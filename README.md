@@ -8,9 +8,11 @@ Build a native iDrive dashboard for the BMW M140i that displays live B58 telemet
 - QNX shell access over SSH and Python communication with the NBT Evo diagnostic service have been demonstrated.
 - The QNX ARM plugin builds with the GCC 4.9.4 Docker toolchain. A parser change removes an import that the copied BMW C++ runtime does not export.
 - The RPM callback now reads accepted telemetry and logs validated RPM. The candidate passes static import and packaging checks; Ubuntu host tests complete, including the lifecycle ThreadSanitizer test, with two checks skipped.
-- The actual RHMI plugin host and its loaded libraries remain unidentified. Vehicle loading, live `engine.RPMSpeed` updates, direct DME communication, and an RPM display remain unverified.
+- `HmiMain3D` on `hu-omap` contains the native RHMI loader and maps the required framework/runtime libraries. The candidate's required named imports also match copies taken from this car. Vehicle loading of our plugin, live `engine.RPMSpeed` updates, direct DME communication, and an RPM display remain unverified.
 
 See the [15 November checkpoint](docs/2026-11-15-checkpoint.md) for the exact candidate hashes, evidence, limitations, and next vehicle checks. The two source changes are preserved as [reviewable patches](patches/README.md).
+
+The later [vehicle preflight](docs/2026-11-15-vehicle-preflight.md) records the confirmed paths and storage checks. A [staging-only helper](tools/README.md) verifies and copies the frozen candidate outside the plugin-loading directories; it does not activate code or restart iDrive.
 
 ## Development setup
 
@@ -22,7 +24,7 @@ This repository currently preserves documentation and patches. The complete modi
 
 ## Next milestone
 
-1. Identify the RHMI plugin host and verify its loaded framework/runtime libraries before installation. The Ethernet diagnostic server is not a confirmed plugin host.
+1. Stage and read back the audited candidate outside plugin-loading directories. Review remaining admission checks, controlled activation and recovery before loading it. The Ethernet diagnostic server remains distinct from the native HMI loader.
 2. With a reviewed deployment and recovery procedure, test native loading and log changing updates from `engine.RPMSpeed` while stationary. Compare validated RPM with the instrument cluster.
 3. If RPM is verified, display it on a simple RHMI screen and test again after a head-unit restart with external adapters disconnected.
 4. Check other signals, such as oil temperature. Explore Even Realities G2 integration after the native dashboard has a reliable live feed.

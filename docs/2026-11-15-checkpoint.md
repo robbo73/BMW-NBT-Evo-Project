@@ -4,6 +4,11 @@ The objective is live B58 RPM on the BMW M140i's NBT Evo without Bluetooth or
 ENET equipment during normal use. This checkpoint is an offline build and
 static-analysis milestone. It does not establish vehicle loading or live RPM.
 
+Later findings from the connected car, including host identification, actual
+framework comparisons and writable storage, are recorded in the
+[vehicle preflight](2026-11-15-vehicle-preflight.md). The outstanding list below
+describes the state at this earlier offline checkpoint.
+
 ## Current source and tools
 
 - Modified application source: `~/milestone-7` on the Ubuntu VM; native plugin
