@@ -6,16 +6,23 @@ Build a native iDrive dashboard for the BMW M140i that displays live B58 telemet
 ## Current status
 
 - QNX shell access over SSH and Python communication with the NBT Evo diagnostic service have been demonstrated.
-- The B58 telemetry bridge passed offline tests. Live engine RPM through BMW's Car Data Service (CDS) is still unverified.
+- The QNX ARM plugin builds with the GCC 4.9.4 Docker toolchain. A parser change removes an import that the copied BMW C++ runtime does not export.
+- The RPM callback now reads accepted telemetry and logs validated RPM. The candidate passes static import and packaging checks; Ubuntu host tests complete, including the lifecycle ThreadSanitizer test, with two checks skipped.
+- The actual RHMI plugin host and its loaded libraries remain unidentified. Vehicle loading, live `engine.RPMSpeed` updates, direct DME communication, and an RPM display remain unverified.
+
+See the [15 November checkpoint](docs/2026-11-15-checkpoint.md) for the exact candidate hashes, evidence, limitations, and next vehicle checks. The two source changes are preserved as [reviewable patches](patches/README.md).
 
 ## Development setup
 
-- **Ubuntu VM on the Windows PC** builds the dashboard prototype with C++17, SDL2, SDL2_ttf, `g++`, Make, and `pkg-config`.
-- **NBT Evo** is the native target. The integration prototype uses C++11, QNX `qcc`, BMW RHMI for the screen, and CDS for vehicle data.
-- **Windows laptop** holds the Python ENET diagnostic scripts. The Chromebook was used for the initial SSH access through Bavarian.
+- **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.
+- **NBT Evo** is the native target, using BMW RHMI for the screen and CDS as the candidate telemetry route. The inspected `hu-jacinto` node runs QNX 6.5.0; it is not yet established as the plugin host.
+- **Chromebook** provides SSH access after Bavarian activation. Access survives closing Bavarian but needs activation again after the car's shutdown/sleep cycle. **Windows** holds the earlier Python ENET diagnostic scripts and transfers files to Ubuntu.
+
+This repository currently preserves documentation and patches. The complete modified source, Docker image, BMW libraries and candidate package are held separately; this checkout alone cannot reproduce the build.
 
 ## Next milestone
 
-1. Log updates from the candidate CDS property `engine.RPMSpeed` on the head unit with the car stationary and compare them with the instrument cluster.
-2. If RPM is verified, display it on a simple RHMI screen and test again after a head-unit restart with external adapters disconnected.
-3. Check availability of other signals such as oil temperature. Explore Even Realities G2 integration after the native dashboard has a reliable live feed.
+1. Identify the RHMI plugin host and verify its loaded framework/runtime libraries before installation. The Ethernet diagnostic server is not a confirmed plugin host.
+2. With a reviewed deployment and recovery procedure, test native loading and log changing updates from `engine.RPMSpeed` while stationary. Compare validated RPM with the instrument cluster.
+3. If RPM is verified, display it on a simple RHMI screen and test again after a head-unit restart with external adapters disconnected.
+4. Check other signals, such as oil temperature. Explore Even Realities G2 integration after the native dashboard has a reliable live feed.

@@ -1,0 +1,11 @@
+--- a/rhmiapp/b58/b58_telemetry.hpp
++++ b/rhmiapp/b58/b58_telemetry.hpp
+@@ -99,7 +99,7 @@
+             if (i==s.size() || s[i]<'0'||s[i]>'9') throw std::runtime_error("invalid exponent");
+             do { ++i; } while (i<s.size() && s[i]>='0' && s[i]<='9');
+         }
+-        std::string num=s.substr(begin,i-begin);
++        std::string num(s.data() + begin, i - begin);
+         char* end=0; double value=std::strtod(num.c_str(), &end);
+         if (!end || *end || !b58IsFinite(value)) throw std::runtime_error("non-finite number");
+         Json out(Json::Number); out.number=value; return out;

@@ -1,0 +1,17 @@
+--- a/rhmiapp/nbt_aad_app.cpp
++++ b/rhmiapp/nbt_aad_app.cpp
+@@ -646,6 +646,14 @@
+ 
+     if (!b58::update(kB58RpmProperty, json, timestamp)) {
+         alog("B58 RPM: telemetry parser rejected payload");
++        return true;
++    }
++
++    double rpm = 0.0;
++    if (b58::read("rpm", timestamp, rpm)) {
++        alog("B58 RPM: validated %.1f rpm", rpm);
++    } else {
++        alog("B58 RPM: no fresh reading after accepted payload");
+     }
+ 
+     return true;
