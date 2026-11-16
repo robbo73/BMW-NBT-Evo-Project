@@ -1,13 +1,22 @@
 # Changes to the modified milestone-7 source
 
-These patches preserve the two changes used for the 15 November 2026 native
-RPM logging candidate. Apply them to the corresponding modified
+These patches preserve the changes used for the 15 and 16 November 2026 native
+RPM logging candidates. Apply them to the corresponding modified
 `~/milestone-7` source, not to this documentation-only checkout.
+
+**Vehicle library-loading tests and HMI activation are paused.** The latest
+candidate loads in the standalone probe, but exit faults and observed unit
+restarts remain unresolved. These patches are source records, not a deployment
+instruction or a claim of full vehicle compatibility.
 
 1. `0001-b58-libstdcxx-compat.patch`: use the scanner-validated character range
    to construct a numeric token without the newer formatted range-error helper.
 2. `0002-b58-validated-rpm-log.patch`: read and log accepted RPM, returning
    before reading when the incoming sample is rejected.
+3. `0003-qnx-loader-compat.patch`: replace the typed telemetry exception catch
+   with catch-all handling and resolve optional `slogf` through `dlsym`, retaining
+   RAM/USB output. The reviewed rebuild removes the rejected dynamic
+   `R_ARM_REL32` relocation, required `slogf` import and `DT_TEXTREL` flag.
 
 The supplied original source identifies NBT-AAD / nanaisu and
 [Supra-iDrive6-Android-Auto](https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)
@@ -15,16 +24,17 @@ and carries `SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0` and its
 required copyright notice. These patches leave those source notices intact.
 The complete upstream/modified application is not included here.
 
-The current candidate already contains these changes; do not apply them twice.
-For a matching earlier source copy, preserve local work and check applicability
-before applying, from that source root:
+The 16 November rebuilt candidate already contains all three patches; do not
+apply them twice. Patch 3 follows patches 1 and 2. For a matching earlier source
+copy, preserve local work and check the next applicable patch before applying
+it, from that source root:
 
 ```sh
-git apply --check /path/to/0001-b58-libstdcxx-compat.patch
-git apply --check /path/to/0002-b58-validated-rpm-log.patch
+git apply --check /path/to/the-next.patch
+git apply /path/to/the-next.patch
 ```
 
-Then apply the patches with `git apply`, rebuild only the RHMI target, and check
-the resulting imports. Other upstream revisions may need adapted contexts.
-See the [checkpoint](../docs/2026-11-15-checkpoint.md) for validation and open
-vehicle checks. Neither patch establishes live CDS availability or an RPM UI.
+Rebuild only the RHMI target and check the resulting imports and relocations.
+Other upstream revisions may need adapted contexts. See the
+[current checkpoint](../docs/2026-11-16-checkpoint.md) for validation and open
+issues. These changes do not establish live CDS availability or an RPM UI.

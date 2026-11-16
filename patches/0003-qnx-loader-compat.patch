@@ -1,0 +1,24 @@
+--- a/rhmiapp/nbt_aad_app.cpp
++++ b/rhmiapp/nbt_aad_app.cpp
+@@ -476,5 +476,11 @@
+     }
+ #ifdef __QNX__
+-    slogf(_SLOG_SETCODE(0x4e41, 1), _SLOG_INFO, "[NbtAadApp] %s", msg);
++    // Resolve optional system logging from the current process scope.
++    // Keep RAM/USB logging available when that symbol is absent.
++    typedef int (*SlogfFunction)(int, int, const char*, ...);
++    static SlogfFunction const systemLog =
++        reinterpret_cast<SlogfFunction>(dlsym(RTLD_DEFAULT, "slogf"));
++    if (systemLog)
++        systemLog(_SLOG_SETCODE(0x4e41, 1), _SLOG_INFO, "[NbtAadApp] %s", msg);
+ #endif
+ }
+--- a/rhmiapp/b58/b58_telemetry.hpp
++++ b/rhmiapp/b58/b58_telemetry.hpp
+@@ -151,5 +151,5 @@
+         std::string json;
+         if (!narrowAsciiJson(value,json)) return false;
+-        try { ingest(property,json,now); return true; } catch (const std::exception&) { return false; }
++        try { ingest(property,json,now); return true; } catch (...) { return false; }
+     }
+     bool get(const std::string& metric, double now, double& value) const {

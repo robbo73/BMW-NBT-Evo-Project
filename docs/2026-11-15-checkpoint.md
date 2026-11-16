@@ -1,5 +1,9 @@
 # Native RPM logging checkpoint — 15 November 2026
 
+**Historical checkpoint.** The [16 November update](2026-11-16-checkpoint.md)
+supersedes the candidate status and next vehicle steps below. Library-loading
+tests and HMI activation are currently paused after observed unit restarts.
+
 The objective is live B58 RPM on the BMW M140i's NBT Evo without Bluetooth or
 ENET equipment during normal use. This checkpoint is an offline build and
 static-analysis milestone. It does not establish vehicle loading or live RPM.

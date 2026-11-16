@@ -1,5 +1,10 @@
 # Connected-vehicle preflight — 15 November 2026
 
+**Historical preflight.** The [16 November checkpoint](2026-11-16-checkpoint.md)
+records the subsequent staging, rollback, loader fix and observed unit restarts.
+Vehicle library-loading tests and HMI activation are currently paused; the
+activation plan below is superseded.
+
 This supplements the earlier [offline checkpoint](2026-11-15-checkpoint.md).
 The candidate has not yet been reported staged, installed, loaded or receiving
 live RPM. All findings below are user-supplied vehicle outputs or static
@@ -84,7 +89,10 @@ or repair that file based on its absence.
 - The owner initially reported battery-only power, then started the engine to
   charge it. Keep further vehicle work stationary with adequate sustained power.
 
-## Remaining activation work
+## Historical activation plan — superseded
+
+The following records the earlier plan, not current vehicle instructions.
+Follow the offline investigation status in the current checkpoint.
 
 Use the [staging-only helper](../tools/README.md) to validate the frozen archive,
 copy outside the discovery tree and read all five files back. The Chromebook
