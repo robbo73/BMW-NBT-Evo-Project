@@ -1,9 +1,35 @@
-# Stage the frozen RPM logging candidate
+# Source preparation and historical staging helper
+
+## Guarded stream cleanup on Ubuntu
+
+`prepare_stream_cleanup.py` removes the two unused `<iostream>` includes from
+the reviewed source revision after patches 1–3. It checks both complete source
+hashes and existing backup paths before editing either file, then preserves
+backups with suffix `.before-20261117-stream-cleanup`.
+
+**The owner has already run this helper and rebuilt the candidate. Do not run
+it again on that source tree.** It performs the same edits as patch 4; choose
+one method only when preparing a matching earlier copy.
+
+For a matching source copy that has not received the cleanup:
+
+```sh
+python3 /path/to/prepare_stream_cleanup.py ~/milestone-7
+```
+
+This is an Ubuntu source helper. It does not build, contact the BMW, install a
+plugin or execute target code. A revision mismatch stops before edits; inspect
+the difference rather than removing the hash checks. See the
+[17 November checkpoint](../docs/2026-11-17-checkpoint.md) for the reviewed
+output and unresolved runtime issue. The helper was validated on a separate
+matching source copy; the owner then used it successfully on Ubuntu.
+
+## Historical: stage the frozen RPM logging candidate
 
 **Historical helper: vehicle library-loading tests and HMI activation are
 currently paused following observed unit restarts.** This helper targets only
 the old 15 November archive, not the rebuilt 16 November candidate. See the
-[current checkpoint](../docs/2026-11-16-checkpoint.md) before further vehicle work.
+[current checkpoint](../docs/2026-11-17-checkpoint.md) before further vehicle work.
 
 Download [stage_rpm_candidate.py](stage_rpm_candidate.py) from GitHub using
 **Download raw file**, then move it into **Linux files → bmw-idrive** on the

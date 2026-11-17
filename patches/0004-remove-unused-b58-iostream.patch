@@ -1,0 +1,19 @@
+--- a/rhmiapp/b58/b58_telemetry.hpp
++++ b/rhmiapp/b58/b58_telemetry.hpp
+@@ -14,7 +14,6 @@
+ }
+ #include <cctype>
+ #include <cstdlib>
+-#include <iostream>
+ #include <map>
+ #include <stdexcept>
+ #include <string>
+--- a/rhmiapp/b58/b58_rhmi_bridge.cpp
++++ b/rhmiapp/b58/b58_rhmi_bridge.cpp
+@@ -3,6 +3,5 @@
+ #include "b58_telemetry.hpp"
+ #include <pthread.h>
+ #include <stdexcept>
+-#include <iostream>
+ #include <string>
+ #include <cstdlib>

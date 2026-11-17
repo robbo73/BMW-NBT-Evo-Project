@@ -1,6 +1,6 @@
 # Native RPM logging checkpoint — 15 November 2026
 
-**Historical checkpoint.** The [16 November update](2026-11-16-checkpoint.md)
+**Historical checkpoint.** The [17 November update](2026-11-17-checkpoint.md)
 supersedes the candidate status and next vehicle steps below. Library-loading
 tests and HMI activation are currently paused after observed unit restarts.
 

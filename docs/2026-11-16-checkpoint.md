@@ -1,5 +1,9 @@
 # Native RPM investigation — 16 November 2026
 
+**Historical checkpoint.** The [17 November update](2026-11-17-checkpoint.md)
+records the recovered core, runtime findings and newer source-cleanup build.
+The candidate hashes and outstanding tasks below describe the earlier state.
+
 **Vehicle library-loading tests and HMI activation are paused following observed
 head-unit restarts. Continue with offline investigation on Ubuntu.**
 

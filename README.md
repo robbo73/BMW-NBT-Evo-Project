@@ -8,14 +8,14 @@ Build a native iDrive dashboard for the BMW M140i that displays live B58 telemet
 **Vehicle library-loading tests and HMI activation are paused following observed head-unit restarts.** Continue with offline investigation on Ubuntu.
 
 - QNX SSH access and external Python identification/VIN requests to the NBT Evo diagnostic service have been demonstrated. Direct DME communication remains unverified.
-- The QNX ARM plugin builds with the GCC 4.9.4 Docker image. The latest source fixes remove the unsupported exception relocation and make system logging optional, preserving RAM/USB logging.
-- The rebuilt library successfully loads and exposes `pluginAppInfo` in a standalone QNX probe, then the probe crashes during exit. Loading stock `AppFramework` alone reproduces the exit fault without the RPM plugin. The owner observes unit restarts around these tests; the mechanism remains unresolved.
-- The revised candidate has not been activated in HMI. The earlier candidate was rolled back to its hidden, disabled stage. HMI initialization, live `engine.RPMSpeed` updates and an RPM display remain unverified.
+- The QNX ARM plugin builds with the GCC 4.9.4 Docker image. Source fixes remove the unsupported exception relocation, make system logging optional and remove two unused `<iostream>` includes. The 17 November rebuild removes both stream-initialization imports without adding required imports.
+- The previous candidate loads and exposes `pluginAppInfo` in a standalone QNX probe, then crashes during exit. Loading stock `AppFramework` alone also faults. An existing probe core now identifies a cross-runtime shutdown path: QNX's stream destructor calls GNU's stream destructor, which passes address `8` to the allocator. Binding/initialization ordering and the associated unit restarts remain unresolved.
+- The latest candidate is **reviewed offline only**: 111796 bytes, SHA-256 `2507e91da987f016cbd5a23db08c088872c345362430a515512284596737113f`. It has not been executed on the car or activated in HMI. The earlier candidate was rolled back to its hidden, disabled stage. HMI initialization, live `engine.RPMSpeed` updates and an RPM display remain unverified.
 - Host telemetry checks pass, and the earlier Ubuntu test suite completed including lifecycle ThreadSanitizer, with two checks skipped. These results do not establish stable vehicle execution.
 
-See the [16 November checkpoint](docs/2026-11-16-checkpoint.md) for the current evidence, candidate hash and offline next steps. Source changes are preserved as [reviewable patches](patches/README.md).
+See the [17 November checkpoint and handover](docs/2026-11-17-checkpoint.md) for the current evidence, candidate fingerprints and where to resume. Source changes are preserved as [reviewable patches](patches/README.md).
 
-The [15 November checkpoint](docs/2026-11-15-checkpoint.md), [vehicle preflight](docs/2026-11-15-vehicle-preflight.md) and [staging-only helper](tools/README.md) are historical records for the earlier candidate. Their vehicle activation plan is superseded by the current pause.
+The [16 November checkpoint](docs/2026-11-16-checkpoint.md), [15 November checkpoint](docs/2026-11-15-checkpoint.md), [vehicle preflight](docs/2026-11-15-vehicle-preflight.md) and staging-only helper are historical records. Their vehicle activation plans are superseded by the current pause. The [tools guide](tools/README.md) also documents the guarded source-cleanup helper already used on Ubuntu.
 
 ## Development setup
 
@@ -27,7 +27,7 @@ This repository currently preserves documentation and patches. The complete modi
 
 ## Next milestone
 
-1. Investigate the standalone framework/probe exit fault and associated unit restarts offline. Review toolchain startup/destructor handling and existing crash evidence before planning further vehicle execution.
-2. Establish a reviewed HMI initialization and recovery procedure once the current failure is understood.
+1. Continue on Ubuntu with the captured core and libraries: investigate the real HMI's runtime binding/initialization context and plugin-discovery behavior. The stream cleanup is verified statically; no further rebuild is needed to validate those two source edits.
+2. Establish a reviewed HMI initialization and recovery procedure after assessing the unresolved runtime failure. Do not use another standalone car probe to validate the cleanup.
 3. Verify genuine changing `engine.RPMSpeed` payloads against the instrument cluster, then add an RPM screen and validate operation without external adapters.
 4. Expand to other signals and Even Realities G2 only after the native RPM feed works reliably.

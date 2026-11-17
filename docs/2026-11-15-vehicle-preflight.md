@@ -1,6 +1,6 @@
 # Connected-vehicle preflight — 15 November 2026
 
-**Historical preflight.** The [16 November checkpoint](2026-11-16-checkpoint.md)
+**Historical preflight.** The [17 November checkpoint](2026-11-17-checkpoint.md)
 records the subsequent staging, rollback, loader fix and observed unit restarts.
 Vehicle library-loading tests and HMI activation are currently paused; the
 activation plan below is superseded.

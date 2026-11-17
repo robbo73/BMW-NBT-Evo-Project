@@ -1,12 +1,13 @@
 # Changes to the modified milestone-7 source
 
-These patches preserve the changes used for the 15 and 16 November 2026 native
+These patches preserve the changes used for the 15–17 November 2026 native
 RPM logging candidates. Apply them to the corresponding modified
 `~/milestone-7` source, not to this documentation-only checkout.
 
 **Vehicle library-loading tests and HMI activation are paused.** The latest
-candidate loads in the standalone probe, but exit faults and observed unit
-restarts remain unresolved. These patches are source records, not a deployment
+candidate is reviewed offline only. The previous candidate loaded in the
+standalone probe, but exit faults and observed unit restarts remain unresolved.
+These patches are source records, not a deployment
 instruction or a claim of full vehicle compatibility.
 
 1. `0001-b58-libstdcxx-compat.patch`: use the scanner-validated character range
@@ -17,6 +18,11 @@ instruction or a claim of full vehicle compatibility.
    with catch-all handling and resolve optional `slogf` through `dlsym`, retaining
    RAM/USB output. The reviewed rebuild removes the rejected dynamic
    `R_ARM_REL32` relocation, required `slogf` import and `DT_TEXTREL` flag.
+4. `0004-remove-unused-b58-iostream.patch`: remove unused `<iostream>` includes
+   from the telemetry header and bridge. The reviewed QNX rebuild removes both
+   `std::ios_base::Init` imports and the bridge's automatic initializer, with no
+   required imports added. This removes avoidable initialization from our code;
+   it is not a verified fix for standalone stock-framework loading.
 
 The supplied original source identifies NBT-AAD / nanaisu and
 [Supra-iDrive6-Android-Auto](https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)
@@ -24,8 +30,11 @@ and carries `SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0` and its
 required copyright notice. These patches leave those source notices intact.
 The complete upstream/modified application is not included here.
 
-The 16 November rebuilt candidate already contains all three patches; do not
-apply them twice. Patch 3 follows patches 1 and 2. For a matching earlier source
+The 16 November rebuilt candidate contains patches 1–3; the 17 November rebuilt
+candidate contains all four. The owner has already applied patch 4's equivalent
+guarded helper to Ubuntu. Do not apply these changes twice. Patch 4 follows
+patches 1–3; alternatively use the [guarded helper](../tools/README.md), not both.
+For a matching earlier source
 copy, preserve local work and check the next applicable patch before applying
 it, from that source root:
 
@@ -36,5 +45,5 @@ git apply /path/to/the-next.patch
 
 Rebuild only the RHMI target and check the resulting imports and relocations.
 Other upstream revisions may need adapted contexts. See the
-[current checkpoint](../docs/2026-11-16-checkpoint.md) for validation and open
+[current checkpoint](../docs/2026-11-17-checkpoint.md) for validation and open
 issues. These changes do not establish live CDS availability or an RPM UI.
