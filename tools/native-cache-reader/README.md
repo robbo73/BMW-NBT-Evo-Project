@@ -90,9 +90,11 @@ the existing property map, current bind flags/handlers and function-block
 state. It never calls a target lookup or bind function. Results are attached
 to each provider and use the existing global read budget and guards.
 
-This added mode has offline fixture coverage only. See the
-[review](../../docs/2026-11-19-notification-locator-review.md) before planning
-its first vehicle use with a fresh PID. Missing entries or clear flags do
+This added mode completed engine-off and idle vehicle observations: the
+inspected provider had no RPM property entry and its function block was
+active in both. See the [results](../../docs/2026-11-19-property-state-vehicle-results.md)
+and [review](../../docs/2026-11-19-notification-locator-review.md). Each use
+requires a fresh PID. Missing entries or clear flags do
 not establish binding history. State 2 does not prove transmission, and
 snapshot rechecks are best-effort rather than atomic. No activation is
 part of this mode.

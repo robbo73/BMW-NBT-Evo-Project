@@ -1,5 +1,9 @@
 # Notification trace and property-locator review — 19 November 2026
 
+Follow-up: the [engine-off and idle observations](2026-11-19-property-state-vehicle-results.md)
+subsequently exercised the new property/state mode on the vehicle. The
+offline-review status below is historical to the preparation of that mode.
+
 The owner supplied Claude's notification trace, a property locator, its 18
 synthetic tests and an ELF metadata workaround. Originals are retained
 unchanged outside this checkout. This review uses the captured original BMW
