@@ -64,6 +64,11 @@ has succeeded. The pause on plugin activation and standalone load/unload
 probes remains in effect. No coding change or firmware modification is
 proposed.
 
+Follow-up: the [request and notification trace](2026-11-20-sports-displays-requests.md)
+now identifies both proxy types, their status decoders, notification
+registration, and a separate display-state event. Its recipient and any
+role in enabling the feed remain unverified.
+
 ## Source identity
 
 - HmiMain3D: 58795504 bytes, SHA-256
