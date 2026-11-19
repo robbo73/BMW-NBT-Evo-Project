@@ -83,7 +83,15 @@ idle value, or changing value by itself is not proof of live B58 telemetry.
 Live CDS callback delivery, agreement with the instrument cluster, dashboard
 display, and operation without an external dongle remain unverified.
 
-## Offline validation
+## Optional inspections
+
+The further opt-in `--inspect-admission` flag also requires `--read-cache`.
+It observes coding predicates in existing variant-server objects, using the
+actual vehicle's libhmicoding profile and additional code/type checks. It
+calls no native variant method, changes no coding and activates no plugin.
+This new mode has offline tests only. See the
+[admission review](../../docs/2026-11-19-app-admission-review.md) for the
+per-instance/scope limits before its first planned vehicle use.
 
 The additional `--inspect-property` flag requires `--read-cache`. It inspects
 the existing property map, current bind flags/handlers and function-block
@@ -99,13 +107,15 @@ not establish binding history. State 2 does not prove transmission, and
 snapshot rechecks are best-effort rather than atomic. No activation is
 part of this mode.
 
+## Offline validation
+
 From this directory on Chromebook Linux or Ubuntu:
 
 ```sh
 python3 -m unittest discover -s . -p 'test*.py' -v
 ```
 
-53 tests passed in the development workspace. They cover cache absence,
+71 tests passed in the development workspace. They cover cache absence,
 invalid status, unavailable/incorrect objects, changing object chains,
 cycles, limits, process identity, binary framing over real local pipes,
 end-of-file and deadlines. They do not connect to the car and do not verify

@@ -66,6 +66,10 @@ values if feasible. A stock library copy is sufficient for that next
 analysis. These observations do not establish a reason to edit coding or
 activate a plugin. Keep the paused load/unload probes paused.
 
+Follow-up: the captured coding library has now been reviewed offline and an
+opt-in observer prepared. See the [app-admission review](2026-11-19-app-admission-review.md).
+Its current predicates have not yet been measured on the vehicle.
+
 The full JSON reports remain on the owner's Chromebook. This checkpoint
 transcribes the pasted reports and the engine-state clarification. No
 cloud-to-vehicle connection was used and no source/library changes were

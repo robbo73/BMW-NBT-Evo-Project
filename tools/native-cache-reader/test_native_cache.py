@@ -203,6 +203,15 @@ class CacheTests(unittest.TestCase):
 
 
 class TransportTests(unittest.TestCase):
+    def test_admission_requires_explicit_cache_mode(self):
+        with patch.object(sys, 'argv', ['nbt_native_cache.py', '--pid', '278582', '--inspect-admission']), \
+             patch('nbt_native_cache.SSHMemory') as remote, \
+             patch('sys.stderr', new_callable=io.StringIO):
+            with self.assertRaises(SystemExit) as stopped:
+                main()
+            self.assertEqual(stopped.exception.code, 2)
+            remote.assert_not_called()
+
     def test_property_inspection_requires_explicit_cache_mode(self):
         with patch.object(sys, 'argv', ['nbt_native_cache.py', '--pid', '278582', '--inspect-property']), \
              patch('nbt_native_cache.SSHMemory') as remote, \
@@ -307,6 +316,8 @@ for line in sys.stdin.buffer:
                  'libhmiremoting.so! @71000000 6768K 248K',
                  'libstdc++.so.6 @72000000 812K 48K']
         self.assertEqual(parse_header(lines, 278582), BASES)
+        self.assertEqual(parse_header(lines + ['libhmicoding.so! @73000000 916K 4K'], 278582),
+                         dict(BASES, coding=0x73000000))
         with self.assertRaisesRegex(Refuse, 'PID'):
             parse_header(lines, 278583)
         with self.assertRaisesRegex(Refuse, 'All required'):

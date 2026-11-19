@@ -1,0 +1,66 @@
+{
+  "source_file_sha256": "f9a6d68e55b006229792d1b4bb417378dabc503076044fa574a810cd61a45e85",
+  "fingerprints": [
+    {
+      "module": "coding",
+      "offset": 292616,
+      "bytes": 96,
+      "sha256": "5fd1ad53fb9e13fa3c043b310d201801fa8c44393e7ed78e031312e9424f398c"
+    },
+    {
+      "module": "coding",
+      "offset": 288636,
+      "bytes": 1648,
+      "sha256": "fda6fde7929eea16e74cd9c26ea322f7a72b8d9d0e09edac62080e3ade649597"
+    },
+    {
+      "module": "coding",
+      "offset": 335176,
+      "bytes": 384,
+      "sha256": "df9727dfaef60f6d51194021ceefd60e66d582e61b593ef898efbde24dde06c3"
+    },
+    {
+      "module": "hmi",
+      "offset": 16883136,
+      "bytes": 80,
+      "sha256": "14fd93df57adc6f087134bf4e8845d0ea59083dda15260c08beaac67f5f4e060"
+    },
+    {
+      "module": "coding",
+      "offset": 370244,
+      "bytes": 112,
+      "sha256": "11b885ded410c87f34d270c88fc2338c130e796e302c7a7093746ae317b0faa8"
+    },
+    {
+      "module": "coding",
+      "offset": 290636,
+      "bytes": 156,
+      "sha256": "2ecae9ed0ce965790e608c04fcc7d0349ccfe85112d5c9f9d78da3d7cecc6cc1"
+    }
+  ],
+  "variant_vtable": 615240,
+  "role_offset": 4,
+  "va_map_offset": 52,
+  "iva_array_offset": 164,
+  "iva_origin": 20000,
+  "iva_stride": 8,
+  "direct_feature": {
+    "id": 416,
+    "descriptor_offset": 647124,
+    "name": "va_A4A_REMOTE_APPS",
+    "name_offset": 506699,
+    "page": 12288,
+    "byte_offset": 108,
+    "extra_offset": 0,
+    "mask": 1,
+    "expected_value": 1
+  },
+  "iva_features": {
+    "remote_hmi": 20053,
+    "apps": 20052,
+    "touch_command": 21092,
+    "special_security": 20802,
+    "special_authority_marked": 20803,
+    "special_authority_unmarked": 20804
+  }
+}

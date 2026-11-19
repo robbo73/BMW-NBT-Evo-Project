@@ -46,13 +46,13 @@ def parse_header(lines, pid):
             'Requested PID is not the expected HmiMain3D process')
     bases = {}
     for line in lines:
-        match = re.search(r'\b(libhmiplugin|libhmiremoting|libstdc\+\+)\.so(?:\.6)?[!*\s]*@([0-9a-fA-F]+)\b', line)
+        match = re.search(r'\b(libhmiplugin|libhmiremoting|libhmicoding|libstdc\+\+)\.so(?:\.6)?[!*\s]*@([0-9a-fA-F]+)\b', line)
         if match:
-            key = {'libhmiplugin': 'plugin', 'libhmiremoting': 'remoting', 'libstdc++': 'cpp'}[match[1]]
+            key = {'libhmiplugin': 'plugin', 'libhmiremoting': 'remoting', 'libhmicoding': 'coding', 'libstdc++': 'cpp'}[match[1]]
             value = pointer(int(match[2], 16))
             require(key not in bases or bases[key] == value, 'Conflicting module mappings')
             bases[key] = value
-    require(set(bases) == {'plugin', 'remoting', 'cpp'}, 'All required module mappings were not found')
+    require({'plugin', 'remoting', 'cpp'}.issubset(bases), 'All required module mappings were not found')
     bases['hmi'] = 0  # HMI is the inspected fixed-address ET_EXEC, not a PIE.
     return bases
 
@@ -178,13 +178,15 @@ class CacheGraph:
             require(hashlib.sha256(block).hexdigest() == check['sha256'],
                     'Code/header fingerprint mismatch for ' + key)
 
-    def find_cache(self):
+    def find_cache(self, name=b'ICarDataServer'):
+        require(isinstance(name, bytes) and 1 <= len(name) <= 128 and
+                all(32 <= c < 127 for c in name), 'Invalid interface name')
         root = self.bases['plugin'] + self.layout['registry_offset']
         header = self.read(root, 20)
         buckets, count, entries = u32(header, 8), u32(header, 12), u32(header, 16)
         require(1 <= count <= 4096 and entries <= 4096, 'Registry is absent or outside audited bounds')
         pointer(buckets)
-        index = fnv1a(b'ICarDataServer') % count
+        index = fnv1a(name) % count
         node = self.word(buckets + index * 4)
         sentinel = self.word(buckets + count * 4)
         visited = set()
@@ -199,14 +201,14 @@ class CacheGraph:
             require(0x1000c <= key < 0xff000000, 'Invalid registry key')
             length = self.word(key - 12)
             require(length <= 512, 'Unexpected registry key length')
-            if length == len(b'ICarDataServer'):
-                if self.read(key, length + 1) == b'ICarDataServer\0':
+            if length == len(name):
+                if self.read(key, length + 1) == name + b'\0':
                     found = pointer(value)
                     break
             node = following
         require(self.read(root, 20) == header, 'Registry changed during lookup; stop and refresh')
         if found is None:
-            raise Refuse('ICarDataServer is not present in the existing cache; no entry was created')
+            raise Refuse(name.decode('ascii') + ' is not present in the existing cache; no entry was created')
         self.vtable(found, self.bases['plugin'] + self.layout['cache_vtable'], 'interface cache')
         return found
 
@@ -236,7 +238,7 @@ class CacheGraph:
                 node = following
         require(len(seen) == entries, 'Scope node count inconsistent with its table')
         require(self.read(cache + 0x18, 12) == snapshot, 'Scope table changed during read')
-        require(bool(providers), 'No existing scope has a cached data server; nothing was initialized')
+        require(bool(providers), 'No existing scope has a cached interface; nothing was initialized')
         return providers
 
     def proxy(self, provider):
@@ -274,10 +276,14 @@ def main():
     parser.add_argument('--read-cache', action='store_true', help='Read the verified existing cache graph')
     parser.add_argument('--inspect-property', action='store_true',
                         help='Also inspect existing RPM property and request state (requires --read-cache)')
+    parser.add_argument('--inspect-admission', action='store_true',
+                        help='Observe coding predicates in existing variant servers (requires --read-cache)')
     parser.add_argument('--output', type=Path, default=Path('nbt-native-cache-report.json'))
     args = parser.parse_args()
     if args.inspect_property and not args.read_cache:
         parser.error('--inspect-property requires --read-cache')
+    if args.inspect_admission and not args.read_cache:
+        parser.error('--inspect-admission requires --read-cache')
     require(not args.output.exists() and not args.output.is_symlink(), 'Output already exists; preserve it first')
     layout = json.loads(Path(__file__).with_name('vehicle-layout.json').read_text())
     report = {'pid': args.pid, 'mode': 'cache' if args.read_cache else 'mappings-only',
@@ -290,6 +296,10 @@ def main():
         if args.read_cache:
             graph = CacheGraph(memory, memory.bases, layout)
             graph.verify_images()
+            if args.inspect_admission:
+                from app_admission import inspect_admission
+                admission_layout = json.loads(Path(__file__).with_name('admission-layout.json').read_text())
+                report['app_admission'] = inspect_admission(graph, admission_layout)
             cache = graph.find_cache()
             providers = graph.scope_providers(cache)
             report['providers'] = []
