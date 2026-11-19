@@ -86,11 +86,19 @@ From this directory on Chromebook Linux or Ubuntu:
 python3 -m unittest -v test_native_cache.py
 ```
 
-24 tests passed in the development workspace. They cover cache absence,
+26 tests passed in the development workspace. They cover cache absence,
 invalid status, unavailable/incorrect objects, changing object chains,
 cycles, limits, process identity, binary framing over real local pipes,
 end-of-file and deadlines. They do not connect to the car and do not verify
 QNX `on`, `pidin`, or `dd` transport behavior on the vehicle.
+
+The initial vehicle mappings-only attempt stopped before the ready marker.
+A separate SSH command successfully checked `dd` and the current HMI PID.
+The revised reader retrieves full `pidin mem` output and filters it on the
+client, removing the nested remote grep expression. Startup failures now
+report their phase, SSH exit status and the last available startup lines.
+The cause of the original failure and the revised transport's vehicle
+behavior remain unverified.
 
 The package contains client source, tests, offset/fingerprint metadata and
 notes only. It contains no BMW firmware or shared-library payloads.

@@ -65,7 +65,7 @@ class SSHMemory:
         server = '''set -eu
 command -v dd >/dev/null
 pidin -p %d ar
-pidin -p %d mem | grep -iE 'libhmiplugin[.]so|libhmiremoting[.]so|libstdc[+][+][.]so[.]6'
+pidin -p %d mem
 echo NBT_CACHE_READ_READY
 while read nbt_skip nbt_words; do
     case "$nbt_skip:$nbt_words" in *[!0-9:]*|:*|*:) exit 2;; esac
@@ -81,8 +81,10 @@ done
             stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         self.total = 0
         self.calls = 0
+        self.phase = 'mapping startup'
+        self.header = []
         try:
-            lines = []
+            header_bytes = 0
             deadline = time.monotonic() + 120  # Allow interactive password entry.
             while True:
                 line = bytearray()
@@ -92,10 +94,16 @@ done
                 text = line.decode('ascii', errors='strict').strip()
                 if text == 'NBT_CACHE_READ_READY':
                     break
-                lines.append(text)
-                require(len(lines) <= 32, 'Unexpected SSH startup output')
-            self.bases = parse_header(lines, pid)
-            self.header = lines
+                self.header.append(text)
+                header_bytes += len(line)
+                require(len(self.header) <= 512 and header_bytes <= 131072,
+                        'Unexpected SSH startup output')
+            self.bases = parse_header(self.header, pid)
+        except Refuse as error:
+            self.close()
+            raise Refuse('%s; SSH exit status: %s; last startup output: %s' %
+                         (error, self.process.returncode,
+                          ' | '.join(self.header[-4:]) or '(none)')) from error
         except BaseException:
             self.close()
             raise
@@ -108,7 +116,7 @@ done
             ready, _, _ = select.select([self.process.stdout], [], [], remaining)
             require(bool(ready), 'Timed out reading SSH output')
             chunk = os.read(self.process.stdout.fileno(), count - len(output))
-            require(bool(chunk), 'SSH closed or the process-memory read was incomplete')
+            require(bool(chunk), 'SSH closed during ' + getattr(self, 'phase', 'output read'))
             output.extend(chunk)
         return bytes(output)
 
@@ -123,6 +131,7 @@ done
         require(self.total <= 262144 and self.calls <= 512, 'Read budget exceeded')
         self.process.stdin.write(('%d %d\n' % (aligned // 4, length // 4)).encode('ascii'))
         self.process.stdin.flush()
+        self.phase = 'process-memory read'
         data = self._exact(length, time.monotonic() + 10)
         return data[address - aligned:address - aligned + size]
 

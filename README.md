@@ -19,7 +19,7 @@ The [16 November checkpoint](docs/2026-11-16-checkpoint.md), [15 November checkp
 
 ## Read-only inspection tool — 19 November
 
-The [native cache reader](tools/native-cache-reader/README.md) is a client-side Python tool for Chromebook Linux or Ubuntu. Its first mode collects HMI process/library mappings only; an explicit optional mode follows existing cache objects using firmware-specific offsets and type checks. Static analysis identified the native `engine.RPMSpeed` provider and its raw-to-RPM conversion. Neither the reader nor live RPM has been validated on the vehicle. The reader passed 24 offline tests. It installs no target executable and does not load libraries or restart HMI; the existing activation pause remains in effect. No BMW binaries are included.
+The [native cache reader](tools/native-cache-reader/README.md) is a client-side Python tool for Chromebook Linux or Ubuntu. Its first mode collects HMI process/library mappings only; an explicit optional mode follows existing cache objects using firmware-specific offsets and type checks. Static analysis identified the native `engine.RPMSpeed` provider and its raw-to-RPM conversion. The first mappings-only vehicle attempt stopped during startup; a separate SSH command verified `dd` and the HMI PID. A revised transport removes nested remote filtering and adds startup diagnostics, with 26 offline tests passing. Neither the cache reader nor live RPM has been validated on the vehicle. It installs no target executable and does not load libraries or restart HMI; the existing activation pause remains in effect. No BMW binaries are included.
 
 ## Development setup
 

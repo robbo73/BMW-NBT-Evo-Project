@@ -1,9 +1,11 @@
 import io
 import json
+import os
 from pathlib import Path
 import struct
 import subprocess
 import sys
+import tempfile
 import time
 import unittest
 from unittest.mock import patch
@@ -201,6 +203,57 @@ class CacheTests(unittest.TestCase):
 
 
 class TransportTests(unittest.TestCase):
+    def test_startup_failure_reports_phase_exit_status_and_output(self):
+        peer = subprocess.Popen(
+            [sys.executable, '-c',
+             "import sys; print('278582 /opt/hmi/bin/zipped/HmiMain3D -c'); sys.exit(3)"],
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        with patch('nbt_native_cache.subprocess.Popen', return_value=peer):
+            with self.assertRaisesRegex(
+                    Refuse, 'mapping startup; SSH exit status: 3; last startup output: 278582'):
+                SSHMemory('root@192.168.16.101', 278582)
+
+    def test_generated_native_command_with_full_mapping_output(self):
+        # Execute the actual generated shell command with fake native utilities.
+        # This covers quoting and startup framing as well as >32 pidin lines.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            utilities = {
+                'on': '#!/bin/sh\nshift 2\nexec "$@"\n',
+                'pidin': '''#!/bin/sh
+if [ "$3" = ar ]; then
+    echo '278582 /opt/hmi/bin/zipped/HmiMain3D -c'
+else
+    index=0
+    while [ "$index" -lt 70 ]; do
+        echo '278582 1 HmiMain3D CONDVAR'
+        index=$((index+1))
+    done
+    echo 'libhmiplugin.so @70000000 200K 4K'
+    echo 'libhmiremoting.so! @71000000 6768K 248K'
+    echo 'libstdc++.so.6 @72000000 812K 48K'
+fi
+''',
+                'dd': '#!/bin/sh\nexec /bin/dd if=/dev/zero "$@"\n',
+            }
+            for name, body in utilities.items():
+                path = root/name
+                path.write_text(body)
+                path.chmod(0o755)
+            popen = subprocess.Popen
+            def spawn(argv, **kwargs):
+                # Mapping mode never invokes dd; stdin remains a request pipe.
+                return popen(['/bin/sh', '-c', argv[-1]],
+                             env=dict(os.environ, PATH=directory+':'+os.environ['PATH']),
+                             **kwargs)
+            with patch('nbt_native_cache.subprocess.Popen', side_effect=spawn):
+                reader = SSHMemory('root@192.168.16.101', 278582)
+            self.assertEqual(reader.bases, BASES)
+            self.assertGreater(len(reader.header), 32)
+            self.assertEqual((reader.total, reader.calls), (0, 0))
+            reader.close()
+            self.assertEqual(reader.process.returncode, 0)
+
     def test_pipe_protocol_preserves_binary_and_closes_without_reads(self):
         # Real OS pipes and a fake native peer; no network or target code runs.
         server = '''import os, sys
@@ -231,7 +284,7 @@ for line in sys.stdin.buffer:
         reader = SSHMemory.__new__(SSHMemory)
         reader.process = peer
         try:
-            with self.assertRaisesRegex(Refuse, 'incomplete'):
+            with self.assertRaisesRegex(Refuse, 'SSH closed during output read'):
                 reader._exact(4, time.monotonic() + 5)
             with self.assertRaisesRegex(Refuse, 'Timed out'):
                 reader._exact(4, time.monotonic() - 1)
