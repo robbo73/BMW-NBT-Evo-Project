@@ -2,7 +2,10 @@
 
 This is a client-side Python 3 tool for the particular vehicle firmware we
 inspected. It runs on Chromebook Linux or Ubuntu. It does not run on the BMW.
-It has not yet been used against the vehicle; its tests use offline fixtures.
+Mappings-only and cache inspection have now completed on the vehicle. The
+engine-speed cache remained invalid in both engine-off and approximately
+700-RPM idle tests. The 26 automated tests use offline fixtures. See the
+[vehicle checkpoint](../../docs/2026-11-19-native-cache-checkpoint.md).
 
 The first check collects process/library mappings only. The optional cache
 reader follows existing objects through the stock HMI plugin registry. It
@@ -68,8 +71,10 @@ The inspected stock RPM property uses CPxyVehicle::CEngineSpeed2. A raw
 unsigned 16-bit value is divided by four to produce integer RPM. The native
 CDS JSON already contains scaled RPM; do not divide that JSON value again.
 
-This observer reports `cached_rpm` only when the inspected registration word
-and valid byte are nonzero, raw is not 65535, and scaled RPM is in 0..9000.
+This observer reports `cached_rpm` only when the associated function-block
+pointer and valid byte are nonzero, raw is not 65535, and scaled RPM is in
+0..9000. The historical `registration_word_nonzero` report label refers to
+that pointer at proxy+0x10, not a subscriber count or an active subscription.
 Those checks do not establish freshness. Snapshots are read without locking
 or suspending HMI and can race with updates despite identity checks.
 Every sample therefore reports freshness as unverified. A zero, plausible
@@ -97,8 +102,9 @@ A separate SSH command successfully checked `dd` and the current HMI PID.
 The revised reader retrieves full `pidin mem` output and filters it on the
 client, removing the nested remote grep expression. Startup failures now
 report their phase, SSH exit status and the last available startup lines.
-The cause of the original failure and the revised transport's vehicle
-behavior remain unverified.
+The cause of the original failure remains unproven. The revised transport
+subsequently completed mappings-only and two bounded cache inspections on
+the vehicle; neither inspection returned valid RPM.
 
 The package contains client source, tests, offset/fingerprint metadata and
 notes only. It contains no BMW firmware or shared-library payloads.
