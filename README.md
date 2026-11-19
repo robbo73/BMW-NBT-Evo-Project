@@ -17,6 +17,10 @@ See the [17 November checkpoint and handover](docs/2026-11-17-checkpoint.md) for
 
 The [16 November checkpoint](docs/2026-11-16-checkpoint.md), [15 November checkpoint](docs/2026-11-15-checkpoint.md), [vehicle preflight](docs/2026-11-15-vehicle-preflight.md) and staging-only helper are historical records. Their vehicle activation plans are superseded by the current pause. The [tools guide](tools/README.md) also documents the guarded source-cleanup helper already used on Ubuntu.
 
+## Read-only inspection tool — 19 November
+
+The [native cache reader](tools/native-cache-reader/README.md) is a client-side Python tool for Chromebook Linux or Ubuntu. Its first mode collects HMI process/library mappings only; an explicit optional mode follows existing cache objects using firmware-specific offsets and type checks. Static analysis identified the native `engine.RPMSpeed` provider and its raw-to-RPM conversion. Neither the reader nor live RPM has been validated on the vehicle. The reader passed 24 offline tests. It installs no target executable and does not load libraries or restart HMI; the existing activation pause remains in effect. No BMW binaries are included.
+
 ## Development setup
 
 - **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.

@@ -1,0 +1,41 @@
+{
+  "fingerprints": {
+    "hmi": {
+      "offset": 1048576,
+      "bytes": 64,
+      "sha256": "6ff198deaf26ef92bd5c473e2aec08ca3854c53080b5defc685d19d2b4851919",
+      "file_sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf"
+    },
+    "plugin": {
+      "offset": 97680,
+      "bytes": 64,
+      "sha256": "735526978c6e25e81440ff68b2393fb63af87b4cd256078c32ba6736fd7be4b9",
+      "file_sha256": "2819ea3a02cdcdef571ff99586762c2871961f695d46bcee62edeeb72a1cdfeb"
+    },
+    "remoting": {
+      "offset": 2131288,
+      "bytes": 64,
+      "sha256": "aebbfc9b48645002cba229adc3ba6942f9a9af96a04053db7d75974a40211d89",
+      "file_sha256": "f5e0c7e78bc7054b96817064b7cd9cc6502e103759bab63a56a0320693aa1d37"
+    },
+    "cpp": {
+      "offset": 344056,
+      "bytes": 64,
+      "sha256": "c303e11a3ca8bd8bccf3376763ab5a2a956a7e7bcda67f9fda986f5146f437cb",
+      "file_sha256": "57a95b3afd5df1d78e7f9fa9c96666501c540bfd04dd156a8dd14ae49d443f3c"
+    }
+  },
+  "registry_offset": 198164,
+  "cache_vtable": 196856,
+  "tls_vtable": 196896,
+  "provider_vtable": 6934712,
+  "environment_vtable": 6985600,
+  "vehicle_vtable": 59645168,
+  "engine_speed_vtable": 59648976,
+  "environment_offset": 28,
+  "vehicle_offset": 4,
+  "engine_speed_offset": 17672,
+  "raw_offset": 120,
+  "valid_offset": 96,
+  "registration_offset": 16
+}
