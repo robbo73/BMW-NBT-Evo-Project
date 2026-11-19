@@ -87,3 +87,9 @@ Library-load/unload probes and plugin/HMI activation remain paused following
 the earlier exit faults and head-unit restarts. Do not change memory flags,
 force the valid byte, replace runtimes or inject calls into the running HMI.
 No further vehicle commands are needed for the current offline follow-up.
+
+The [CDS bind follow-up](2026-11-19-cds-bind-followup.md) independently checks
+the first-handler activation path, decodes the 400/401/402 error branches,
+resolves the proxy's notification virtual and defines the remaining static
+and read-only investigations. A missing subscription is a hypothesis, not a
+runtime root cause established by the invalid cache samples.
