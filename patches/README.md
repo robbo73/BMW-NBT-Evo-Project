@@ -1,8 +1,8 @@
 # Changes to the modified milestone-7 source
 
 Patches 1–4 preserve the changes used for the 15–17 November 2026 native
-RPM logging candidates. Patch 5 is a prepared 20 November source change,
-pending an Ubuntu QNX rebuild and offline binary review. Apply them to the corresponding modified
+RPM logging candidates. Patch 5 was applied and rebuilt on Ubuntu on
+20 November; its binary has passed offline review only. Apply them to the corresponding modified
 `~/milestone-7` source, not to this documentation-only checkout.
 
 **Vehicle library-loading tests and HMI activation are paused.** The latest
@@ -28,8 +28,9 @@ instruction or a claim of full vehicle compatibility.
    method and invoke it once for RPM after the subscription call in the
    existing app initialization runnable, using the same callback. Logs mark
    invocation and return without claiming successful data delivery. This
-   source change has not yet been QNX-built or vehicle-tested; see its
-   [preparation review](../docs/2026-11-20-initial-get-preparation.md).
+   source change has been QNX-built and reviewed offline; it has not been
+   vehicle-tested. See the [build review](../docs/2026-11-20-initial-get-build-review.md)
+   and [preparation review](../docs/2026-11-20-initial-get-preparation.md).
 
 The supplied original source identifies NBT-AAD / nanaisu and
 [Supra-iDrive6-Android-Auto](https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)

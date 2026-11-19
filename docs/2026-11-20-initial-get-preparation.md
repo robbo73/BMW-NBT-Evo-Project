@@ -73,3 +73,8 @@ review. Keep platform libraries and the working Android Auto source intact.
 The separate app-admission/initialization investigation remains outstanding;
 adding async-get does not resolve the earlier missing plugin mapping or
 standalone framework shutdown fault. Vehicle execution remains paused.
+
+Follow-up: the owner has now applied the helper, rebuilt on Ubuntu, and
+supplied the result. The [build review](2026-11-20-initial-get-build-review.md)
+records its new fingerprint and passed offline checks. The source preparation
+above is complete on that tree; do not apply it again.
