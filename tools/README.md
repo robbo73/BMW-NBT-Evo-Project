@@ -1,5 +1,28 @@
 # Source preparation and historical staging helper
 
+## Initial RPM async-get preparation on Ubuntu
+
+`prepare_initial_rpm_get.py` prepares patch 5 against the exact reviewed
+17 November `rhmiapp/nbt_aad_app.cpp`. Its default is a check only:
+
+```sh
+python3 /path/to/prepare_initial_rpm_get.py ~/milestone-7
+```
+
+After matching the source revision, explicit `--apply` preserves a backup
+and adds the initial RPM request:
+
+```sh
+python3 /path/to/prepare_initial_rpm_get.py ~/milestone-7 --apply
+```
+
+Use either this helper or patch 5, once. A revision mismatch stops before
+editing; preserve local changes and inspect differences instead of removing
+the hash guard. The helper does not build or connect to the BMW. The
+[source review](../docs/2026-11-20-initial-get-preparation.md) records the
+verified baseline/output hashes and current validation limits. This change
+has not yet been QNX-built or run on the vehicle. Loading remains paused.
+
 ## Guarded stream cleanup on Ubuntu
 
 `prepare_stream_cleanup.py` removes the two unused `<iostream>` includes from

@@ -1,7 +1,8 @@
 # Changes to the modified milestone-7 source
 
-These patches preserve the changes used for the 15–17 November 2026 native
-RPM logging candidates. Apply them to the corresponding modified
+Patches 1–4 preserve the changes used for the 15–17 November 2026 native
+RPM logging candidates. Patch 5 is a prepared 20 November source change,
+pending an Ubuntu QNX rebuild and offline binary review. Apply them to the corresponding modified
 `~/milestone-7` source, not to this documentation-only checkout.
 
 **Vehicle library-loading tests and HMI activation are paused.** The latest
@@ -23,6 +24,12 @@ instruction or a claim of full vehicle compatibility.
    `std::ios_base::Init` imports and the bridge's automatic initializer, with no
    required imports added. This removes avoidable initialization from our code;
    it is not a verified fix for standalone stock-framework loading.
+5. `0005-b58-initial-async-get.patch`: declare the existing native async-get
+   method and invoke it once for RPM after the subscription call in the
+   existing app initialization runnable, using the same callback. Logs mark
+   invocation and return without claiming successful data delivery. This
+   source change has not yet been QNX-built or vehicle-tested; see its
+   [preparation review](../docs/2026-11-20-initial-get-preparation.md).
 
 The supplied original source identifies NBT-AAD / nanaisu and
 [Supra-iDrive6-Android-Auto](https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)

@@ -1,0 +1,25 @@
+--- a/rhmiapp/nbt_aad_app.cpp
++++ b/rhmiapp/nbt_aad_app.cpp
+@@ -194,6 +194,7 @@
+     void setProperty(unsigned componentId, unsigned propertyId, const Parcel& value);   // _ZN3bmw9PluginApp11setPropertyEjjRKNS_6ParcelE
+     // Car data (same call SecurityMenu uses for "specialvehicle.menucontrol"); value arrives as UTF-16 JSON text.
+     void cdsAddPropertyChangedEventHandler(BasicString<char>& property, unsigned id, const CdsDelegate& handler);
++    void cdsGetPropertyAsync(BasicString<char>& property, const CdsDelegate& handler);
+     bool onInit();                           // base implementations, called from our overrides
+     void onFinalize();
+ private:
+@@ -892,8 +893,13 @@
+             rpmProp, 0, rpmDelegate
+         );
+ 
+-        alog("B58 CDS handler registered for %s",
++        alog("B58 CDS subscription call returned for %s",
+              kB58RpmProperty);
++        // Use the same copied delegate for initial and ongoing responses.
++        // One explicit get per subscription-runnable execution; no polling.
++        alog("B58 CDS initial async-get invoking for %s", kB58RpmProperty);
++        g_runApp->cdsGetPropertyAsync(rpmProp, rpmDelegate);
++        alog("B58 CDS initial async-get call returned for %s", kB58RpmProperty);
+     }
+ 
+     {
