@@ -272,8 +272,12 @@ def main():
     parser.add_argument('--pid', type=int, required=True, help='Fresh HmiMain3D PID on hu-omap')
     parser.add_argument('--target', default='root@192.168.16.101')
     parser.add_argument('--read-cache', action='store_true', help='Read the verified existing cache graph')
+    parser.add_argument('--inspect-property', action='store_true',
+                        help='Also inspect existing RPM property and request state (requires --read-cache)')
     parser.add_argument('--output', type=Path, default=Path('nbt-native-cache-report.json'))
     args = parser.parse_args()
+    if args.inspect_property and not args.read_cache:
+        parser.error('--inspect-property requires --read-cache')
     require(not args.output.exists() and not args.output.is_symlink(), 'Output already exists; preserve it first')
     layout = json.loads(Path(__file__).with_name('vehicle-layout.json').read_text())
     report = {'pid': args.pid, 'mode': 'cache' if args.read_cache else 'mappings-only',
@@ -295,13 +299,25 @@ def main():
                     continue
                 require(len(seen) < 4, 'More than four distinct providers; stop for review')
                 seen.add(provider)
+                provider_report = {'scope_address': hex(scope),
+                                   'provider_address': hex(provider)}
+                if args.inspect_property:
+                    from rpm_property_locator import inspect_rpm_property, inspect_request_state
+                    chain = graph.proxy(provider)
+                    require(graph.word(tls + 8) == provider, 'Cached provider changed before property inspection')
+                    provider_report['rpm_property'] = inspect_rpm_property(
+                        graph, provider, expected_proxy=chain[2])
+                    provider_report['request_state'] = inspect_request_state(
+                        graph, chain[2], expected_host=chain[1])
+                    require(graph.proxy(provider) == chain and graph.word(tls + 8) == provider,
+                            'Provider chain changed during property inspection')
                 samples = []
                 for number in range(3):
                     if number:
                         time.sleep(0.5)
                     samples.append(graph.sample(tls, provider))
-                report['providers'].append({'scope_address': hex(scope),
-                                            'provider_address': hex(provider), 'samples': samples})
+                provider_report['samples'] = samples
+                report['providers'].append(provider_report)
         report['result'] = 'completed'
     except (Refuse, OSError, ValueError, BrokenPipeError) as error:
         report['result'] = 'stopped'

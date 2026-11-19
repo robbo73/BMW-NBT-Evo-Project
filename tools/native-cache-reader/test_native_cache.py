@@ -10,7 +10,7 @@ import time
 import unittest
 from unittest.mock import patch
 
-from nbt_native_cache import CacheGraph, Refuse, SSHMemory, fnv1a, parse_header
+from nbt_native_cache import CacheGraph, Refuse, SSHMemory, fnv1a, main, parse_header
 
 
 LAYOUT = json.loads(Path(__file__).with_name('vehicle-layout.json').read_text())
@@ -203,6 +203,16 @@ class CacheTests(unittest.TestCase):
 
 
 class TransportTests(unittest.TestCase):
+    def test_property_inspection_requires_explicit_cache_mode(self):
+        with patch.object(sys, 'argv', ['nbt_native_cache.py', '--pid', '278582', '--inspect-property']), \
+             patch('nbt_native_cache.SSHMemory') as remote, \
+             patch('sys.stderr', new_callable=io.StringIO) as error:
+            with self.assertRaises(SystemExit) as stopped:
+                main()
+            self.assertEqual(stopped.exception.code, 2)
+            self.assertIn('requires --read-cache', error.getvalue())
+            remote.assert_not_called()
+
     def test_startup_failure_reports_phase_exit_status_and_output(self):
         peer = subprocess.Popen(
             [sys.executable, '-c',

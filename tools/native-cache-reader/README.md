@@ -85,13 +85,25 @@ display, and operation without an external dongle remain unverified.
 
 ## Offline validation
 
+The additional `--inspect-property` flag requires `--read-cache`. It inspects
+the existing property map, current bind flags/handlers and function-block
+state. It never calls a target lookup or bind function. Results are attached
+to each provider and use the existing global read budget and guards.
+
+This added mode has offline fixture coverage only. See the
+[review](../../docs/2026-11-19-notification-locator-review.md) before planning
+its first vehicle use with a fresh PID. Missing entries or clear flags do
+not establish binding history. State 2 does not prove transmission, and
+snapshot rechecks are best-effort rather than atomic. No activation is
+part of this mode.
+
 From this directory on Chromebook Linux or Ubuntu:
 
 ```sh
-python3 -m unittest -v test_native_cache.py
+python3 -m unittest discover -s . -p 'test*.py' -v
 ```
 
-26 tests passed in the development workspace. They cover cache absence,
+53 tests passed in the development workspace. They cover cache absence,
 invalid status, unavailable/incorrect objects, changing object chains,
 cycles, limits, process identity, binary framing over real local pipes,
 end-of-file and deadlines. They do not connect to the car and do not verify

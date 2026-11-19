@@ -118,3 +118,8 @@ Fourteen exact ARM instruction checks plus the native proxy virtual target
 were asserted offline for this review. No plugin changes, vehicle memory
 writes, library loading, HMI activation or coding changes were performed.
 The existing pause on vehicle library-load/unload experiments remains.
+
+The [notification/locator review](2026-11-19-notification-locator-review.md)
+checks the supplied follow-up, corrects historical-state inferences, traces
+activation/retry and prepares opt-in read-only property inspection. That
+new vehicle mode remains untested on the car.
