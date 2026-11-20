@@ -4,7 +4,7 @@ This is a client-side Python 3 tool for the particular vehicle firmware we
 inspected. It runs on Chromebook Linux or Ubuntu. It does not run on the BMW.
 Mappings-only and cache inspection have now completed on the vehicle. The
 engine-speed cache remained invalid in both engine-off and approximately
-700-RPM idle tests. The 71 automated tests use offline fixtures. See the
+700-RPM idle tests. The 89 automated tests use offline fixtures. See the
 [vehicle checkpoint](../../docs/2026-11-19-native-cache-checkpoint.md).
 
 The first check collects process/library mappings only. The optional cache
@@ -85,6 +85,12 @@ display, and operation without an external dongle remain unverified.
 
 ## Optional inspections
 
+The opt-in `--inspect-manager` flag requires `--read-cache`. It reads the
+existing app-manager singleton and registered directory paths, with extra
+code fingerprints, type checks, bounded tree traversal and region rechecks.
+It does not invoke a scan or load a plugin. This new mode has offline tests
+only; see the [path review](../../docs/2026-11-20-plugin-manager-path-review.md).
+
 The further opt-in `--inspect-admission` flag also requires `--read-cache`.
 It observes coding predicates in existing variant-server objects, using the
 actual vehicle's libhmicoding profile and additional code/type checks. It
@@ -117,7 +123,7 @@ From this directory on Chromebook Linux or Ubuntu:
 python3 -m unittest discover -s . -p 'test*.py' -v
 ```
 
-71 tests passed in the development workspace. They cover cache absence,
+89 tests passed in the development workspace. They cover cache absence,
 invalid status, unavailable/incorrect objects, changing object chains,
 cycles, limits, process identity, binary framing over real local pipes,
 end-of-file and deadlines. They do not connect to the car and do not verify

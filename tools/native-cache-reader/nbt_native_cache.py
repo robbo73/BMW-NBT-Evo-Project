@@ -278,12 +278,16 @@ def main():
                         help='Also inspect existing RPM property and request state (requires --read-cache)')
     parser.add_argument('--inspect-admission', action='store_true',
                         help='Observe coding predicates in existing variant servers (requires --read-cache)')
+    parser.add_argument('--inspect-manager', action='store_true',
+                        help='Read existing app-manager directory records (requires --read-cache)')
     parser.add_argument('--output', type=Path, default=Path('nbt-native-cache-report.json'))
     args = parser.parse_args()
     if args.inspect_property and not args.read_cache:
         parser.error('--inspect-property requires --read-cache')
     if args.inspect_admission and not args.read_cache:
         parser.error('--inspect-admission requires --read-cache')
+    if args.inspect_manager and not args.read_cache:
+        parser.error('--inspect-manager requires --read-cache')
     require(not args.output.exists() and not args.output.is_symlink(), 'Output already exists; preserve it first')
     layout = json.loads(Path(__file__).with_name('vehicle-layout.json').read_text())
     report = {'pid': args.pid, 'mode': 'cache' if args.read_cache else 'mappings-only',
@@ -296,6 +300,10 @@ def main():
         if args.read_cache:
             graph = CacheGraph(memory, memory.bases, layout)
             graph.verify_images()
+            if args.inspect_manager:
+                from plugin_manager import inspect_manager
+                manager_layout = json.loads(Path(__file__).with_name('manager-layout.json').read_text())
+                report['plugin_manager'] = inspect_manager(graph, manager_layout)
             if args.inspect_admission:
                 from app_admission import inspect_admission
                 admission_layout = json.loads(Path(__file__).with_name('admission-layout.json').read_text())
@@ -346,6 +354,8 @@ def main():
 
 
 if __name__ == '__main__':
+    # Optional inspectors must share this script's Refuse class and helpers.
+    sys.modules['nbt_native_cache'] = sys.modules[__name__]
     try:
         sys.exit(main())
     except (Refuse, OSError, ValueError) as error:

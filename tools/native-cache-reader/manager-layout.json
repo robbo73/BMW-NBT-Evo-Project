@@ -1,0 +1,27 @@
+{
+  "source_file_sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf",
+  "instance_pointer": 60792468,
+  "manager_vtable": 59671856,
+  "fingerprints": [
+    {
+      "offset": 37980024,
+      "bytes": 440,
+      "sha256": "0f638e110671025a69d02c8063be9af232d911efb8a086c40e7fb385fe87e95c"
+    },
+    {
+      "offset": 37986016,
+      "bytes": 124,
+      "sha256": "dfabe11992bd7ba0d5248193acb63109b542f95459880e3474c65b7741f12042"
+    },
+    {
+      "offset": 37979600,
+      "bytes": 180,
+      "sha256": "32a7358d5b188ea494b9eb901eb86a32b50415dc2b83bd29b41f2853b9018313"
+    },
+    {
+      "offset": 16849392,
+      "bytes": 116,
+      "sha256": "c8ed46238f1c11446bb7a672d916161c8e75ea9e6b6fa4e56d75de46ae41433d"
+    }
+  ]
+}
