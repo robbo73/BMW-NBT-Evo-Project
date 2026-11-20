@@ -97,3 +97,8 @@ The new observer does not relax the pause on plugin loading or standalone
 load/unload probes following the earlier crashes. The actual car's current
 admission values, successful native subscription and fresh B58 RPM remain
 unverified. No firmware, patched binaries or vehicle coding data are committed.
+
+Follow-up: the first read-only vehicle observation has now completed. Both
+admission predicates passed in one cached instance; its app-manager scope
+association and plugin loading remain unverified. See the
+[20 November results](2026-11-20-app-admission-vehicle-results.md).

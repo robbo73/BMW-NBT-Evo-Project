@@ -4,7 +4,7 @@ This is a client-side Python 3 tool for the particular vehicle firmware we
 inspected. It runs on Chromebook Linux or Ubuntu. It does not run on the BMW.
 Mappings-only and cache inspection have now completed on the vehicle. The
 engine-speed cache remained invalid in both engine-off and approximately
-700-RPM idle tests. The 26 automated tests use offline fixtures. See the
+700-RPM idle tests. The 71 automated tests use offline fixtures. See the
 [vehicle checkpoint](../../docs/2026-11-19-native-cache-checkpoint.md).
 
 The first check collects process/library mappings only. The optional cache
@@ -89,9 +89,11 @@ The further opt-in `--inspect-admission` flag also requires `--read-cache`.
 It observes coding predicates in existing variant-server objects, using the
 actual vehicle's libhmicoding profile and additional code/type checks. It
 calls no native variant method, changes no coding and activates no plugin.
-This new mode has offline tests only. See the
+Its first vehicle run completed: both admission predicates passed in one
+cached instance, while actual app-manager scope association remains unverified.
+See the [vehicle results](../../docs/2026-11-20-app-admission-vehicle-results.md) and
 [admission review](../../docs/2026-11-19-app-admission-review.md) for the
-per-instance/scope limits before its first planned vehicle use.
+per-instance/scope limits.
 
 The additional `--inspect-property` flag requires `--read-cache`. It inspects
 the existing property map, current bind flags/handlers and function-block
