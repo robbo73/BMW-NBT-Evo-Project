@@ -1,5 +1,21 @@
 # Source preparation and historical staging helper
 
+## Separate native initialization check on Ubuntu
+
+`prepare_init_check.py` verifies the reviewed full RPM source and can create
+a separate lifecycle-only source file with `--write-copy`. It never edits
+the original. `build_init_check.sh` runs that preparation and builds the
+distinct libNbtAadInitCheck.so using the existing QNX Docker image:
+
+```sh
+bash /path/to/build_init_check.sh ~/milestone-7
+```
+
+It preserves the full source/binary, refuses existing check-output files and
+produces ~/nbt-init-check-review.tar.gz. Build and upload that archive for
+offline review; no vehicle installation or execution is performed. See the
+[initialization review and trial-plan limits](../docs/2026-11-20-initialization-review.md).
+
 ## Initial RPM async-get preparation on Ubuntu
 
 `prepare_initial_rpm_get.py` prepares patch 5 against the exact reviewed
