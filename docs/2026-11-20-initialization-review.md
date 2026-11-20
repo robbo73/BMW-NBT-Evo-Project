@@ -107,3 +107,8 @@ This preparation does not lift the vehicle-execution pause. A successful
 future initialization-only trial would not validate CDS, RPM, Android Auto
 features, process shutdown or all unload paths. The full candidate and live
 engine-speed work remain separate subsequent steps.
+
+Follow-up: the owner has built the separate variant on Ubuntu, preserving
+the full RPM source and binary. Its [offline build review](2026-11-20-init-check-build-review.md)
+passes; the [native-host trial plan](2026-11-20-init-check-trial-plan.md)
+remains a draft without activation.
