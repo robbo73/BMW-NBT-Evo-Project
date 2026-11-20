@@ -3,6 +3,10 @@
 This is a review plan, not an activation instruction. No vehicle command
 in this plan has been run for the new check. The separate build has passed
 [offline review](2026-11-20-init-check-build-review.md); loading is still paused.
+The [Chromebook preparation bundle](2026-11-20-init-check-ready-bundle.md)
+now implements hidden staging/read-back and the guarded containment move.
+Its new vehicle commands remain untested; the move and later restart are
+separate operations, and the helper contains no activation command.
 
 ## Fixed prospective identity
 
@@ -50,11 +54,11 @@ reboots or an immediate switch to the full RPM candidate.
 ## Rollback semantics
 
 The intended reverse move is from the exact active trial directory back to
-the exact hidden stage. A future command must verify the physical ID5 root,
-reject linked/mismatched paths, require the active trial directory and
-refuse an existing hidden destination before using mv. Idempotent handling
-of an already hidden trial must be explicit. It must not delete files or
-touch the older NbtAad stage.
+the exact hidden stage. The prepared rollback helper verifies the physical
+ID5 root, rejects linked/mismatched paths, requires the active trial directory
+and refuses an existing hidden destination before using mv. It explicitly
+handles an already hidden trial without moving it. It deletes no files and
+does not touch the older NbtAad stage.
 
 That rename prevents discovery at a subsequent startup. It does not unload
 an already running library, stop a callback or prove shutdown safety. The

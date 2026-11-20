@@ -1,5 +1,15 @@
 # Source preparation and historical staging helper
 
+## Chromebook initialization-check ready bundle
+
+The [initialization-check helper](init-check/README.md) provides offline
+verification, hidden staging/read-back and guarded containment for the
+separate reviewed lifecycle build. Its default does not contact the car;
+there is no activation or restart command. The separately delivered ready
+bundle includes the pinned candidate, which is not stored in GitHub.
+29 offline filesystem-backed checks pass; vehicle use of this new helper
+remains untested. See the [preparation checkpoint](../docs/2026-11-20-init-check-ready-bundle.md).
+
 ## Separate native initialization check on Ubuntu
 
 `prepare_init_check.py` verifies the reviewed full RPM source and can create
@@ -36,8 +46,9 @@ Use either this helper or patch 5, once. A revision mismatch stops before
 editing; preserve local changes and inspect differences instead of removing
 the hash guard. The helper does not build or connect to the BMW. The
 [source review](../docs/2026-11-20-initial-get-preparation.md) records the
-verified baseline/output hashes and current validation limits. This change
-has not yet been QNX-built or run on the vehicle. Loading remains paused.
+verified baseline/output hashes and current validation limits. The owner has
+since rebuilt it; the [offline build review](../docs/2026-11-20-initial-get-build-review.md)
+records the result. It has not been run on the vehicle. Loading remains paused.
 
 ## Guarded stream cleanup on Ubuntu
 
