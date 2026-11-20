@@ -23,6 +23,8 @@ The [native cache reader](tools/native-cache-reader/README.md) is a client-side 
 
 Offline review of the actual vehicle's coding library identifies the separate app-admission predicates. The opt-in observer's first vehicle run completed: both predicates passed in one cached variant-server instance. Its association with the app manager's execution scope remains unverified, and the result does not prove plugin loading. See the [vehicle results](docs/2026-11-20-app-admission-vehicle-results.md) and [coding review and limits](docs/2026-11-19-app-admission-review.md).
 
+The manager-path observer also completed a vehicle run. It confirms the intended RW Plugins root is registered without the per-directory coded-name filter. The older candidate remains hidden; no new plugin was loaded. See the [registered-path results](docs/2026-11-20-plugin-manager-vehicle-results.md).
+
 ## Development setup
 
 - **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.

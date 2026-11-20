@@ -88,8 +88,11 @@ display, and operation without an external dongle remain unverified.
 The opt-in `--inspect-manager` flag requires `--read-cache`. It reads the
 existing app-manager singleton and registered directory paths, with extra
 code fingerprints, type checks, bounded tree traversal and region rechecks.
-It does not invoke a scan or load a plugin. This new mode has offline tests
-only; see the [path review](../../docs/2026-11-20-plugin-manager-path-review.md).
+It does not invoke a scan or load a plugin. Its first vehicle run completed
+and confirmed four registered paths, including the intended RW Plugins root
+with its coded-name filter off. See the
+[results](../../docs/2026-11-20-plugin-manager-vehicle-results.md) and
+[path review](../../docs/2026-11-20-plugin-manager-path-review.md).
 
 The further opt-in `--inspect-admission` flag also requires `--read-cache`.
 It observes coding predicates in existing variant-server objects, using the

@@ -69,3 +69,7 @@ the saved JSON error path instead of escaping as an uncaught exception.
 
 This new mode has not yet been exercised on the vehicle. It is intended to
 identify the actual registered search paths while the candidate stays hidden.
+
+Follow-up: the first vehicle run has now completed. The four paths and
+filter flags matched the expected RO/RW arrangement; the candidate remains
+hidden. See the [vehicle results](2026-11-20-plugin-manager-vehicle-results.md).
