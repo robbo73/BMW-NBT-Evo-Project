@@ -82,3 +82,23 @@ from a successful write/read/delete result.
 Library-load and restart trials remain paused. Continue preparation offline
 if the owner disconnects; maintaining an ignition-on car session is not
 necessary for disassembly or recovery-helper development.
+
+## RAM check follow-up: missing rmdir
+
+The owner ran the original inert check on OMAP. The explicit cleanup and
+exit-trap cleanup both reported `/bin/sh: rmdir: cannot execute - No such
+file or directory`. Under set -e, reaching the explicit rmdir establishes
+that directory creation, text write/read comparison and text-file deletion
+had completed, but the check did not reach PASS. The subsequent listing
+showed `/ramdisk/mm/.nbt-ram-check.18329716`, mode 700, size 0. The listing
+alone is not a complete empty-directory enumeration. No plugin was loaded.
+
+The helper is corrected to precheck ln/mkdir/cat/rm and avoid rmdir. Cleanup
+rejects a linked probe path, removes its own check file, rejects any remaining
+ordinary/hidden entry (including dangling links), and uses rm -r only on the
+exact, owned empty directory. It never uses recursive removal on a wildcard,
+Plugins root or payload stage. Do not concurrently edit these temporary
+paths. Local disposable Linux checks cover successful cleanup, cleanup after
+a failed read, and preservation of an unexpected hidden entry. Execution of
+the corrected helper on QNX and removal of the observed residual directory
+are not yet confirmed.
