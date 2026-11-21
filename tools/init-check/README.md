@@ -116,5 +116,10 @@ filesystem fixtures, with synthetic payloads and no SSH. They cover hash and
 archive checks, successful hidden staging/modes, old active candidates,
 symlinks/missing paths, interrupted transfers, noclobber, corrupted read-back,
 verification without mutation, report preservation and guarded/idempotent
-rollback. This is not end-to-end validation on QNX; the new helper and
-initialization-check candidate have not been run on the vehicle.
+rollback. This fixture testing is not end-to-end validation on QNX.
+
+Update, 21 November: the owner subsequently completed preflight, hidden
+staging with all five matching read-backs, and rollback-path inspection on
+the vehicle. The initialization-check binary has not been executed, and
+the new rollback move has not been exercised there. See the
+[staging results](../../docs/2026-11-21-init-check-staging-results.md).
