@@ -99,6 +99,20 @@ ordinary/hidden entry (including dangling links), and uses rm -r only on the
 exact, owned empty directory. It never uses recursive removal on a wildcard,
 Plugins root or payload stage. Do not concurrently edit these temporary
 paths. Local disposable Linux checks cover successful cleanup, cleanup after
-a failed read, and preservation of an unexpected hidden entry. Execution of
-the corrected helper on QNX and removal of the observed residual directory
-are not yet confirmed.
+a failed read, and preservation of an unexpected hidden entry. The corrected
+complete helper has not been rerun on QNX.
+
+The owner subsequently ran the exact-path cleanup for
+`/ramdisk/mm/.nbt-ram-check.18329716`. That command verified the physical RAM
+root, required a non-linked directory, rejected any ordinary/hidden entries,
+removed the exact directory with rm -r and checked its absence. It printed
+`PASS: temporary directory removed`. This confirms cleanup of the observed
+residual directory and availability of that removal operation; it does not
+test reboot clearing, plugin-link admission or HMI recovery.
+
+The vehicle preparation session can end here: all five initialization-check
+payloads remain verified in their hidden disk stage, the RAM filesystem
+supports the observed create/write/read/delete operations, and no candidate
+was exposed or executed. Next work is offline design/validation of a guarded
+temporary trial and containment sequence covering HMI-only restart as well
+as loss of SSH. No further ignition-on observation is needed for that work.
