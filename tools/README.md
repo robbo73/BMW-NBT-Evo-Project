@@ -7,7 +7,9 @@ filesystem timeout experiment, with 13 passing Linux fixture checks. The
 Ubuntu build script produces a QNX ELF/readelf review archive without
 touching milestone-7, connecting to the BMW or executing the ARM output.
 It contains no plugin activation or library loading, and guard death remains
-an explicit recovery limitation. Target build/review is the next step.
+an explicit recovery limitation. The owner has now built the QNX output;
+its [offline ELF/runtime review](../docs/2026-11-21-ram-lease-build-review.md)
+passes against the captured libc. No vehicle execution has taken place.
 
 ## Chromebook initialization-check ready bundle
 

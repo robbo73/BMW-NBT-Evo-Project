@@ -30,3 +30,9 @@ test of HMI, QNX or the vehicle watchdog. Existing RAM lifetime and library
 resource/finalization uncertainties remain. See the
 [volatile-path review](2026-11-21-volatile-path-review.md) for the evidence
 and the [trial plan](2026-11-20-init-check-trial-plan.md) for the current pause.
+
+Follow-up: the owner completed the QNX build and uploaded its output. The
+[offline build review](2026-11-21-ram-lease-build-review.md) verifies exact
+source/binary identities, QNX interpreter/runtime imports and C-only startup.
+No target execution has taken place; no further rebuild is needed for those
+reviewed bytes.

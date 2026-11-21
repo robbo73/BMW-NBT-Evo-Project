@@ -1,0 +1,103 @@
+{
+  "archive_sha256": "a1cbc0ddee52b8fdf42e58521d941701dc70efec5ce7d9f823b1b2010729d5e5",
+  "executable": {
+    "bytes": 12820,
+    "sha256": "12bcd2379450108198d83b1a78611337bca5902ff5728fa55bcdb01450c16238",
+    "machine": "EM_ARM",
+    "type": "ET_EXEC",
+    "flags": "0x5000002",
+    "entry": "0x100994",
+    "interpreter": [
+      "/usr/lib/ldqnx.so.2"
+    ],
+    "needed": [
+      "libc.so.3"
+    ]
+  },
+  "captured_libc": {
+    "bytes": 490310,
+    "sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+    "export_table_source": "PT_DYNAMIC; no section reconstruction"
+  },
+  "required_undefined": [
+    "clock_gettime",
+    "printf",
+    "_init_array",
+    "sigemptyset",
+    "snprintf",
+    "getpid",
+    "_preinit_array",
+    "perror",
+    "readlink",
+    "puts",
+    "rmdir",
+    "fflush",
+    "realpath",
+    "nanosleep",
+    "__get_errno_ptr",
+    "lstat",
+    "unlink",
+    "sigaction",
+    "symlink",
+    "_init_libc",
+    "memset",
+    "_fini_array",
+    "strcmp",
+    "atexit",
+    "stat",
+    "fwrite",
+    "exit",
+    "mkdir"
+  ],
+  "weak_undefined": [
+    "__deregister_frame_info",
+    "__register_frame_info"
+  ],
+  "missing_required_from_captured_libc": [],
+  "copy_relocations": [
+    {
+      "name": "_Stdout",
+      "executable_bytes": 80,
+      "libc_bytes": 80,
+      "available": true,
+      "equal_size": true
+    },
+    {
+      "name": "errno",
+      "executable_bytes": 4,
+      "libc_bytes": 4,
+      "available": true,
+      "equal_size": true
+    },
+    {
+      "name": "_Stderr",
+      "executable_bytes": 80,
+      "libc_bytes": 80,
+      "available": true,
+      "equal_size": true
+    }
+  ],
+  "relocation_types": {
+    "20": 3,
+    "22": 30
+  },
+  "arrays": {
+    ".init_array": [
+      {
+        "address": "0x100b50",
+        "symbol": "frame_dummy"
+      }
+    ],
+    ".fini_array": [
+      {
+        "address": "0x100b0c",
+        "symbol": "__do_global_dtors_aux"
+      }
+    ]
+  },
+  "forbidden_dynamic_tags": [],
+  "host_mode_string_in_target": false,
+  "has_fixed_ram_root": true,
+  "has_link_rehearsal_switch": true,
+  "runtime_execution_performed": false
+}
