@@ -62,3 +62,8 @@ baseline, inspect active manifest ID/name conflicts, preserve any existing
 RAM log, and resolve sustained power, controlled observation/recovery and
 the response to lost SSH. Do not repeat a standalone loader probe or
 activate the full RPM build to validate this staging result.
+
+Follow-up: a fresh PID/library baseline, stable-screen/ignition state and
+RAM-mount listing are now recorded in the
+[volatile-path investigation](2026-11-21-volatile-path-review.md). It does
+not authorize or establish a recovery-safe loading trial.
