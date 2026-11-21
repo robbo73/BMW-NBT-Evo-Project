@@ -116,3 +116,9 @@ supports the observed create/write/read/delete operations, and no candidate
 was exposed or executed. Next work is offline design/validation of a guarded
 temporary trial and containment sequence covering HMI-only restart as well
 as loss of SSH. No further ignition-on observation is needed for that work.
+
+The first offline deliverable is now the
+[inert C-only deadline rehearsal](2026-11-21-ram-lease-rehearsal-preparation.md).
+Its Linux tests explicitly retain a fixture after SIGKILL; no claim that a
+timer alone resolves recovery is made. The next owner action is an Ubuntu
+cross-build for ELF inspection, not a BMW command.

@@ -1,5 +1,14 @@
 # Source preparation and historical staging helper
 
+## Inert RAM lease rehearsal on Ubuntu
+
+The [C-only rehearsal](ram-lease-rehearsal/README.md) prepares a separate
+filesystem timeout experiment, with 13 passing Linux fixture checks. The
+Ubuntu build script produces a QNX ELF/readelf review archive without
+touching milestone-7, connecting to the BMW or executing the ARM output.
+It contains no plugin activation or library loading, and guard death remains
+an explicit recovery limitation. Target build/review is the next step.
+
 ## Chromebook initialization-check ready bundle
 
 The [initialization-check helper](init-check/README.md) provides offline
