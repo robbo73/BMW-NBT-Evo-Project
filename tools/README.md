@@ -8,6 +8,9 @@ portable policy checks and a separate callback type check pass. The server
 has no plugin/HMI operation and has not been run on the vehicle. The build
 script creates an ELF review archive without touching milestone-7 or
 executing target code; kernel namespace lifetime remains a future test.
+The owner has now supplied that cross-build; its
+[offline review](../docs/2026-11-23-endpoint-build-review.md) passes against
+the captured libc. No native endpoint execution has taken place.
 
 ## QNX resource-manager interface capture on Ubuntu
 

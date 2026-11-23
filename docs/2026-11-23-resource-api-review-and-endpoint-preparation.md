@@ -65,3 +65,9 @@ expiry, signal/forced death, endpoint lookup/read/seek/error semantics and
 reader/resource lifetime must be demonstrated with inert data first. No
 change to the pause on library loading or HMI activation is made here.
 See the [endpoint investigation](2026-11-23-process-owned-endpoint-investigation.md).
+
+Follow-up: the owner cross-built the prototype and supplied its output.
+The [offline endpoint build review](2026-11-23-endpoint-build-review.md)
+passes source-identity, ELF/import and relevant layout checks. No endpoint
+has been executed on the vehicle, and no further rebuild is needed for
+those frozen bytes.

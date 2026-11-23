@@ -1,0 +1,121 @@
+{
+  "archive": {
+    "bytes": 16848,
+    "sha256": "79f490438cc0893df4b651d6ee04fe2b5d761bc816ab16c1fe787f052e284b6c"
+  },
+  "executable": {
+    "bytes": 13681,
+    "sha256": "3df7b9161c30d5195975c37b614d92f0bdbfc23792d88c74691e30e735d7a625",
+    "class": 32,
+    "little_endian": true,
+    "machine": "EM_ARM",
+    "type": "ET_EXEC",
+    "flags": "0x5000002",
+    "entry": "0x100b0c",
+    "interpreter": [
+      "/usr/lib/ldqnx.so.2"
+    ],
+    "needed": [
+      "libc.so.3"
+    ]
+  },
+  "captured_libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+  "required_undefined_count": 33,
+  "required_undefined": [
+    "clock_gettime",
+    "dispatch_handler",
+    "printf",
+    "_init_array",
+    "sigemptyset",
+    "snprintf",
+    "iofunc_attr_init",
+    "getpid",
+    "_preinit_array",
+    "resmgr_attach",
+    "perror",
+    "puts",
+    "fflush",
+    "iofunc_open_default",
+    "dispatch_destroy",
+    "__get_errno_ptr",
+    "lstat",
+    "dispatch_context_alloc",
+    "sigaction",
+    "_init_libc",
+    "memset",
+    "iofunc_read_verify",
+    "_fini_array",
+    "dispatch_context_free",
+    "strcmp",
+    "atexit",
+    "resmgr_detach",
+    "dispatch_create",
+    "fwrite",
+    "iofunc_func_init",
+    "exit",
+    "dispatch_timeout",
+    "dispatch_block"
+  ],
+  "missing_required": [],
+  "weak_undefined": [
+    "__deregister_frame_info",
+    "__register_frame_info"
+  ],
+  "copy_relocations": [
+    {
+      "name": "_Stdout",
+      "bytes": 80,
+      "libc_bytes": 80,
+      "matches": true
+    },
+    {
+      "name": "errno",
+      "bytes": 4,
+      "libc_bytes": 4,
+      "matches": true
+    },
+    {
+      "name": "_Stderr",
+      "bytes": 80,
+      "libc_bytes": 80,
+      "matches": true
+    }
+  ],
+  "relocation_types": {
+    "20": 3,
+    "22": 35
+  },
+  "forbidden_dynamic_tags": [],
+  "arrays": {
+    ".init_array": [
+      {
+        "address": "0x100cc8",
+        "name": "frame_dummy"
+      }
+    ],
+    ".fini_array": [
+      {
+        "address": "0x100c84",
+        "name": "__do_global_dtors_aux"
+      }
+    ]
+  },
+  "dummy_text_present": true,
+  "fixed_endpoint_prefix_present": true,
+  "serve_switch_present": true,
+  "target_executed": false,
+  "observed_abi_checks": {
+    "connect_callbacks": 8,
+    "io_callbacks": 26,
+    "libc_attribute_init_bytes": 88,
+    "compiled_attribute_nbytes_offset": "0x28",
+    "libc_attribute_mode_offset": "0x4c",
+    "compiled_ocb_offset_field": "0x08",
+    "compiled_context_status_offset": "0x48",
+    "compiled_context_iov_offsets": [
+      "0x54",
+      "0x58"
+    ],
+    "scope": "Relevant fields only, not exhaustive ABI validation"
+  }
+}
