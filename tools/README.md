@@ -6,10 +6,13 @@ The [fixed-text QNX endpoint prototype](endpoint-rehearsal/README.md) is
 prepared using the captured SDK interfaces. Its initial serving test failed
 on an idle-timeout handling bug after a successful help-only check. The
 [correction](../docs/2026-11-23-endpoint-timeout-correction.md) has 25 passing
-host checks and requires a fresh QNX cross-build/review. Do not rerun the
+host checks and its corrected QNX cross-build now passes offline review. Do not rerun the
 initial 3df7b9161c30 build. The server has no plugin/HMI operation; its build
 script does not touch milestone-7 or execute ARM code. Kernel endpoint
 lifetime remains a future test.
+The corrected cross-build has now been supplied and
+[reviewed](../docs/2026-11-23-endpoint-timeout-fix-build-review.md). Its
+compiled retry branch matches the fix; native serving remains unverified.
 
 ## QNX resource-manager interface capture on Ubuntu
 

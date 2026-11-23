@@ -81,3 +81,8 @@ runtime symbols must be inspected before another inert car test. The fix
 has not been built for QNX or run on the car yet. No new BMW observation is
 needed for that offline step. Actual plugin loading/HMI restarts remain
 paused and live RPM is unverified.
+
+Follow-up: the owner has supplied the corrected QNX build. Its
+[offline review](2026-11-23-endpoint-timeout-fix-build-review.md) confirms
+the receive-ID check and retry branch in the compiled code, unchanged
+runtime imports and absence of host stubs. Native behavior remains pending.
