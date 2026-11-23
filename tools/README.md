@@ -1,5 +1,14 @@
 # Source preparation and historical staging helper
 
+## Inert endpoint prototype on Ubuntu
+
+The [fixed-text QNX endpoint prototype](endpoint-rehearsal/README.md) is
+prepared for cross-build/review using the captured SDK interfaces. Sixteen
+portable policy checks and a separate callback type check pass. The server
+has no plugin/HMI operation and has not been run on the vehicle. The build
+script creates an ELF review archive without touching milestone-7 or
+executing target code; kernel namespace lifetime remains a future test.
+
 ## QNX resource-manager interface capture on Ubuntu
 
 The [include-only SDK capture](resource-api-capture/README.md) obtains the

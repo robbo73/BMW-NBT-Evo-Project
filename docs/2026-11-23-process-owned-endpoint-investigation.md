@@ -92,3 +92,9 @@ After interface review, any prototype must be isolated from real Plugins,
 serve dummy data only, and test ordinary expiry, handled signals and forced
 death before a real manifest endpoint is considered. This preserves the
 pause on plugin loading/HMI restarts. Live RPM remains unverified.
+
+Follow-up: the owner supplied the SDK preprocessing output. Its verified
+interfaces were used to prepare an isolated, fixed-text endpoint prototype
+for an Ubuntu-only cross-build. See the
+[interface review and preparation](2026-11-23-resource-api-review-and-endpoint-preparation.md).
+No endpoint has been run on the vehicle and lifetime remains unverified.
