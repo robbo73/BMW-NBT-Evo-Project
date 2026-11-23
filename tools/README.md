@@ -1,5 +1,13 @@
 # Source preparation and historical staging helper
 
+## QNX resource-manager interface capture on Ubuntu
+
+The [include-only SDK capture](resource-api-capture/README.md) obtains the
+existing toolchain's declarations/macros for investigating a process-owned
+endpoint. It creates no target executable and needs no BMW connection.
+No such endpoint is implemented or activated. Preprocessed vendor output
+is for private review and is not committed to GitHub.
+
 ## Inert RAM lease rehearsal on Ubuntu
 
 The [C-only rehearsal](ram-lease-rehearsal/README.md) prepares a separate

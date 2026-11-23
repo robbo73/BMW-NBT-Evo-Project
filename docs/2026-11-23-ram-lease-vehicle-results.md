@@ -85,3 +85,9 @@ not yet been performed. No native build/source change is needed for it.
 The pause on actual library-load probes and HMI activation/restarts remains.
 See the [offline build review](2026-11-21-ram-lease-build-review.md) and
 [volatile-path investigation](2026-11-21-volatile-path-review.md).
+
+Follow-up: an additional rehearsal fixture was absent after the owner
+stopped the test session, but the exact disconnect/stop sequence is not
+established. A native /proc listing also lacked cwd/fd paths. See the
+[process-owned endpoint investigation](2026-11-23-process-owned-endpoint-investigation.md)
+for those observations and the next Ubuntu-only SDK interface capture.
