@@ -1,12 +1,9 @@
 #!/bin/sh
 # OMAP only: fixed-text endpoint, own child PIDs, no HMI/plugin operation.
-echo "STOP: initial 3df7b9161c30 build has an idle-timeout bug; do not rerun." >&2
-exit 1
-# Historical command below is preserved as evidence, not an active test.
 set -u
 ulimit -c 0 || exit 1
 for nbt_cmd in sleep kill ls cat; do command -v "$nbt_cmd" >/dev/null || exit 1; done
-nbt_binary=/dev/shmem/nbt_endpoint_rehearsal_3df7b9161c30
+nbt_binary=/dev/shmem/nbt_endpoint_rehearsal_83c6e473829e
 if [ ! -f "$nbt_binary" ] || [ -L "$nbt_binary" ] || [ ! -x "$nbt_binary" ]; then
     echo "STOP: verified RAM executable is missing/linked/not executable"
     exit 1

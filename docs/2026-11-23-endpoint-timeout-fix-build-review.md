@@ -98,3 +98,9 @@ The corrected build has not yet registered an endpoint, served a client,
 reached native expiry or demonstrated lookup failure after forced death.
 Actual plugin activation/HMI restart trials remain paused. The original
 initialization-check/full RPM builds are unchanged; live RPM is unverified.
+
+Follow-up: corrected help-only startup and the single-console normal test
+have now completed on the car, including metadata, expected text, deadline
+exit 0 and independent post-exit lookup failure. See the
+[vehicle results](2026-11-23-endpoint-vehicle-results.md). Forced death and
+manifest/HMI integration remain unverified.

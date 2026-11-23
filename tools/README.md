@@ -8,18 +8,21 @@ on an idle-timeout handling bug after a successful help-only check. The
 [correction](../docs/2026-11-23-endpoint-timeout-correction.md) has 25 passing
 host checks and its corrected QNX cross-build now passes offline review. Do not rerun the
 initial 3df7b9161c30 build. The server has no plugin/HMI operation; its build
-script does not touch milestone-7 or execute ARM code. Kernel endpoint
-lifetime remains a future test.
+script does not touch milestone-7 or execute ARM code.
 The corrected cross-build has now been supplied and
 [reviewed](../docs/2026-11-23-endpoint-timeout-fix-build-review.md). Its
-compiled retry branch matches the fix; native serving remains unverified.
+compiled retry branch matches the fix. The owner has now confirmed native
+fixed-text reading, normal deadline exit 0 and post-exit lookup failure.
+See the [vehicle results](../docs/2026-11-23-endpoint-vehicle-results.md).
+The forced-death check is prepared but has not run on the vehicle.
 
 ## QNX resource-manager interface capture on Ubuntu
 
 The [include-only SDK capture](resource-api-capture/README.md) obtains the
 existing toolchain's declarations/macros for investigating a process-owned
 endpoint. It creates no target executable and needs no BMW connection.
-No such endpoint is implemented or activated. Preprocessed vendor output
+The separate prototype above implements an inert fixed-text endpoint,
+without any manifest or plugin integration. Preprocessed vendor output
 is for private review and is not committed to GitHub.
 
 ## Inert RAM lease rehearsal on Ubuntu
