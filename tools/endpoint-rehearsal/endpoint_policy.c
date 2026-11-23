@@ -29,3 +29,13 @@ int nbt_endpoint_open_allowed(unsigned flags, unsigned write_mask,
 {
     return (flags & (write_mask | change_mask)) == 0;
 }
+
+enum nbt_dispatch_action nbt_endpoint_dispatch_action(int has_context,
+                                                     int rcvid, int error)
+{
+    /* A real request/pulse is valid even if an API left errno unchanged.
+     * QNX receive timeout can return a context with rcvid == -1. */
+    if (has_context && rcvid >= 0) return NBT_DISPATCH_MESSAGE;
+    if (error == EINTR || error == ETIMEDOUT) return NBT_DISPATCH_RETRY;
+    return NBT_DISPATCH_FAIL;
+}

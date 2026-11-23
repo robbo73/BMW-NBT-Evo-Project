@@ -10,4 +10,11 @@ int nbt_endpoint_slice(long long offset, long long requested,
                        size_t *start, size_t *count);
 int nbt_endpoint_open_allowed(unsigned flags, unsigned write_mask,
                               unsigned change_mask);
+enum nbt_dispatch_action {
+    NBT_DISPATCH_FAIL = -1,
+    NBT_DISPATCH_RETRY = 0,
+    NBT_DISPATCH_MESSAGE = 1
+};
+enum nbt_dispatch_action nbt_endpoint_dispatch_action(int has_context,
+                                                     int rcvid, int error);
 #endif

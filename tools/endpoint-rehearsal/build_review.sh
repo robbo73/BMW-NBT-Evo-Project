@@ -5,7 +5,7 @@ nbt_prep=$(cd -- "$(dirname -- "$0")" && pwd)
 cd "$nbt_prep"
 sha256sum -c SHA256SUMS
 nbt_out=build-qnx
-nbt_review="$HOME/nbt-endpoint-review.tar.gz"
+nbt_review="$HOME/nbt-endpoint-timeout-fix-review.tar.gz"
 if [ -e "$nbt_out" ] || [ -L "$nbt_out" ]; then
     echo "Build output already exists; preserve it before another build." >&2
     exit 1
@@ -15,10 +15,10 @@ if [ -e "$nbt_review" ] || [ -L "$nbt_review" ]; then
     exit 1
 fi
 mkdir "$nbt_out"
-if python3 -m unittest -v test_policy.py > "$nbt_out/host-policy-tests.txt" 2>&1; then
-    cat "$nbt_out/host-policy-tests.txt"
+if python3 -m unittest -v test_policy.py test_loop.py > "$nbt_out/host-tests.txt" 2>&1; then
+    cat "$nbt_out/host-tests.txt"
 else
-    cat "$nbt_out/host-policy-tests.txt"
+    cat "$nbt_out/host-tests.txt"
     exit 1
 fi
 sudo docker run --rm --user "$(id -u):$(id -g)" \
@@ -37,7 +37,7 @@ sha256sum nbt_endpoint_rehearsal.c endpoint_policy.c endpoint_policy.h \
     "$nbt_out/nbt_endpoint_rehearsal" > "$nbt_out/build-hashes.txt"
 cat "$nbt_out/build-hashes.txt"
 tar -czf "$nbt_review" nbt_endpoint_rehearsal.c endpoint_policy.c endpoint_policy.h \
-    test_policy.py build_review.sh README.md SHA256SUMS "$nbt_out"
+    test_policy.py test_loop.py test_support build_review.sh README.md SHA256SUMS "$nbt_out"
 sha256sum "$nbt_review"
 echo "Offline endpoint review archive ready: $nbt_review"
 echo "No milestone-7 changes, BMW connection or ARM execution were performed."

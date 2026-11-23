@@ -8,8 +8,12 @@
 #include <signal.h>
 #include <stdio.h>
 #include <string.h>
+#ifdef NBT_ENDPOINT_TEST_RUNTIME
+#include "test_support/fake_qnx.h"
+#else
 #include <sys/iofunc.h>
 #include <sys/dispatch.h>
+#endif
 #include <sys/stat.h>
 #include <time.h>
 #include <unistd.h>
@@ -86,6 +90,7 @@ static int milliseconds(long long *value)
 static void usage(const char *name)
 {
     printf("Usage: %s --serve\n", name);
+    puts("Revision: timeout-fix-1");
     puts("Inert ten-second read-only endpoint: /dev/nbt_endpoint_rehearsal.<pid>");
     puts("No plugin, manifest, RPM request, library loading or HMI operation.");
 }
@@ -102,7 +107,8 @@ int main(int argc, char **argv)
     struct stat info;
     struct timespec poll;
     char path[128];
-    int id = -1, failed = 0, ready = 0, size;
+    int id = -1, failed = 0, ready = 0, size, receive_error;
+    enum nbt_dispatch_action action_result;
     long long now, deadline;
     const char *reason = "setup-error";
 
@@ -151,13 +157,21 @@ int main(int argc, char **argv)
         if (stopped) { reason = "signal"; break; }
         if (milliseconds(&now) != 0) { perror("clock"); failed = 1; break; }
         if (now >= deadline) { reason = "deadline"; break; }
+        errno = 0;
         next = dispatch_block(context);
-        if (!next) {
-            if (errno == EINTR || errno == ETIMEDOUT) continue;
-            perror("dispatch_block"); failed = 1; break;
+        receive_error = errno;
+        if (next) context = next;
+        action_result = nbt_endpoint_dispatch_action(next != NULL,
+                              next ? next->resmgr_context.rcvid : -1,
+                              receive_error);
+        if (action_result == NBT_DISPATCH_RETRY) continue;
+        if (action_result == NBT_DISPATCH_FAIL) {
+            errno = receive_error ? receive_error : EIO;
+            perror("dispatch_block/receive"); failed = 1; break;
         }
-        context = next;
+        errno = 0;
         if (dispatch_handler(context) < 0) {
+            if (!errno) errno = EIO;
             perror("dispatch_handler"); failed = 1; break;
         }
     }

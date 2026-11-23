@@ -1,5 +1,10 @@
 # Reviewed endpoint rehearsal: Chromebook storage bundle
 
+**Superseded initial build: do not execute 3df7b9161c30 again.** Its serving
+test exposed an idle-timeout handling bug. A corrected source package is
+being cross-built/reviewed separately. The archived ready bundle remains
+an identity/evidence record, not a current execution instruction.
+
 23 November 2026. This bundle freezes the QNX ARM executable after offline
 ELF/import review. It is a C-only fixed-text endpoint experiment. It is not
 a manifest server for the plugin, a loader or a completed recovery tool.

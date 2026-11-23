@@ -30,7 +30,7 @@ This demonstrates startup, help output and normal C exit for the exact
 executable. It registers no endpoint and is not evidence of IPC/read/expiry
 or forced-death behavior. No plugin was loaded or HMI restart requested.
 
-## Next prepared check: not yet performed
+## First normal-deadline/read check: failed
 
 [check_deadline.sh](../tools/endpoint-rehearsal/check_deadline.sh) starts only
 the fixed helper as its own child, captures that child's PID, waits briefly,
@@ -49,7 +49,10 @@ or a remaining endpoint are failures of this normal-deadline check.
 The shell flow was exercised against disposable local control-flow
 fixtures for normal completion, wrong text and overrun. Those fixtures use
 ordinary Linux files and do not emulate QNX namespace registration/IPC.
-The native runtime observations remain pending.
+The native runtime observations were subsequently supplied: this first
+check failed at dispatch_handler's idle timeout before a successful read.
+See the [failure and correction](2026-11-23-endpoint-timeout-correction.md).
+Do not rerun the original executable or treat READY as a serving pass.
 
 The [offline review](2026-11-23-endpoint-build-review.md) still applies.
 Actual plugin loading/HMI restart trials remain paused; live RPM is

@@ -1,6 +1,6 @@
 # Inert QNX endpoint prototype: offline build only
 
-23 November 2026. This is a C-only resource-manager experiment serving
+23 November 2026, timeout-fix-1 revision. This is a C-only resource-manager experiment serving
 `nbt-endpoint-rehearsal\n` under a unique `/dev/nbt_endpoint_rehearsal.<pid>`
 name for a configured ten-second lease. It contains no manifest, payload,
 plugin discovery link, RPM request, HMI access or activation operation.
@@ -14,13 +14,13 @@ compilation does not verify endpoint lifetime or establish recovery.
 
 ## Ubuntu build
 
-Save nbt-endpoint-prep.tar.gz in your Ubuntu home folder, then run in the
+Save nbt-endpoint-timeout-fix-prep.tar.gz in your Ubuntu home folder, then run in the
 **Ubuntu terminal**:
 
 ```sh
 cd ~
-tar -xzkf nbt-endpoint-prep.tar.gz
-cd nbt-endpoint-prep
+tar -xzkf nbt-endpoint-timeout-fix-prep.tar.gz
+cd nbt-endpoint-timeout-fix-prep
 sha256sum -c SHA256SUMS
 bash build_review.sh
 ```
@@ -31,7 +31,7 @@ policy checks, cross-compiles with the existing qnx65-armv7-toolchain:4.9
 image, and collects readelf/hashes into:
 
 ```text
-/home/rob/nbt-endpoint-review.tar.gz
+/home/rob/nbt-endpoint-timeout-fix-review.tar.gz
 ```
 
 Upload that archive for offline ELF/import/startup review. Do not execute
@@ -51,13 +51,41 @@ GitHub. The adapter passed a separate private 32-bit, syntax-only callback
 type check against the captured declarations. This is not an ARM ABI test
 or a QNX build, and no resulting binary was produced by that check.
 
-Sixteen Linux tests compile only the portable endpoint policy. They check
+Twenty-five Linux checks pass. Sixteen compile only the portable endpoint policy and check
 whole/partial reads, reassembly, seek offsets, zero-length/EOF reads,
 negative/maximum integers, null outputs, randomized boundary cases, and
 write/create/truncate refusal using supplied platform masks. Those tests
 do not exercise QNX dispatch, namespace registration, default SDK handlers,
 IPC, detachment or process death. The host policy shared object is a local
 test artifact and is not the QNX server executable.
+
+Nine additional checks run the actual C main loop against deliberately
+small host stubs, including the observed non-null context with receive ID
+-1 and ETIMEDOUT. They cover null timeout/interruption, preservation of the
+original context, stale errno on valid messages/pulses, and fatal receive
+and handler errors. The fake structures are not QNX headers or an ABI
+model and no namespace or IPC is emulated. They are used only by Linux
+tests; the real target build uses the installed QNX SDK and never defines
+NBT_ENDPOINT_TEST_RUNTIME. A native review must reject any accidentally
+stub-linked output.
+
+## Observed failure and correction
+
+The initial 3df7b9161c30 executable passed help-only startup but exited
+before the first metadata/read request, printing
+`dispatch_handler: Connection timed out`. Do not rerun that build.
+This QNX receive path can return a non-null context with rcvid == -1 on
+timeout; a non-null pointer alone is not evidence of a message. The original
+loop incorrectly passed that context to the handler.
+
+The corrected loop clears errno before receive, captures the result/error,
+classifies the receive ID and retries idle timeout/interruption without
+dispatching. Valid requests and pulses are processed regardless of stale
+errno, and errno is reset before handler invocation. Unexpected receive
+errors and actual handler errors still terminate and clean up; this is not
+a blanket ignore-timeout change. The usage output identifies timeout-fix-1.
+Old source/review archives and milestone-7 remain untouched. The new review
+archive has a distinct name; use a fresh preparation directory.
 
 ## Proposed target behavior, not yet run
 

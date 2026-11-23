@@ -1,5 +1,9 @@
 # Inert endpoint: QNX build review — 23 November 2026
 
+**Historical initial build: do not rerun 3df7b9161c30.** It passed these
+static checks but failed its first serving test at an unhandled idle timeout.
+See the [failure and source correction](2026-11-23-endpoint-timeout-correction.md).
+
 The owner supplied the Ubuntu cross-build archive. The source identities,
 ELF/runtime imports and relevant callback layout checks below pass offline.
 The ARM executable has not been executed in the cloud or on the vehicle.
@@ -106,6 +110,7 @@ recovery. Reader/resource lifetimes and partial-failure behavior need their
 own design if this primitive works. Actual plugin loading and HMI restart
 trials remain paused; native initialization and live RPM are unverified.
 
-Follow-up: the owner has completed a verified RAM transfer and help-only
-startup/exit with code 0. Endpoint serving/expiry tests are still pending.
+Follow-up: the owner completed a verified RAM transfer and help-only
+startup/exit with code 0. The first serving test then failed at dispatching
+an idle-timeout context; it is not an endpoint serving/expiry pass.
 See the [vehicle progress](2026-11-23-endpoint-vehicle-results.md).

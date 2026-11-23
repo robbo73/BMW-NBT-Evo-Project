@@ -1,5 +1,8 @@
 #!/bin/sh
 # OMAP only: fixed-text endpoint, own child PIDs, no HMI/plugin operation.
+echo "STOP: initial 3df7b9161c30 build has an idle-timeout bug; do not rerun." >&2
+exit 1
+# Historical command below is preserved as evidence, not an active test.
 set -u
 ulimit -c 0 || exit 1
 for nbt_cmd in sleep kill ls cat; do command -v "$nbt_cmd" >/dev/null || exit 1; done

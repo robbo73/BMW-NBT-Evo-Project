@@ -3,16 +3,13 @@
 ## Inert endpoint prototype on Ubuntu
 
 The [fixed-text QNX endpoint prototype](endpoint-rehearsal/README.md) is
-prepared for cross-build/review using the captured SDK interfaces. Sixteen
-portable policy checks and a separate callback type check pass. The server
-has no plugin/HMI operation and has not been run on the vehicle. The build
-script creates an ELF review archive without touching milestone-7 or
-executing target code; kernel namespace lifetime remains a future test.
-The owner has now supplied that cross-build; its
-[offline review](../docs/2026-11-23-endpoint-build-review.md) passes against
-the captured libc. The verified RAM executable has passed help-only startup
-and exit, without registering an endpoint; see the
-[vehicle progress](../docs/2026-11-23-endpoint-vehicle-results.md).
+prepared using the captured SDK interfaces. Its initial serving test failed
+on an idle-timeout handling bug after a successful help-only check. The
+[correction](../docs/2026-11-23-endpoint-timeout-correction.md) has 25 passing
+host checks and requires a fresh QNX cross-build/review. Do not rerun the
+initial 3df7b9161c30 build. The server has no plugin/HMI operation; its build
+script does not touch milestone-7 or execute ARM code. Kernel endpoint
+lifetime remains a future test.
 
 ## QNX resource-manager interface capture on Ubuntu
 
