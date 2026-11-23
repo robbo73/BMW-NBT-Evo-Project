@@ -44,23 +44,43 @@ configured lease is 10000 milliseconds; elapsed time was not independently
 measured. No Plugins path, manifest, staged payload or HMI interface was
 accessed. The executable has no plugin loading, RPM or restart operation.
 
-## Remaining tests and limits
+## Delivered SIGHUP path
 
-The normal timeout result does not verify behavior after an SSH disconnect,
-handled signals, guard death, HMI restart or full-node restart. The Linux
-SIGKILL fixture is still an explicit failure case: a dead guard leaves its
-dummy link. No native plugin activation or live CDS/RPM result follows.
-
-The next prepared inert check is
+The owner subsequently ran
 [check_hangup.sh](../tools/ram-lease-rehearsal/check_hangup.sh). It verifies
 sleep/kill utilities before starting the same child, captures that child's
 PID with $!, sends only that child SIGHUP after two seconds, waits for its
 expected exit code 2, and checks that its exact dummy directory is absent.
 It does not close the SSH connection or target any pre-existing process.
-Passing it would establish the delivered-SIGHUP path, not the complete
-lost-network/SSH failure scenario. The shell sequence was checked locally
-against the host build and temporary fixtures before being supplied; it has
-not yet been run on the vehicle.
+The shell sequence was checked locally against the host build and temporary
+fixtures before being supplied. The vehicle output was:
+
+```text
+READY pid=12865652 base=/ramdisk/mm/.nbt-lease-rehearsal.12865652 lease_ms=10000
+REVOKED reason=signal; dummy fixture removed
+Hangup rehearsal exit: 2 (expected 2)
+PASS: signalled child cleaned up
+```
+
+This demonstrates handled-signal cleanup and expected normal C exit code 2
+for the explicitly signalled child. The final shell checks also confirmed
+that this child's exact dummy directory was absent and not a dangling link.
+It does not demonstrate actual SSH-loss behavior or HMI stability.
+
+## Remaining tests and limits
+
+Actual SSH disconnection, guard death, HMI restart and full-node restart
+remain untested on the vehicle. The Linux SIGKILL fixture is still an
+explicit failure case: a dead guard leaves its dummy link. No native plugin
+activation or live CDS/RPM result follows.
+
+One further bounded inert check can use a separate SSH connection with
+multiplexing disabled: start the same rehearsal, observe READY, then close
+only that test connection using the SSH client's local disconnect escape.
+Keep the original console open and inspect for residual dummy fixtures
+after the ten-second lease. This would test that particular client-close
+path; it would not establish every network-loss or reboot scenario. It has
+not yet been performed. No native build/source change is needed for it.
 
 The pause on actual library-load probes and HMI activation/restarts remains.
 See the [offline build review](2026-11-21-ram-lease-build-review.md) and
