@@ -9,7 +9,9 @@ touching milestone-7, connecting to the BMW or executing the ARM output.
 It contains no plugin activation or library loading, and guard death remains
 an explicit recovery limitation. The owner has now built the QNX output;
 its [offline ELF/runtime review](../docs/2026-11-21-ram-lease-build-review.md)
-passes against the captured libc. No vehicle execution has taken place.
+passes against the captured libc. On 23 November the owner completed the
+verified RAM transfer, help-only startup and normal deadline/cleanup path.
+See the [vehicle results and limits](../docs/2026-11-23-ram-lease-vehicle-results.md).
 
 ## Chromebook initialization-check ready bundle
 

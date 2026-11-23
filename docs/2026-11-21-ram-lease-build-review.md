@@ -91,3 +91,9 @@ mechanism, unload anything, or lift the pause on actual plugin loading and
 HMI restarts. Resource lifetime, soft/full restart and lost-SSH behavior
 remain part of the future containment design. No live RPM or CDS callback
 has been verified. See the [preparation and host-test limits](2026-11-21-ram-lease-rehearsal-preparation.md).
+
+Follow-up, 23 November: the owner has now run the exact reviewed executable
+after a verified RAM transfer. Help-only startup/exit and normal monotonic
+deadline/cleanup completed. See the
+[vehicle results](2026-11-23-ram-lease-vehicle-results.md); the plugin-loading
+pause and guard-death/resource-lifetime limits remain in place.
