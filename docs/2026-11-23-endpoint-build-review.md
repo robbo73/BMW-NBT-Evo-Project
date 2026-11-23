@@ -105,3 +105,7 @@ This does not yet implement a process-owned manifest or solve real-plugin
 recovery. Reader/resource lifetimes and partial-failure behavior need their
 own design if this primitive works. Actual plugin loading and HMI restart
 trials remain paused; native initialization and live RPM are unverified.
+
+Follow-up: the owner has completed a verified RAM transfer and help-only
+startup/exit with code 0. Endpoint serving/expiry tests are still pending.
+See the [vehicle progress](2026-11-23-endpoint-vehicle-results.md).
