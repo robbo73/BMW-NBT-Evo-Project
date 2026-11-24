@@ -1,5 +1,14 @@
 # Source preparation and historical staging helper
 
+## Dummy discovery-link preparation on Ubuntu
+
+The [new rehearsal](discovery-link-rehearsal/README.md) reuses the reviewed
+endpoint binary and adds an isolated dummy alias test outside all plugin
+roots. Its 13 Linux control-flow checks pass; the target alias sequence
+has not run on the BMW. The ready bundle needs only Ubuntu checksum/syntax/
+fixture verification, with no Docker, compilation, ARM execution or car
+connection. See the [preparation record](../docs/2026-11-24-discovery-link-preparation.md).
+
 ## Inert endpoint prototype on Ubuntu
 
 The [fixed-text QNX endpoint prototype](endpoint-rehearsal/README.md) is

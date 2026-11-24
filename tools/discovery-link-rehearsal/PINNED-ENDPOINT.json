@@ -1,0 +1,20 @@
+{
+  "revision": "discovery-alias-1",
+  "prepared": "2026-11-24",
+  "target_binary": {
+    "filename": "nbt_endpoint_rehearsal",
+    "bytes": 13876,
+    "sha256": "83c6e473829ea1441872a7f93a4693de0c7867a13fb5f2b2e42862e8490da25f",
+    "revision": "timeout-fix-1",
+    "ram_path": "/dev/shmem/nbt_endpoint_rehearsal_83c6e473829e"
+  },
+  "prior_vehicle_evidence": {
+    "normal_deadline_exit": 0,
+    "forced_death_exit": 137,
+    "post_exit_endpoint_unavailable": true
+  },
+  "new_discovery_alias_vehicle_test_completed": false,
+  "actual_plugin_activation": false,
+  "live_rpm_verified": false,
+  "offline_tests_scope": "Linux shell control-flow fixtures only; no QNX IPC, namespace, ABI or HMI emulation"
+}
