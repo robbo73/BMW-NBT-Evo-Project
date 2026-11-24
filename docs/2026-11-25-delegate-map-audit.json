@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-25",
+  "framework_sha256": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+  "instruction_checks": [
+    {
+      "address": "0x7fa8",
+      "mnemonic": "bl",
+      "operands": "#0x91c0"
+    },
+    {
+      "address": "0x7fb4",
+      "mnemonic": "ldm",
+      "operands": "r5, {r0, r1}"
+    },
+    {
+      "address": "0x7fb8",
+      "mnemonic": "stm",
+      "operands": "r3, {r0, r1}"
+    },
+    {
+      "address": "0x8008",
+      "mnemonic": "bl",
+      "operands": "#0x91c0"
+    },
+    {
+      "address": "0x8010",
+      "mnemonic": "ldm",
+      "operands": "r5, {r0, r1}"
+    },
+    {
+      "address": "0x8014",
+      "mnemonic": "stm",
+      "operands": "r3, {r0, r1}"
+    },
+    {
+      "address": "0x91d8",
+      "mnemonic": "bl",
+      "operands": "#0x85bc"
+    },
+    {
+      "address": "0x91dc",
+      "mnemonic": "subs",
+      "operands": "r5, r0, #0"
+    },
+    {
+      "address": "0x91e0",
+      "mnemonic": "bne",
+      "operands": "#0x9250"
+    },
+    {
+      "address": "0x9218",
+      "mnemonic": "bl",
+      "operands": "#0x90e0"
+    },
+    {
+      "address": "0x9250",
+      "mnemonic": "add",
+      "operands": "r0, r5, #0xc"
+    },
+    {
+      "address": "0x8648",
+      "mnemonic": "bl",
+      "operands": "#0x4eb8"
+    },
+    {
+      "address": "0x864c",
+      "mnemonic": "cmp",
+      "operands": "r0, #0"
+    },
+    {
+      "address": "0x8650",
+      "mnemonic": "beq",
+      "operands": "#0x8660"
+    }
+  ],
+  "key_comparison": "strcmp",
+  "map_value": "one two-word Delegate per property key",
+  "duplicate_same_key_assignment": "overwrite_existing_value_not_append",
+  "runtime_callback_count_verified": false,
+  "threading_and_reentrancy_verified": false,
+  "target_execution": false
+}

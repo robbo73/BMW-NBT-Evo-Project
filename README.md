@@ -3,6 +3,8 @@ Build inbuilt telemetry data in existing head unit
 
 Build a native iDrive dashboard for the BMW M140i that displays live B58 telemetry directly on the NBT Evo. The goal is everyday operation without a laptop, Bluetooth dongle, or ENET adapter.
 
+For the concise verified/offline/unverified table and current priorities, see **[STATUS.md](STATUS.md)**.
+
 ## Current status
 
 **Vehicle library-loading tests and HMI activation are paused following observed head-unit restarts.** Continue with offline investigation on Ubuntu.
