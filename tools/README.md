@@ -14,7 +14,10 @@ The corrected cross-build has now been supplied and
 compiled retry branch matches the fix. The owner has now confirmed native
 fixed-text reading, normal deadline exit 0 and post-exit lookup failure.
 See the [vehicle results](../docs/2026-11-23-endpoint-vehicle-results.md).
-The forced-death check is prepared but has not run on the vehicle.
+On 24 November the restored, hash-verified copy also passed the helper-only
+forced-death check: expected text, wait status 137 and endpoint unavailability.
+See the [forced-death result and limits](../docs/2026-11-24-endpoint-forced-death-results.md).
+Discovery aliases and manifest/HMI integration have not been tested.
 
 ## QNX resource-manager interface capture on Ubuntu
 

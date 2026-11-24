@@ -103,4 +103,8 @@ Follow-up: corrected help-only startup and the single-console normal test
 have now completed on the car, including metadata, expected text, deadline
 exit 0 and independent post-exit lookup failure. See the
 [vehicle results](2026-11-23-endpoint-vehicle-results.md). Forced death and
-manifest/HMI integration remain unverified.
+manifest/HMI integration remained unverified at that checkpoint.
+
+On 24 November the restored, hash-verified build also passed the
+[forced-death check](2026-11-24-endpoint-forced-death-results.md).
+Discovery aliases and manifest/HMI integration remain unverified.

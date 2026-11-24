@@ -92,7 +92,7 @@ was requested. These stdout results do not independently establish screen
 stability or arbitrary failure recovery. The old 3df7b9161c30 build remains
 superseded and must not be reused.
 
-## Prepared forced-death check: pending
+## Prepared forced-death check: pending at this checkpoint
 
 [check_forced_death.sh](../tools/endpoint-rehearsal/check_forced_death.sh)
 starts a new copy of the same inert helper, captures its child PID and
@@ -110,4 +110,8 @@ The new script has been syntax-checked. Local shell control-flow checks
 confirmed rejection of a missing executable and rejection of an ordinary
 file that survives SIGKILL of its writer (status 137, REMAINS, no PASS).
 These checks do not emulate or establish QNX registration/IPC lifetime.
-The forced-death vehicle check has not yet been performed.
+The forced-death vehicle check had not yet been performed at this checkpoint.
+
+Follow-up: on 24 November a restored, hash-verified copy passed the forced-death
+check. See the [completed result](2026-11-24-endpoint-forced-death-results.md)
+for the transcript, exact conclusions and remaining integration limits.
