@@ -55,3 +55,12 @@ resource and open-handle lifetimes, actual SSH-loss behavior and HMI-fault
 containment remain unverified. The existing initialization-only candidate
 remains hidden; library-load/HMI activation and restart trials remain paused.
 Live B58 RPM has not been demonstrated.
+
+
+## Follow-up
+
+The owner completed Ubuntu integrity verification and all 13 host checks,
+then passed the native normal-expiry dummy alias test. See the
+[vehicle results](2026-11-24-discovery-link-vehicle-results.md) for the exact
+read-back and console evidence. The forced-death alias branch remains pending.
+The frozen package/source checksums are unchanged.
