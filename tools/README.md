@@ -1,5 +1,14 @@
 # Source preparation and historical staging helper
 
+## Separate stdio-reader build on Ubuntu
+
+The [C-only dummy reader](stdio-reader-rehearsal/README.md) prepares a direct
+test of the fopen/seek-end/ftell/rewind/full-read/close pattern found in the
+actual manifest loader. Twelve host checks pass. The next step is an
+isolated QNX cross-build using the existing Docker image and upload of the
+review archive, with no milestone-7 edit, BMW connection or ARM execution.
+See the [static review and preparation](../docs/2026-11-24-manifest-reader-review.md).
+
 ## Dummy discovery-link preparation on Ubuntu
 
 The [new rehearsal](discovery-link-rehearsal/README.md) reuses the reviewed

@@ -19,6 +19,8 @@ Build a native iDrive dashboard for the BMW M140i that displays live B58 telemet
 
 The [dummy discovery-link rehearsal](docs/2026-11-24-discovery-link-preparation.md) reuses the proven endpoint binary. The owner completed Ubuntu integrity checks and all 13 Linux tests, then passed both native alias tests: expected text, normal exit 0 or forced-death exit 137, dangling alias and fixture cleanup. See the [vehicle results](docs/2026-11-24-discovery-link-vehicle-results.md). Both cases stayed outside real plugin roots and served no manifest. Next work is offline manifest-reader/discovery-mechanism review.
 
+The next Ubuntu step is the [separate stdio-reader build](docs/2026-11-24-manifest-reader-review.md). Static analysis confirms that the native manifest loader seeks to the end, measures, rewinds and reads the whole file before parsing. The new C-only dummy reader has 12 passing Linux tests and is prepared for a QNX cross-build and ELF review; it has not run on the car and does not parse XML or load a plugin.
+
 See the [17 November checkpoint and handover](docs/2026-11-17-checkpoint.md) for the current evidence, candidate fingerprints and where to resume. Source changes are preserved as [reviewable patches](patches/README.md).
 
 The [16 November checkpoint](docs/2026-11-16-checkpoint.md), [15 November checkpoint](docs/2026-11-15-checkpoint.md), [vehicle preflight](docs/2026-11-15-vehicle-preflight.md) and staging-only helper are historical records. Their vehicle activation plans are superseded by the current pause. The [tools guide](tools/README.md) also documents the guarded source-cleanup helper already used on Ubuntu.
