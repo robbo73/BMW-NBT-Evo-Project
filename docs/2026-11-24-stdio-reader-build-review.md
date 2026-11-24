@@ -92,3 +92,14 @@ reader. Native manifest parsing/admission, resource lifetime, HMI-fault
 containment and C++ initialization remain unverified. Actual plugin
 loading and HMI activation/restart trials remain paused. Live RPM has
 not been demonstrated.
+
+
+## Vehicle follow-up
+
+The owner subsequently verified the ready bundle and both RAM read-backs,
+passed new-reader help-only startup with exit 0, then passed the isolated
+stdio alias test: exact bytes and all seek/read/close checks, both exits 0,
+dangling alias and owned-fixture cleanup. See the
+[complete vehicle result](2026-11-24-stdio-reader-vehicle-results.md).
+This does not establish native XML parsing, HMI integration or live RPM.
+The original static audit and frozen package hashes are unchanged.

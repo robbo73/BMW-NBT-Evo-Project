@@ -8,8 +8,10 @@ loader. The owner passed 12 host checks and cross-built it. Its
 [ELF/runtime review](../docs/2026-11-24-stdio-reader-build-review.md) passes,
 and the [ready instructions](stdio-reader-rehearsal/ready-instructions.md)
 cover Chromebook storage and the proposed inert alias test. Nine new runner
-fixtures pass. No rebuild is needed; the new ARM reader and runner have
-not yet executed on the BMW. No milestone-7 or plugin activation is involved.
+fixtures pass. The owner has now completed verified RAM read-backs, reader
+help-only startup and the native stdio alias/read/expiry/cleanup test. See the
+[vehicle result and limits](../docs/2026-11-24-stdio-reader-vehicle-results.md).
+No milestone-7 edit or plugin activation is involved.
 
 ## Dummy discovery-link preparation on Ubuntu
 
