@@ -1,13 +1,15 @@
 # Source preparation and historical staging helper
 
-## Separate stdio-reader build on Ubuntu
+## Reviewed stdio reader and Chromebook ready bundle
 
-The [C-only dummy reader](stdio-reader-rehearsal/README.md) prepares a direct
-test of the fopen/seek-end/ftell/rewind/full-read/close pattern found in the
-actual manifest loader. Twelve host checks pass. The next step is an
-isolated QNX cross-build using the existing Docker image and upload of the
-review archive, with no milestone-7 edit, BMW connection or ARM execution.
-See the [static review and preparation](../docs/2026-11-24-manifest-reader-review.md).
+The [C-only dummy reader](stdio-reader-rehearsal/README.md) follows the
+fopen/seek-end/ftell/rewind/full-read/close pattern found in the manifest
+loader. The owner passed 12 host checks and cross-built it. Its
+[ELF/runtime review](../docs/2026-11-24-stdio-reader-build-review.md) passes,
+and the [ready instructions](stdio-reader-rehearsal/ready-instructions.md)
+cover Chromebook storage and the proposed inert alias test. Nine new runner
+fixtures pass. No rebuild is needed; the new ARM reader and runner have
+not yet executed on the BMW. No milestone-7 or plugin activation is involved.
 
 ## Dummy discovery-link preparation on Ubuntu
 

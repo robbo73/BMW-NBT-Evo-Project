@@ -1,0 +1,88 @@
+{
+  "binary": {
+    "bytes": 9306,
+    "sha256": "a90b4183ea980987ca58d5a0b61f4a5ee78602272c0fba9f922f4a86ecdb0e13",
+    "class": 32,
+    "little_endian": true,
+    "machine": "EM_ARM",
+    "type": "ET_EXEC",
+    "flags": "0x5000002",
+    "entry": "0x100834",
+    "interpreter": "/usr/lib/ldqnx.so.2"
+  },
+  "needed": [
+    "libc.so.3"
+  ],
+  "forbidden_dynamic_tags": [],
+  "required_function_imports": [
+    "printf",
+    "_init_array",
+    "snprintf",
+    "_preinit_array",
+    "perror",
+    "puts",
+    "alarm",
+    "fseek",
+    "lstat",
+    "signal",
+    "memcmp",
+    "fread",
+    "_init_libc",
+    "fopen",
+    "ftell",
+    "fclose",
+    "_fini_array",
+    "strcmp",
+    "atexit",
+    "stat",
+    "fwrite",
+    "exit"
+  ],
+  "required_count": 22,
+  "missing_from_actual_libc": [],
+  "optional_weak_imports": [
+    "__deregister_frame_info",
+    "__register_frame_info"
+  ],
+  "relocation_counts": {
+    "20": 2,
+    "22": 24
+  },
+  "copy_relocations": [
+    {
+      "type": 20,
+      "symbol": "errno",
+      "offset": "0x102274",
+      "size": 4,
+      "provider_size": 4
+    },
+    {
+      "type": 20,
+      "symbol": "_Stderr",
+      "offset": "0x102278",
+      "size": 80,
+      "provider_size": 80
+    }
+  ],
+  "init_array": {
+    "address": "0x1009f0",
+    "symbol": "frame_dummy"
+  },
+  "fini_array": {
+    "address": "0x1009ac",
+    "symbol": "__do_global_dtors_aux"
+  },
+  "main": {
+    "address": "0x100a4c",
+    "bytes": 1016
+  },
+  "host_wrapper_or_cpp_symbols": [],
+  "vehicle_execution": false,
+  "provenance": {
+    "archive_sha256": "5220e2301802ae896221daaed17de07b5e0ebe9c590f80d2834c2d62c307be59",
+    "source_sha256": "add047a1b725722106f37e58be3c0f167ac474e1ba1f3cadbb94a5908a0be136",
+    "captured_libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+    "owner_host_tests": 12,
+    "owner_host_test_seconds": 5.209
+  }
+}

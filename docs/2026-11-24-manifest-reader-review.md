@@ -67,3 +67,11 @@ binary and hidden initialization-only payload are untouched. No BMW
 connection is needed. This is not a completed manifest endpoint, HMI
 lifetime guard or native initialization trial. Library-loading/HMI
 activation/restart trials remain paused. Live B58 RPM is unverified.
+
+
+## Follow-up
+
+The owner completed all 12 tests and the isolated QNX cross-build. The
+[actual executable review](2026-11-24-stdio-reader-build-review.md) passes
+and a pinned Chromebook ready bundle with a separately checked runner is
+prepared. No new ARM reader execution or HMI operation is claimed.
