@@ -55,13 +55,42 @@ all real plugin roots. It uses no .manifest filename, parser, scanner,
 BMW framework, plugin, CDS request or HMI operation. No HMI restart was
 requested. Screen stability is not independently established by stdout.
 
-## Next bounded check
+## Native forced-death alias test passed
 
-The same script's --forced-death branch is prepared but its alias case
-has not yet run on the BMW. It starts a new helper, first reads through a
-new dummy alias, kills only that child, requires wait status 137, and checks
-that the alias becomes dangling before cleaning up. The endpoint-only
-forced-death result is already [verified separately](2026-11-24-endpoint-forced-death-results.md).
+The owner then ran the unchanged --forced-death branch. All six package
+checksums and the independently pinned shell-script hash passed again.
+After authentication, the complete output was:
+
+```text
+READY pid=11309172 path=/dev/nbt_endpoint_rehearsal.11309172 bytes=23 lease_ms=10000
+ALIAS_READ: nbt-endpoint-rehearsal
+FORCED_STOP: rehearsal child 11309172
+Killed
+Endpoint server exit: 137
+DANGLING: dummy alias remains a link; target unavailable
+CLEANED: dummy alias and owned fixture directory
+PASS: --forced-death dummy discovery-link rehearsal
+```
+
+This confirms a fresh dummy alias successfully served the expected text,
+the script sent SIGKILL only to its new helper child, and wait returned 137.
+The alias remained a symlink but no longer resolved after helper death;
+the script then removed the alias and its checked-empty fixture directory.
+No WATCHDOG fallback output appeared. SIGKILL bypasses the endpoint helper's
+explicit detach/cleanup path. The cleanup line describes the surviving
+shell's separate removal of its dummy link and directory.
+
+The earlier [endpoint-only forced-death result](2026-11-24-endpoint-forced-death-results.md)
+and both alias cases now pass independently. The alias shell itself was not
+killed, and these results do not establish cleanup after its SIGKILL.
+The link was confined to an isolated RAM fixture, not a real plugin root.
+
+## Checkpoint and remaining work
+
+No further vehicle command is needed for this checkpoint. The next work is
+offline review of manifest-reader compatibility and the proposed temporary
+discovery mechanism. The inert 23-byte text helper does not serve XML or
+monitor HMI lifetime, and must not be treated as a finished trial guard.
 
 These isolated results do not establish manifest-reader compatibility,
 real scanner admission, already-open handle behavior, resource lifetime,

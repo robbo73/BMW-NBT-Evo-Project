@@ -5,8 +5,10 @@
 The [new rehearsal](discovery-link-rehearsal/README.md) reuses the reviewed
 endpoint binary and adds an isolated dummy alias test outside all plugin
 roots. The owner passed Ubuntu verification and all 13 Linux tests, followed
-by the native normal-expiry alias/read/cleanup test. The forced-death alias
-case remains pending; see the [vehicle results](../docs/2026-11-24-discovery-link-vehicle-results.md). The ready bundle needs only Ubuntu checksum/syntax/
+by both native alias tests: normal expiry and forced helper death, with
+expected text, dangling aliases and fixture cleanup. See the
+[vehicle results](../docs/2026-11-24-discovery-link-vehicle-results.md).
+The ready bundle needs only Ubuntu checksum/syntax/
 fixture verification, with no Docker, compilation, ARM execution or car
 connection. See the [preparation record](../docs/2026-11-24-discovery-link-preparation.md).
 
@@ -27,8 +29,8 @@ See the [vehicle results](../docs/2026-11-23-endpoint-vehicle-results.md).
 On 24 November the restored, hash-verified copy also passed the helper-only
 forced-death check: expected text, wait status 137 and endpoint unavailability.
 See the [forced-death result and limits](../docs/2026-11-24-endpoint-forced-death-results.md).
-A dummy discovery alias has since passed normal expiry; its forced-death
-case and manifest/HMI integration remain unverified.
+A dummy discovery alias has since passed both normal expiry and forced
+helper death. Manifest/HMI integration remains unverified.
 
 ## QNX resource-manager interface capture on Ubuntu
 

@@ -62,5 +62,8 @@ Live B58 RPM has not been demonstrated.
 The owner completed Ubuntu integrity verification and all 13 host checks,
 then passed the native normal-expiry dummy alias test. See the
 [vehicle results](2026-11-24-discovery-link-vehicle-results.md) for the exact
-read-back and console evidence. The forced-death alias branch remains pending.
+read-back and console evidence. The owner subsequently passed the forced-
+death alias branch as well: expected text, SIGKILL wait status 137, a dangling
+alias and owned-fixture cleanup. Both dummy alias cases now pass; no manifest
+or HMI integration has been tested.
 The frozen package/source checksums are unchanged.
