@@ -1,0 +1,454 @@
+{
+  "date": "2026-11-25",
+  "archive": {
+    "bytes": 39056,
+    "sha256": "fc26f44da2c54ed22691b796b8a815b8144ef0d4c14b45e3e8768217190c5905"
+  },
+  "owner_tests": {
+    "count": 36,
+    "seconds": 11.604
+  },
+  "vehicle_execution": false,
+  "binaries": {
+    "endpoint": {
+      "bytes": 15898,
+      "sha256": "8f502b6394a0acd9c800358b9ed6605fdc2f8aa92f5dce32dde73653b1bc06f2",
+      "elf_class": 32,
+      "little_endian": true,
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "type": "ET_EXEC",
+      "entry": "0x100b48",
+      "interpreter": "/usr/lib/ldqnx.so.2",
+      "needed": [
+        "libc.so.3"
+      ],
+      "required_function_imports": [
+        "clock_gettime",
+        "dispatch_handler",
+        "printf",
+        "_init_array",
+        "sigemptyset",
+        "snprintf",
+        "iofunc_attr_init",
+        "getpid",
+        "_preinit_array",
+        "resmgr_attach",
+        "perror",
+        "puts",
+        "fflush",
+        "iofunc_lseek_default",
+        "iofunc_open_default",
+        "dispatch_destroy",
+        "__get_errno_ptr",
+        "lstat",
+        "dispatch_context_alloc",
+        "sigaction",
+        "_init_libc",
+        "memset",
+        "iofunc_read_verify",
+        "_fini_array",
+        "dispatch_context_free",
+        "strcmp",
+        "atexit",
+        "resmgr_detach",
+        "dispatch_create",
+        "fwrite",
+        "iofunc_func_init",
+        "exit",
+        "dispatch_timeout",
+        "dispatch_block"
+      ],
+      "required_count": 34,
+      "missing_required": [],
+      "new_required_vs_previous": [
+        "iofunc_lseek_default"
+      ],
+      "removed_required_vs_previous": [],
+      "optional_weak_imports": [
+        "__deregister_frame_info",
+        "__register_frame_info"
+      ],
+      "relocation_counts": {
+        "20": 3,
+        "22": 36
+      },
+      "copy_relocations": [
+        {
+          "type": 20,
+          "symbol": "_Stdout",
+          "bytes": 80,
+          "provider_bytes": 80
+        },
+        {
+          "type": 20,
+          "symbol": "errno",
+          "bytes": 4,
+          "provider_bytes": 4
+        },
+        {
+          "type": 20,
+          "symbol": "_Stderr",
+          "bytes": 80,
+          "provider_bytes": 80
+        }
+      ],
+      "forbidden_dynamic_tags": [],
+      "init_array": {
+        "address": "0x100d04",
+        "symbol": "frame_dummy"
+      },
+      "fini_array": {
+        "address": "0x100cc0",
+        "symbol": "__do_global_dtors_aux"
+      },
+      "body_storage_bytes": 586,
+      "functions": {
+        "main": {
+          "address": "0x100fc0",
+          "bytes": 1548
+        },
+        "endpoint_read": {
+          "address": "0x100e10",
+          "bytes": 268
+        },
+        "endpoint_lseek": {
+          "address": "0x100dc0",
+          "bytes": 80
+        },
+        "nbt_body_init": {
+          "address": "0x10165c",
+          "bytes": 48
+        },
+        "nbt_body_length": {
+          "address": "0x101698",
+          "bytes": 8
+        },
+        "nbt_body_expected": {
+          "address": "0x1015cc",
+          "bytes": 144
+        },
+        "nbt_body_slice": {
+          "address": "0x1016a0",
+          "bytes": 156
+        },
+        "nbt_body_dispatch_action": {
+          "address": "0x101750",
+          "bytes": 48
+        },
+        "nbt_trace_reset": {
+          "address": "0x1017e4",
+          "bytes": 24
+        },
+        "nbt_trace_read": {
+          "address": "0x1017fc",
+          "bytes": 80
+        },
+        "nbt_trace_seek": {
+          "address": "0x10184c",
+          "bytes": 72
+        },
+        "nbt_trace_dump": {
+          "address": "0x1018d8",
+          "bytes": 236
+        },
+        "reserve": {
+          "address": "0x101780",
+          "bytes": 100
+        }
+      },
+      "trace_storage": {
+        "bytes": 3584,
+        "records": 64,
+        "record_bytes": 56,
+        "used_counter_bytes": 4,
+        "dropped_counter_bytes": 4
+      },
+      "instruction_checks": [
+        {
+          "address": "0x100dc8",
+          "mnemonic": "ldrd",
+          "operands": "r8, sb, [r1, #8]"
+        },
+        {
+          "address": "0x100dd0",
+          "mnemonic": "ldrd",
+          "operands": "r6, r7, [r2, #8]"
+        },
+        {
+          "address": "0x100dd4",
+          "mnemonic": "ldrsh",
+          "operands": "fp, [r1, #4]"
+        },
+        {
+          "address": "0x100dd8",
+          "mnemonic": "bl",
+          "operands": "#0x100a34"
+        },
+        {
+          "address": "0x100dec",
+          "mnemonic": "mov",
+          "operands": "sl, r0"
+        },
+        {
+          "address": "0x100e00",
+          "mnemonic": "bl",
+          "operands": "#0x10184c"
+        },
+        {
+          "address": "0x100e04",
+          "mnemonic": "mov",
+          "operands": "r0, sl"
+        },
+        {
+          "address": "0x100e44",
+          "mnemonic": "bl",
+          "operands": "#0x100aac"
+        },
+        {
+          "address": "0x100ebc",
+          "mnemonic": "bl",
+          "operands": "#0x1016a0"
+        },
+        {
+          "address": "0x100ed4",
+          "mnemonic": "str",
+          "operands": "ip, [r3, #0x48]"
+        },
+        {
+          "address": "0x100ef4",
+          "mnemonic": "strd",
+          "operands": "r2, r3, [r7, #8]"
+        },
+        {
+          "address": "0x100f0c",
+          "mnemonic": "str",
+          "operands": "ip, [r2, #0x58]"
+        },
+        {
+          "address": "0x100f14",
+          "mnemonic": "str",
+          "operands": "r0, [r2, #0x54]"
+        },
+        {
+          "address": "0x10102c",
+          "mnemonic": "bl",
+          "operands": "#0x10165c"
+        },
+        {
+          "address": "0x101030",
+          "mnemonic": "bl",
+          "operands": "#0x1017e4"
+        },
+        {
+          "address": "0x1011b8",
+          "mnemonic": "mov",
+          "operands": "ip, #0x800"
+        },
+        {
+          "address": "0x101200",
+          "mnemonic": "str",
+          "operands": "lr, [sp, #0x150]"
+        },
+        {
+          "address": "0x1014c4",
+          "mnemonic": "bl",
+          "operands": "#0x101750"
+        },
+        {
+          "address": "0x1014e4",
+          "mnemonic": "bl",
+          "operands": "#0x1009a4"
+        },
+        {
+          "address": "0x10131c",
+          "mnemonic": "bl",
+          "operands": "#0x1018d8"
+        },
+        {
+          "address": "0x10178c",
+          "mnemonic": "cmp",
+          "operands": "r2, #0x40"
+        },
+        {
+          "address": "0x1017ac",
+          "mnemonic": "mov",
+          "operands": "r2, #0x38"
+        },
+        {
+          "address": "0x1017c4",
+          "mnemonic": "cmn",
+          "operands": "r2, #1"
+        },
+        {
+          "address": "0x101698",
+          "mnemonic": "movw",
+          "operands": "r0, #0x24a"
+        }
+      ]
+    },
+    "reader": {
+      "bytes": 10248,
+      "sha256": "f0d391701c69a8dd07c203c876bbed1ef5d1a885604667b4ed64502f87745884",
+      "elf_class": 32,
+      "little_endian": true,
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "type": "ET_EXEC",
+      "entry": "0x100834",
+      "interpreter": "/usr/lib/ldqnx.so.2",
+      "needed": [
+        "libc.so.3"
+      ],
+      "required_function_imports": [
+        "printf",
+        "_init_array",
+        "snprintf",
+        "_preinit_array",
+        "perror",
+        "puts",
+        "alarm",
+        "fseek",
+        "lstat",
+        "signal",
+        "memcmp",
+        "fread",
+        "_init_libc",
+        "fopen",
+        "ftell",
+        "fclose",
+        "_fini_array",
+        "strcmp",
+        "atexit",
+        "stat",
+        "fwrite",
+        "exit"
+      ],
+      "required_count": 22,
+      "missing_required": [],
+      "new_required_vs_previous": [],
+      "removed_required_vs_previous": [],
+      "optional_weak_imports": [
+        "__deregister_frame_info",
+        "__register_frame_info"
+      ],
+      "relocation_counts": {
+        "20": 2,
+        "22": 24
+      },
+      "copy_relocations": [
+        {
+          "type": 20,
+          "symbol": "errno",
+          "bytes": 4,
+          "provider_bytes": 4
+        },
+        {
+          "type": 20,
+          "symbol": "_Stderr",
+          "bytes": 80,
+          "provider_bytes": 80
+        }
+      ],
+      "forbidden_dynamic_tags": [],
+      "init_array": {
+        "address": "0x1009f0",
+        "symbol": "frame_dummy"
+      },
+      "fini_array": {
+        "address": "0x1009ac",
+        "symbol": "__do_global_dtors_aux"
+      },
+      "body_storage_bytes": 586,
+      "functions": {
+        "main": {
+          "address": "0x100a84",
+          "bytes": 1020
+        },
+        "nbt_body_init": {
+          "address": "0x100f10",
+          "bytes": 48
+        },
+        "nbt_body_length": {
+          "address": "0x100f4c",
+          "bytes": 8
+        },
+        "nbt_body_expected": {
+          "address": "0x100e80",
+          "bytes": 144
+        },
+        "nbt_body_slice": {
+          "address": "0x100f54",
+          "bytes": 156
+        },
+        "nbt_body_dispatch_action": {
+          "address": "0x101004",
+          "bytes": 48
+        }
+      },
+      "instruction_checks": [
+        {
+          "address": "0x100be4",
+          "mnemonic": "bl",
+          "operands": "#0x10075c"
+        },
+        {
+          "address": "0x100d04",
+          "mnemonic": "bl",
+          "operands": "#0x100774"
+        },
+        {
+          "address": "0x100d54",
+          "mnemonic": "bl",
+          "operands": "#0x1007c8"
+        },
+        {
+          "address": "0x100d5c",
+          "mnemonic": "blt",
+          "operands": "#0x100d70"
+        },
+        {
+          "address": "0x100dac",
+          "mnemonic": "bl",
+          "operands": "#0x100774"
+        },
+        {
+          "address": "0x100dd8",
+          "mnemonic": "bl",
+          "operands": "#0x1007a4"
+        },
+        {
+          "address": "0x100ddc",
+          "mnemonic": "cmp",
+          "operands": "r0, #1"
+        },
+        {
+          "address": "0x100e1c",
+          "mnemonic": "bl",
+          "operands": "#0x100798"
+        },
+        {
+          "address": "0x100e4c",
+          "mnemonic": "bl",
+          "operands": "#0x1007d4"
+        },
+        {
+          "address": "0x100f4c",
+          "mnemonic": "movw",
+          "operands": "r0, #0x24a"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "all_18_preparation_files_match": true,
+    "all_six_native_sources_unchanged_after_host_fix": true,
+    "captured_libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+    "host_fault_wrappers_absent": true
+  },
+  "new_local_checks": {
+    "runner_cases": 9,
+    "trace_parser_cases": 10,
+    "native_execution": false
+  }
+}

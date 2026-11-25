@@ -1,16 +1,14 @@
 # Source preparation and historical staging helper
 
-## Separate larger-body build on Ubuntu
+## Reviewed 586-byte larger-body pair and Chromebook bundle
 
-The [new preparation](larger-body-rehearsal/README.md) adds a bounded binary
-body, fixed-capacity read/seek tracing and a corresponding C-only reader.
-All 36 host tests pass in the cloud after a [fortified read-hook
-fix](../docs/2026-11-25-larger-body-host-test-fix.md). The original owner run
-stopped before QNX compilation; use the fresh host-fix preparation. The next
-step is an isolated QNX cross-build of only
-the 586-byte endpoint/reader and upload for ELF/import review. No previous
-source, binary or vehicle stage is changed. See the
-[preparation record](../docs/2026-11-25-larger-body-preparation.md).
+The [separate preparation](larger-body-rehearsal/README.md) adds a bounded
+binary body, read/seek tracing and reader. The corrected owner run passed
+all 36 tests and built both QNX programs. Their [ELF/import/callback
+review](../docs/2026-11-25-larger-body-build-review.md) passes; a pinned
+[ready bundle](larger-body-rehearsal/ready-instructions.md), nine runner
+fixtures and ten local trace-parser fixtures are prepared. No rebuild is
+needed. The new pair has not run on the BMW; old packages/stages are unchanged.
 
 ## Reviewed stdio reader and Chromebook ready bundle
 

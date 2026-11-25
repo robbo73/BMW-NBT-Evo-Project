@@ -78,3 +78,11 @@ No milestone-7 source, frozen 23-byte package, actual manifest or hidden
 vehicle stage changed. Actual plugin loading and HMI activation/restart
 trials remain paused. Larger-body native behavior and live RPM remain
 unverified.
+
+
+## Corrected build supplied
+
+The owner passed all 36 tests in 11.604 seconds and cross-built both 586-byte
+executables. The [uploaded build review](2026-11-25-larger-body-build-review.md)
+passes and a separate pinned ready bundle is prepared. The source-only host
+correction did not require any target C change. No new native run is claimed.
