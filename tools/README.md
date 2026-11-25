@@ -1,5 +1,14 @@
 # Source preparation and historical staging helper
 
+## Separate larger-body build on Ubuntu
+
+The [new preparation](larger-body-rehearsal/README.md) adds a bounded binary
+body, fixed-capacity read/seek tracing and a corresponding C-only reader.
+All 34 host tests pass. The next step is an isolated QNX cross-build of only
+the 586-byte endpoint/reader and upload for ELF/import review. No previous
+source, binary or vehicle stage is changed. See the
+[preparation record](../docs/2026-11-25-larger-body-preparation.md).
+
 ## Reviewed stdio reader and Chromebook ready bundle
 
 The [C-only dummy reader](stdio-reader-rehearsal/README.md) follows the

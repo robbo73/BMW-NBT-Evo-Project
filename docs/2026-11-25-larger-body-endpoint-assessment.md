@@ -122,3 +122,12 @@ Real XML parsing/admission, resource lifetime, HMI identity/guard lifetime,
 the earlier mixed-runtime crash and live RPM remain unverified. Endpoint
 unavailability does not stop code already loaded into HMI. Actual plugin
 loading and HMI activation/restart trials remain paused.
+
+
+## Implementation follow-up
+
+The owner returned to Ubuntu. A separate [bounded body/reader/trace
+preparation](2026-11-25-larger-body-preparation.md) now passes 34 host checks
+and a private captured-SDK callback declaration check. The first native
+build will be 586 bytes only, for ELF review. No native result, real manifest
+or change to the frozen 23-byte packages is implied.

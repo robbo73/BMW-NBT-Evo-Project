@@ -1,0 +1,63 @@
+{
+  "revision": "larger-body-1",
+  "date": "2026-11-25",
+  "initial_qnx_build_length": 586,
+  "body_cap": 16384,
+  "trace_capacity": 64,
+  "lease_ms": 10000,
+  "receive_timeout_ms": 100,
+  "incoming_msg_max_size": 2048,
+  "nparts_max": 2,
+  "reader_alarm_seconds": 5,
+  "host_tests": {
+    "body": 6,
+    "callbacks_and_trace": 6,
+    "receive_loop": 9,
+    "reader": 13,
+    "total": 34,
+    "seconds": 7.397
+  },
+  "host_body_lengths": [
+    1,
+    23,
+    586,
+    2047,
+    2048,
+    2049,
+    4095,
+    4096,
+    4097,
+    8192,
+    8193,
+    16384
+  ],
+  "expected_body_sha256": {
+    "1": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "23": "4841ab5611128e2019ff7e702b3f6af25ce9a0c8585f8a122c3115b03a6dda12",
+    "586": "3218a4ee930711ef93fbdc6272ba60a086eaa2b4f6f9b803f6d5c80d2240716f",
+    "2047": "f6e4d80fca92b5a79aada55094b3cf14d85271d083ddd63872fac3d85c00c6dd",
+    "2048": "ec81d01c0861d37d3594972bd43b76c67264828ffcead485d249821cdc4f7cc3",
+    "2049": "de5674cb53147c6f7b42bcb74f112c57a020ac3ce5c2bb0f5cf3ab8bb72159df",
+    "4095": "677d0c26de0b357c71991bb9c5123126be60b4890a8748e5a4a611b96d9710a3",
+    "4096": "3beb2c8cf765feaee1d5902543e3a401846603782ba9e7f3caa05324e6c9f1bd",
+    "4097": "5fdb828f3c64123fd53bb482ed3ba85efb49ebe6e9df3f5f033187050f0d9c78",
+    "8192": "ef2c57f3e33a66ca651f4f3c4e7bb837260092a6d15ac89292886c661ae7ecd9",
+    "8193": "e2b1ca64c469a1163e6eceaf642d4a5b33ae028edde72d95b4296b5c2116bbd4",
+    "16384": "1a017b209373b8e6c460c767b0b4cf718c7cead0d513152fb8e28d5345e65360"
+  },
+  "private_sdk_check": {
+    "captured_interface_sha256": "4cf95bd71aa96177d49986e18ba05faa6e1b4b4aaa82cde50de839943f4eac51",
+    "method": "32-bit syntax-only callback declarations against captured QNX 6.5 SDK; not ARM ABI/runtime",
+    "lseek_whence_offset": 4,
+    "lseek_offset_offset": 8,
+    "lseek_union_size": 16,
+    "ocb_offset_offset": 8
+  },
+  "native_build_inspected": false,
+  "native_large_body_verified": false,
+  "provider_death_with_open_handle_verified": false,
+  "actual_manifest": false,
+  "plugin_activation": false,
+  "hmi_restart": false,
+  "live_rpm_verified": false
+}
