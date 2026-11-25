@@ -4,7 +4,10 @@
 
 The [new preparation](larger-body-rehearsal/README.md) adds a bounded binary
 body, fixed-capacity read/seek tracing and a corresponding C-only reader.
-All 34 host tests pass. The next step is an isolated QNX cross-build of only
+All 36 host tests pass in the cloud after a [fortified read-hook
+fix](../docs/2026-11-25-larger-body-host-test-fix.md). The original owner run
+stopped before QNX compilation; use the fresh host-fix preparation. The next
+step is an isolated QNX cross-build of only
 the 586-byte endpoint/reader and upload for ELF/import review. No previous
 source, binary or vehicle stage is changed. See the
 [preparation record](../docs/2026-11-25-larger-body-preparation.md).

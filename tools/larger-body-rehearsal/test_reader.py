@@ -23,12 +23,16 @@ class StdioReader(unittest.TestCase):
         private_source.write_text(source.replace('/ramdisk/mm', str(cls.root)))
         cls.binary = cls.root / 'reader'
         cls.fault_binary = cls.root / 'fault-reader'
+        cls.fortified_binary = cls.root / 'fortified-reader'
         command = ['cc', '-std=gnu99', '-O2', '-Wall', '-Wextra', '-Werror',
                    '-I',str(ROOT),str(private_source),str(ROOT/'large_body.c')]
         subprocess.run(command + ['-o', str(cls.binary)], check=True)
-        wrappers = ['-Wl,--wrap=' + name for name in ('fopen', 'fseek', 'ftell', 'fread', 'fclose')]
+        wrappers = ['-Wl,--wrap=' + name for name in ('fopen', 'fseek', 'ftell', 'fread', '__fread_chk', 'fclose')]
         subprocess.run(command + [str(ROOT / 'test_support/stdio_faults.c'), *wrappers,
                                  '-o', str(cls.fault_binary)], check=True)
+        subprocess.run(command + ['-U_FORTIFY_SOURCE', '-D_FORTIFY_SOURCE=2',
+                                  str(ROOT / 'test_support/stdio_faults.c'), *wrappers,
+                                  '-o', str(cls.fortified_binary)], check=True)
 
     @classmethod
     def tearDownClass(cls):
@@ -51,8 +55,9 @@ class StdioReader(unittest.TestCase):
         self.fixture.rmdir()
         self.target.unlink(missing_ok=True)
 
-    def run_reader(self, args=('--read-alias', '42'), fault=None):
-        return subprocess.run([str(self.fault_binary if fault else self.binary), *args],
+    def run_reader(self, args=('--read-alias', '42'), fault=None, fortified=False):
+        binary = self.fortified_binary if fortified else (self.fault_binary if fault else self.binary)
+        return subprocess.run([str(binary), *args],
                               env=dict(os.environ, NBT_STDIO_FAULT=fault or ''),
                               capture_output=True, text=True, timeout=8)
 
@@ -147,6 +152,22 @@ class StdioReader(unittest.TestCase):
             with self.subTest(fault=fault):
                 result = self.run_reader(fault=fault)
                 self.assert_failure(result)
+                if fault == 'read':
+                    self.assertIn('HOST_FREAD_HOOK:', result.stderr)
+
+    def test_fortified_read_preserves_success_and_injects_failure(self):
+        good = self.run_reader(fortified=True)
+        self.assertEqual(good.returncode, 0, good.stdout + good.stderr)
+        bad = self.run_reader(fault='read', fortified=True)
+        self.assert_failure(bad)
+        self.assertIn('HOST_FREAD_HOOK: fortified', bad.stderr)
+
+    def test_fortified_blocked_read_is_terminated_by_alarm(self):
+        result = self.run_reader(fault='hang_read', fortified=True)
+        self.assertEqual(result.returncode, -signal.SIGALRM, result.stdout + result.stderr)
+        self.assertIn('HOST_FREAD_HOOK: fortified', result.stderr)
+        self.assertNotIn('PASS:', result.stdout)
+        self.assertEqual(self.target.read_bytes(), BODY)
 
     def test_full_reader_at_8193_bytes(self):
         binary=self.root/'reader-8193'
@@ -167,6 +188,7 @@ class StdioReader(unittest.TestCase):
 
     def test_alarm_bounds_a_blocked_reader(self):
         result = self.run_reader(fault='hang_read')
+        self.assertIn('HOST_FREAD_HOOK:', result.stderr)
         self.assertEqual(result.returncode, -signal.SIGALRM, result.stdout + result.stderr)
         self.assertNotIn('PASS:', result.stdout)
         self.assertEqual(self.target.read_bytes(), BODY)

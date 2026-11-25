@@ -5,7 +5,7 @@ nbt_prep=$(cd -- "$(dirname -- "$0")" && pwd)
 cd "$nbt_prep"
 sha256sum -c SHA256SUMS
 nbt_out=build-qnx
-nbt_review="$HOME/nbt-large-body-review.tar.gz"
+nbt_review="$HOME/nbt-large-body-host-fix-review.tar.gz"
 if [ -e "$nbt_out" ] || [ -L "$nbt_out" ]; then
     echo "Build output already exists; preserve it before another build." >&2; exit 1
 fi

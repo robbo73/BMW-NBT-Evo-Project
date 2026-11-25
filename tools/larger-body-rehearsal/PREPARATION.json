@@ -1,5 +1,5 @@
 {
-  "revision": "larger-body-1",
+  "revision": "larger-body-1-host-fix-1",
   "date": "2026-11-25",
   "initial_qnx_build_length": 586,
   "body_cap": 16384,
@@ -13,9 +13,9 @@
     "body": 6,
     "callbacks_and_trace": 6,
     "receive_loop": 9,
-    "reader": 13,
-    "total": 34,
-    "seconds": 7.397
+    "reader": 15,
+    "total": 36,
+    "seconds": 12.442
   },
   "host_body_lengths": [
     1,
@@ -59,5 +59,24 @@
   "actual_manifest": false,
   "plugin_activation": false,
   "hmi_restart": false,
-  "live_rpm_verified": false
+  "live_rpm_verified": false,
+  "host_fault_injection_fix": {
+    "reproduced_original_failures_with": "_FORTIFY_SOURCE=2 (read call becomes __fread_chk)",
+    "wrapped_read_entries": [
+      "fread",
+      "__fread_chk"
+    ],
+    "forced_fortification_regressions": 2,
+    "all_six_target_source_files_unchanged": true,
+    "qnx_compile_arguments_unchanged": true,
+    "native_source_sha256": {
+      "large_body.c": "b7973ea402990ef472a79b356e2c4ff71de97b55e77a51335250c41263d25b11",
+      "large_body.h": "187b71d08191e65298918b57e28a4098644ad8be939078f57e365599630bd605",
+      "trace_log.c": "bc0bc846169893901b9b30167da8cd625efa75b4991a9f1a09c84b20851491ba",
+      "trace_log.h": "93ccfe53d0f23069f820401a237d86051c370b12ff7f6db961cd66660567ae6c",
+      "nbt_large_endpoint.c": "a8a0e0615e041d8dbc2236bef86ada6feec46f4392ddfca5592c88544689636f",
+      "nbt_large_reader.c": "ed15d0ba607dc80148c8825417ee8a10cc928f3b43f5bf9378fc79f07261755b"
+    },
+    "owner_corrected_run_pending": true
+  }
 }

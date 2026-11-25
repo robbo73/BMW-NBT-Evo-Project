@@ -84,3 +84,15 @@ open handles across provider death, client buffering controls for those
 cases, actual XML parsing/admission, HMI guard lifetime and the previous
 runtime/restart failures remain unverified. Actual plugin loading and HMI
 activation/restart trials remain paused; live RPM is unverified.
+
+
+## Host-side failure and corrected preparation
+
+The original owner run passed the payload checksums but failed two read fault-
+injection cases and correctly stopped before QNX compilation. Both symptoms
+were reproduced with glibc fortification: __fread_chk bypassed the ordinary
+fread wrapper. The [host-only correction](2026-11-25-larger-body-host-test-fix.md)
+adds both entry points and two explicit fortified regressions; all 36 cloud
+checks pass. The six target source/header files and compiler arguments are
+unchanged. Use the newly named host-fix archive/folder and keep the failed
+original intact. No new QNX build or native result is claimed yet.

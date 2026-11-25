@@ -79,7 +79,7 @@ cross-build; source availability of one symbol is not a complete import audit.
 
 The new reader checks both seeks and rejects negative or mismatched ftell
 before its bounded full-item fread. It compares binary data with memcmp
-and checks close. Its 13 host tests cover canonical PID/overflow bounds,
+and checks close. Its 15 host tests cover canonical PID/overflow bounds,
 path/link/type/size controls, exact and wrong bytes, six stdio faults,
 normal reads at 586 and 8193 and a blocked read stopped by its own alarm.
 All these use ordinary host files, not a native resource manager.
@@ -93,3 +93,18 @@ No attempt is made to provoke the native HMI loader's unchecked ftell error.
 No real XML, Plugins path, payload, process injection, native framework
 loading, HMI restart, coding or firmware change is implemented. The old
 23-byte helper/reader, plugin source and hidden stages remain untouched.
+
+## Host wrapper compatibility follow-up
+
+GNU/Linux libc headers can route fread through __fread_chk when fortified.
+The initial read-only test wrapper intercepted only the ordinary symbol,
+so a fortified host read bypassed deliberate failure/hang injection. This
+was reproduced with the exact two owner-reported failures. Both symbols
+are now wrapped only in host fault binaries; no QNX source/build flags
+change. The ordinary and fortified wrappers share the same injection and
+forward to their respective real libc entry point otherwise. Markers
+confirm the selected hook was reached. A third host reader build explicitly
+sets _FORTIFY_SOURCE=2 and two regressions check successful normal reading,
+injected failure and a blocked read killed by the real reader alarm.
+The wrapper now waits in pause repeatedly so unrelated handled signals
+cannot accidentally release the deliberately blocked fault.

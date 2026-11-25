@@ -8,19 +8,19 @@ The existing tested source, binaries and candidate stages remain unchanged.
 
 ## Ubuntu action
 
-From the extracted nbt-large-body-prep directory run:
+From the extracted nbt-large-body-host-fix-prep directory run:
 
 ```sh
 bash build_review.sh
 ```
 
-The script verifies all source hashes, runs 34 host tests, then cross-builds
+The script verifies all source hashes, runs 36 host tests, then cross-builds
 only two separate executables using the existing qnx65-armv7-toolchain:4.9
 image: build-qnx/nbt_large_endpoint_586 and build-qnx/nbt_large_reader_586.
 It records ELF metadata/symbols/hashes and creates:
 
 ```text
-/home/rob/nbt-large-body-review.tar.gz
+/home/rob/nbt-large-body-host-fix-review.tar.gz
 ```
 
 Upload that archive for ELF/import/compiled-callback inspection. Do not run
@@ -70,8 +70,8 @@ size only; the contents are unrelated dummy binary data containing NULs.
 
 ## Host checks and limits
 
-The 34 checks comprise six body/bounds tests across 12 compiled lengths,
-six callback/log tests, nine receive-loop tests and 13 reader/error tests.
+The 36 checks comprise six body/bounds tests across 12 compiled lengths,
+six callback/log tests, nine receive-loop tests and 15 reader/error tests.
 See DESIGN.md for exact coverage, private captured-SDK declaration checking
 and the distinction between synthetic seek replies and native semantics.
 Host binaries are compiled in disposable temporary directories. Fault/stub
@@ -83,3 +83,19 @@ provider death with an open handle and SDK runtime compatibility require
 later review/tests. HMI identity/guard lifetime, real manifest admission and
 resource lifetime remain unresolved. Actual plugin loading and HMI
 activation/restarts remain paused; live RPM is unverified.
+
+## Host fault-injection correction
+
+The first owner-side run stopped before QNX compilation: the read-failure
+and blocked-read tests returned the normal success marker. The same two
+failures were reproduced with glibc fortification enabled, where source
+fread becomes __fread_chk and bypasses a wrapper for fread alone.
+The host wrapper now intercepts both entry points, preserving the real
+fortified implementation when no fault is selected. Two forced-fortification
+regressions require the fortified hook marker, a failed read and actual
+SIGALRM termination. No tests are skipped and hardening is not disabled.
+
+All six target C source/header files are byte-for-byte unchanged from the
+original preparation, as are the Docker target compile flags. This archive
+extracts into a new folder and writes a new review archive name, preserving
+the failed build and host-tests.txt in ~/nbt-large-body-prep/.
