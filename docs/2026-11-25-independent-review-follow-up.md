@@ -59,3 +59,13 @@ archives, source patches, build outputs and hidden vehicle stages are not
 modified. No new QNX build or vehicle command was performed. Actual plugin
 loading and HMI activation/restart trials remain paused; live RPM remains
 unverified.
+
+
+## Larger-body review received
+
+The owner supplied Claude's [full report](2026-11-25-larger-body-endpoint-review.md).
+The [integration assessment](2026-11-25-larger-body-endpoint-assessment.md)
+records accepted source findings, the independently checked native-loader
+length/close paths, corrected new[] allocation wording, other-version
+documentation limits and the next offline preparation requirements. No
+source, frozen package, suite count or vehicle test result changed.

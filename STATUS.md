@@ -22,18 +22,20 @@ is not a completed mechanism.
 | Fixed 23-byte process-owned endpoint | Native normal exit and helper SIGKILL cases passed; subsequent endpoint unavailable | [Deadline](docs/2026-11-23-endpoint-vehicle-results.md), [forced death](docs/2026-11-24-endpoint-forced-death-results.md) |
 | Dummy symlink outside plugin roots | Native normal expiry and forced helper death passed, with dangling link and fixture cleanup | [Alias results](docs/2026-11-24-discovery-link-vehicle-results.md) |
 | C-only stdio reader through alias | Native seek-end/ftell/rewind/full-read/close passed; both exits 0 and cleanup passed; 23-byte body only | [Reader results](docs/2026-11-24-stdio-reader-vehicle-results.md) |
-| Real manifest / larger endpoint bodies | XML parsing, actual scanner admission, larger reads/seeks and resource/handle lifetime unverified | [Manifest trace](docs/2026-11-24-manifest-reader-review.md) |
+| Real manifest / larger endpoint bodies | Larger-body source review completed; no larger body or native open-handle-at-death test yet. XML parsing/admission and resource lifetime unverified | [Review assessment](docs/2026-11-25-larger-body-endpoint-assessment.md), [manifest trace](docs/2026-11-24-manifest-reader-review.md) |
+| Native loader length-error handling | Offline: ftell==-1 is not explicitly rejected; allocation call is new[], runtime consequences unverified. Current C reader already rejects it | [Static check and correction](docs/2026-11-25-larger-body-endpoint-assessment.md) |
 | Earlier native framework/probe crashes | Core establishes mixed C++ stream destruction fault; binding/initialization context and associated full-unit restarts unresolved | [Core/runtime checkpoint](docs/2026-11-17-checkpoint.md) |
 | Stock Sports Displays comparison | Native proxies/notification route traced offline; proposed read-only closed/open comparison not yet performed | [Stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
 
 ## Next focused work
 
-1. Independently review larger bounded endpoint reads, before preparing the
-   next inert rehearsal. The frozen init-check manifest is **586 bytes**;
-   its UI description is **10951 bytes** and is a different file. Include
-   realistic and multi-KB sizes, partial reads, seek offsets, EOF, error paths
-   and provider/handle lifetime. Do not assume the 2048-byte incoming message
-   setting is itself the reply-size limit.
+1. Larger-body independent review and the [integration assessment](docs/2026-11-25-larger-body-endpoint-assessment.md)
+   are complete. Next prepare a separate bounded dummy-body variant and
+   offline checks for larger reads, length-derived EOF/seek boundaries and
+   request tracing. The init-check manifest is **586 bytes**; its UI description
+   is **10951 bytes** and is separate. Native open-handle/provider-death behavior
+   remains untested; control client buffering and test deadlines. Do not infer
+   a 2048-byte reply cap from the incoming message setting or change it blindly.
 2. Continue the unresolved runtime/restart investigation before any HMI load.
    Endpoint expiry is a discovery constraint, not a crash fix or an unload.
 3. Consider a separate bounded stock-screen observation after fingerprints,

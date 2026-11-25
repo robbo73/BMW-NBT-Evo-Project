@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-25",
+  "hmi_sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf",
+  "original_elf_modified": false,
+  "instruction_checks": [
+    {
+      "address": "0x298a5c0",
+      "mnemonic": "bl",
+      "operands": "#0x2b27848"
+    },
+    {
+      "address": "0x298a5c8",
+      "mnemonic": "bl",
+      "operands": "#0x2b28278"
+    },
+    {
+      "address": "0x298a5d4",
+      "mnemonic": "mov",
+      "operands": "r6, r0"
+    },
+    {
+      "address": "0x298a5dc",
+      "mnemonic": "bl",
+      "operands": "#0x2b27848"
+    },
+    {
+      "address": "0x298a5e0",
+      "mnemonic": "cmp",
+      "operands": "r6, #0"
+    },
+    {
+      "address": "0x298a5e4",
+      "mnemonic": "bne",
+      "operands": "#0x298a5f8"
+    },
+    {
+      "address": "0x298a5f0",
+      "mnemonic": "bl",
+      "operands": "#0x2b272d8"
+    },
+    {
+      "address": "0x298a61c",
+      "mnemonic": "add",
+      "operands": "r0, r6, #1"
+    },
+    {
+      "address": "0x298a620",
+      "mnemonic": "bl",
+      "operands": "#0x2b28630"
+    },
+    {
+      "address": "0x298a624",
+      "mnemonic": "mov",
+      "operands": "r1, r6"
+    },
+    {
+      "address": "0x298a628",
+      "mnemonic": "mov",
+      "operands": "r2, #1"
+    },
+    {
+      "address": "0x298a638",
+      "mnemonic": "bl",
+      "operands": "#0x2b27998"
+    },
+    {
+      "address": "0x298a63c",
+      "mnemonic": "cmp",
+      "operands": "r0, #1"
+    },
+    {
+      "address": "0x298a664",
+      "mnemonic": "bl",
+      "operands": "#0x2b272d8"
+    },
+    {
+      "address": "0x298a674",
+      "mnemonic": "bl",
+      "operands": "#0x2b272d8"
+    }
+  ],
+  "allocation_call": {
+    "veneer": "0x2b28630",
+    "target": "0x2781ec",
+    "symbol": "_Znaj",
+    "demangled": "operator new[](unsigned int)"
+  },
+  "ftell_minus_one": {
+    "zero_only_branch": true,
+    "requested_allocation_size_wraps_to_zero": true,
+    "fread_item_size_if_reached": "0xffffffff",
+    "allocator_or_stdio_effect_verified": false
+  },
+  "normal_close_sites": {
+    "zero_length": "0x298a5f0",
+    "short_or_failed_fread": "0x298a664",
+    "successful_fread": "0x298a674"
+  },
+  "target_execution": false
+}
