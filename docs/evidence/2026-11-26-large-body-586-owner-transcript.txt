@@ -1,0 +1,13 @@
+READY pid=4317301 path=/dev/nbt_large_endpoint_586.4317301 bytes=586 lease_ms=10000
+PASS: larger-reader-1; bytes=586 items=1; seek-end/tell/rewind/read/close
+Stdio reader exit: 0
+TRACE_SUMMARY events=4 dropped=0 overflow=0 elapsed_ms=10020
+TRACE_SEEK index=0 before=0 offset_bits=0000000000000000 whence=2 after=586 rc=-1
+TRACE_SEEK index=1 before=586 offset_bits=0000000000000000 whence=1 after=586 rc=-1
+TRACE_SEEK index=2 before=586 offset_bits=0000000000000000 whence=0 after=0 rc=-1
+TRACE_READ index=3 before=0 requested=1024 xtype=0 count=586 after=586 rc=-1
+DETACHED reason=deadline; endpoint server exiting
+Endpoint server exit: 0
+DANGLING: dummy alias remains a link; target unavailable
+CLEANED: dummy alias and owned fixture directory
+PASS: 586-byte dummy reader/expiry/cleanup; trace requires assessment

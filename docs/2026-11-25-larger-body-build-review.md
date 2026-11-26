@@ -102,3 +102,12 @@ stages are unchanged. Native 586-byte behavior, other lengths/seek cases,
 open handles across provider death, XML admission, resource lifetime and
 HMI guard/fault containment remain unverified. Actual plugin loading and
 HMI activation/restart trials remain paused; live RPM is unverified.
+
+## Subsequent vehicle result — 26 November
+
+The owner subsequently completed both RAM read-backs, help-only startup and
+the [586-byte dummy run](2026-11-26-larger-body-vehicle-results.md). Exact
+stdio reading, normal expiry/cleanup and complete trace assessment passed.
+This supersedes the not-yet-run status above for this specific pair/run;
+other lengths, open-handle death and XML/HMI integration remain unverified.
+The frozen archive and build-review metadata have not changed.

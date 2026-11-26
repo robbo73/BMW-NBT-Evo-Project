@@ -1,5 +1,12 @@
 # Separate larger-body rehearsal: Ubuntu build for inspection
 
+**26 November update:** the reviewed 586-byte pair passed native startup,
+full binary stdio read, deadline exit/cleanup and complete trace assessment.
+See the [vehicle results](../../docs/2026-11-26-larger-body-vehicle-results.md).
+The preparation instructions below preserve the earlier build stage; their
+not-yet-run statements describe that stage. Larger native bodies and
+open-handle/provider-death behavior remain unverified.
+
 25 November 2026. This is a new C-only experiment after the native 23-byte
 endpoint/alias/stdio checks. It serves generated binary dummy data, not XML.
 The first QNX build is fixed at **586 bytes**. Larger sizes are covered by
