@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-26",
+  "contribution": "Owner-supplied Claude C held-controller-1 supervisor",
+  "decision": "source review changes required before QNX cross-build preparation",
+  "archive": {
+    "filename": "held-expiry-supervisor.zip",
+    "bytes": 26220,
+    "sha256": "df822c5866b0f8d246dcfcb8e1d6a6a9fdc7da532ae5b826003a404f63457829",
+    "ordinary_files": 7
+  },
+  "original_files": {
+    "ARCHITECTURE.md": "79db5709656fe7867e7370243b67afda74852bb58c054b1edd8bea9045a6b64d",
+    "README.md": "002c44d3fbe57cfe5394f1d9fd8d831f358c61b94292cd5e10e200904fbbee1a",
+    "SHA256SUMS": "568f848b6bba51561278f5a9d1bb1f60b6e765dc826017e2308ca564e51ca97f",
+    "nbt_held_supervisor.c": "762223f72603891b3bd34fca2b9d5abf17c46dcbb9ef78e15d3acc79ca101117",
+    "test_supervisor.py": "ab4becc70a07e878667b6b167ec232b57bcb34ce21a6e38497f99278a7a5a8aa",
+    "test_support/stub_provider.c": "0c6d0950ede39dfc2685792ab9352332c07f64725235ff3a1eb04b776148c9a4",
+    "test_support/stub_reader.c": "072b2e662f2b3bb9b1cc8546dff85e3c8080716f6e698e86f2167c841ff4c46a"
+  },
+  "supplied_checksums_verified": true,
+  "two_loose_uploads_match_zip": true,
+  "external_test_report": {
+    "passed": 20,
+    "platform": "Linux with namespace/chroot support",
+    "repeated_runs": 4,
+    "not_independently_reproduced_here": true
+  },
+  "local_host_suite": {
+    "discovered": 20,
+    "passed": 5,
+    "skipped": 15,
+    "seconds": 0.941,
+    "skip_reason": "root or user+mount namespace support unavailable",
+    "host_binaries_compiled": true,
+    "native_qnx_execution": false
+  },
+  "fault_probes": {
+    "clock_failure": {
+      "elapsed_ms": -123426789000,
+      "stop_reported": 0
+    },
+    "late_write": {
+      "completed_at_ms": 28100,
+      "output_bound_ms": 28000,
+      "write_log_result": 0
+    },
+    "waitpid_eio": {
+      "reap_check_result": 1,
+      "owned": 0,
+      "reaped": 1,
+      "lost": 1
+    }
+  },
+  "fault_probe_method": "own host translation unit includes the exact supplied C with main renamed; clock_gettime/write/waitpid replaced only in that private unit; no production trial or child signals executed",
+  "api_export_spot_check": {
+    "count": 20,
+    "all_exported_by_captured_libc": true,
+    "actual_compiled_import_list_or_abi_validated": false
+  },
+  "active_assessor_contract_reader_endpoint_changed": false,
+  "qnx_build": false,
+  "vehicle_connection": false
+}

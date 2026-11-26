@@ -43,6 +43,8 @@ The [held-expiry offline assessor](docs/2026-11-26-held-expiry-assessor-review.m
 
 The [subsequent shell-controller review](docs/2026-11-26-shell-controller-assessment.md) reproduces its 12 host test methods but finds pre-release trace validation, blocked-output/watchdog and byte-preservation failures, plus the already-missing target printf and acknowledged PID ownership gap. It is not adopted as a vehicle runner; the active hardened assessor and tested binaries remain unchanged.
 
+The [C supervisor follow-up review](docs/2026-11-26-c-supervisor-assessment.md) confirms improved ownership, raw capture and pre-release checks, but reproduces three clock/write/wait error-path defects and identifies a remaining guardian identity gap. Five local checks pass; 15 namespace-dependent tests are skipped here. The reported full Claude runs are separate evidence. No target supervisor build/package is accepted yet.
+
 The [DAviS0d Windows NBT emulator review](docs/2026-11-26-bmw-nbt-emulator-review.md) finds a substantial older x86 NBT UI/simulation project, not an Evo ARM test environment. Ten focused model/static-contract checks pass, but Windows boot was not tested and required IFS files need their actual Git LFS payloads. Its simulated gauges do not verify live CDS/RPM; own-code reuse is restricted by its licence.
 
 ## Development setup
