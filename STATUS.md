@@ -24,7 +24,8 @@ is not a completed mechanism.
 | C-only stdio reader through alias | Native seek-end/ftell/rewind/full-read/close passed; both exits 0 and cleanup passed; 23-byte body only | [Reader results](docs/2026-11-24-stdio-reader-vehicle-results.md) |
 | 586-byte dummy binary body | Native full stdio read/close, deadline exit 0, alias cleanup and complete trace assessment passed; three seeks and one 1024-byte request returning 586 bytes | [26 November results](docs/2026-11-26-larger-body-vehicle-results.md) |
 | Larger bodies / real manifest / open-handle death | Native bodies above 586 bytes, real XML/HMI integration and provider death with an open handle remain unverified | [Build review](docs/2026-11-25-larger-body-build-review.md), [review assessment](docs/2026-11-25-larger-body-endpoint-assessment.md) |
-| Held-descriptor reader | Owner cross-build and 22 host checks pass; static imports/ABI/control flow reviewed. No native run/controller yet; separate offline assessor has 50 synthetic checks | [Build review](docs/2026-11-26-open-handle-reader-build-review.md) |
+| Held-descriptor reader | Owner cross-build and 22 host checks pass; static imports/ABI/control flow reviewed. No native run yet; the separately reviewed supervisor is now packaged. Offline assessor has 50 synthetic checks | [Build review](docs/2026-11-26-open-handle-reader-build-review.md) |
+| Held-descriptor supervisor/capture | Owner host suite 50/50; QNX static build review passes; ready bundle/client prepared. No native supervisor/held-reader result | [Build and bundle](docs/2026-11-26-supervisor-r2-build-review.md) |
 | Native loader length-error handling | Offline: ftell==-1 is not explicitly rejected; allocation call is new[], runtime consequences unverified. Current C reader already rejects it | [Static check and correction](docs/2026-11-25-larger-body-endpoint-assessment.md) |
 | Earlier native framework/probe crashes | Core establishes mixed C++ stream destruction fault; binding/initialization context and associated full-unit restarts unresolved | [Core/runtime checkpoint](docs/2026-11-17-checkpoint.md) |
 | Stock Sports Displays comparison | Native proxies/notification route traced offline; proposed read-only closed/open comparison not yet performed | [Stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
@@ -54,8 +55,11 @@ is not a completed mechanism.
    needed resolution. Those r1 results were 5 passed/15 namespace skips.
    [Revision 2 plus local clock/signal fixes](docs/2026-11-26-supervisor-r2-preparation.md)
    now passes 34 host checks with 16 namespace skips and has a frozen Ubuntu
-   offline build preparation. New QNX executable/API inspection is next;
-   no ARM run or vehicle-ready supervisor package exists. Larger-body cases
+   offline build preparation. The owner then passed all 50 checks with no skips,
+   and [QNX ELF/SDK/76-site compiled review](docs/2026-11-26-supervisor-r2-build-review.md)
+   passes. A Chromebook RAM-only bundle and status-preserving capture helper
+   (14 host checks) are prepared. Next RAM read-backs/help-only startup, then
+   the bounded dummy trial; no new ARM result exists. Larger-body cases
    remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer

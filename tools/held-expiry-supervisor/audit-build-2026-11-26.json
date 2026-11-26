@@ -1,0 +1,806 @@
+{
+  "date": "2026-11-26",
+  "file": "nbt_held_supervisor",
+  "bytes": 27292,
+  "sha256": "1b499e82eb1ef73b40b327fe7bd334206fc1d21713271c55d363defc11256a28",
+  "elf": {
+    "class": 32,
+    "little_endian": true,
+    "machine": "EM_ARM",
+    "type": "ET_EXEC",
+    "flags": "0x5000002",
+    "entry": "0x100d68",
+    "interpreter": "/usr/lib/ldqnx.so.2"
+  },
+  "dependencies": [
+    "libc.so.3"
+  ],
+  "required_functions": [
+    "clock_gettime",
+    "waitpid",
+    "sysconf",
+    "printf",
+    "_init_array",
+    "sigemptyset",
+    "snprintf",
+    "timer_create",
+    "getpid",
+    "_preinit_array",
+    "memcpy",
+    "readlink",
+    "puts",
+    "dup2",
+    "timer_delete",
+    "vsnprintf",
+    "rmdir",
+    "readdir",
+    "nanosleep",
+    "write",
+    "kill",
+    "umask",
+    "__get_errno_ptr",
+    "lstat",
+    "unlink",
+    "memcmp",
+    "fork",
+    "execv",
+    "sigaction",
+    "symlink",
+    "_init_libc",
+    "memset",
+    "opendir",
+    "_fini_array",
+    "strcmp",
+    "atexit",
+    "timer_getoverrun",
+    "pread",
+    "stat",
+    "access",
+    "exit",
+    "_exit",
+    "strlen",
+    "open",
+    "closedir",
+    "fcntl",
+    "timer_settime",
+    "mkdir",
+    "close",
+    "sigprocmask"
+  ],
+  "required_count": 50,
+  "new_vs_held_reader": [
+    "_exit",
+    "access",
+    "closedir",
+    "dup2",
+    "execv",
+    "fcntl",
+    "fork",
+    "kill",
+    "memcpy",
+    "mkdir",
+    "nanosleep",
+    "opendir",
+    "pread",
+    "readdir",
+    "rmdir",
+    "stat",
+    "symlink",
+    "sysconf",
+    "timer_create",
+    "timer_delete",
+    "timer_getoverrun",
+    "timer_settime",
+    "umask",
+    "unlink",
+    "waitpid"
+  ],
+  "all_required_exports_found": true,
+  "libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+  "relocations": [
+    {
+      "type": 20,
+      "symbol": "errno",
+      "offset": "0x1057b0"
+    },
+    {
+      "type": 22,
+      "symbol": "clock_gettime",
+      "offset": "0x10565c"
+    },
+    {
+      "type": 22,
+      "symbol": "waitpid",
+      "offset": "0x105660"
+    },
+    {
+      "type": 22,
+      "symbol": "sysconf",
+      "offset": "0x105664"
+    },
+    {
+      "type": 22,
+      "symbol": "printf",
+      "offset": "0x105668"
+    },
+    {
+      "type": 22,
+      "symbol": "_init_array",
+      "offset": "0x10566c"
+    },
+    {
+      "type": 22,
+      "symbol": "sigemptyset",
+      "offset": "0x105670"
+    },
+    {
+      "type": 22,
+      "symbol": "snprintf",
+      "offset": "0x105674"
+    },
+    {
+      "type": 22,
+      "symbol": "timer_create",
+      "offset": "0x105678"
+    },
+    {
+      "type": 22,
+      "symbol": "getpid",
+      "offset": "0x10567c"
+    },
+    {
+      "type": 22,
+      "symbol": "_preinit_array",
+      "offset": "0x105680"
+    },
+    {
+      "type": 22,
+      "symbol": "memcpy",
+      "offset": "0x105684"
+    },
+    {
+      "type": 22,
+      "symbol": "readlink",
+      "offset": "0x105688"
+    },
+    {
+      "type": 22,
+      "symbol": "puts",
+      "offset": "0x10568c"
+    },
+    {
+      "type": 22,
+      "symbol": "dup2",
+      "offset": "0x105690"
+    },
+    {
+      "type": 22,
+      "symbol": "timer_delete",
+      "offset": "0x105694"
+    },
+    {
+      "type": 22,
+      "symbol": "vsnprintf",
+      "offset": "0x105698"
+    },
+    {
+      "type": 22,
+      "symbol": "rmdir",
+      "offset": "0x10569c"
+    },
+    {
+      "type": 22,
+      "symbol": "readdir",
+      "offset": "0x1056a0"
+    },
+    {
+      "type": 22,
+      "symbol": "nanosleep",
+      "offset": "0x1056a4"
+    },
+    {
+      "type": 22,
+      "symbol": "write",
+      "offset": "0x1056a8"
+    },
+    {
+      "type": 22,
+      "symbol": "kill",
+      "offset": "0x1056ac"
+    },
+    {
+      "type": 22,
+      "symbol": "__deregister_frame_info",
+      "offset": "0x1056b0"
+    },
+    {
+      "type": 22,
+      "symbol": "umask",
+      "offset": "0x1056b4"
+    },
+    {
+      "type": 22,
+      "symbol": "__get_errno_ptr",
+      "offset": "0x1056b8"
+    },
+    {
+      "type": 22,
+      "symbol": "lstat",
+      "offset": "0x1056bc"
+    },
+    {
+      "type": 22,
+      "symbol": "unlink",
+      "offset": "0x1056c0"
+    },
+    {
+      "type": 22,
+      "symbol": "memcmp",
+      "offset": "0x1056c4"
+    },
+    {
+      "type": 22,
+      "symbol": "fork",
+      "offset": "0x1056c8"
+    },
+    {
+      "type": 22,
+      "symbol": "execv",
+      "offset": "0x1056cc"
+    },
+    {
+      "type": 22,
+      "symbol": "sigaction",
+      "offset": "0x1056d0"
+    },
+    {
+      "type": 22,
+      "symbol": "symlink",
+      "offset": "0x1056d4"
+    },
+    {
+      "type": 22,
+      "symbol": "_init_libc",
+      "offset": "0x1056d8"
+    },
+    {
+      "type": 22,
+      "symbol": "memset",
+      "offset": "0x1056dc"
+    },
+    {
+      "type": 22,
+      "symbol": "opendir",
+      "offset": "0x1056e0"
+    },
+    {
+      "type": 22,
+      "symbol": "_fini_array",
+      "offset": "0x1056e4"
+    },
+    {
+      "type": 22,
+      "symbol": "strcmp",
+      "offset": "0x1056e8"
+    },
+    {
+      "type": 22,
+      "symbol": "atexit",
+      "offset": "0x1056ec"
+    },
+    {
+      "type": 22,
+      "symbol": "timer_getoverrun",
+      "offset": "0x1056f0"
+    },
+    {
+      "type": 22,
+      "symbol": "pread",
+      "offset": "0x1056f4"
+    },
+    {
+      "type": 22,
+      "symbol": "stat",
+      "offset": "0x1056f8"
+    },
+    {
+      "type": 22,
+      "symbol": "access",
+      "offset": "0x1056fc"
+    },
+    {
+      "type": 22,
+      "symbol": "exit",
+      "offset": "0x105700"
+    },
+    {
+      "type": 22,
+      "symbol": "_exit",
+      "offset": "0x105704"
+    },
+    {
+      "type": 22,
+      "symbol": "strlen",
+      "offset": "0x105708"
+    },
+    {
+      "type": 22,
+      "symbol": "open",
+      "offset": "0x10570c"
+    },
+    {
+      "type": 22,
+      "symbol": "closedir",
+      "offset": "0x105710"
+    },
+    {
+      "type": 22,
+      "symbol": "fcntl",
+      "offset": "0x105714"
+    },
+    {
+      "type": 22,
+      "symbol": "timer_settime",
+      "offset": "0x105718"
+    },
+    {
+      "type": 22,
+      "symbol": "mkdir",
+      "offset": "0x10571c"
+    },
+    {
+      "type": 22,
+      "symbol": "__register_frame_info",
+      "offset": "0x105720"
+    },
+    {
+      "type": 22,
+      "symbol": "close",
+      "offset": "0x105724"
+    },
+    {
+      "type": 22,
+      "symbol": "sigprocmask",
+      "offset": "0x105728"
+    }
+  ],
+  "init_fini": {
+    ".init_array": {
+      "address": "0x100f24",
+      "name": "frame_dummy"
+    },
+    ".fini_array": {
+      "address": "0x100ee0",
+      "name": "__do_global_dtors_aux"
+    }
+  },
+  "sdk_abi": {
+    "nbt_value_wnohang": 64,
+    "nbt_value_sigkill": 9,
+    "nbt_value_sigev_signal": 1,
+    "nbt_offset_sigev_signo": 4,
+    "nbt_offset_sigev_notify": 0,
+    "nbt_size_pid_t": 4,
+    "nbt_size_off_t": 4,
+    "nbt_size_itimerspec": 16,
+    "nbt_size_sigevent": 16,
+    "nbt_size_sig_atomic_t": 4,
+    "nbt_size_timer_t": 4
+  },
+  "host_test_markers_found": false,
+  "textrel_rpath_runpath": false,
+  "qnx_execution": false,
+  "runtime_timer_acceptance_verified": false,
+  "compiled_sites": [
+    {
+      "address": "0x101008",
+      "instruction": "bl #0x100c0c",
+      "purpose": "obtain interrupted errno location"
+    },
+    {
+      "address": "0x101014",
+      "instruction": "ldr r6, [r5]",
+      "purpose": "save errno before timer query"
+    },
+    {
+      "address": "0x101018",
+      "instruction": "bl #0x100cb4",
+      "purpose": "timer_getoverrun"
+    },
+    {
+      "address": "0x101040",
+      "instruction": "cmp r2, r3",
+      "purpose": "compare remaining capacity before addition"
+    },
+    {
+      "address": "0x10104c",
+      "instruction": "movwle r3, #0x4240",
+      "purpose": "saturation low bits"
+    },
+    {
+      "address": "0x101050",
+      "instruction": "movtle r3, #0xf",
+      "purpose": "saturation high bits; cap 1000000"
+    },
+    {
+      "address": "0x10105c",
+      "instruction": "str r6, [r5]",
+      "purpose": "restore errno"
+    },
+    {
+      "address": "0x10115c",
+      "instruction": "ldr r2, [r3, #0x20]",
+      "purpose": "read sticky clock-failed state"
+    },
+    {
+      "address": "0x101170",
+      "instruction": "bne #0x1011f0",
+      "purpose": "failed clock cannot recover into release"
+    },
+    {
+      "address": "0x101184",
+      "instruction": "bl #0x100af8",
+      "purpose": "monotonic clock read"
+    },
+    {
+      "address": "0x101198",
+      "instruction": "str r3, [r4, #0x20]",
+      "purpose": "latch syscall failure"
+    },
+    {
+      "address": "0x1011d0",
+      "instruction": "ldrd r6, r7, [r4, #0x28]",
+      "purpose": "load last good 64-bit clock"
+    },
+    {
+      "address": "0x1011dc",
+      "instruction": "blt #0x101190",
+      "purpose": "backwards clock latches failure"
+    },
+    {
+      "address": "0x1011e4",
+      "instruction": "strd r2, r3, [r4, #0x28]",
+      "purpose": "store last good time"
+    },
+    {
+      "address": "0x101270",
+      "instruction": "mov r2, #0x10",
+      "purpose": "clear exact 16-byte sigevent"
+    },
+    {
+      "address": "0x101290",
+      "instruction": "str r4, [sp, #4]",
+      "purpose": "SDK sigev_signo offset four"
+    },
+    {
+      "address": "0x101294",
+      "instruction": "str r3, [sp]",
+      "purpose": "SDK notify offset zero, SIGEV_SIGNAL one"
+    },
+    {
+      "address": "0x101298",
+      "instruction": "bl #0x100b4c",
+      "purpose": "create process-signal timer"
+    },
+    {
+      "address": "0x1012d0",
+      "instruction": "str r0, [sp, #0x10]",
+      "purpose": "itimerspec initial seconds offset zero"
+    },
+    {
+      "address": "0x1012e8",
+      "instruction": "str r3, [sp, #0x14]",
+      "purpose": "initial nanoseconds offset four"
+    },
+    {
+      "address": "0x1012f4",
+      "instruction": "str r0, [sp, #0x18]",
+      "purpose": "interval seconds offset eight"
+    },
+    {
+      "address": "0x101314",
+      "instruction": "str r4, [sp, #0x1c]",
+      "purpose": "interval ns offset twelve"
+    },
+    {
+      "address": "0x101318",
+      "instruction": "bl #0x100d2c",
+      "purpose": "arm timer"
+    },
+    {
+      "address": "0x101328",
+      "instruction": "bl #0x100ba0",
+      "purpose": "delete timer if arm fails"
+    },
+    {
+      "address": "0x101430",
+      "instruction": "mov r5, #0x40",
+      "purpose": "64 bounded EINTR retries"
+    },
+    {
+      "address": "0x10143c",
+      "instruction": "mov r2, #0x40",
+      "purpose": "QNX WNOHANG is 64"
+    },
+    {
+      "address": "0x101440",
+      "instruction": "bl #0x100b04",
+      "purpose": "wait for exact passed child PID"
+    },
+    {
+      "address": "0x101450",
+      "instruction": "cmp r2, r0",
+      "purpose": "only exact returned PID collects status"
+    },
+    {
+      "address": "0x101464",
+      "instruction": "str r1, [r4, #8]",
+      "purpose": "release ownership after actual collection"
+    },
+    {
+      "address": "0x1014a4",
+      "instruction": "cmp r3, #4",
+      "purpose": "EINTR handling"
+    },
+    {
+      "address": "0x1014b8",
+      "instruction": "mov r0, #3",
+      "purpose": "other errors retain ownership, return WAIT_ERROR"
+    },
+    {
+      "address": "0x1014c8",
+      "instruction": "cmp r3, #0xa",
+      "purpose": "QNX ECHILD is ten"
+    },
+    {
+      "address": "0x1014dc",
+      "instruction": "str r2, [r4, #8]",
+      "purpose": "relinquish unknown PID after ECHILD"
+    },
+    {
+      "address": "0x1014e0",
+      "instruction": "str r3, [r4, #0x10]",
+      "purpose": "mark lost rather than collected"
+    },
+    {
+      "address": "0x102a70",
+      "instruction": "cmp r1, #0",
+      "purpose": "check ownership before child signal"
+    },
+    {
+      "address": "0x102a74",
+      "instruction": "beq #0x102a80",
+      "purpose": "refuse unowned PID"
+    },
+    {
+      "address": "0x102a7c",
+      "instruction": "b #0x100be8",
+      "purpose": "signal owned child only"
+    },
+    {
+      "address": "0x102734",
+      "instruction": "bl #0x10192c",
+      "purpose": "validate raw provider capture framing"
+    },
+    {
+      "address": "0x102760",
+      "instruction": "bl #0x100c30",
+      "purpose": "match full READY bytes"
+    },
+    {
+      "address": "0x102778",
+      "instruction": "bl #0x100c30",
+      "purpose": "match exact summary prefix"
+    },
+    {
+      "address": "0x1027d4",
+      "instruction": "beq #0x102864",
+      "purpose": "reject elapsed leading zero"
+    },
+    {
+      "address": "0x102824",
+      "instruction": "bne #0x102864",
+      "purpose": "require exact control-tail size"
+    },
+    {
+      "address": "0x102830",
+      "instruction": "bl #0x100c30",
+      "purpose": "match full read/seek/DETACHED control tail"
+    },
+    {
+      "address": "0x10285c",
+      "instruction": "cmp r3, #0",
+      "purpose": "provider stderr must be empty"
+    },
+    {
+      "address": "0x102894",
+      "instruction": "bl #0x1017b0",
+      "purpose": "check deadline before CONTROL_TRACE_OK"
+    },
+    {
+      "address": "0x1028b8",
+      "instruction": "bl #0x1016d4",
+      "purpose": "record CONTROL_TRACE_OK"
+    },
+    {
+      "address": "0x1028cc",
+      "instruction": "bl #0x1019d4",
+      "purpose": "recheck reader ownership/status"
+    },
+    {
+      "address": "0x10290c",
+      "instruction": "bl #0x10152c",
+      "purpose": "fresh reader stdout before release"
+    },
+    {
+      "address": "0x102914",
+      "instruction": "bl #0x10152c",
+      "purpose": "fresh reader stderr before release"
+    },
+    {
+      "address": "0x102980",
+      "instruction": "bl #0x1017b0",
+      "purpose": "deadline recheck after final reads"
+    },
+    {
+      "address": "0x10299c",
+      "instruction": "cmp r3, #0",
+      "purpose": "reader-owned check immediately before signal"
+    },
+    {
+      "address": "0x1029ac",
+      "instruction": "mov r1, #0x10",
+      "purpose": "QNX SIGUSR1 sixteen"
+    },
+    {
+      "address": "0x1029b0",
+      "instruction": "bl #0x100be8",
+      "purpose": "release exact reader PID"
+    },
+    {
+      "address": "0x1029f4",
+      "instruction": "bl #0x1016d4",
+      "purpose": "record successful release"
+    },
+    {
+      "address": "0x102aa4",
+      "instruction": "sub sp, sp, #0x7c",
+      "purpose": "main entry before help/active role dispatch"
+    },
+    {
+      "address": "0x102bb8",
+      "instruction": "bl #0x101154",
+      "purpose": "launcher startup clock check"
+    },
+    {
+      "address": "0x102be4",
+      "instruction": "movw r2, #0x7530",
+      "purpose": "launcher hard deadline 30000 ms"
+    },
+    {
+      "address": "0x102bec",
+      "instruction": "mov r3, #0x64",
+      "purpose": "repeat 100 ms"
+    },
+    {
+      "address": "0x102bf0",
+      "instruction": "bl #0x101258",
+      "purpose": "arm launcher before fork"
+    },
+    {
+      "address": "0x102c20",
+      "instruction": "bl #0x100c3c",
+      "purpose": "fork supervisor"
+    },
+    {
+      "address": "0x102c54",
+      "instruction": "bl #0x1013fc",
+      "purpose": "launcher waits only on owned supervisor"
+    },
+    {
+      "address": "0x102c88",
+      "instruction": "bl #0x102a70",
+      "purpose": "forward HUP to owned supervisor"
+    },
+    {
+      "address": "0x102cac",
+      "instruction": "bl #0x102a70",
+      "purpose": "forward INT"
+    },
+    {
+      "address": "0x102cd0",
+      "instruction": "bl #0x102a70",
+      "purpose": "forward TERM"
+    },
+    {
+      "address": "0x102cec",
+      "instruction": "mov r2, #9",
+      "purpose": "launcher hard stop SIGKILL"
+    },
+    {
+      "address": "0x102cf4",
+      "instruction": "bl #0x102a70",
+      "purpose": "kill owned supervisor"
+    },
+    {
+      "address": "0x102d3c",
+      "instruction": "mov r0, #0x7c",
+      "purpose": "ECHILD launcher exit 124"
+    },
+    {
+      "address": "0x102d64",
+      "instruction": "movne r0, #0x7a",
+      "purpose": "wait-error launcher exit 122"
+    },
+    {
+      "address": "0x102d60",
+      "instruction": "ldreq r0, [r5, #0x7c]",
+      "purpose": "propagate supervisor actual decoded status"
+    },
+    {
+      "address": "0x102d74",
+      "instruction": "movw r2, #0x7918",
+      "purpose": "self hard stop 31000 ms"
+    },
+    {
+      "address": "0x102d6c",
+      "instruction": "mov r1, #9",
+      "purpose": "self timer signal SIGKILL"
+    },
+    {
+      "address": "0x102e68",
+      "instruction": "movw r2, #0x61a8",
+      "purpose": "trial deadline 25000 ms"
+    },
+    {
+      "address": "0x1033c0",
+      "instruction": "bl #0x100bdc",
+      "purpose": "bounded final stdout write"
+    },
+    {
+      "address": "0x1033dc",
+      "instruction": "bl #0x1014ec",
+      "purpose": "check deadline after positive write"
+    },
+    {
+      "address": "0x103338",
+      "instruction": "moveq r0, #3",
+      "purpose": "output failure exit three"
+    },
+    {
+      "address": "0x103358",
+      "instruction": "movne r0, #3",
+      "purpose": "clock-failed successful-output exit three"
+    }
+  ],
+  "compiled_site_count": 76,
+  "relocation_counts": {
+    "R_ARM_JUMP_SLOT": 52,
+    "R_ARM_COPY": 1
+  },
+  "copy_objects": [
+    {
+      "name": "errno",
+      "size": 4,
+      "provider_size_matches": true
+    }
+  ],
+  "weak_dynamic_imports": [
+    "__register_frame_info",
+    "__deregister_frame_info"
+  ],
+  "owner_host_tests": {
+    "passed": 50,
+    "skipped": 0,
+    "failures": 0,
+    "seconds": 43.241
+  },
+  "review_archive": {
+    "bytes": 94344,
+    "sha256": "caaa9f25d812aced7d2754c22f3d5abff7c4d64c380a495f0ac29a441a4a07eb",
+    "members": 47
+  },
+  "preparation_payloads_matched": 24,
+  "compiled_build_hashes_matched": true,
+  "result": "static ELF/import/SDK/compiled-flow review passes; QNX runtime timer/process behavior remains unverified"
+}

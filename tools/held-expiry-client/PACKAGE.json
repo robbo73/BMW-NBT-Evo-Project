@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-26",
+  "purpose": "RAM-only inert 586-byte held-descriptor normal-expiry trial",
+  "supervisor_build_archive_sha256": "caaa9f25d812aced7d2754c22f3d5abff7c4d64c380a495f0ac29a441a4a07eb",
+  "owner_host_tests": {
+    "passed": 50,
+    "skipped": 0,
+    "seconds": 43.241
+  },
+  "compiled_sites_checked": 76,
+  "client_host_checks": {
+    "passed": 14,
+    "seconds": 0.113,
+    "no_ssh_or_arm_execution": true
+  },
+  "assets": {
+    "nbt_large_endpoint_586": {
+      "bytes": 15898,
+      "sha256": "8f502b6394a0acd9c800358b9ed6605fdc2f8aa92f5dce32dde73653b1bc06f2"
+    },
+    "nbt_hold_reader_586": {
+      "bytes": 22345,
+      "sha256": "9a54c7f4dba539d25861f6e98a018d778bec62eb86462b7b208138a4be34de79"
+    },
+    "nbt_held_supervisor": {
+      "bytes": 27292,
+      "sha256": "1b499e82eb1ef73b40b327fe7bd334206fc1d21713271c55d363defc11256a28"
+    }
+  },
+  "acceptance": "complete assessor PASS AND observed launcher status 0 AND SSH/QNET status 0; exact final status trailer required",
+  "qnx_supervisor_execution_verified": false,
+  "qnx_held_reader_execution_verified": false,
+  "prior_586_stdio_run_verified": true,
+  "qnx_timer_runtime_acceptance_verified": false,
+  "hmi_integration_verified": false,
+  "live_rpm_verified": false
+}
