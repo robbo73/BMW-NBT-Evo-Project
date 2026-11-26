@@ -51,6 +51,8 @@ The [DAviS0d Windows NBT emulator review](docs/2026-11-26-bmw-nbt-emulator-revie
 
 The [return to plugin-loading review](docs/2026-11-26-runtime-context-review.md) confirms the current six Ubuntu hashes and separates the earlier standalone shutdown crash from the HMI non-loading observation. Both loader flags and lifecycle slots match. The next evidence gap is the introducing dependency/load and runtime binding order: eight libraries mapped in the probe core have not been supplied. Inventory existing Ubuntu vehicle copies first; no rebuild or loading test is requested.
 
+The [27 November FreZZZeR/iDriveDeck review](docs/2026-11-27-frezzzer-id6-review.md) finds that the two requested repos are diagnostic tooling and an unfinished native prototype, while their linked upstream already releases BoostDeck/ShiftDeck. Our exact car framework pair is listed, and the packaged ShiftDeck passes 50 function-prefix plus vtable checks against our captured pair. Its MOST transport is implemented but OBD RPM over that path remains unverified on the car; some same-pair HMI freezes are reported. Evaluate this as a UI/integration base while retaining the current loading pause and adapter-free RPM goal.
+
 ## Development setup
 
 - **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.

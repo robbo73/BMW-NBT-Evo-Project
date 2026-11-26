@@ -12,6 +12,7 @@ is not a completed mechanism.
 | Area | Evidence/status | Reference |
 | --- | --- | --- |
 | QNX SSH; external HU identification/VIN | Demonstrated; HU responses do not establish DME access | [Project README](README.md) |
+| Existing native gauge reference | Linked iDriveDeck releases BoostDeck/ShiftDeck; exact car framework pair listed; packaged ShiftDeck passes 50 function-prefix/vtable audit. MOST OBD RPM and stable execution on this car unverified | [27 November review](docs/2026-11-27-frezzzer-id6-review.md) |
 | Direct DME communication | Unverified | [Project README](README.md) |
 | Existing RPM cache, engine off/idle | Read-only observations completed; invalid cache and no RPM property in the inspected provider snapshots | [Vehicle observations](docs/2026-11-19-property-state-vehicle-results.md) |
 | Native subscription versus initial async-get | Distinct paths traced offline; full RPM candidate built/reviewed, not run | [API trace](docs/2026-11-20-cds-async-get-review.md), [build](docs/2026-11-20-initial-get-build-review.md) |
@@ -32,16 +33,19 @@ is not a completed mechanism.
 
 ## Next focused work
 
-1. Focus on the actual [plugin-loading/runtime context](docs/2026-11-26-runtime-context-review.md)
-   before another RPM trial. All six current Ubuntu artifact hashes match the
-   reviewed baseline. The core's mixed-runtime fault and the earlier HMI
-   non-loading observation are distinct; no common cause is established.
-   Eight core-mapped dependencies are missing from the uploaded files. Check
-   existing Ubuntu copies/provenance before any new collection or proposed
-   source/linking change. No rebuild or car loading test is needed for this
-   inventory. The native dummy normal-expiry result is recorded and needs no
-   repeat. Larger-size/fault cases remain unverified, deferred unless required
-   by a concrete HMI trial/recovery design.
+1. Evaluate the [existing iDriveDeck ShiftDeck/BoostDeck implementation](docs/2026-11-27-frezzzer-id6-review.md)
+   as a UI and native integration reference before further custom gauge work.
+   The two originally supplied FreZZZeR repos are not a completed native app.
+   Our car's framework pair matches four upstream profiles, and a packaged
+   ShiftDeck static audit passes 50 function prefixes plus vtables. Same-pair
+   freeze reports mean this does not establish safe native loading. Separate
+   the UI/lifecycle question from transport: OBD 01 RPM over its implemented
+   MOST fallback is still unverified, and its Android Auto guard may force
+   HSFZ. No installation or vehicle operation was performed.
+   Continue the [runtime-context investigation](docs/2026-11-26-runtime-context-review.md)
+   using the unchanged six-file Ubuntu baseline. Eight core-mapped libraries
+   remain missing locally; a later read-only car collection can close that
+   evidence gap. No repeat inert rehearsal or source change is required now.
 2. Continue the unresolved runtime/restart investigation before any HMI load.
    Endpoint expiry is a discovery constraint, not a crash fix or an unload.
 3. Consider a separate bounded stock-screen observation after fingerprints,

@@ -1,0 +1,108 @@
+{
+  "review_date_sydney": "2026-11-27",
+  "scope": "Public repository static source review and isolated Linux host tests. No BMW connection, ARM execution, package installation on a vehicle or HMI operation.",
+  "repositories": {
+    "FreZZZeR/nbtevo-diag": "e550bdadebe9cb060ecab1630893ebed433ec4c2",
+    "FreZZZeR/nbtevo-id6-apps": "e4fb4ce2ab51e7c48f7cab9b805a963dd5918672",
+    "FreZZZeR/ID6_apps_prerelease": "9113c26ef08999b5eab8bcd5f13227b3225bcaae",
+    "inotbarnacle/ID6_apps_prerelease": "8567abaadd1305965b3ad39e3222575cd49c507d"
+  },
+  "requested_python_tests": {
+    "passed": 28,
+    "seconds": 0.06,
+    "evocode_version": "0.5.0",
+    "pytest_version": "9.2.0",
+    "gateway": "fake only"
+  },
+  "requested_native_host_checks": {
+    "default_make_test": "Stopped at final collector test compilation: -Werror=misleading-indentation on current host GCC. First six C test programs passed.",
+    "separate_collector_test": "Passed with only -Wno-error=misleading-indentation added, source unchanged.",
+    "shell_syntax_checks": "Collector C and plugin C++ both passed.",
+    "qnx_build_or_native_run": false
+  },
+  "linked_upstream_focused_host_checks": {
+    "core": "passed",
+    "most_checks": 130,
+    "most_failures": 0,
+    "diag_link_cases": 25,
+    "diag_link_failures": 0,
+    "transport": "fake DSI/DME only; not whole upstream suite"
+  },
+  "framework_match": {
+    "app": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+    "core": "7c6ad2a7134adf8385435487301c88a192a0e8e3bf1bf5ae5c858eb4f92d8202",
+    "matched_installer_profiles": [
+      "NBTevo_Q18491I",
+      "NBTevo_R19101I",
+      "NBTevo_R19144I",
+      "NBTevo_T18501I"
+    ],
+    "software_label_identified": false,
+    "function_prefix_comparisons_passed": 50,
+    "vtables_passed": true,
+    "runtime_compatibility_proven": false
+  },
+  "dashboard_zip": {
+    "bytes": 681018,
+    "sha256": "36ec7fce93c73b62342290e91429c89d68a64e8aed97fb62b5a4dd50be66d023"
+  },
+  "package_metadata": {
+    "reference-libShiftDeck.so": {
+      "bytes": 49048,
+      "sha256": "5b7cd9c61eafcef43767dc509aee1d1239eed0fb748e6ed05b5980733cf31313",
+      "elf_class": 32,
+      "machine": "EM_ARM",
+      "type": "ET_DYN",
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libm.so.2",
+        "libsocket.so.3",
+        "libstdc++.so.6",
+        "libc.so.3"
+      ],
+      "stream_init_imports": [],
+      "exports": {
+        "pluginAppInfo": {
+          "size": 24,
+          "address": "0xa500"
+        }
+      },
+      "most_markers": {
+        "--transport": false,
+        "MOST unavailable": false,
+        "DSYSMOSTServer": false,
+        "libsys_dsi_base.cpp-ne.so.4": false
+      }
+    },
+    "reference-shift-deck-qnx": {
+      "bytes": 42759,
+      "sha256": "dab4c1644ac72221464dd18fc255cbc547b3934808f48b9845f54a7493328787",
+      "elf_class": 32,
+      "machine": "EM_ARM",
+      "type": "ET_EXEC",
+      "needed": [
+        "libm.so.2",
+        "libsocket.so.3",
+        "libc.so.3"
+      ],
+      "stream_init_imports": [],
+      "exports": {},
+      "most_markers": {
+        "--transport": true,
+        "MOST unavailable": true,
+        "DSYSMOSTServer": true,
+        "libsys_dsi_base.cpp-ne.so.4": true
+      }
+    }
+  },
+  "key_limits": [
+    "Requested native repository has an always-failing HSFZ stub, missing periodic scheduling and wrong/unconfirmed entry export for our captured loader.",
+    "Linked upstream implements real HSFZ and MOST fallback; ShiftDeck uses OBD 01 0C, not CDS engine.RPMSpeed.",
+    "Upstream MOST notes explicitly leave OBD 01 and this port unverified on a car; their other custom N20 port reported DID 22 success without OBD equipment.",
+    "Same framework pair has both reported successes and freezes; matching fingerprints do not establish stable runtime.",
+    "Upstream forces HSFZ if native NbtAad is detected; preserving future Android Auto needs review."
+  ],
+  "vehicle_installation_performed": false,
+  "our_live_rpm_verified": false
+}
