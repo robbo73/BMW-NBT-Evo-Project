@@ -37,9 +37,11 @@ is not a completed mechanism.
    The owner then passed RAM read-backs, help startup and the [native 586-byte dummy run](docs/2026-11-26-larger-body-vehicle-results.md), including complete trace assessment.
    The separate [open-handle expiry proposal has been reviewed](docs/2026-11-26-open-handle-expiry-assessment.md):
    reuse the endpoint with a new raw-descriptor reader, confirmed-exit release,
-   bounded phases and explicit capture/readiness controls. It is design only;
-   no implementation or new target package is ready. Next freeze that protocol
-   offline; larger-body boundary cases remain separate work.
+   bounded phases and explicit capture/readiness controls. A [separate reader preparation](docs/2026-11-26-open-handle-reader-preparation.md)
+   now passes 22 host checks and is ready for the owner Ubuntu cross-build.
+   No new QNX build/native result, vehicle controller or target-ready package
+   exists yet. Review the compiled reader and SDK capture, then finish the
+   controller/assessor; larger-body boundary cases remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
    a 2048-byte reply cap from the incoming message setting or change it blindly.

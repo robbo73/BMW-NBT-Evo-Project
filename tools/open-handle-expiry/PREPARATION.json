@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-26",
+  "stage": "source-and-offline-build-preparation-only",
+  "reader_revision": "held-reader-1",
+  "body_bytes": 586,
+  "host_tests": {
+    "count": 22,
+    "seconds": 6.591,
+    "passed": true,
+    "qnx_emulation": false
+  },
+  "qnx_build_performed": false,
+  "target_execution_performed": false,
+  "controller_implemented": false,
+  "complete_trace_assessor_implemented": false,
+  "milestone_7_modified": false,
+  "endpoint_unchanged": {
+    "sha256": "8f502b6394a0acd9c800358b9ed6605fdc2f8aa92f5dce32dde73653b1bc06f2",
+    "bundled": false
+  },
+  "captured_libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+  "api_export_spot_check": "all 16 proposed raw-file/signal/clock/formatting functions checked are exported; not final compiled-import review",
+  "review_output": "/home/rob/nbt-open-handle-reader-review.tar.gz",
+  "vehicle_execution": "paused pending compiled reader and complete controller/assessor review"
+}
