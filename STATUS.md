@@ -45,7 +45,11 @@ is not a completed mechanism.
    now passes 50 synthetic tests after numeric hardening and proposed
    pre-release trace-gate/cleanup-order amendments. Next implement/test the
    controller, including bounded IO/cleanup and whole-trial watchdog coverage,
-   before any vehicle-ready package; larger-body cases remain separate work.
+   before any vehicle-ready package. A [supplied shell prototype was reviewed](docs/2026-11-26-shell-controller-assessment.md):
+   its 12 host tests pass, but independent invalid-control, blocked-output and
+   NUL-loss cases expose blockers, alongside missing target printf and PID
+   ownership gaps. It is not adopted; next implementation is a C supervisor.
+   Larger-body cases remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
    a 2048-byte reply cap from the incoming message setting or change it blindly.

@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-26",
+  "candidate": "Owner-supplied Claude held-controller-1 shell prototype",
+  "decision": "not accepted for target packaging or execution",
+  "archive": {
+    "filename": "held-expiry-assessor.zip",
+    "bytes": 36920,
+    "sha256": "c2004da484ec9a333585a54e3d43b29b369cc4fef5cdaf91dbb7e5d29c81fdc1",
+    "ordinary_files": 11
+  },
+  "original_files": {
+    "CONTROLLER-REVIEW.md": "d0d70fcc8f5647cdeff85d8584e71991aad43e52d7d46289f1e4db84d1e23ceb",
+    "INTEGRATION-NOTE.md": "1340a3cd71eb099ca159900e46ea03b834751f72d94771417734589a68c4f6fa",
+    "LOG-CONTRACT.md": "040ef444ad6528ee3b0714fb3964eb5472c48bef9c423a3d1d12e1caa981967d",
+    "assess_held_expiry.py": "d2b0daca52a0d9ab09c836729067aa7668d1f359a962b03c6fa5685f4b8258b0",
+    "examples/SYNTHETIC-held-expiry-pass.assessment.txt": "a3f72b77e1dd6cf9f3a92886f4783c80f6f3b8114230b40f8d4ae7b8cf318845",
+    "examples/SYNTHETIC-held-expiry-pass.log": "d6f1f25aa816338e95e8c531c9c491462f38084dcfd2f5a09d4dba5523efb571",
+    "examples/SYNTHETIC-held-expiry-zero-byte-read.assessment.txt": "68da37d0939d259ad36634544cf313c4acf7655f03a2f7b56801a332b6b4b085",
+    "examples/SYNTHETIC-held-expiry-zero-byte-read.log": "92b43b2636e8f78b05e2e91ac080dfa5bfc9ead886bf135c194da0ba82ed4d0e",
+    "nbt_held_controller.sh": "a9cbfef018e157af304500d9dd6f5189a3273ab11d4f6ff5de91bee551fa53df",
+    "test_assess_held_expiry.py": "88b0637d36aba37314927009ab5ee9a98158bca74a122c591fecee07401e8fdc",
+    "test_controller.py": "9e296ec9f11b80e9cd0524b310eb8a902e4b2a119c0eda5d7f7516bd8c1785ec"
+  },
+  "three_loose_files_match_zip": true,
+  "baseline_host_suite": {
+    "test_methods": 12,
+    "passed": 12,
+    "seconds": 10.294,
+    "shells": [
+      "dash",
+      "bash"
+    ],
+    "scenario_executions": 22,
+    "assessor": "external bundled legacy checker, not active hardened checker",
+    "reader": "own unchanged reader source with private host path substitutions; injected post-release errors",
+    "provider": "synthetic shell stub"
+  },
+  "adversarial_review": [
+    {
+      "case": "malformed_control_trace",
+      "controller_exit": 0,
+      "release_sent": true,
+      "legacy_verdict": "PREREQUISITE_FAILED",
+      "adopted_verdict": "CONTRADICTORY",
+      "adopted_findings": [
+        {
+          "category": "INCOMPLETE",
+          "message": "missing controller record CONTROL_TRACE_OK"
+        },
+        {
+          "category": "CONTRADICTORY",
+          "message": "controller records out of the required order"
+        },
+        {
+          "category": "PREREQUISITE_FAILED",
+          "message": "premature release: RELEASE_SENT before CONTROL_TRACE_OK"
+        },
+        {
+          "category": "PREREQUISITE_FAILED",
+          "message": "control read trace is not index=0 0->100 requested=100 count=100 (requested=101: buffering or wrong client?)"
+        }
+      ]
+    },
+    {
+      "case": "stdout_blocked_before_watchdog",
+      "shell": "dash",
+      "configured_watchdog_seconds": 1,
+      "still_running_after_seconds": 2.502,
+      "timed_out": true,
+      "pipe_filled_bytes": 65536
+    },
+    {
+      "case": "stdout_blocked_before_watchdog",
+      "shell": "bash",
+      "configured_watchdog_seconds": 1,
+      "still_running_after_seconds": 2.504,
+      "timed_out": true,
+      "pipe_filled_bytes": 65536
+    }
+  ],
+  "capture_integrity_review": [
+    {
+      "case": "nul_prefixed_provider_ready",
+      "shell": "dash",
+      "provider_stub_explicitly_writes_nul": true,
+      "controller_exit": 0,
+      "release_sent": true,
+      "nul_preserved_in_final_capture": false,
+      "legacy_assessor_verdict": "PASS"
+    },
+    {
+      "case": "nul_prefixed_provider_ready",
+      "shell": "bash",
+      "provider_stub_explicitly_writes_nul": true,
+      "controller_exit": 0,
+      "release_sent": true,
+      "nul_preserved_in_final_capture": false,
+      "legacy_assessor_verdict": "PASS"
+    }
+  ],
+  "native_execution": false,
+  "vehicle_connection": false,
+  "active_assessor_changed": false,
+  "reader_endpoint_changed": false,
+  "next_implementation": "native C supervisor design with owned unreaped children, complete pre-release control validation, bounded IO/cleanup and byte-exact capture; not implemented by this review"
+}

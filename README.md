@@ -41,6 +41,8 @@ The manager-path observer also completed a vehicle run. It confirms the intended
 
 The [held-expiry offline assessor](docs/2026-11-26-held-expiry-assessor-review.md), contributed by Claude and reviewed here, passes 50 synthetic tests after numeric hardening and adding a mandatory pre-release control-trace assertion. Its proposed contract retains watchdog coverage through cleanup. No target controller or native held-handle result exists yet.
 
+The [subsequent shell-controller review](docs/2026-11-26-shell-controller-assessment.md) reproduces its 12 host test methods but finds pre-release trace validation, blocked-output/watchdog and byte-preservation failures, plus the already-missing target printf and acknowledged PID ownership gap. It is not adopted as a vehicle runner; the active hardened assessor and tested binaries remain unchanged.
+
 The [DAviS0d Windows NBT emulator review](docs/2026-11-26-bmw-nbt-emulator-review.md) finds a substantial older x86 NBT UI/simulation project, not an Evo ARM test environment. Ten focused model/static-contract checks pass, but Windows boot was not tested and required IFS files need their actual Git LFS payloads. Its simulated gauges do not verify live CDS/RPM; own-code reuse is restricted by its licence.
 
 ## Development setup
