@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-11-26T07:39:29.901787+00:00",
+  "purpose": "inert 586-byte held-descriptor expiry trial",
+  "decision": "ACCEPT",
+  "live_rpm_verified": false,
+  "hmi_integration_verified": false,
+  "controller_exit": 0,
+  "assessor_verdict": "PASS",
+  "reasons": [],
+  "ssh_exit": 0,
+  "transport_status_agrees": true,
+  "raw_sha256": "a86f93c9bc7cb9316440597c5983be772fe10490f17693415557e768999d6d29",
+  "capture_sha256": "88fdf4799b5ff2f7c69a760d310768d85fa92f3a9dfa84ee753d828420b0b37d"
+}

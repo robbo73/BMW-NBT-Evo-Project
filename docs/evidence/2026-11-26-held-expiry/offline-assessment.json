@@ -1,0 +1,89 @@
+{
+  "transport_gate": {
+    "decision": "ACCEPT",
+    "controller_exit": 0,
+    "assessor_verdict": "PASS",
+    "reasons": [],
+    "live_rpm_verified": false,
+    "hmi_integration_verified": false,
+    "ssh_exit": 0,
+    "transport_status_agrees": true
+  },
+  "assessment": {
+    "contract": "held-expiry-log/1",
+    "contract_status": "PROPOSED",
+    "proposal_revision": 2,
+    "input_authenticated": false,
+    "identities": {
+      "controller": 4579445,
+      "provider": 4579447,
+      "reader": 4583544
+    },
+    "provider": {
+      "elapsed_ms": 10023,
+      "events": 2,
+      "trace": [
+        {
+          "index": 0,
+          "kind": "read",
+          "before": 0,
+          "requested": 100,
+          "xtype": 0,
+          "count": 100,
+          "after": 100,
+          "endpoint_reply_code": -1
+        },
+        {
+          "index": 1,
+          "kind": "seek",
+          "before": 100,
+          "offset_bits": "0000000000000000",
+          "whence": 1,
+          "after": 100,
+          "endpoint_reply_code": -1
+        }
+      ],
+      "exit_status": 0
+    },
+    "reader": {
+      "probes": [
+        {
+          "name": "read64_a",
+          "syscall_result": -1,
+          "errno": 9,
+          "elapsed_ms": 0
+        },
+        {
+          "name": "seek_start",
+          "syscall_result": -1,
+          "errno": 9,
+          "elapsed_ms": 0
+        },
+        {
+          "name": "read64_b",
+          "syscall_result": -1,
+          "errno": 9,
+          "elapsed_ms": 0
+        }
+      ],
+      "close": {
+        "name": "close",
+        "syscall_result": -1,
+        "errno": 9,
+        "elapsed_ms": 0
+      },
+      "last_record": "OBSERVED: held-reader-1; three probes failed; requires provider/trace assessment",
+      "exit_status": 0
+    },
+    "verdict": "PASS",
+    "findings": [],
+    "notes": [
+      "TRACE rc values are provider resource-manager reply codes; reader rc values are syscall results.",
+      "errno values are recorded, not required to equal any particular value.",
+      "A PASS describes this capture only; it is not a general QNX result."
+    ],
+    "hmi_integration_verified": false,
+    "plugin_execution_verified": false,
+    "live_rpm_verified": false
+  }
+}

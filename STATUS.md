@@ -23,47 +23,29 @@ is not a completed mechanism.
 | Dummy symlink outside plugin roots | Native normal expiry and forced helper death passed, with dangling link and fixture cleanup | [Alias results](docs/2026-11-24-discovery-link-vehicle-results.md) |
 | C-only stdio reader through alias | Native seek-end/ftell/rewind/full-read/close passed; both exits 0 and cleanup passed; 23-byte body only | [Reader results](docs/2026-11-24-stdio-reader-vehicle-results.md) |
 | 586-byte dummy binary body | Native full stdio read/close, deadline exit 0, alias cleanup and complete trace assessment passed; three seeks and one 1024-byte request returning 586 bytes | [26 November results](docs/2026-11-26-larger-body-vehicle-results.md) |
-| Larger bodies / real manifest / open-handle death | Native bodies above 586 bytes, real XML/HMI integration and provider death with an open handle remain unverified | [Build review](docs/2026-11-25-larger-body-build-review.md), [review assessment](docs/2026-11-25-larger-body-endpoint-assessment.md) |
-| Held-descriptor reader | Owner cross-build and 22 host checks pass; static imports/ABI/control flow reviewed. No native run yet; the separately reviewed supervisor is now packaged. Offline assessor has 50 synthetic checks | [Build review](docs/2026-11-26-open-handle-reader-build-review.md) |
-| Held-descriptor supervisor/capture | Owner host suite 50/50; QNX static build review passes; ready bundle/client prepared. No native supervisor/held-reader result | [Build and bundle](docs/2026-11-26-supervisor-r2-build-review.md) |
+| Larger bodies / real manifest / forced death | Native bodies above 586 bytes, real XML/HMI integration and forced provider death with an open handle remain unverified | [Build review](docs/2026-11-25-larger-body-build-review.md), [review assessment](docs/2026-11-25-larger-body-endpoint-assessment.md) |
+| Held raw descriptor after normal expiry | Native 100-byte control passed; after confirmed provider exit both reads, seek and close returned -1/errno 9 promptly. Reader/provider exit 0; exact uploaded capture passes offline reassessment | [Vehicle results](docs/2026-11-26-held-expiry-vehicle-results.md) |
+| Held-descriptor supervisor/capture | Native normal path passed: control-trace gate, parent release, cleanup, launcher/SSH exit 0, assessor PASS and client ACCEPT. Emergency timer/death paths untested | [Vehicle results](docs/2026-11-26-held-expiry-vehicle-results.md), [build](docs/2026-11-26-supervisor-r2-build-review.md) |
 | Native loader length-error handling | Offline: ftell==-1 is not explicitly rejected; allocation call is new[], runtime consequences unverified. Current C reader already rejects it | [Static check and correction](docs/2026-11-25-larger-body-endpoint-assessment.md) |
 | Earlier native framework/probe crashes | Core establishes mixed C++ stream destruction fault; binding/initialization context and associated full-unit restarts unresolved | [Core/runtime checkpoint](docs/2026-11-17-checkpoint.md) |
 | Stock Sports Displays comparison | Native proxies/notification route traced offline; proposed read-only closed/open comparison not yet performed | [Stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
 
 ## Next focused work
 
-1. Larger-body independent review and the [integration assessment](docs/2026-11-25-larger-body-endpoint-assessment.md)
-   are complete. The [separate body/reader/logging preparation](docs/2026-11-25-larger-body-preparation.md)
-   passes 36 cloud host checks after a [fortified read-hook correction](docs/2026-11-25-larger-body-host-test-fix.md).
-   The corrected owner run passed and both [586-byte ELFs passed static review](docs/2026-11-25-larger-body-build-review.md).
-   The owner then passed RAM read-backs, help startup and the [native 586-byte dummy run](docs/2026-11-26-larger-body-vehicle-results.md), including complete trace assessment.
-   The separate [open-handle expiry proposal has been reviewed](docs/2026-11-26-open-handle-expiry-assessment.md):
-   reuse the endpoint with a new raw-descriptor reader, confirmed-exit release,
-   bounded phases and explicit capture/readiness controls. A [separate reader preparation](docs/2026-11-26-open-handle-reader-preparation.md)
-   passed all 22 owner host checks and its [QNX build/SDK review](docs/2026-11-26-open-handle-reader-build-review.md)
-   now passes: 32 required functions available and 58 compiled sites checked.
-   The reader has not run on QNX. The [offline assessor contribution](docs/2026-11-26-held-expiry-assessor-review.md)
-   now passes 50 synthetic tests after numeric hardening and proposed
-   pre-release trace-gate/cleanup-order amendments. Next implement/test the
-   controller, including bounded IO/cleanup and whole-trial watchdog coverage,
-   before any vehicle-ready package. A [supplied shell prototype was reviewed](docs/2026-11-26-shell-controller-assessment.md):
-   its 12 host tests pass, but independent invalid-control, blocked-output and
-   NUL-loss cases expose blockers, alongside missing target printf and PID
-   ownership gaps. It is not adopted. A [subsequent C supervisor review](docs/2026-11-26-c-supervisor-assessment.md)
-   finds the intended raw-capture/pre-release improvements, but reproduces
-   clock-error, late-write and waitpid-ownership defects; guardian identity
-   needed resolution. Those r1 results were 5 passed/15 namespace skips.
-   [Revision 2 plus local clock/signal fixes](docs/2026-11-26-supervisor-r2-preparation.md)
-   now passes 34 host checks with 16 namespace skips and has a frozen Ubuntu
-   offline build preparation. The owner then passed all 50 checks with no skips,
-   and [QNX ELF/SDK/76-site compiled review](docs/2026-11-26-supervisor-r2-build-review.md)
-   passes. A Chromebook RAM-only bundle and status-preserving capture helper
-   (14 host checks) are prepared. Next RAM read-backs/help-only startup, then
-   the bounded dummy trial; no new ARM result exists. Larger-body cases
-   remain separate work.
+1. The [native 586-byte stdio test](docs/2026-11-26-larger-body-vehicle-results.md)
+   and subsequent [held raw-descriptor normal-expiry trial](docs/2026-11-26-held-expiry-vehicle-results.md)
+   both pass within their distinct scopes. The latter complete uploaded capture
+   matches its hashes and independently reassesses PASS/ACCEPT, with launcher/SSH
+   exit 0 and owned fixture cleanup. No repeat is needed for this checkpoint.
+   Review larger-size boundary cases offline before preparing another native
+   package. Keep any forced-death/open-stdio and emergency-timer cases separate;
+   those were not exercised by normal expiry. The supervisor's 50 owner host
+   checks and [QNX compiled review](docs/2026-11-26-supervisor-r2-build-review.md)
+   remain supporting evidence, not native fault-path tests.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
-   and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
-   a 2048-byte reply cap from the incoming message setting or change it blindly.
+   and is separate. No real manifest/XML/HMI result follows from dummy data.
+   Do not infer a 2048-byte reply cap from the incoming message setting or
+   change it blindly.
 2. Continue the unresolved runtime/restart investigation before any HMI load.
    Endpoint expiry is a discovery constraint, not a crash fix or an unload.
 3. Consider a separate bounded stock-screen observation after fingerprints,

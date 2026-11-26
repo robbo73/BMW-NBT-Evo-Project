@@ -1,0 +1,42 @@
+HXC1 seq=1 BEGIN contract=held-expiry-log/1 controller=held-controller-1 controller_pid=4579445 provider_bin=/dev/shmem/nbt_large_endpoint_586_8f502b6394a0 reader_bin=/dev/shmem/nbt_hold_reader_586_9a54c7f4dba5 fixture=/ramdisk/mm/.nbt-held-alias-586.4579445
+HXC1 seq=2 PROVIDER_STARTED pid=4579447
+HXC1 seq=3 PROVIDER_READY pid=4579447 path=/dev/nbt_large_endpoint_586.4579447
+HXC1 seq=4 ALIAS_CREATED path=/ramdisk/mm/.nbt-held-alias-586.4579445/dummy-body.bin target=/dev/nbt_large_endpoint_586.4579447
+HXC1 seq=5 READER_STARTED pid=4583544 parent=4579445 provider=4579447
+HXC1 seq=6 HELD_OBSERVED reader=4583544
+HXC1 seq=7 PROVIDER_REAPED pid=4579447 status=0
+HXC1 seq=8 ENDPOINT_ABSENT path=/dev/nbt_large_endpoint_586.4579447 alias=dangling
+HXC1 seq=9 CONTROL_TRACE_OK provider=4579447 events=2
+HXC1 seq=10 RELEASE_SENT reader=4583544 signal=USR1
+HXC1 seq=11 READER_REAPED pid=4583544 status=0
+HXC1 seq=12 SECTION_BEGIN stream=provider.stdout bytes=355
+READY pid=4579447 path=/dev/nbt_large_endpoint_586.4579447 bytes=586 lease_ms=10000
+TRACE_SUMMARY events=2 dropped=0 overflow=0 elapsed_ms=10023
+TRACE_READ index=0 before=0 requested=100 xtype=0 count=100 after=100 rc=-1
+TRACE_SEEK index=1 before=100 offset_bits=0000000000000000 whence=1 after=100 rc=-1
+DETACHED reason=deadline; endpoint server exiting
+HXC1 seq=13 SECTION_END stream=provider.stdout
+HXC1 seq=14 SECTION_BEGIN stream=provider.stderr bytes=0
+HXC1 seq=15 SECTION_END stream=provider.stderr
+HXC1 seq=16 SECTION_BEGIN stream=reader.stdout bytes=591
+CONTROL_BEGIN name=read100
+CONTROL_END name=read100 rc=100 errno=0
+CONTROL_BEGIN name=seek_current
+CONTROL_END name=seek_current rc=100 errno=0
+HELD pid=4583544 parent=4579445 provider=4579447 offset=100
+RELEASED sender=4579445
+OP_BEGIN name=read64_a
+OP_END name=read64_a rc=-1 errno=9 elapsed_ms=0
+OP_BEGIN name=seek_start
+OP_END name=seek_start rc=-1 errno=9 elapsed_ms=0
+OP_BEGIN name=read64_b
+OP_END name=read64_b rc=-1 errno=9 elapsed_ms=0
+OP_BEGIN name=close
+OP_END name=close rc=-1 errno=9 elapsed_ms=0
+OBSERVED: held-reader-1; three probes failed; requires provider/trace assessment
+HXC1 seq=17 SECTION_END stream=reader.stdout
+HXC1 seq=18 SECTION_BEGIN stream=reader.stderr bytes=0
+HXC1 seq=19 SECTION_END stream=reader.stderr
+HXC1 seq=20 FIXTURE_CLEANED path=/ramdisk/mm/.nbt-held-alias-586.4579445
+HXC1 seq=21 WATCHDOG_CANCELLED
+HXC1 seq=22 END result=complete
