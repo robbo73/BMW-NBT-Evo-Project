@@ -35,8 +35,11 @@ is not a completed mechanism.
    passes 36 cloud host checks after a [fortified read-hook correction](docs/2026-11-25-larger-body-host-test-fix.md).
    The corrected owner run passed and both [586-byte ELFs passed static review](docs/2026-11-25-larger-body-build-review.md).
    The owner then passed RAM read-backs, help startup and the [native 586-byte dummy run](docs/2026-11-26-larger-body-vehicle-results.md), including complete trace assessment.
-   Next prepare/review larger-body boundary cases offline and a separate
-   open-handle/provider-death test with controlled buffering/deadlines.
+   The separate [open-handle expiry proposal has been reviewed](docs/2026-11-26-open-handle-expiry-assessment.md):
+   reuse the endpoint with a new raw-descriptor reader, confirmed-exit release,
+   bounded phases and explicit capture/readiness controls. It is design only;
+   no implementation or new target package is ready. Next freeze that protocol
+   offline; larger-body boundary cases remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
    a 2048-byte reply cap from the incoming message setting or change it blindly.
