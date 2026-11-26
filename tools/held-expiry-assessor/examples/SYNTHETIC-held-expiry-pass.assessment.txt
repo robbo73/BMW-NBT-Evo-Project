@@ -1,0 +1,78 @@
+{
+  "contract": "held-expiry-log/1",
+  "contract_status": "PROPOSED",
+  "findings": [],
+  "hmi_integration_verified": false,
+  "identities": {
+    "controller": 11111,
+    "provider": 22222,
+    "reader": 33333
+  },
+  "input_authenticated": false,
+  "live_rpm_verified": false,
+  "notes": [
+    "TRACE rc values are provider resource-manager reply codes; reader rc values are syscall results.",
+    "errno values are recorded, not required to equal any particular value.",
+    "A PASS describes this capture only; it is not a general QNX result."
+  ],
+  "plugin_execution_verified": false,
+  "proposal_revision": 2,
+  "provider": {
+    "elapsed_ms": 10021,
+    "events": 2,
+    "exit_status": 0,
+    "trace": [
+      {
+        "after": 100,
+        "before": 0,
+        "count": 100,
+        "endpoint_reply_code": -1,
+        "index": 0,
+        "kind": "read",
+        "requested": 100,
+        "xtype": 0
+      },
+      {
+        "after": 100,
+        "before": 100,
+        "endpoint_reply_code": -1,
+        "index": 1,
+        "kind": "seek",
+        "offset_bits": "0000000000000000",
+        "whence": 1
+      }
+    ]
+  },
+  "reader": {
+    "close": {
+      "elapsed_ms": 0,
+      "errno": null,
+      "name": "close",
+      "syscall_result": 0
+    },
+    "exit_status": 0,
+    "last_record": "OBSERVED: held-reader-1; three probes failed; requires provider/trace assessment",
+    "probes": [
+      {
+        "elapsed_ms": 1,
+        "errno": 9,
+        "name": "read64_a",
+        "syscall_result": -1
+      },
+      {
+        "elapsed_ms": 1,
+        "errno": 9,
+        "name": "seek_start",
+        "syscall_result": -1
+      },
+      {
+        "elapsed_ms": 1,
+        "errno": 9,
+        "name": "read64_b",
+        "syscall_result": -1
+      }
+    ]
+  },
+  "verdict": "PASS"
+}
+PASS: held-expiry-log/1 capture satisfies every assessed requirement

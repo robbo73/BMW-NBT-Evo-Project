@@ -24,7 +24,7 @@ is not a completed mechanism.
 | C-only stdio reader through alias | Native seek-end/ftell/rewind/full-read/close passed; both exits 0 and cleanup passed; 23-byte body only | [Reader results](docs/2026-11-24-stdio-reader-vehicle-results.md) |
 | 586-byte dummy binary body | Native full stdio read/close, deadline exit 0, alias cleanup and complete trace assessment passed; three seeks and one 1024-byte request returning 586 bytes | [26 November results](docs/2026-11-26-larger-body-vehicle-results.md) |
 | Larger bodies / real manifest / open-handle death | Native bodies above 586 bytes, real XML/HMI integration and provider death with an open handle remain unverified | [Build review](docs/2026-11-25-larger-body-build-review.md), [review assessment](docs/2026-11-25-larger-body-endpoint-assessment.md) |
-| Held-descriptor reader | Owner cross-build and 22 host checks pass; static imports/ABI/control flow reviewed. No native run or complete controller/assessor yet | [Build review](docs/2026-11-26-open-handle-reader-build-review.md) |
+| Held-descriptor reader | Owner cross-build and 22 host checks pass; static imports/ABI/control flow reviewed. No native run/controller yet; separate offline assessor has 50 synthetic checks | [Build review](docs/2026-11-26-open-handle-reader-build-review.md) |
 | Native loader length-error handling | Offline: ftell==-1 is not explicitly rejected; allocation call is new[], runtime consequences unverified. Current C reader already rejects it | [Static check and correction](docs/2026-11-25-larger-body-endpoint-assessment.md) |
 | Earlier native framework/probe crashes | Core establishes mixed C++ stream destruction fault; binding/initialization context and associated full-unit restarts unresolved | [Core/runtime checkpoint](docs/2026-11-17-checkpoint.md) |
 | Stock Sports Displays comparison | Native proxies/notification route traced offline; proposed read-only closed/open comparison not yet performed | [Stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
@@ -41,9 +41,11 @@ is not a completed mechanism.
    bounded phases and explicit capture/readiness controls. A [separate reader preparation](docs/2026-11-26-open-handle-reader-preparation.md)
    passed all 22 owner host checks and its [QNX build/SDK review](docs/2026-11-26-open-handle-reader-build-review.md)
    now passes: 32 required functions available and 58 compiled sites checked.
-   The reader has not run on QNX. Next implement/test the controller and
-   complete trace assessor before any vehicle-ready package; larger-body
-   boundary cases remain separate work.
+   The reader has not run on QNX. The [offline assessor contribution](docs/2026-11-26-held-expiry-assessor-review.md)
+   now passes 50 synthetic tests after numeric hardening and proposed
+   pre-release trace-gate/cleanup-order amendments. Next implement/test the
+   controller, including bounded IO/cleanup and whole-trial watchdog coverage,
+   before any vehicle-ready package; larger-body cases remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
    a 2048-byte reply cap from the incoming message setting or change it blindly.

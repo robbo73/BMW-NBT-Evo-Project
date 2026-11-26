@@ -1,0 +1,70 @@
+{
+  "contract": "held-expiry-log/1",
+  "contract_status": "PROPOSED",
+  "findings": [
+    {
+      "category": "INCOMPLETE",
+      "message": "reader exited status 1"
+    },
+    {
+      "category": "UNEXPECTED_PROBE_RESULT",
+      "message": "read64_a: zero-byte read at offset 100 (not legitimate EOF) after provider exit"
+    }
+  ],
+  "hmi_integration_verified": false,
+  "identities": {
+    "controller": 11111,
+    "provider": 22222,
+    "reader": 33333
+  },
+  "input_authenticated": false,
+  "live_rpm_verified": false,
+  "notes": [
+    "TRACE rc values are provider resource-manager reply codes; reader rc values are syscall results.",
+    "errno values are recorded, not required to equal any particular value.",
+    "A PASS describes this capture only; it is not a general QNX result."
+  ],
+  "plugin_execution_verified": false,
+  "proposal_revision": 2,
+  "provider": {
+    "elapsed_ms": 10021,
+    "events": 2,
+    "exit_status": 0,
+    "trace": [
+      {
+        "after": 100,
+        "before": 0,
+        "count": 100,
+        "endpoint_reply_code": -1,
+        "index": 0,
+        "kind": "read",
+        "requested": 100,
+        "xtype": 0
+      },
+      {
+        "after": 100,
+        "before": 100,
+        "endpoint_reply_code": -1,
+        "index": 1,
+        "kind": "seek",
+        "offset_bits": "0000000000000000",
+        "whence": 1
+      }
+    ]
+  },
+  "reader": {
+    "close": null,
+    "exit_status": 1,
+    "last_record": "STOP: held-reader-1 incomplete or unexpected result",
+    "probes": [
+      {
+        "elapsed_ms": 1,
+        "errno": null,
+        "name": "read64_a",
+        "syscall_result": 0
+      }
+    ]
+  },
+  "verdict": "UNEXPECTED_PROBE_RESULT"
+}
+STOP: UNEXPECTED_PROBE_RESULT

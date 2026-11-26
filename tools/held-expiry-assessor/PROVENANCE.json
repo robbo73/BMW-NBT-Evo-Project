@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-26",
+  "origin": "Owner-provided Claude output; original tests rerun before amendments",
+  "original_zip": {
+    "file": "held-expiry-assessor.zip",
+    "bytes": 24437,
+    "sha256": "2ac4a1536a59907177fae64176c8b8e6ca692ad9798d07831d36b58bf9d6ae8d"
+  },
+  "original_files": {
+    "INTEGRATION-NOTE.md": "806780b8af8e64f6d8324e2b6f367073d283252fb879104656993a6c8735c646",
+    "LOG-CONTRACT.md": "ad1a44e3fae87479e96ea250a4f4f23d19f0cf57444d0b3f1ca235e78b85514e",
+    "assess_held_expiry.py": "257d9884cda20ae3748dcaa01c1330f3aa250883cda7f7137d1efb96c8a831ba",
+    "examples/SYNTHETIC-held-expiry-pass.assessment.txt": "a3f72b77e1dd6cf9f3a92886f4783c80f6f3b8114230b40f8d4ae7b8cf318845",
+    "examples/SYNTHETIC-held-expiry-pass.log": "d6f1f25aa816338e95e8c531c9c491462f38084dcfd2f5a09d4dba5523efb571",
+    "examples/SYNTHETIC-held-expiry-zero-byte-read.assessment.txt": "68da37d0939d259ad36634544cf313c4acf7655f03a2f7b56801a332b6b4b085",
+    "examples/SYNTHETIC-held-expiry-zero-byte-read.log": "92b43b2636e8f78b05e2e91ac080dfa5bfc9ead886bf135c194da0ba82ed4d0e",
+    "test_assess_held_expiry.py": "88b0637d36aba37314927009ab5ee9a98158bca74a122c591fecee07401e8fdc"
+  },
+  "four_loose_uploads_match_zip": true,
+  "original_suite": {
+    "passed": 45,
+    "seconds": 0.496
+  },
+  "adopted_suite": {
+    "passed": 50,
+    "seconds": 0.532
+  },
+  "contract": "held-expiry-log/1",
+  "proposal_revision": 2,
+  "synthetic_only": true,
+  "controller_implemented": false,
+  "qnx_execution": false,
+  "changes": [
+    "canonical numeric validation",
+    "captured QNX signed-32-bit result/errno bounds",
+    "required CONTROL_TRACE_OK before release",
+    "watchdog cancellation after cleanup",
+    "regenerated labelled synthetic examples"
+  ]
+}

@@ -39,6 +39,8 @@ Offline review of the actual vehicle's coding library identifies the separate ap
 
 The manager-path observer also completed a vehicle run. It confirms the intended RW Plugins root is registered without the per-directory coded-name filter. The older candidate remains hidden; no new plugin was loaded. See the [registered-path results](docs/2026-11-20-plugin-manager-vehicle-results.md).
 
+The [held-expiry offline assessor](docs/2026-11-26-held-expiry-assessor-review.md), contributed by Claude and reviewed here, passes 50 synthetic tests after numeric hardening and adding a mandatory pre-release control-trace assertion. Its proposed contract retains watchdog coverage through cleanup. No target controller or native held-handle result exists yet.
+
 The [DAviS0d Windows NBT emulator review](docs/2026-11-26-bmw-nbt-emulator-review.md) finds a substantial older x86 NBT UI/simulation project, not an Evo ARM test environment. Ten focused model/static-contract checks pass, but Windows boot was not tested and required IFS files need their actual Git LFS payloads. Its simulated gauges do not verify live CDS/RPM; own-code reuse is restricted by its licence.
 
 ## Development setup
