@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-26",
+  "origin": "Owner-supplied Claude supervisor revision 2; adopted with four Codex regressions and local fixes",
+  "archive": {
+    "name": "held-expiry-supervisor-r2.zip",
+    "bytes": 37300,
+    "sha256": "2195b1b05cc3e7e044f0f5d756f637859159d5d959f2ec01a6b38f23770d8c44",
+    "ordinary_files": 10
+  },
+  "original_files": {
+    "ARCHITECTURE.md": "65b697313da6df25ca311af8bef5d000e06d1ea3b94aee3b34cd57c7dae2c819",
+    "README.md": "875c95c274c6f96e82198d9aac3bb8049c69e4a0efade8b8e63cc2696ee68a3a",
+    "SHA256SUMS": "de3f2f93ba1a29df37c669fd9c58bf3c10b1c87ccd1280894f3f057246e81a01",
+    "gate_trial.py": "26c5433c4d21d12ecd955878a85d49980079d95c17086d954c80f06616f92341",
+    "nbt_held_supervisor.c": "40e013bcd9d403056145d426742cdd37bcacc9184084a0c0f578ecd7234f9ca4",
+    "test_faults.py": "32a2feedc593619e9454d741b401ebf30a6366e711e46094c9995e4617c6bec5",
+    "test_supervisor.py": "67230cacbf905618a9ac73b211a3ecaf67c2e3c632ba25db40623662c9527855",
+    "test_support/fault_unit.c": "b0c3ce877e12373a2f37b296f093666d7b409ef3a9541640d51814a481cff968",
+    "test_support/stub_provider.c": "0c6d0950ede39dfc2685792ab9352332c07f64725235ff3a1eb04b776148c9a4",
+    "test_support/stub_reader.c": "072b2e662f2b3bb9b1cc8546dff85e3c8080716f6e698e86f2167c841ff4c46a"
+  },
+  "loose_architecture_matches_zip": true,
+  "original_checksums_verified": true,
+  "supplied_local_rerun": {
+    "discovered": 46,
+    "passed": 30,
+    "skipped": 16,
+    "seconds": 13.127
+  },
+  "extra_regressions_before_fix": {
+    "count": 4,
+    "failed": 4
+  },
+  "adopted_local_rerun": {
+    "discovered": 50,
+    "passed": 34,
+    "skipped": 16,
+    "seconds": 13.926
+  },
+  "skip_reason": "namespace/chroot unavailable in cloud; full end-to-end results not independently reproduced",
+  "external_full_suite_report": {
+    "passed": 46,
+    "platform": "Linux with namespaces; owner-provided Claude report"
+  },
+  "local_changes": [
+    "latch clock failure across later successful readings",
+    "reject regression relative to last good reading",
+    "preserve errno in both timer handlers",
+    "saturate overrun counters before arithmetic",
+    "four regression methods plus host overrun fault injection"
+  ],
+  "unchanged_active_dependencies": [
+    "assessor",
+    "revision-2 contract",
+    "reader",
+    "endpoint"
+  ],
+  "qnx_build_performed": false,
+  "arm_execution": false,
+  "vehicle_connection": false,
+  "target_package_ready": false,
+  "qnx_runtime_questions": [
+    "SIGKILL timer acceptance and self-process delivery",
+    "timer_getoverrun behavior in handlers",
+    "fork/timer inheritance",
+    "QNX waitpid errno and zombie retention",
+    "EINTR during resource-manager IO"
+  ]
+}

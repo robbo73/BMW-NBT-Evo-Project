@@ -45,6 +45,8 @@ The [subsequent shell-controller review](docs/2026-11-26-shell-controller-assess
 
 The [C supervisor follow-up review](docs/2026-11-26-c-supervisor-assessment.md) confirms improved ownership, raw capture and pre-release checks, but reproduces three clock/write/wait error-path defects and identifies a remaining guardian identity gap. Five local checks pass; 15 namespace-dependent tests are skipped here. The reported full Claude runs are separate evidence. No target supervisor build/package is accepted yet.
 
+The [r2 launcher/supervisor preparation](docs/2026-11-26-supervisor-r2-preparation.md) incorporates the ownership redesign, status-plus-assessor gate and four local clock/signal regression fixes. Its 50 host cases yield 34 passes and 16 namespace skips here; a standalone Ubuntu package is ready to cross-build only the supervisor and capture its SDK/ELF metadata. No ARM execution or vehicle-ready package is implied.
+
 The [DAviS0d Windows NBT emulator review](docs/2026-11-26-bmw-nbt-emulator-review.md) finds a substantial older x86 NBT UI/simulation project, not an Evo ARM test environment. Ten focused model/static-contract checks pass, but Windows boot was not tested and required IFS files need their actual Git LFS payloads. Its simulated gauges do not verify live CDS/RPM; own-code reuse is restricted by its licence.
 
 ## Development setup

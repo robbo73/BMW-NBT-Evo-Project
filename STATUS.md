@@ -51,9 +51,12 @@ is not a completed mechanism.
    ownership gaps. It is not adopted. A [subsequent C supervisor review](docs/2026-11-26-c-supervisor-assessment.md)
    finds the intended raw-capture/pre-release improvements, but reproduces
    clock-error, late-write and waitpid-ownership defects; guardian identity
-   needs resolution. Local results are 5 passed/15 namespace skips, distinct
-   from Claude's reported 20-pass runs. Source revision is needed before
-   Ubuntu cross-build preparation. Larger-body cases remain separate work.
+   needed resolution. Those r1 results were 5 passed/15 namespace skips.
+   [Revision 2 plus local clock/signal fixes](docs/2026-11-26-supervisor-r2-preparation.md)
+   now passes 34 host checks with 16 namespace skips and has a frozen Ubuntu
+   offline build preparation. New QNX executable/API inspection is next;
+   no ARM run or vehicle-ready supervisor package exists. Larger-body cases
+   remain separate work.
    The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
    and is separate. Native open-handle/provider-death behavior remains untested. Do not infer
    a 2048-byte reply cap from the incoming message setting or change it blindly.
