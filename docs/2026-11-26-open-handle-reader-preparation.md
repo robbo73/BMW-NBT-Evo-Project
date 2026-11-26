@@ -49,3 +49,10 @@ After owner build review, complete the controller/readiness/reaping/trace
 assessment/whole-trial watchdog protocol and test its failure paths before
 preparing any vehicle package. Larger sizes and forced provider death remain
 separate work. Actual HMI/plugin trials remain paused and live RPM unverified.
+
+## Subsequent build review
+
+The owner then passed 22 host checks in 6.443 seconds and supplied the QNX
+reader and SDK capture. The [compiled review](2026-11-26-open-handle-reader-build-review.md)
+passes. This supersedes the not-yet-built status for that reader only; no
+native execution or complete controller/assessor exists yet.

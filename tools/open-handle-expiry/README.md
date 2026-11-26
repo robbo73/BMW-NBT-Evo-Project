@@ -1,5 +1,11 @@
 # Separate held-descriptor reader: Ubuntu build for inspection
 
+**Build review update:** the owner passed all 22 host checks and cross-built
+the reader. Its [static review](../../docs/2026-11-26-open-handle-reader-build-review.md)
+passes; no rebuild is needed for that revision. The build-stage instructions
+below are retained for reproducibility. No vehicle controller or target-ready
+package exists yet, and this reader has not run on QNX.
+
 26 November 2026. Source/build preparation only. The endpoint which passed the
 586-byte vehicle trial is unchanged and is not rebuilt or bundled here.
 No vehicle runner or release command is provided. No car connection is needed.

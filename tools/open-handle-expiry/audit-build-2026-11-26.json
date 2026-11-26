@@ -1,0 +1,595 @@
+{
+  "file": "nbt_hold_reader_586",
+  "bytes": 22345,
+  "sha256": "9a54c7f4dba539d25861f6e98a018d778bec62eb86462b7b208138a4be34de79",
+  "entry": "0x100a2c",
+  "flags": "0x5000002",
+  "elf_type": "ET_EXEC",
+  "machine": "EM_ARM",
+  "required_functions": [
+    "clock_gettime",
+    "printf",
+    "_init_array",
+    "sigemptyset",
+    "snprintf",
+    "getpid",
+    "_preinit_array",
+    "readlink",
+    "puts",
+    "vsnprintf",
+    "lseek",
+    "sigaddset",
+    "alarm",
+    "write",
+    "fstat",
+    "sigwaitinfo",
+    "__get_errno_ptr",
+    "lstat",
+    "read",
+    "memcmp",
+    "sigaction",
+    "_init_libc",
+    "memset",
+    "getppid",
+    "_fini_array",
+    "strcmp",
+    "atexit",
+    "exit",
+    "strlen",
+    "open",
+    "close",
+    "sigprocmask"
+  ],
+  "required_function_count": 32,
+  "new_vs_586_stdio_reader": [
+    "__get_errno_ptr",
+    "clock_gettime",
+    "close",
+    "fstat",
+    "getpid",
+    "getppid",
+    "lseek",
+    "memset",
+    "open",
+    "read",
+    "readlink",
+    "sigaction",
+    "sigaddset",
+    "sigemptyset",
+    "sigprocmask",
+    "sigwaitinfo",
+    "strlen",
+    "vsnprintf",
+    "write"
+  ],
+  "relocations": [
+    {
+      "offset": "0x1033d0",
+      "type": 20,
+      "symbol": "errno"
+    },
+    {
+      "offset": "0x103344",
+      "type": 22,
+      "symbol": "clock_gettime"
+    },
+    {
+      "offset": "0x103348",
+      "type": 22,
+      "symbol": "printf"
+    },
+    {
+      "offset": "0x10334c",
+      "type": 22,
+      "symbol": "_init_array"
+    },
+    {
+      "offset": "0x103350",
+      "type": 22,
+      "symbol": "sigemptyset"
+    },
+    {
+      "offset": "0x103354",
+      "type": 22,
+      "symbol": "snprintf"
+    },
+    {
+      "offset": "0x103358",
+      "type": 22,
+      "symbol": "getpid"
+    },
+    {
+      "offset": "0x10335c",
+      "type": 22,
+      "symbol": "_preinit_array"
+    },
+    {
+      "offset": "0x103360",
+      "type": 22,
+      "symbol": "readlink"
+    },
+    {
+      "offset": "0x103364",
+      "type": 22,
+      "symbol": "puts"
+    },
+    {
+      "offset": "0x103368",
+      "type": 22,
+      "symbol": "vsnprintf"
+    },
+    {
+      "offset": "0x10336c",
+      "type": 22,
+      "symbol": "lseek"
+    },
+    {
+      "offset": "0x103370",
+      "type": 22,
+      "symbol": "sigaddset"
+    },
+    {
+      "offset": "0x103374",
+      "type": 22,
+      "symbol": "alarm"
+    },
+    {
+      "offset": "0x103378",
+      "type": 22,
+      "symbol": "write"
+    },
+    {
+      "offset": "0x10337c",
+      "type": 22,
+      "symbol": "fstat"
+    },
+    {
+      "offset": "0x103380",
+      "type": 22,
+      "symbol": "__deregister_frame_info"
+    },
+    {
+      "offset": "0x103384",
+      "type": 22,
+      "symbol": "sigwaitinfo"
+    },
+    {
+      "offset": "0x103388",
+      "type": 22,
+      "symbol": "__get_errno_ptr"
+    },
+    {
+      "offset": "0x10338c",
+      "type": 22,
+      "symbol": "lstat"
+    },
+    {
+      "offset": "0x103390",
+      "type": 22,
+      "symbol": "read"
+    },
+    {
+      "offset": "0x103394",
+      "type": 22,
+      "symbol": "memcmp"
+    },
+    {
+      "offset": "0x103398",
+      "type": 22,
+      "symbol": "sigaction"
+    },
+    {
+      "offset": "0x10339c",
+      "type": 22,
+      "symbol": "_init_libc"
+    },
+    {
+      "offset": "0x1033a0",
+      "type": 22,
+      "symbol": "memset"
+    },
+    {
+      "offset": "0x1033a4",
+      "type": 22,
+      "symbol": "getppid"
+    },
+    {
+      "offset": "0x1033a8",
+      "type": 22,
+      "symbol": "_fini_array"
+    },
+    {
+      "offset": "0x1033ac",
+      "type": 22,
+      "symbol": "strcmp"
+    },
+    {
+      "offset": "0x1033b0",
+      "type": 22,
+      "symbol": "atexit"
+    },
+    {
+      "offset": "0x1033b4",
+      "type": 22,
+      "symbol": "exit"
+    },
+    {
+      "offset": "0x1033b8",
+      "type": 22,
+      "symbol": "strlen"
+    },
+    {
+      "offset": "0x1033bc",
+      "type": 22,
+      "symbol": "open"
+    },
+    {
+      "offset": "0x1033c0",
+      "type": 22,
+      "symbol": "__register_frame_info"
+    },
+    {
+      "offset": "0x1033c4",
+      "type": 22,
+      "symbol": "close"
+    },
+    {
+      "offset": "0x1033c8",
+      "type": 22,
+      "symbol": "sigprocmask"
+    }
+  ],
+  "init_fini": {
+    ".init_array": [
+      {
+        "address": "0x100be8",
+        "name": "frame_dummy"
+      }
+    ],
+    ".fini_array": [
+      {
+        "address": "0x100ba4",
+        "name": "__do_global_dtors_aux"
+      }
+    ]
+  },
+  "sdk_abi": {
+    "nbt_offset_stat_size": 8,
+    "nbt_offset_siginfo_pid": 12,
+    "nbt_size_stat": 72,
+    "nbt_size_siginfo_t": 40,
+    "nbt_size_ssize_t": 4,
+    "nbt_size_off_t": 4
+  },
+  "libc_sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+  "all_required_functions_exported": true,
+  "copy_sizes_match": true,
+  "native_execution": false,
+  "complete_vehicle_controller": false,
+  "review_date": "2026-11-26",
+  "compiled_sites": [
+    {
+      "address": "0x100eb8",
+      "instruction": "beq #0x100fa4",
+      "purpose": "default help branches before active setup"
+    },
+    {
+      "address": "0x100f50",
+      "instruction": "bl #0x1009b4",
+      "purpose": "getppid identity gate"
+    },
+    {
+      "address": "0x100fdc",
+      "instruction": "bl #0x100990",
+      "purpose": "default SIGALRM action"
+    },
+    {
+      "address": "0x101034",
+      "instruction": "bl #0x100a20",
+      "purpose": "unblock SIGALRM"
+    },
+    {
+      "address": "0x101040",
+      "instruction": "mov r0, #5",
+      "purpose": "setup alarm seconds"
+    },
+    {
+      "address": "0x101044",
+      "instruction": "bl #0x100924",
+      "purpose": "setup alarm call"
+    },
+    {
+      "address": "0x101070",
+      "instruction": "mov r1, #0x10",
+      "purpose": "QNX SIGUSR1 number 16"
+    },
+    {
+      "address": "0x101084",
+      "instruction": "bl #0x100a20",
+      "purpose": "block release signal"
+    },
+    {
+      "address": "0x1010a0",
+      "instruction": "bl #0x100990",
+      "purpose": "reset release disposition while blocked"
+    },
+    {
+      "address": "0x1011ac",
+      "instruction": "bl #0x1008e8",
+      "purpose": "exact-target readlink check"
+    },
+    {
+      "address": "0x1011e0",
+      "instruction": "mov r1, #0",
+      "purpose": "O_RDONLY only"
+    },
+    {
+      "address": "0x1011e4",
+      "instruction": "bl #0x1009fc",
+      "purpose": "raw open"
+    },
+    {
+      "address": "0x1011f4",
+      "instruction": "bl #0x10093c",
+      "purpose": "descriptor fstat"
+    },
+    {
+      "address": "0x1012fc",
+      "instruction": "ldr r2, [sp, #0x74]",
+      "purpose": "stat st_size +8 from structure at sp+0x6c"
+    },
+    {
+      "address": "0x101300",
+      "instruction": "movw r3, #0x24a",
+      "purpose": "expected descriptor length 586"
+    },
+    {
+      "address": "0x101324",
+      "instruction": "mov r2, #0x64",
+      "purpose": "control read count 100"
+    },
+    {
+      "address": "0x101330",
+      "instruction": "bl #0x100978",
+      "purpose": "control raw read"
+    },
+    {
+      "address": "0x101340",
+      "instruction": "bl #0x100960",
+      "purpose": "capture failed-read errno before formatting"
+    },
+    {
+      "address": "0x101374",
+      "instruction": "bl #0x100984",
+      "purpose": "exact control prefix memcmp"
+    },
+    {
+      "address": "0x10139c",
+      "instruction": "mov r2, #1",
+      "purpose": "SEEK_CUR"
+    },
+    {
+      "address": "0x1013a0",
+      "instruction": "bl #0x10090c",
+      "purpose": "control raw lseek with 32-bit off_t"
+    },
+    {
+      "address": "0x1013c0",
+      "instruction": "asr r3, r4, #0x1f",
+      "purpose": "sign extend 32-bit offset for logging"
+    },
+    {
+      "address": "0x1013c8",
+      "instruction": "cmp r4, #0x64",
+      "purpose": "require control offset 100"
+    },
+    {
+      "address": "0x1013d4",
+      "instruction": "mov r0, #0x12",
+      "purpose": "hold phase 18 seconds"
+    },
+    {
+      "address": "0x1013d8",
+      "instruction": "bl #0x100d7c",
+      "purpose": "arm hold before HELD"
+    },
+    {
+      "address": "0x1013fc",
+      "instruction": "bl #0x100e10",
+      "purpose": "emit HELD before sigwaitinfo"
+    },
+    {
+      "address": "0x10140c",
+      "instruction": "mov r2, #0x28",
+      "purpose": "clear 40-byte siginfo"
+    },
+    {
+      "address": "0x101420",
+      "instruction": "bl #0x100954",
+      "purpose": "synchronous blocked release wait"
+    },
+    {
+      "address": "0x101438",
+      "instruction": "beq #0x101408",
+      "purpose": "retry signal wait on EINTR 4"
+    },
+    {
+      "address": "0x101468",
+      "instruction": "cmp r0, #0x10",
+      "purpose": "require QNX SIGUSR1 return"
+    },
+    {
+      "address": "0x101470",
+      "instruction": "ldr r2, [sp, #0x50]",
+      "purpose": "sender PID at siginfo +12"
+    },
+    {
+      "address": "0x101478",
+      "instruction": "cmp r2, r3",
+      "purpose": "compare sender PID with original parent"
+    },
+    {
+      "address": "0x1014a8",
+      "instruction": "mov r0, #3",
+      "purpose": "per-operation cap three seconds"
+    },
+    {
+      "address": "0x1014ec",
+      "instruction": "bl #0x100978",
+      "purpose": "first post-release raw read"
+    },
+    {
+      "address": "0x101530",
+      "instruction": "cmn r7, #1",
+      "purpose": "first read requires -1"
+    },
+    {
+      "address": "0x101538",
+      "instruction": "bne #0x101210",
+      "purpose": "first anomalous read goes to close"
+    },
+    {
+      "address": "0x101540",
+      "instruction": "movw r0, #0xbb7",
+      "purpose": "latency maximum 2999 ms"
+    },
+    {
+      "address": "0x101594",
+      "instruction": "bl #0x10090c",
+      "purpose": "post-release SEEK_SET"
+    },
+    {
+      "address": "0x1015e0",
+      "instruction": "cmn r7, #1",
+      "purpose": "post-release seek requires -1"
+    },
+    {
+      "address": "0x101644",
+      "instruction": "bl #0x100978",
+      "purpose": "second raw read"
+    },
+    {
+      "address": "0x101688",
+      "instruction": "cmn r7, #1",
+      "purpose": "second read requires -1"
+    },
+    {
+      "address": "0x101218",
+      "instruction": "bl #0x100d7c",
+      "purpose": "close has separately rearmed bound"
+    },
+    {
+      "address": "0x101250",
+      "instruction": "bl #0x100a14",
+      "purpose": "raw close"
+    },
+    {
+      "address": "0x1012d8",
+      "instruction": "bl #0x100e10",
+      "purpose": "OBSERVED recorded only on successful local path"
+    },
+    {
+      "address": "0x100da4",
+      "instruction": "movw r4, #0x61a7",
+      "purpose": "remaining-1 comparison against 24999"
+    },
+    {
+      "address": "0x100dd4",
+      "instruction": "movw r4, #0x658f",
+      "purpose": "rounding numerator uses 25999 minus elapsed"
+    },
+    {
+      "address": "0x100dec",
+      "instruction": "bl #0x101aac",
+      "purpose": "internal signed 64-bit division helper"
+    },
+    {
+      "address": "0x100df4",
+      "instruction": "movhs r0, r6",
+      "purpose": "cap remaining whole seconds by phase"
+    },
+    {
+      "address": "0x100df8",
+      "instruction": "bl #0x100924",
+      "purpose": "rearm alarm"
+    },
+    {
+      "address": "0x100e14",
+      "instruction": "mov r1, #0x100",
+      "purpose": "256-byte formatting bound"
+    },
+    {
+      "address": "0x100e34",
+      "instruction": "bl #0x100900",
+      "purpose": "vsnprintf to stack buffer"
+    },
+    {
+      "address": "0x100e38",
+      "instruction": "cmp r0, #0xff",
+      "purpose": "reject negative/oversized length by unsigned branch"
+    },
+    {
+      "address": "0x100e50",
+      "instruction": "bl #0x100930",
+      "purpose": "unbuffered write"
+    },
+    {
+      "address": "0x100e64",
+      "instruction": "cmp r3, #4",
+      "purpose": "retry output EINTR 4"
+    },
+    {
+      "address": "0x100e88",
+      "instruction": "beq #0x100e48",
+      "purpose": "zero-byte output is failure"
+    },
+    {
+      "address": "0x100e8c",
+      "instruction": "add r4, r4, r0",
+      "purpose": "advance partial-write cursor"
+    },
+    {
+      "address": "0x100ce0",
+      "instruction": "mov r0, #2",
+      "purpose": "QNX CLOCK_MONOTONIC 2"
+    },
+    {
+      "address": "0x100ce8",
+      "instruction": "bl #0x100894",
+      "purpose": "monotonic clock import"
+    }
+  ],
+  "compiled_site_count": 58,
+  "dependencies": [
+    "libc.so.3"
+  ],
+  "interpreter": "/usr/lib/ldqnx.so.2",
+  "copy_objects": [
+    {
+      "name": "errno",
+      "size": 4
+    }
+  ],
+  "weak_dynamic_imports": [
+    "__deregister_frame_info",
+    "__register_frame_info"
+  ],
+  "relocation_counts": {
+    "R_ARM_COPY": 1,
+    "R_ARM_JUMP_SLOT": 34
+  },
+  "all_build_hashes_verified": true,
+  "host_tests": {
+    "passed": 22,
+    "seconds": 6.443
+  },
+  "archive_sha256": "842c9bc59b7b1d8398ef9c2c6747858ba83a8ee0739cc5b294b9efe9bbe01368",
+  "archive_bytes": 33572,
+  "archive_members": 24,
+  "preparation_files_matched": 10,
+  "textrel_rpath_runpath": false,
+  "host_fault_markers": false,
+  "body_bss_bytes": 586,
+  "internal_division_helpers": "statically linked libgcc routines, no dynamic dependency",
+  "result": "static reader review passes; controller and complete assessor still required before vehicle preparation"
+}
