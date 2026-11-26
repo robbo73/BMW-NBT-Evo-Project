@@ -32,20 +32,16 @@ is not a completed mechanism.
 
 ## Next focused work
 
-1. The [native 586-byte stdio test](docs/2026-11-26-larger-body-vehicle-results.md)
-   and subsequent [held raw-descriptor normal-expiry trial](docs/2026-11-26-held-expiry-vehicle-results.md)
-   both pass within their distinct scopes. The latter complete uploaded capture
-   matches its hashes and independently reassesses PASS/ACCEPT, with launcher/SSH
-   exit 0 and owned fixture cleanup. No repeat is needed for this checkpoint.
-   Review larger-size boundary cases offline before preparing another native
-   package. Keep any forced-death/open-stdio and emergency-timer cases separate;
-   those were not exercised by normal expiry. The supervisor's 50 owner host
-   checks and [QNX compiled review](docs/2026-11-26-supervisor-r2-build-review.md)
-   remain supporting evidence, not native fault-path tests.
-   The init-check manifest is **586 bytes**; its UI description is **10951 bytes**
-   and is separate. No real manifest/XML/HMI result follows from dummy data.
-   Do not infer a 2048-byte reply cap from the incoming message setting or
-   change it blindly.
+1. Focus on the actual [plugin-loading/runtime context](docs/2026-11-26-runtime-context-review.md)
+   before another RPM trial. All six current Ubuntu artifact hashes match the
+   reviewed baseline. The core's mixed-runtime fault and the earlier HMI
+   non-loading observation are distinct; no common cause is established.
+   Eight core-mapped dependencies are missing from the uploaded files. Check
+   existing Ubuntu copies/provenance before any new collection or proposed
+   source/linking change. No rebuild or car loading test is needed for this
+   inventory. The native dummy normal-expiry result is recorded and needs no
+   repeat. Larger-size/fault cases remain unverified, deferred unless required
+   by a concrete HMI trial/recovery design.
 2. Continue the unresolved runtime/restart investigation before any HMI load.
    Endpoint expiry is a discovery constraint, not a crash fix or an unload.
 3. Consider a separate bounded stock-screen observation after fingerprints,

@@ -1,0 +1,470 @@
+{
+  "date": "2026-11-26",
+  "scope": "Offline ELF metadata and prior core map; no library loaded or ARM execution",
+  "owner_ubuntu_baseline": {
+    "rhmiapp/nbt_aad_app.cpp": "1b3b8e343dcabea75036e2c473ccc71a51a2cbd240c84d5de5eb070e0accf853",
+    "rhmiapp/nbt_aad_app_init_check.cpp": "d742b624263cc16f30d7809d942e6ac1e5267466fa312db985977f9a3dc3c776",
+    "rhmiapp/libNbtAad.so": "a1e5bd912a24984bac48d420bb711beecce83d87ad6678f7c1c322e46881faf3",
+    "rhmiapp/libNbtAadInitCheck.so": "9cc395b60a97eea6b1d7ff9c1e58d98260bc90392bf1f6e466894e98b0d6329d",
+    "rhmiapp/lib/libAppFramework.A.so": "75aff211cfe29e904cdc8545bf8f4e9174c132dc0469e0a7ef84296391ada69f",
+    "rhmiapp/lib/libCoreFramework.A.so": "235d275fbf7eeebaa955641202f971c260be2e49d9addda1227f5eb0316a2156"
+  },
+  "owner_ubuntu_ipv4": "192.168.8.157",
+  "images": {
+    "hmi": {
+      "file": "HmiMain3D-car",
+      "sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf",
+      "bytes": 58795504,
+      "needed": [
+        "libAppFramework.A.so",
+        "libKD.so.1",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libicudt.so",
+        "libiwnn.1.6.6-r1.so",
+        "libILU.so",
+        "libhmispeechdialog.so",
+        "libhmispeechtypes.so",
+        "libsys_colibry_net.gpp.so.7",
+        "libsys_someip.gpp.so.8",
+        "libcommonapi21_someip.gpp.so.7",
+        "libsys_dsi_commonapi21.gpp.so.2",
+        "libsys_fwthirdparty_commonapi21.so",
+        "libsys_dsi_colibry.gpp.so.8",
+        "libCoreFramework.A.so",
+        "libhmilog.so",
+        "libGLESv2.so.1",
+        "libEGL.so.1",
+        "libstdc++.so.6",
+        "libDevIL.so",
+        "libOpenCTM.so",
+        "libfribidi.so",
+        "libfreetype2.so",
+        "libharfbuzz.so",
+        "libhmiperformancemonitor.so",
+        "libhmidb.so",
+        "libhmigraphicbase.so",
+        "libscreen.so.1",
+        "libilmClient.gpp.so.1",
+        "libdce.so.1",
+        "libmemmgr.so.1",
+        "libtilerusr.so.1",
+        "libhmifwsupport.so",
+        "libhmiwebserverservice.so",
+        "libsys_trace_clienttrace.gpp.so.7",
+        "libsys_dsi_trace.gpp.so.6",
+        "libsys_dsi_base.gpp.so.4",
+        "libsys_dsi_servicebroker.gpp.so.4",
+        "libcommunication.gpp.so",
+        "libheartbeat.so.3",
+        "libhmicom.so",
+        "libhmiregistry.so",
+        "libhmicoding.so",
+        "libhmiplugin.so",
+        "libsys_colibry.gpp.so.7",
+        "libhmizip.so",
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_Znwj",
+          "address": "0x27820c",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x2781cc",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x20cea8",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x20ea80",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt4cerr",
+          "address": "0x3912600",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        }
+      ],
+      "selected_copy_relocations": [
+        "_ZSt4cerr"
+      ]
+    },
+    "app_car": {
+      "file": "libAppFramework.A.so",
+      "sha256": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+      "bytes": 51580,
+      "needed": [
+        "libCoreFramework.A.so",
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "core_car": {
+      "file": "libCoreFramework.A.so",
+      "sha256": "7c6ad2a7134adf8385435487301c88a192a0e8e3bf1bf5ae5c858eb4f92d8202",
+      "bytes": 95400,
+      "needed": [
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "app_link_input": {
+      "file": "libAppFramework.A.so",
+      "sha256": "75aff211cfe29e904cdc8545bf8f4e9174c132dc0469e0a7ef84296391ada69f",
+      "bytes": 51612,
+      "needed": [
+        "libCoreFramework.A.so",
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "core_link_input": {
+      "file": "libCoreFramework.A.so",
+      "sha256": "235d275fbf7eeebaa955641202f971c260be2e49d9addda1227f5eb0316a2156",
+      "bytes": 95456,
+      "needed": [
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "gnu": {
+      "file": "libstdc++.so.6",
+      "sha256": "57a95b3afd5df1d78e7f9fa9c96666501c540bfd04dd156a8dd14ae49d443f3c",
+      "bytes": 849036,
+      "needed": [
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0xae784",
+          "size": 12,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt4cerr",
+          "address": "0xd019c",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt3cin",
+          "address": "0xd07bc",
+          "size": 144,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x54a18",
+          "size": 172,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x55224",
+          "size": 1716,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_baseD2Ev",
+          "address": "0x5459c",
+          "size": 128,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt4cout",
+          "address": "0xd0730",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0xb1450",
+          "size": 180,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "qnx_cpp": {
+      "file": "libecpp-ne.so.4",
+      "sha256": "28e12c07f2539d1e334c5d6981f6886d14ffe9d71c1b057c3fc6006c0cbaeac8",
+      "bytes": 118172,
+      "needed": [
+        "libc.so.3"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x13640",
+          "size": 12,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x15098",
+          "size": 572,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt3cin",
+          "address": "0x227f0",
+          "size": 56,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x14f68",
+          "size": 152,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZNSt8ios_baseD2Ev",
+          "address": "0x13f54",
+          "size": 124,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_ZSt4cout",
+          "address": "0x22828",
+          "size": 52,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x160b8",
+          "size": 204,
+          "defined": true,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "init_candidate": {
+      "file": "libNbtAadInitCheck.so",
+      "sha256": "9cc395b60a97eea6b1d7ff9c1e58d98260bc90392bf1f6e466894e98b0d6329d",
+      "bytes": 43757,
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libstdc++.so.6",
+        "libm.so.2"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "rpm_candidate": {
+      "file": "libNbtAad.so",
+      "sha256": "a1e5bd912a24984bac48d420bb711beecce83d87ad6678f7c1c322e46881faf3",
+      "bytes": 112212,
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libstdc++.so.6",
+        "libm.so.2"
+      ],
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL"
+        }
+      ]
+    },
+    "probe": {
+      "file": "nbt_load_probe",
+      "sha256": "372952e265abd04f08167aedd3463b6f32f45719d11c990d5e89410b77e4e8a1",
+      "bytes": 7512,
+      "needed": [
+        "libc.so.3"
+      ],
+      "selected_symbols": []
+    }
+  },
+  "core_map_sha256": "ee93d005788e065f16c7ad833db15f95c76daa698c1b3eb73e20478c4c12661e",
+  "core_mapped_libraries": [
+    "libc.so.3",
+    "libAppFramework.A.so",
+    "libCoreFramework.A.so",
+    "libstdc++.so.6",
+    "libm.so.2",
+    "libhmibase.so",
+    "libbacktrace.so.1",
+    "libsocket.so.3",
+    "libBMWOTFapi.so.3",
+    "libboost_filesystem.so",
+    "libboost_system.so",
+    "libboost_regex.so",
+    "libecpp-ne.so.4"
+  ],
+  "mapped_libraries_not_captured": [
+    "libBMWOTFapi.so.3",
+    "libbacktrace.so.1",
+    "libboost_filesystem.so",
+    "libboost_regex.so",
+    "libboost_system.so",
+    "libhmibase.so",
+    "libm.so.2",
+    "libsocket.so.3"
+  ],
+  "conclusion": "The mixed-runtime fault is established by earlier core analysis, but the introducing dependency/load and actual symbol resolution/initialization order remain untraced. Missing libraries are evidence gaps, not proven defective libraries.",
+  "native_loading_verified": false,
+  "live_rpm_verified": false
+}
