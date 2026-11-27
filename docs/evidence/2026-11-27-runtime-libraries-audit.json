@@ -1,0 +1,1719 @@
+{
+  "date": "2026-11-27",
+  "scope": "Offline file/ELF/core inspection only; no library loading or ARM execution. Export presence is not runtime binding or ABI validation.",
+  "archive": {
+    "name": "nbt-runtime-libs-9yrkc0ke.tar.gz",
+    "bytes": 724320,
+    "sha256": "f66bcbac817b622b69850708c6721572f501483b464d4a78ddc9911c46f3d563",
+    "libraries": 8,
+    "total_library_bytes": 1943777,
+    "manifest_and_headers_verified": true
+  },
+  "download_manifest": [
+    {
+      "file": "libbacktrace.so.1",
+      "source": "/net/hu-omap/fs/sda0/lib/libbacktrace.so.1",
+      "bytes": 17700,
+      "sha256": "c9ef7895f4ea64960de34408487d53ed78490e30cd63e7bafb627427753bd499"
+    },
+    {
+      "file": "libm.so.2",
+      "source": "/net/hu-omap/fs/sda0/lib/libm.so.2",
+      "bytes": 156672,
+      "sha256": "b501b6162eef4dd8dec46b9f0a9c69b785a0b0df50dd65abbb35f04ccf040fda"
+    },
+    {
+      "file": "libsocket.so.3",
+      "source": "/net/hu-omap/fs/sda0/lib/libsocket.so.3",
+      "bytes": 187592,
+      "sha256": "c81c1fc86b6497637004a9a3b690ab28398517e53288a6a0096eb56e6f20ec32"
+    },
+    {
+      "file": "libboost_filesystem.so",
+      "source": "/net/hu-omap/fs/sda0/opt/hmi/ID5/lib/libboost_filesystem.so",
+      "bytes": 99956,
+      "sha256": "88e824397952d112544937c994158d8e9b1028c1695734cca33524d7056962d6"
+    },
+    {
+      "file": "libboost_regex.so",
+      "source": "/net/hu-omap/fs/sda0/opt/hmi/ID5/lib/libboost_regex.so",
+      "bytes": 1036592,
+      "sha256": "a830807f77822cbaa09c32d030ae3bd11b4f501363223762ab285916f22b2281"
+    },
+    {
+      "file": "libboost_system.so",
+      "source": "/net/hu-omap/fs/sda0/opt/hmi/ID5/lib/libboost_system.so",
+      "bytes": 13855,
+      "sha256": "0e4fe7cbfcf35b303008aafbf2e1f34911f1f6426499b799f68c0fadfcfd1878"
+    },
+    {
+      "file": "libhmibase.so",
+      "source": "/net/hu-omap/fs/sda0/opt/hmi/ID5/lib/libhmibase.so",
+      "bytes": 397192,
+      "sha256": "88594cc2da8376d7b7483e15c6339f6271523b955cc1d4210167fc930ac16087"
+    },
+    {
+      "file": "libBMWOTFapi.so.3",
+      "source": "/net/hu-omap/fs/sda0/opt/hmi/otf/libBMWOTFapi.so.3",
+      "bytes": 34218,
+      "sha256": "6bdf5581317d658120775f2651d02015e36073165fd1f60abc4e032dc9c2242a"
+    }
+  ],
+  "images": {
+    "libhmibase.so": {
+      "bytes": 397192,
+      "sha256": "88594cc2da8376d7b7483e15c6339f6271523b955cc1d4210167fc930ac16087",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x5f7a0",
+      "selected_symbols": [
+        {
+          "name": "sendto",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znaj",
+          "address": "0x5113c",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x510fc",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x5111c",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "socket",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x5115c",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "recv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libboost_regex.so": {
+      "bytes": 1036592,
+      "sha256": "a830807f77822cbaa09c32d030ae3bd11b4f501363223762ab285916f22b2281",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0xc6e24",
+      "selected_symbols": [
+        {
+          "name": "_Znaj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_baseD2Ev",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libbacktrace.so.1": {
+      "bytes": 17700,
+      "sha256": "c9ef7895f4ea64960de34408487d53ed78490e30cd63e7bafb627427753bd499",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x4e28",
+      "selected_symbols": []
+    },
+    "libsocket.so.3": {
+      "bytes": 187592,
+      "sha256": "c81c1fc86b6497637004a9a3b690ab28398517e53288a6a0096eb56e6f20ec32",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x2da70",
+      "selected_symbols": [
+        {
+          "name": "recv",
+          "address": "0x1d944",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "socket",
+          "address": "0x276d0",
+          "size": 356,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "sendto",
+          "address": "0x2711c",
+          "size": 356,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libm.so.2": {
+      "bytes": 156672,
+      "sha256": "b501b6162eef4dd8dec46b9f0a9c69b785a0b0df50dd65abbb35f04ccf040fda",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x26010",
+      "selected_symbols": []
+    },
+    "libboost_system.so": {
+      "bytes": 13855,
+      "sha256": "0e4fe7cbfcf35b303008aafbf2e1f34911f1f6426499b799f68c0fadfcfd1878",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x2850",
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libboost_filesystem.so": {
+      "bytes": 99956,
+      "sha256": "88e824397952d112544937c994158d8e9b1028c1695734cca33524d7056962d6",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libboost_system.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x129e8",
+      "selected_symbols": [
+        {
+          "name": "_Znaj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libBMWOTFapi.so.3": {
+      "bytes": 34218,
+      "sha256": "6bdf5581317d658120775f2651d02015e36073165fd1f60abc4e032dc9c2242a",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libecpp-ne.so.4",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x650c",
+      "selected_symbols": []
+    },
+    "libAppFramework.A.so": {
+      "bytes": 51580,
+      "sha256": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libCoreFramework.A.so",
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0xd230",
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libCoreFramework.A.so": {
+      "bytes": 95400,
+      "sha256": "7c6ad2a7134adf8385435487301c88a192a0e8e3bf1bf5ae5c858eb4f92d8202",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libstdc++.so.6",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x17218",
+      "selected_symbols": [
+        {
+          "name": "_Znaj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "socket",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "recv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libstdc++.so.6": {
+      "bytes": 849036,
+      "sha256": "57a95b3afd5df1d78e7f9fa9c96666501c540bfd04dd156a8dd14ae49d443f3c",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0xcecf4",
+      "selected_symbols": [
+        {
+          "name": "_Znaj",
+          "address": "0xb15b0",
+          "size": 28,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0xae79c",
+          "size": 4,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0xae784",
+          "size": 12,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt4cerr",
+          "address": "0xd019c",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt3cin",
+          "address": "0xd07bc",
+          "size": 144,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x54a18",
+          "size": 172,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x55224",
+          "size": 1716,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_baseD2Ev",
+          "address": "0x5459c",
+          "size": 128,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt4cout",
+          "address": "0xd0730",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0xb1450",
+          "size": 180,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libecpp-ne.so.4": {
+      "bytes": 118172,
+      "sha256": "28e12c07f2539d1e334c5d6981f6886d14ffe9d71c1b057c3fc6006c0cbaeac8",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x1d1f0",
+      "selected_symbols": [
+        {
+          "name": "_Znaj",
+          "address": "0x160b0",
+          "size": 4,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x13640",
+          "size": 12,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x15098",
+          "size": 572,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x13634",
+          "size": 4,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt3cin",
+          "address": "0x227f0",
+          "size": 56,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x14f68",
+          "size": 152,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_baseD2Ev",
+          "address": "0x13f54",
+          "size": 124,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt4cout",
+          "address": "0x22828",
+          "size": 52,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x160b8",
+          "size": 204,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "libc.so.3": {
+      "bytes": 490310,
+      "sha256": "7d1199d75bd1187dc3e1842fa89320e9eb82d7215ccf4ce251edcf033cf46baf",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [],
+      "dynamic_address": "0x75968",
+      "selected_symbols": []
+    },
+    "historical_plugin": {
+      "bytes": 112222,
+      "sha256": "ac246b424e39a0ca9904f60ae900c01d68daee2e489496cfbb9464cef4534721",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libstdc++.so.6",
+        "libm.so.2"
+      ],
+      "dynamic_address": "0x159c8",
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "recv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "sendto",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "socket",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "rpm_candidate": {
+      "bytes": 112212,
+      "sha256": "a1e5bd912a24984bac48d420bb711beecce83d87ad6678f7c1c322e46881faf3",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libstdc++.so.6",
+        "libm.so.2"
+      ],
+      "dynamic_address": "0x15a28",
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "recv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "sendto",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "socket",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "init_candidate": {
+      "bytes": 43757,
+      "sha256": "9cc395b60a97eea6b1d7ff9c1e58d98260bc90392bf1f6e466894e98b0d6329d",
+      "elf_class": 32,
+      "elf_type": "ET_DYN",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libAppFramework.A.so",
+        "libCoreFramework.A.so",
+        "libstdc++.so.6",
+        "libm.so.2"
+      ],
+      "dynamic_address": "0x9030",
+      "selected_symbols": [
+        {
+          "name": "_ZdlPv",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znwj",
+          "address": "0x0",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    },
+    "probe": {
+      "bytes": 7512,
+      "sha256": "372952e265abd04f08167aedd3463b6f32f45719d11c990d5e89410b77e4e8a1",
+      "elf_class": 32,
+      "elf_type": "ET_EXEC",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x101b1c",
+      "selected_symbols": []
+    },
+    "hmi": {
+      "bytes": 58795504,
+      "sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf",
+      "elf_class": 32,
+      "elf_type": "ET_EXEC",
+      "machine": "EM_ARM",
+      "flags": "0x5000002",
+      "needed": [
+        "libAppFramework.A.so",
+        "libKD.so.1",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libicudt.so",
+        "libiwnn.1.6.6-r1.so",
+        "libILU.so",
+        "libhmispeechdialog.so",
+        "libhmispeechtypes.so",
+        "libsys_colibry_net.gpp.so.7",
+        "libsys_someip.gpp.so.8",
+        "libcommonapi21_someip.gpp.so.7",
+        "libsys_dsi_commonapi21.gpp.so.2",
+        "libsys_fwthirdparty_commonapi21.so",
+        "libsys_dsi_colibry.gpp.so.8",
+        "libCoreFramework.A.so",
+        "libhmilog.so",
+        "libGLESv2.so.1",
+        "libEGL.so.1",
+        "libstdc++.so.6",
+        "libDevIL.so",
+        "libOpenCTM.so",
+        "libfribidi.so",
+        "libfreetype2.so",
+        "libharfbuzz.so",
+        "libhmiperformancemonitor.so",
+        "libhmidb.so",
+        "libhmigraphicbase.so",
+        "libscreen.so.1",
+        "libilmClient.gpp.so.1",
+        "libdce.so.1",
+        "libmemmgr.so.1",
+        "libtilerusr.so.1",
+        "libhmifwsupport.so",
+        "libhmiwebserverservice.so",
+        "libsys_trace_clienttrace.gpp.so.7",
+        "libsys_dsi_trace.gpp.so.6",
+        "libsys_dsi_base.gpp.so.4",
+        "libsys_dsi_servicebroker.gpp.so.4",
+        "libcommunication.gpp.so",
+        "libheartbeat.so.3",
+        "libhmicom.so",
+        "libhmiregistry.so",
+        "libhmicoding.so",
+        "libhmiplugin.so",
+        "libsys_colibry.gpp.so.7",
+        "libhmizip.so",
+        "libhmibase.so",
+        "libbacktrace.so.1",
+        "libsocket.so.3",
+        "libBMWOTFapi.so.3",
+        "libboost_filesystem.so",
+        "libboost_system.so",
+        "libboost_regex.so",
+        "libm.so.2",
+        "libc.so.3"
+      ],
+      "dynamic_address": "0x38f0280",
+      "selected_symbols": [
+        {
+          "name": "_Znwj",
+          "address": "0x27820c",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdlPv",
+          "address": "0x2781cc",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitD1Ev",
+          "address": "0x20cea8",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZdaPv",
+          "address": "0x2781ac",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZNSt8ios_base4InitC1Ev",
+          "address": "0x20ea80",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_ZSt4cerr",
+          "address": "0x3912600",
+          "size": 140,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "slogf",
+          "address": "0x2105bc",
+          "size": 0,
+          "defined": false,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        },
+        {
+          "name": "_Znaj",
+          "address": "0x2781ec",
+          "size": 32,
+          "defined": true,
+          "binding": "STB_GLOBAL",
+          "visibility": "STV_DEFAULT"
+        }
+      ]
+    }
+  },
+  "candidate_dependency_closures": {
+    "historical_plugin": {
+      "images": [
+        "historical_plugin",
+        "libAppFramework.A.so",
+        "libBMWOTFapi.so.3",
+        "libCoreFramework.A.so",
+        "libbacktrace.so.1",
+        "libboost_filesystem.so",
+        "libboost_regex.so",
+        "libboost_system.so",
+        "libc.so.3",
+        "libecpp-ne.so.4",
+        "libhmibase.so",
+        "libm.so.2",
+        "libsocket.so.3",
+        "libstdc++.so.6"
+      ],
+      "missing_needed_edges": [],
+      "required_global_import_count": 121,
+      "required_imports_without_named_export": []
+    },
+    "rpm_candidate": {
+      "images": [
+        "libAppFramework.A.so",
+        "libBMWOTFapi.so.3",
+        "libCoreFramework.A.so",
+        "libbacktrace.so.1",
+        "libboost_filesystem.so",
+        "libboost_regex.so",
+        "libboost_system.so",
+        "libc.so.3",
+        "libecpp-ne.so.4",
+        "libhmibase.so",
+        "libm.so.2",
+        "libsocket.so.3",
+        "libstdc++.so.6",
+        "rpm_candidate"
+      ],
+      "missing_needed_edges": [],
+      "required_global_import_count": 120,
+      "required_imports_without_named_export": []
+    },
+    "init_candidate": {
+      "images": [
+        "init_candidate",
+        "libAppFramework.A.so",
+        "libBMWOTFapi.so.3",
+        "libCoreFramework.A.so",
+        "libbacktrace.so.1",
+        "libboost_filesystem.so",
+        "libboost_regex.so",
+        "libboost_system.so",
+        "libc.so.3",
+        "libecpp-ne.so.4",
+        "libhmibase.so",
+        "libm.so.2",
+        "libsocket.so.3",
+        "libstdc++.so.6"
+      ],
+      "missing_needed_edges": [],
+      "required_global_import_count": 66,
+      "required_imports_without_named_export": []
+    }
+  },
+  "library_required_imports_without_any_captured_export": {},
+  "core_map_dynamic_offset_checks": {
+    "libc.so.3": {
+      "core_base": "0x1143000",
+      "core_dynamic_offset": "0x75968",
+      "captured_dynamic_offset": "0x75968",
+      "matches": true
+    },
+    "libAppFramework.A.so": {
+      "core_base": "0x781ac000",
+      "core_dynamic_offset": "0xd230",
+      "captured_dynamic_offset": "0xd230",
+      "matches": true
+    },
+    "libCoreFramework.A.so": {
+      "core_base": "0x78035000",
+      "core_dynamic_offset": "0x17218",
+      "captured_dynamic_offset": "0x17218",
+      "matches": true
+    },
+    "libstdc++.so.6": {
+      "core_base": "0x781e4000",
+      "core_dynamic_offset": "0xcecf4",
+      "captured_dynamic_offset": "0xcecf4",
+      "matches": true
+    },
+    "libm.so.2": {
+      "core_base": "0x780ae000",
+      "core_dynamic_offset": "0x26010",
+      "captured_dynamic_offset": "0x26010",
+      "matches": true
+    },
+    "libhmibase.so": {
+      "core_base": "0x780d5000",
+      "core_dynamic_offset": "0x5f7a0",
+      "captured_dynamic_offset": "0x5f7a0",
+      "matches": true
+    },
+    "libbacktrace.so.1": {
+      "core_base": "0x7813d000",
+      "core_dynamic_offset": "0x4e28",
+      "captured_dynamic_offset": "0x4e28",
+      "matches": true
+    },
+    "libsocket.so.3": {
+      "core_base": "0x782bb000",
+      "core_dynamic_offset": "0x2da70",
+      "captured_dynamic_offset": "0x2da70",
+      "matches": true
+    },
+    "libBMWOTFapi.so.3": {
+      "core_base": "0x780a4000",
+      "core_dynamic_offset": "0x650c",
+      "captured_dynamic_offset": "0x650c",
+      "matches": true
+    },
+    "libboost_filesystem.so": {
+      "core_base": "0x782ee000",
+      "core_dynamic_offset": "0x129e8",
+      "captured_dynamic_offset": "0x129e8",
+      "matches": true
+    },
+    "libboost_system.so": {
+      "core_base": "0x78138000",
+      "core_dynamic_offset": "0x2850",
+      "captured_dynamic_offset": "0x2850",
+      "matches": true
+    },
+    "libboost_regex.so": {
+      "core_base": "0x78301000",
+      "core_dynamic_offset": "0xc6e24",
+      "captured_dynamic_offset": "0xc6e24",
+      "matches": true
+    },
+    "libecpp-ne.so.4": {
+      "core_base": "0x783ca000",
+      "core_dynamic_offset": "0x1d1f0",
+      "captured_dynamic_offset": "0x1d1f0",
+      "matches": true
+    }
+  },
+  "selected_export_providers": {
+    "_ZSt4cout": [
+      "libecpp-ne.so.4",
+      "libstdc++.so.6"
+    ],
+    "_ZSt4cerr": [
+      "libstdc++.so.6"
+    ],
+    "_ZSt3cin": [
+      "libecpp-ne.so.4",
+      "libstdc++.so.6"
+    ],
+    "_ZNSt8ios_base4InitC1Ev": [
+      "libecpp-ne.so.4",
+      "libstdc++.so.6"
+    ],
+    "_ZNSt8ios_base4InitD1Ev": [
+      "libecpp-ne.so.4",
+      "libstdc++.so.6"
+    ],
+    "_ZNSt8ios_baseD2Ev": [
+      "libecpp-ne.so.4",
+      "libstdc++.so.6"
+    ],
+    "_Znwj": [
+      "libecpp-ne.so.4",
+      "libhmibase.so",
+      "libstdc++.so.6"
+    ],
+    "_Znaj": [
+      "libecpp-ne.so.4",
+      "libhmibase.so",
+      "libstdc++.so.6"
+    ],
+    "_ZdlPv": [
+      "libecpp-ne.so.4",
+      "libhmibase.so",
+      "libstdc++.so.6"
+    ],
+    "_ZdaPv": [
+      "libecpp-ne.so.4",
+      "libhmibase.so",
+      "libstdc++.so.6"
+    ],
+    "recv": [
+      "libsocket.so.3"
+    ],
+    "sendto": [
+      "libsocket.so.3"
+    ],
+    "socket": [
+      "libsocket.so.3"
+    ],
+    "slogf": []
+  },
+  "selected_core_relocation_slots": [
+    {
+      "image": "libNbtAad.so",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "relocation_type": 21,
+      "relocation_slot": "0x781d2ce0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2b20",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "recv",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2b3c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "sendto",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2b54",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2c18",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "socket",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2c3c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libNbtAad.so",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x781d2c90",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libAppFramework.A.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x781b9384",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libAppFramework.A.so",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x781b93e8",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "_Znaj",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c364",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "_ZdaPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c370",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c398",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "socket",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c404",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c44c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libCoreFramework.A.so",
+      "symbol": "recv",
+      "relocation_type": 22,
+      "relocation_slot": "0x7804c45c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_Znaj",
+      "relocation_type": 21,
+      "relocation_slot": "0x782b3904",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZdaPv",
+      "relocation_type": 21,
+      "relocation_slot": "0x782b395c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZSt4cerr",
+      "relocation_type": 21,
+      "relocation_slot": "0x782b3a9c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZSt3cin",
+      "relocation_type": 21,
+      "relocation_slot": "0x782b3bb0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZSt4cout",
+      "relocation_type": 21,
+      "relocation_slot": "0x782b3d10",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_Znaj",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b2e84",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZdaPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b2ed0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b3070",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b33c8",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b3568",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b3584",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libstdc++.so.6",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x782b37dc",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libhmibase.so",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "relocation_type": 21,
+      "relocation_slot": "0x78134dfc",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libhmibase.so",
+      "symbol": "sendto",
+      "relocation_type": 22,
+      "relocation_slot": "0x781348e0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libhmibase.so",
+      "symbol": "socket",
+      "relocation_type": 22,
+      "relocation_slot": "0x78134b0c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libhmibase.so",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x78134b54",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libhmibase.so",
+      "symbol": "recv",
+      "relocation_type": 22,
+      "relocation_slot": "0x78134c60",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libsocket.so.3",
+      "symbol": "socket",
+      "relocation_type": 22,
+      "relocation_slot": "0x782e8c40",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libsocket.so.3",
+      "symbol": "sendto",
+      "relocation_type": 22,
+      "relocation_slot": "0x782e8d10",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_filesystem.so",
+      "symbol": "_Znaj",
+      "relocation_type": 22,
+      "relocation_slot": "0x78300af0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_filesystem.so",
+      "symbol": "_ZdaPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x78300b20",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_filesystem.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x78300b7c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_filesystem.so",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x78300d10",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_system.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x7813a948",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_regex.so",
+      "symbol": "_Znaj",
+      "relocation_type": 22,
+      "relocation_slot": "0x783c7fa8",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_regex.so",
+      "symbol": "_ZdaPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x783c8024",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_regex.so",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x783c8184",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_regex.so",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x783c86cc",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libboost_regex.so",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x783c89c0",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_Znaj",
+      "relocation_type": 21,
+      "relocation_slot": "0x783e7534",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZdaPv",
+      "relocation_type": 21,
+      "relocation_slot": "0x783e7630",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZSt3cin",
+      "relocation_type": 21,
+      "relocation_slot": "0x783e7644",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZSt4cout",
+      "relocation_type": 21,
+      "relocation_slot": "0x783e766c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_Znaj",
+      "relocation_type": 22,
+      "relocation_slot": "0x783e72dc",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZdlPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x783e738c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZdaPv",
+      "relocation_type": 22,
+      "relocation_slot": "0x783e743c",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "relocation_type": 22,
+      "relocation_slot": "0x783e7494",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    },
+    {
+      "image": "libecpp-ne.so.4",
+      "symbol": "_Znwj",
+      "relocation_type": 22,
+      "relocation_slot": "0x783e74d4",
+      "core_bytes_present": false,
+      "slot_value": null,
+      "exact_symbol_address_matches": []
+    }
+  ],
+  "introducing_edge": {
+    "from": "libBMWOTFapi.so.3",
+    "needed": "libecpp-ne.so.4",
+    "type": "DT_NEEDED"
+  },
+  "native_plugin_loading_verified": false,
+  "live_rpm_verified": false,
+  "static_stream_initialization_checks": {
+    "libhmibase.so": {
+      "init_array_entries": 25,
+      "ios_base_initializer_sites": [
+        {
+          "init_array_entry": "0x42e90",
+          "ios_base_Init_C1_call": "0x42eb0",
+          "destructor_registration_call": "0x42ec8"
+        },
+        {
+          "init_array_entry": "0x43698",
+          "ios_base_Init_C1_call": "0x436b4",
+          "destructor_registration_call": "0x436d0"
+        },
+        {
+          "init_array_entry": "0x487f8",
+          "ios_base_Init_C1_call": "0x48814",
+          "destructor_registration_call": "0x48830"
+        },
+        {
+          "init_array_entry": "0x4d43c",
+          "ios_base_Init_C1_call": "0x4d458",
+          "destructor_registration_call": "0x4d474"
+        },
+        {
+          "init_array_entry": "0x4fedc",
+          "ios_base_Init_C1_call": "0x4fef8",
+          "destructor_registration_call": "0x4ff10"
+        }
+      ],
+      "constructor_plt_symbol": "_ZNSt8ios_base4InitC1Ev",
+      "destructor_registration_plt_symbol": "__aeabi_atexit",
+      "actual_runtime_binding_verified": false
+    },
+    "libecpp-ne.so.4": {
+      "init_array_entries": 5,
+      "stream_initializer_entry": "0x14e44",
+      "cout_vtable_store": "0x14f14",
+      "cout_destructor_registration": "0x14f34",
+      "literal_GOT_symbol_references": {
+        "0x14efc": "_ZSt4cout",
+        "0x14f00": "_ZTVSt7ostream",
+        "0x14f1c": "_ZNSt7ostreamD1Ev"
+      },
+      "destructor_registration_plt_symbol": "__aeabi_atexit",
+      "actual_runtime_binding_verified": false
+    }
+  },
+  "limitations": [
+    "No library loaded or ARM code executed.",
+    "Matching dynamic offsets support consistency with the core map but are not full historical byte identity.",
+    "No selected relocation slot is present in retained core bytes; they cannot establish actual symbol targets.",
+    "Named export presence does not validate symbol versions, loader search order, data ABI or runtime compatibility.",
+    "Captured HMI dependency closure remains larger and incomplete; the closed 13-library graph is the focused probe/candidate graph."
+  ]
+}
