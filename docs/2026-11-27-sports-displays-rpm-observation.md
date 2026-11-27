@@ -1,6 +1,6 @@
 # RPM cache with Sports Displays closed and open — 27 November 2026
 
-**Both owner-reported observations completed successfully. Opening Sports
+**Both uploaded client reports record completed observations. Opening Sports
 Displays did not produce a valid RPM cache sample or an RPM property entry
 in the inspected provider snapshots.** This does not rule out live CDS RPM.
 The reader observes existing state and never subscribes or requests a value.
@@ -13,10 +13,25 @@ result. An exact cluster value was not separately recorded for the closed
 screen. The owner followed the closed-screen baseline and open-screen
 comparison commands. The actual power/torque gauge readings were not supplied.
 
-Evidence for this note is the two complete JSON reports pasted into the chat,
-plus the mappings-only output. The original local files have not yet been
-uploaded or independently hashed/reassessed here. This note is a transcription
-of the supplied observations, not a claim to possess their raw captures.
+The owner subsequently uploaded all three original client JSON reports in
+`nbt-sports-rpm.cIPKOg.tar.gz` (1092 bytes). Offline validation confirms the
+expected three regular members, strict JSON without duplicate keys or
+nonfinite numbers, identical PID/mappings and provider/property/request state,
+and all six pasted sample values and timestamps. Each reported read count and
+the mappings-only zero-read result also agree. No car connection or transport
+replay was performed for the verification.
+
+Archive SHA-256:
+
+```text
+8a49abe09806dcd465ab07b1ae68ed71de783079801ffbd01ca171c1f980f63e
+```
+
+The [report audit](evidence/2026-11-27-sports-rpm-report-audit.json) records
+per-file sizes/hashes and the verified comparison. The original report bytes
+are retained outside Git; the repository contains derived audit metadata.
+These local reports do not independently authenticate screen state, cluster
+RPM or the original SSH transport; those conditions remain owner-reported.
 
 The Chromebook package's 13 SHA256SUMS entries passed. Mappings-only completed
 with zero process-memory reads. Each cache run used the established
@@ -80,9 +95,8 @@ remain paused for the separate unresolved runtime/restart investigation.
 
 ## Next step
 
-Preserve/upload the three existing client reports for exact evidence checks;
-no car connection is needed to package those files. A repeat unchanged RPM
-comparison is not requested. A power/torque comparison requires a separately
+The three original client reports are now preserved and checked. No further
+collection or repeat unchanged RPM comparison is requested. A power/torque comparison requires a separately
 prepared observer with verified offsets, fingerprints, object guards and
 offline fixtures. An active RPM test without our plugin requires an existing
 external CDS client whose connection and permissions have been established.

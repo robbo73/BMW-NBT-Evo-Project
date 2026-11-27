@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-27",
+  "scope": "0x3a96a68",
+  "archive": {
+    "name": "nbt-sports-rpm.cIPKOg.tar.gz",
+    "bytes": 1092,
+    "sha256": "8a49abe09806dcd465ab07b1ae68ed71de783079801ffbd01ca171c1f980f63e",
+    "expected_member_names": [
+      "mappings.json",
+      "sports-closed.json",
+      "sports-open.json"
+    ],
+    "all_members_regular": true
+  },
+  "reports": {
+    "mappings.json": {
+      "bytes": 440,
+      "sha256": "2d177baeeae45bac96800698c7c1ab95db16ebae272f2804b23aa8bc7e567053"
+    },
+    "sports-closed.json": {
+      "bytes": 2487,
+      "sha256": "0438725aef98d823f6d1a7a962817bc44156a5169349285961e2f970d99da895"
+    },
+    "sports-open.json": {
+      "bytes": 2487,
+      "sha256": "e4a4e8c9e9408b2c5f9b511d875559dafc1e9810c2414918581f48b1f20b29af"
+    }
+  },
+  "checks": {
+    "strict_JSON_without_duplicate_keys_or_nonfinite_numbers": true,
+    "all_three_reports_completed": true,
+    "same_PID_and_module_mappings": true,
+    "same_scope_provider_property_and_request_state": true,
+    "all_six_samples_match_pasted_values_and_timestamps": true,
+    "mappings_only_zero_memory_reads": true,
+    "each_cache_run_2024_bytes_in_132_reads": true
+  },
+  "pid": 294966,
+  "mappings": {
+    "cpp": "0x789ac000",
+    "coding": "0x78e9d000",
+    "plugin": "0x78f81000",
+    "remoting": "0x79800000",
+    "hmi": "0x0"
+  },
+  "provider": "0xa232dc0",
+  "rpm_proxy": "0xa5e7520",
+  "property_found_both": false,
+  "property_map_nodes_both": 15,
+  "host_state_both": 2,
+  "cache_valid_all_six_samples": false,
+  "raw_value_all_six_samples": 0,
+  "cached_rpm_all_six_samples": null,
+  "sample_times_client_monotonic": {
+    "sports-closed.json": [
+      603891.181959536,
+      603891.992912168,
+      603892.850882755
+    ],
+    "sports-open.json": [
+      603957.193424026,
+      603958.006198607,
+      603958.839865344
+    ]
+  },
+  "owner_conditions": {
+    "engine_running": true,
+    "approximately_600_idle_RPM_reported_with_open_result": true,
+    "closed_screen_exact_cluster_RPM_separately_recorded": false,
+    "power_torque_gauge_values_supplied": false
+  },
+  "limits": [
+    "The local files do not independently authenticate screen state, actual vehicle RPM or original SSH transport.",
+    "Passive snapshots cannot establish whether a subscription/query was sent or a transient update occurred between reads.",
+    "Only the inspected RPM provider/proxy was observed; the separate power/torque proxies were not read.",
+    "No live CDS callback, producer freshness or cluster agreement was established."
+  ],
+  "raw_reports_committed_to_repository": false,
+  "assessment": "Uploaded reports agree with the pasted result: no valid RPM sample or property entry observed with Sports Displays closed or open."
+}
