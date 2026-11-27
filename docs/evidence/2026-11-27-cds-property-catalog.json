@@ -1,0 +1,2140 @@
+{
+  "artifact_sha256": "f5e0c7e78bc7054b96817064b7cd9cc6502e103759bab63a56a0320693aa1d37",
+  "artifact_bytes": 7169308,
+  "factory_address": "0x1a5a70",
+  "factory_bytes": 44464,
+  "properties": [
+    {
+      "property": "climate.seatHeatDriver",
+      "native_factory_id": 1,
+      "proc_unit": 1,
+      "name_address": "0x5a0f50",
+      "constructor_call": "0x1a5ac0",
+      "push_back_call": "0x1a5b00"
+    },
+    {
+      "property": "climate.seatHeatPassenger",
+      "native_factory_id": 2,
+      "proc_unit": 1,
+      "name_address": "0x5a0f67",
+      "constructor_call": "0x1a5b4c",
+      "push_back_call": "0x1a5b90"
+    },
+    {
+      "property": "climate.seatHeatDRR",
+      "native_factory_id": 3,
+      "proc_unit": 1,
+      "name_address": "0x5a0f81",
+      "constructor_call": "0x1a5bdc",
+      "push_back_call": "0x1a5c20"
+    },
+    {
+      "property": "climate.seatHeatPSR",
+      "native_factory_id": 4,
+      "proc_unit": 1,
+      "name_address": "0x5a0f95",
+      "constructor_call": "0x1a5c6c",
+      "push_back_call": "0x1a5cb0"
+    },
+    {
+      "property": "climate.seatClimate",
+      "native_factory_id": 5,
+      "proc_unit": 1,
+      "name_address": "0x5a0fa9",
+      "constructor_call": "0x1a5cfc",
+      "push_back_call": "0x1a5d40"
+    },
+    {
+      "property": "climate.seatClimatePassenger",
+      "native_factory_id": 6,
+      "proc_unit": 1,
+      "name_address": "0x5a0fbd",
+      "constructor_call": "0x1a5d8c",
+      "push_back_call": "0x1a5dd0"
+    },
+    {
+      "property": "climate.seatClimateDRR",
+      "native_factory_id": 7,
+      "proc_unit": 1,
+      "name_address": "0x5a0fda",
+      "constructor_call": "0x1a5e1c",
+      "push_back_call": "0x1a5e60"
+    },
+    {
+      "property": "climate.seatClimatePSR",
+      "native_factory_id": 8,
+      "proc_unit": 1,
+      "name_address": "0x5a0ff1",
+      "constructor_call": "0x1a5eac",
+      "push_back_call": "0x1a5ef0"
+    },
+    {
+      "property": "climate.driverSettings",
+      "native_factory_id": 9,
+      "proc_unit": 1,
+      "name_address": "0x5a1008",
+      "constructor_call": "0x1a5f3c",
+      "push_back_call": "0x1a5f80"
+    },
+    {
+      "property": "climate.passengerSettings",
+      "native_factory_id": 10,
+      "proc_unit": 1,
+      "name_address": "0x5a101f",
+      "constructor_call": "0x1a5fcc",
+      "push_back_call": "0x1a6010"
+    },
+    {
+      "property": "climate.fondSettings",
+      "native_factory_id": 11,
+      "proc_unit": 1,
+      "name_address": "0x5a1039",
+      "constructor_call": "0x1a605c",
+      "push_back_call": "0x1a60a0"
+    },
+    {
+      "property": "climate.ACCompressor",
+      "native_factory_id": 12,
+      "proc_unit": 1,
+      "name_address": "0x5a104e",
+      "constructor_call": "0x1a60ec",
+      "push_back_call": "0x1a6130"
+    },
+    {
+      "property": "climate.ACMode",
+      "native_factory_id": 13,
+      "proc_unit": 1,
+      "name_address": "0x5a1063",
+      "constructor_call": "0x1a617c",
+      "push_back_call": "0x1a61c0"
+    },
+    {
+      "property": "climate.ACSystemTemperatures",
+      "native_factory_id": 14,
+      "proc_unit": 1,
+      "name_address": "0x5a1072",
+      "constructor_call": "0x1a620c",
+      "push_back_call": "0x1a6250"
+    },
+    {
+      "property": "climate.residualHeat",
+      "native_factory_id": 15,
+      "proc_unit": 1,
+      "name_address": "0x5a108f",
+      "constructor_call": "0x1a629c",
+      "push_back_call": "0x1a62e0"
+    },
+    {
+      "property": "climate.airConditionerCompressor",
+      "native_factory_id": 16,
+      "proc_unit": 1,
+      "name_address": "0x5a10a4",
+      "constructor_call": "0x1a632c",
+      "push_back_call": "0x1a6370"
+    },
+    {
+      "property": "climate.ventilation",
+      "native_factory_id": 17,
+      "proc_unit": 1,
+      "name_address": "0x5a10c5",
+      "constructor_call": "0x1a63bc",
+      "push_back_call": "0x1a6400"
+    },
+    {
+      "property": "climate.seatAutoClimateDR",
+      "native_factory_id": 18,
+      "proc_unit": 1,
+      "name_address": "0x5a10d9",
+      "constructor_call": "0x1a644c",
+      "push_back_call": "0x1a6490"
+    },
+    {
+      "property": "climate.seatAutoClimatePS",
+      "native_factory_id": 19,
+      "proc_unit": 1,
+      "name_address": "0x5a10f3",
+      "constructor_call": "0x1a64dc",
+      "push_back_call": "0x1a6520"
+    },
+    {
+      "property": "climate.seatAutoClimateDRR",
+      "native_factory_id": 20,
+      "proc_unit": 1,
+      "name_address": "0x5a110d",
+      "constructor_call": "0x1a656c",
+      "push_back_call": "0x1a65b0"
+    },
+    {
+      "property": "climate.seatAutoClimatePSR",
+      "native_factory_id": 21,
+      "proc_unit": 1,
+      "name_address": "0x5a1128",
+      "constructor_call": "0x1a65fc",
+      "push_back_call": "0x1a6640"
+    },
+    {
+      "property": "climate.armRestHeating",
+      "native_factory_id": 22,
+      "proc_unit": 1,
+      "name_address": "0x5a1143",
+      "constructor_call": "0x1a668c",
+      "push_back_call": "0x1a66d0"
+    },
+    {
+      "property": "comfort.seatControlPS",
+      "native_factory_id": 23,
+      "proc_unit": 1,
+      "name_address": "0x5a115a",
+      "constructor_call": "0x1a671c",
+      "push_back_call": "0x1a6760"
+    },
+    {
+      "property": "comfort.seatControlDRR",
+      "native_factory_id": 24,
+      "proc_unit": 1,
+      "name_address": "0x5a1170",
+      "constructor_call": "0x1a67ac",
+      "push_back_call": "0x1a67f0"
+    },
+    {
+      "property": "comfort.seatControlPSR",
+      "native_factory_id": 25,
+      "proc_unit": 1,
+      "name_address": "0x5a1187",
+      "constructor_call": "0x1a683c",
+      "push_back_call": "0x1a6880"
+    },
+    {
+      "property": "comfort.seatMassageRL",
+      "native_factory_id": 26,
+      "proc_unit": 1,
+      "name_address": "0x5a119e",
+      "constructor_call": "0x1a68cc",
+      "push_back_call": "0x1a6910"
+    },
+    {
+      "property": "comfort.seatMassageRR",
+      "native_factory_id": 27,
+      "proc_unit": 1,
+      "name_address": "0x5a11b4",
+      "constructor_call": "0x1a695c",
+      "push_back_call": "0x1a69a0"
+    },
+    {
+      "property": "comfort.seatLumbarRL",
+      "native_factory_id": 28,
+      "proc_unit": 1,
+      "name_address": "0x5a11ca",
+      "constructor_call": "0x1a69ec",
+      "push_back_call": "0x1a6a30"
+    },
+    {
+      "property": "comfort.seatLumbarRR",
+      "native_factory_id": 29,
+      "proc_unit": 1,
+      "name_address": "0x5a11df",
+      "constructor_call": "0x1a6c54",
+      "push_back_call": "0x1a6c98"
+    },
+    {
+      "property": "comfort.scentGenerator",
+      "native_factory_id": 30,
+      "proc_unit": 1,
+      "name_address": "0x5a11f4",
+      "constructor_call": "0x1a6ce4",
+      "push_back_call": "0x1a6d28"
+    },
+    {
+      "property": "comfort.ambientLight",
+      "native_factory_id": 31,
+      "proc_unit": 1,
+      "name_address": "0x5a120b",
+      "constructor_call": "0x1a6d74",
+      "push_back_call": "0x1a6db8"
+    },
+    {
+      "property": "comfort.ambientColour",
+      "native_factory_id": 32,
+      "proc_unit": 1,
+      "name_address": "0x5a1220",
+      "constructor_call": "0x1a6e04",
+      "push_back_call": "0x1a6e48"
+    },
+    {
+      "property": "comfort.bodyTraining",
+      "native_factory_id": 33,
+      "proc_unit": 0,
+      "name_address": "0x5a1236",
+      "constructor_call": "0x1a6e94",
+      "push_back_call": "0x1a6ed8"
+    },
+    {
+      "property": "comfort.bodyTrainingStatus",
+      "native_factory_id": 34,
+      "proc_unit": 0,
+      "name_address": "0x5a124b",
+      "constructor_call": "0x1a6f24",
+      "push_back_call": "0x1a6f68"
+    },
+    {
+      "property": "comfort.seatMemory",
+      "native_factory_id": 35,
+      "proc_unit": 0,
+      "name_address": "0x5a1266",
+      "constructor_call": "0x1a6fb4",
+      "push_back_call": "0x1a6ff8"
+    },
+    {
+      "property": "communication.currentCallInfo",
+      "native_factory_id": 36,
+      "proc_unit": 1,
+      "name_address": "0x5a1279",
+      "constructor_call": "0x1a7044",
+      "push_back_call": "0x1a7088"
+    },
+    {
+      "property": "communication.lastCallInfo",
+      "native_factory_id": 37,
+      "proc_unit": 1,
+      "name_address": "0x5a1297",
+      "constructor_call": "0x1a70d4",
+      "push_back_call": "0x1a7118"
+    },
+    {
+      "property": "communication.contactList",
+      "native_factory_id": 38,
+      "proc_unit": 0,
+      "name_address": "0x5a12b2",
+      "constructor_call": "0x1a7164",
+      "push_back_call": "0x1a71a8"
+    },
+    {
+      "property": "communication.contactDetail",
+      "native_factory_id": 39,
+      "proc_unit": 0,
+      "name_address": "0x5a12cc",
+      "constructor_call": "0x1a71f4",
+      "push_back_call": "0x1a7238"
+    },
+    {
+      "property": "communication.contactPicture",
+      "native_factory_id": 40,
+      "proc_unit": 0,
+      "name_address": "0x5a12e8",
+      "constructor_call": "0x1a7284",
+      "push_back_call": "0x1a72c8"
+    },
+    {
+      "property": "communication.contactServiceProvider",
+      "native_factory_id": 41,
+      "proc_unit": 0,
+      "name_address": "0x5a1305",
+      "constructor_call": "0x1a7314",
+      "push_back_call": "0x1a7358"
+    },
+    {
+      "property": "communication.controlCall",
+      "native_factory_id": 42,
+      "proc_unit": 0,
+      "name_address": "0x5a132a",
+      "constructor_call": "0x1a73a4",
+      "push_back_call": "0x1a73e8"
+    },
+    {
+      "property": "communication.call",
+      "native_factory_id": 43,
+      "proc_unit": 0,
+      "name_address": "0x5a1344",
+      "constructor_call": "0x1a7434",
+      "push_back_call": "0x1a7478"
+    },
+    {
+      "property": "communication.phoneStatus",
+      "native_factory_id": 44,
+      "proc_unit": 0,
+      "name_address": "0x5a1357",
+      "constructor_call": "0x1a74c4",
+      "push_back_call": "0x1a7508"
+    },
+    {
+      "property": "communication.callStatus0",
+      "native_factory_id": 45,
+      "proc_unit": 0,
+      "name_address": "0x5a1371",
+      "constructor_call": "0x1a7554",
+      "push_back_call": "0x1a7598"
+    },
+    {
+      "property": "communication.callStatus1",
+      "native_factory_id": 46,
+      "proc_unit": 0,
+      "name_address": "0x5a138b",
+      "constructor_call": "0x1a75e4",
+      "push_back_call": "0x1a7628"
+    },
+    {
+      "property": "communication.controlPhone",
+      "native_factory_id": 47,
+      "proc_unit": 0,
+      "name_address": "0x5a13a5",
+      "constructor_call": "0x1a7674",
+      "push_back_call": "0x1a76b8"
+    },
+    {
+      "property": "communication.phone",
+      "native_factory_id": 48,
+      "proc_unit": 0,
+      "name_address": "0x5a13c0",
+      "constructor_call": "0x1a7704",
+      "push_back_call": "0x1a7748"
+    },
+    {
+      "property": "communication.callDuration0",
+      "native_factory_id": 49,
+      "proc_unit": 0,
+      "name_address": "0x5a13d4",
+      "constructor_call": "0x1a7794",
+      "push_back_call": "0x1a77d8"
+    },
+    {
+      "property": "communication.callDuration1",
+      "native_factory_id": 50,
+      "proc_unit": 0,
+      "name_address": "0x5a13f0",
+      "constructor_call": "0x1a7824",
+      "push_back_call": "0x1a7868"
+    },
+    {
+      "property": "communication.callInfo0",
+      "native_factory_id": 51,
+      "proc_unit": 0,
+      "name_address": "0x5a140c",
+      "constructor_call": "0x1a78b4",
+      "push_back_call": "0x1a78f8"
+    },
+    {
+      "property": "communication.callInfo1",
+      "native_factory_id": 52,
+      "proc_unit": 0,
+      "name_address": "0x5a1424",
+      "constructor_call": "0x1a7944",
+      "push_back_call": "0x1a7988"
+    },
+    {
+      "property": "communication.callAvailability",
+      "native_factory_id": 53,
+      "proc_unit": 0,
+      "name_address": "0x5a143c",
+      "constructor_call": "0x1a79d4",
+      "push_back_call": "0x1a7a18"
+    },
+    {
+      "property": "communication.gsmSIAStatus",
+      "native_factory_id": 54,
+      "proc_unit": 0,
+      "name_address": "0x5a145b",
+      "constructor_call": "0x1a7a64",
+      "push_back_call": "0x1a7aa8"
+    },
+    {
+      "property": "communication.infoPlus",
+      "native_factory_id": 55,
+      "proc_unit": 0,
+      "name_address": "0x5a1476",
+      "constructor_call": "0x1a7af4",
+      "push_back_call": "0x1a7b38"
+    },
+    {
+      "property": "communication.atmId",
+      "native_factory_id": 56,
+      "proc_unit": 0,
+      "name_address": "0x5a148d",
+      "constructor_call": "0x1a7b84",
+      "push_back_call": "0x1a7bc8"
+    },
+    {
+      "property": "controls.cruiseControl",
+      "native_factory_id": 57,
+      "proc_unit": 1,
+      "name_address": "0x5a14a1",
+      "constructor_call": "0x1a7c14",
+      "push_back_call": "0x1a7c58"
+    },
+    {
+      "property": "controls.convertibleTop",
+      "native_factory_id": 58,
+      "proc_unit": 1,
+      "name_address": "0x5a14b8",
+      "constructor_call": "0x1a7ca4",
+      "push_back_call": "0x1a7ce8"
+    },
+    {
+      "property": "controls.windshieldWiper",
+      "native_factory_id": 59,
+      "proc_unit": 1,
+      "name_address": "0x5a14d0",
+      "constructor_call": "0x1a7d34",
+      "push_back_call": "0x1a7d78"
+    },
+    {
+      "property": "controls.lights",
+      "native_factory_id": 60,
+      "proc_unit": 1,
+      "name_address": "0x5a14e9",
+      "constructor_call": "0x1a7dc4",
+      "push_back_call": "0x1a7e08"
+    },
+    {
+      "property": "controls.startStopStatus",
+      "native_factory_id": 61,
+      "proc_unit": 1,
+      "name_address": "0x5a14f9",
+      "constructor_call": "0x1a7e54",
+      "push_back_call": "0x1a7e98"
+    },
+    {
+      "property": "controls.startStopLEDs",
+      "native_factory_id": 62,
+      "proc_unit": 1,
+      "name_address": "0x5a1512",
+      "constructor_call": "0x1a7ee4",
+      "push_back_call": "0x1a7f28"
+    },
+    {
+      "property": "controls.windowDriverFront",
+      "native_factory_id": 63,
+      "proc_unit": 1,
+      "name_address": "0x5a1529",
+      "constructor_call": "0x1a7f74",
+      "push_back_call": "0x1a7fb8"
+    },
+    {
+      "property": "controls.windowPassengerFront",
+      "native_factory_id": 64,
+      "proc_unit": 1,
+      "name_address": "0x5a1544",
+      "constructor_call": "0x1a8004",
+      "push_back_call": "0x1a8048"
+    },
+    {
+      "property": "controls.windowDriverRear",
+      "native_factory_id": 65,
+      "proc_unit": 1,
+      "name_address": "0x5a1562",
+      "constructor_call": "0x1a8094",
+      "push_back_call": "0x1a80d8"
+    },
+    {
+      "property": "controls.windowPassengerRear",
+      "native_factory_id": 66,
+      "proc_unit": 1,
+      "name_address": "0x5a157c",
+      "constructor_call": "0x1a8124",
+      "push_back_call": "0x1a8168"
+    },
+    {
+      "property": "controls.sunroof",
+      "native_factory_id": 67,
+      "proc_unit": 1,
+      "name_address": "0x5a1599",
+      "constructor_call": "0x1a81b4",
+      "push_back_call": "0x1a81f8"
+    },
+    {
+      "property": "controls.sunroof2",
+      "native_factory_id": 68,
+      "proc_unit": 1,
+      "name_address": "0x5a15aa",
+      "constructor_call": "0x1a8244",
+      "push_back_call": "0x1a8288"
+    },
+    {
+      "property": "controls.turnSignal",
+      "native_factory_id": 69,
+      "proc_unit": 1,
+      "name_address": "0x5a15bc",
+      "constructor_call": "0x1a82d4",
+      "push_back_call": "0x1a8318"
+    },
+    {
+      "property": "controls.defrostRear",
+      "native_factory_id": 70,
+      "proc_unit": 1,
+      "name_address": "0x5a15d0",
+      "constructor_call": "0x1a8364",
+      "push_back_call": "0x1a83a8"
+    },
+    {
+      "property": "controls.headlights",
+      "native_factory_id": 71,
+      "proc_unit": 1,
+      "name_address": "0x5a15e5",
+      "constructor_call": "0x1a83f4",
+      "push_back_call": "0x1a8438"
+    },
+    {
+      "property": "controls.tcProxy",
+      "native_factory_id": 72,
+      "proc_unit": 1,
+      "name_address": "0x5a15f9",
+      "constructor_call": "0x1a8484",
+      "push_back_call": "0x1a84c8"
+    },
+    {
+      "property": "controls.shadowingRoof",
+      "native_factory_id": 73,
+      "proc_unit": 1,
+      "name_address": "0x5a160a",
+      "constructor_call": "0x1a8514",
+      "push_back_call": "0x1a8558"
+    },
+    {
+      "property": "controls.sunblind",
+      "native_factory_id": 74,
+      "proc_unit": 1,
+      "name_address": "0x5a1621",
+      "constructor_call": "0x1a85a4",
+      "push_back_call": "0x1a85e8"
+    },
+    {
+      "property": "driving.odometer",
+      "native_factory_id": 75,
+      "proc_unit": 1,
+      "name_address": "0x5a1633",
+      "constructor_call": "0x1a8634",
+      "push_back_call": "0x1a8678"
+    },
+    {
+      "property": "driving.shiftIndicator",
+      "native_factory_id": 76,
+      "proc_unit": 1,
+      "name_address": "0x5a1644",
+      "constructor_call": "0x1a86c4",
+      "push_back_call": "0x1a8708"
+    },
+    {
+      "property": "driving.acceleratorPedal",
+      "native_factory_id": 77,
+      "proc_unit": 1,
+      "name_address": "0x5a165b",
+      "constructor_call": "0x1a8754",
+      "push_back_call": "0x1a8798"
+    },
+    {
+      "property": "driving.speedActual",
+      "native_factory_id": 78,
+      "proc_unit": 1,
+      "name_address": "0x5a1674",
+      "constructor_call": "0x1a87e4",
+      "push_back_call": "0x1a8828"
+    },
+    {
+      "property": "driving.keyPosition",
+      "native_factory_id": 79,
+      "proc_unit": 1,
+      "name_address": "0x5a1688",
+      "constructor_call": "0x1a8874",
+      "push_back_call": "0x1a88b8"
+    },
+    {
+      "property": "driving.acceleration",
+      "native_factory_id": 80,
+      "proc_unit": 1,
+      "name_address": "0x5a169c",
+      "constructor_call": "0x1a8904",
+      "push_back_call": "0x1a8948"
+    },
+    {
+      "property": "driving.steeringWheel",
+      "native_factory_id": 81,
+      "proc_unit": 1,
+      "name_address": "0x5a16b1",
+      "constructor_call": "0x1a8994",
+      "push_back_call": "0x1a89d8"
+    },
+    {
+      "property": "driving.gear",
+      "native_factory_id": 82,
+      "proc_unit": 1,
+      "name_address": "0x5a16c7",
+      "constructor_call": "0x1a8a24",
+      "push_back_call": "0x1a8a68"
+    },
+    {
+      "property": "driving.keyNumber",
+      "native_factory_id": 83,
+      "proc_unit": 1,
+      "name_address": "0x5a16d4",
+      "constructor_call": "0x1a8ab4",
+      "push_back_call": "0x1a8af8"
+    },
+    {
+      "property": "driving.brakeContact",
+      "native_factory_id": 84,
+      "proc_unit": 1,
+      "name_address": "0x5a16e6",
+      "constructor_call": "0x1a8b44",
+      "push_back_call": "0x1a8b88"
+    },
+    {
+      "property": "driving.DSCActive",
+      "native_factory_id": 85,
+      "proc_unit": 1,
+      "name_address": "0x5a16fb",
+      "constructor_call": "0x1a8bd4",
+      "push_back_call": "0x1a8c18"
+    },
+    {
+      "property": "driving.clutchPedal",
+      "native_factory_id": 86,
+      "proc_unit": 1,
+      "name_address": "0x5a170d",
+      "constructor_call": "0x1a8e34",
+      "push_back_call": "0x1a8e78"
+    },
+    {
+      "property": "driving.speedDisplayed",
+      "native_factory_id": 87,
+      "proc_unit": 1,
+      "name_address": "0x5a1721",
+      "constructor_call": "0x1a8ec4",
+      "push_back_call": "0x1a8f08"
+    },
+    {
+      "property": "driving.parkingBrake",
+      "native_factory_id": 88,
+      "proc_unit": 1,
+      "name_address": "0x5a1738",
+      "constructor_call": "0x1a8f54",
+      "push_back_call": "0x1a8f98"
+    },
+    {
+      "property": "driving.mode",
+      "native_factory_id": 89,
+      "proc_unit": 1,
+      "name_address": "0x5a174d",
+      "constructor_call": "0x1a8fe4",
+      "push_back_call": "0x1a9028"
+    },
+    {
+      "property": "driving.mode35up",
+      "native_factory_id": 90,
+      "proc_unit": 1,
+      "name_address": "0x5a175a",
+      "constructor_call": "0x1a9074",
+      "push_back_call": "0x1a90b8"
+    },
+    {
+      "property": "driving.ecoTip",
+      "native_factory_id": 91,
+      "proc_unit": 1,
+      "name_address": "0x5a176b",
+      "constructor_call": "0x1a9104",
+      "push_back_call": "0x1a9148"
+    },
+    {
+      "property": "driving.averageConsumption",
+      "native_factory_id": 92,
+      "proc_unit": 1,
+      "name_address": "0x5a177a",
+      "constructor_call": "0x1a9194",
+      "push_back_call": "0x1a91d8"
+    },
+    {
+      "property": "driving.averageSpeed",
+      "native_factory_id": 93,
+      "proc_unit": 1,
+      "name_address": "0x5a1795",
+      "constructor_call": "0x1a9224",
+      "push_back_call": "0x1a9268"
+    },
+    {
+      "property": "driving.ecoRange",
+      "native_factory_id": 94,
+      "proc_unit": 1,
+      "name_address": "0x5a17aa",
+      "constructor_call": "0x1a92b4",
+      "push_back_call": "0x1a92f8"
+    },
+    {
+      "property": "driving.ecoRangeWon",
+      "native_factory_id": 95,
+      "proc_unit": 1,
+      "name_address": "0x5a17bb",
+      "constructor_call": "0x1a9344",
+      "push_back_call": "0x1a9388"
+    },
+    {
+      "property": "driving.FDRControl",
+      "native_factory_id": 96,
+      "proc_unit": 1,
+      "name_address": "0x5a17cf",
+      "constructor_call": "0x1a93d4",
+      "push_back_call": "0x1a9418"
+    },
+    {
+      "property": "driving.electricalPowerDistribution",
+      "native_factory_id": 97,
+      "proc_unit": 1,
+      "name_address": "0x5a17e2",
+      "constructor_call": "0x1a9464",
+      "push_back_call": "0x1a94a8"
+    },
+    {
+      "property": "driving.displayRangeElectricVehicle",
+      "native_factory_id": 98,
+      "proc_unit": 1,
+      "name_address": "0x5a1806",
+      "constructor_call": "0x1a94f4",
+      "push_back_call": "0x1a9538"
+    },
+    {
+      "property": "driving.drivingStyle",
+      "native_factory_id": 99,
+      "proc_unit": 1,
+      "name_address": "0x5a182a",
+      "constructor_call": "0x1a9584",
+      "push_back_call": "0x1a95c8"
+    },
+    {
+      "property": "driving.trafficSignInfo1",
+      "native_factory_id": 100,
+      "proc_unit": 1,
+      "name_address": "0x5a183f",
+      "constructor_call": "0x1a9614",
+      "push_back_call": "0x1a9658"
+    },
+    {
+      "property": "driving.trafficSignInfo2",
+      "native_factory_id": 101,
+      "proc_unit": 1,
+      "name_address": "0x5a1858",
+      "constructor_call": "0x1a96a4",
+      "push_back_call": "0x1a96e8"
+    },
+    {
+      "property": "driving.trafficSignInfo3",
+      "native_factory_id": 102,
+      "proc_unit": 1,
+      "name_address": "0x5a1871",
+      "constructor_call": "0x1a9734",
+      "push_back_call": "0x1a9778"
+    },
+    {
+      "property": "driving.trafficSignInfo4",
+      "native_factory_id": 103,
+      "proc_unit": 1,
+      "name_address": "0x5a188a",
+      "constructor_call": "0x1a97c4",
+      "push_back_call": "0x1a9808"
+    },
+    {
+      "property": "driving.trafficSignInfoVisibility",
+      "native_factory_id": 104,
+      "proc_unit": 1,
+      "name_address": "0x5a18a3",
+      "constructor_call": "0x1a9854",
+      "push_back_call": "0x1a9898"
+    },
+    {
+      "property": "driving.rsConfigStatus",
+      "native_factory_id": 105,
+      "proc_unit": 1,
+      "name_address": "0x5a18c5",
+      "constructor_call": "0x1a98e4",
+      "push_back_call": "0x1a9928"
+    },
+    {
+      "property": "driving.orNPITextMessage",
+      "native_factory_id": 106,
+      "proc_unit": 1,
+      "name_address": "0x5a18dc",
+      "constructor_call": "0x1a9974",
+      "push_back_call": "0x1a99b8"
+    },
+    {
+      "property": "driving.orInfo",
+      "native_factory_id": 107,
+      "proc_unit": 1,
+      "name_address": "0x5a18f5",
+      "constructor_call": "0x1a9a04",
+      "push_back_call": "0x1a9a48"
+    },
+    {
+      "property": "driving.sliTextMessage",
+      "native_factory_id": 108,
+      "proc_unit": 1,
+      "name_address": "0x5a1904",
+      "constructor_call": "0x1a9a94",
+      "push_back_call": "0x1a9ad8"
+    },
+    {
+      "property": "driving.sliNextSpeedLimitRecognition",
+      "native_factory_id": 109,
+      "proc_unit": 1,
+      "name_address": "0x5a191b",
+      "constructor_call": "0x1a9b24",
+      "push_back_call": "0x1a9b68"
+    },
+    {
+      "property": "driving.sliActualSpeedLimitInfo",
+      "native_factory_id": 110,
+      "proc_unit": 1,
+      "name_address": "0x5a1940",
+      "constructor_call": "0x1a9bb4",
+      "push_back_call": "0x1a9bf8"
+    },
+    {
+      "property": "driving.laneBoundariesLoFrq",
+      "native_factory_id": 111,
+      "proc_unit": 0,
+      "name_address": "0x5a1960",
+      "constructor_call": "0x1a9c44",
+      "push_back_call": "0x1a9c88"
+    },
+    {
+      "property": "driving.laneBoundaries",
+      "native_factory_id": 112,
+      "proc_unit": 0,
+      "name_address": "0x5a197c",
+      "constructor_call": "0x1a9cd4",
+      "push_back_call": "0x1a9d18"
+    },
+    {
+      "property": "driving.laneChange",
+      "native_factory_id": 113,
+      "proc_unit": 0,
+      "name_address": "0x5a1993",
+      "constructor_call": "0x1a9d64",
+      "push_back_call": "0x1a9da8"
+    },
+    {
+      "property": "driving.signRecognitionFrontCamera",
+      "native_factory_id": 114,
+      "proc_unit": 0,
+      "name_address": "0x5a19a6",
+      "constructor_call": "0x1a9df4",
+      "push_back_call": "0x1a9e38"
+    },
+    {
+      "property": "driving.envLearning",
+      "native_factory_id": 115,
+      "proc_unit": 0,
+      "name_address": "0x5a19c9",
+      "constructor_call": "0x1a9e84",
+      "push_back_call": "0x1a9ec8"
+    },
+    {
+      "property": "engine.status",
+      "native_factory_id": 116,
+      "proc_unit": 1,
+      "name_address": "0x5a19dd",
+      "constructor_call": "0x1a9f14",
+      "push_back_call": "0x1a9f58"
+    },
+    {
+      "property": "engine.temperature",
+      "native_factory_id": 117,
+      "proc_unit": 1,
+      "name_address": "0x5a19eb",
+      "constructor_call": "0x1a9fa4",
+      "push_back_call": "0x1a9fe8"
+    },
+    {
+      "property": "engine.RPMSpeed",
+      "native_factory_id": 118,
+      "proc_unit": 1,
+      "name_address": "0x5a19fe",
+      "constructor_call": "0x1aa034",
+      "push_back_call": "0x1aa078"
+    },
+    {
+      "property": "engine.consumption",
+      "native_factory_id": 119,
+      "proc_unit": 1,
+      "name_address": "0x5a1a0e",
+      "constructor_call": "0x1aa0c4",
+      "push_back_call": "0x1aa108"
+    },
+    {
+      "property": "engine.info",
+      "native_factory_id": 120,
+      "proc_unit": 1,
+      "name_address": "0x5a1a21",
+      "constructor_call": "0x1aa154",
+      "push_back_call": "0x1aa198"
+    },
+    {
+      "property": "engine.torque",
+      "native_factory_id": 121,
+      "proc_unit": 1,
+      "name_address": "0x5a1a2d",
+      "constructor_call": "0x1aa1e4",
+      "push_back_call": "0x1aa228"
+    },
+    {
+      "property": "engine.rangeCalc",
+      "native_factory_id": 122,
+      "proc_unit": 1,
+      "name_address": "0x5a1a3b",
+      "constructor_call": "0x1aa274",
+      "push_back_call": "0x1aa2b8"
+    },
+    {
+      "property": "engine.electricVehicleMode",
+      "native_factory_id": 123,
+      "proc_unit": 1,
+      "name_address": "0x5a1a4c",
+      "constructor_call": "0x1aa304",
+      "push_back_call": "0x1aa348"
+    },
+    {
+      "property": "entertainment.descriptionCurrentSource",
+      "native_factory_id": 124,
+      "proc_unit": 1,
+      "name_address": "0x5a1a67",
+      "constructor_call": "0x1aa394",
+      "push_back_call": "0x1aa3d8"
+    },
+    {
+      "property": "entertainment.multimedia",
+      "native_factory_id": 125,
+      "proc_unit": 1,
+      "name_address": "0x5a1a8e",
+      "constructor_call": "0x1aa424",
+      "push_back_call": "0x1aa468"
+    },
+    {
+      "property": "entertainment.statusAvailableSources",
+      "native_factory_id": 126,
+      "proc_unit": 0,
+      "name_address": "0x5a1aa7",
+      "constructor_call": "0x1aa4b4",
+      "push_back_call": "0x1aa4f8"
+    },
+    {
+      "property": "entertainment.statusAllowedSources",
+      "native_factory_id": 127,
+      "proc_unit": 0,
+      "name_address": "0x5a1acc",
+      "constructor_call": "0x1aa548",
+      "push_back_call": "0x1aa590"
+    },
+    {
+      "property": "entertainment.mediabrowsing",
+      "native_factory_id": 128,
+      "proc_unit": 1,
+      "name_address": "0x5a1aef",
+      "constructor_call": "0x1aa5e4",
+      "push_back_call": "0x1aa628"
+    },
+    {
+      "property": "entertainment.radioStation",
+      "native_factory_id": 129,
+      "proc_unit": 1,
+      "name_address": "0x5a1b0b",
+      "constructor_call": "0x1aa67c",
+      "push_back_call": "0x1aa6c8"
+    },
+    {
+      "property": "entertainment.radioFrequency",
+      "native_factory_id": 130,
+      "proc_unit": 1,
+      "name_address": "0x5a1b26",
+      "constructor_call": "0x1aa72c",
+      "push_back_call": "0x1aa778"
+    },
+    {
+      "property": "entertainment.tuner.statusCurrentSource",
+      "native_factory_id": 131,
+      "proc_unit": 0,
+      "name_address": "0x5a1b43",
+      "constructor_call": "0x1aa7dc",
+      "push_back_call": "0x1aa828"
+    },
+    {
+      "property": "entertainment.tuner.statusPlayback",
+      "native_factory_id": 132,
+      "proc_unit": 0,
+      "name_address": "0x5a1b6b",
+      "constructor_call": "0x1aa88c",
+      "push_back_call": "0x1aa8d8"
+    },
+    {
+      "property": "entertainment.tuner.statusMetaInfo",
+      "native_factory_id": 133,
+      "proc_unit": 0,
+      "name_address": "0x5a1b8e",
+      "constructor_call": "0x1aa93c",
+      "push_back_call": "0x1aa988"
+    },
+    {
+      "property": "entertainment.tuner.info",
+      "native_factory_id": 134,
+      "proc_unit": 0,
+      "name_address": "0x5a1bb1",
+      "constructor_call": "0x1aa9ec",
+      "push_back_call": "0x1aaa38"
+    },
+    {
+      "property": "entertainment.tuner.playList",
+      "native_factory_id": 135,
+      "proc_unit": 0,
+      "name_address": "0x5a1bca",
+      "constructor_call": "0x1aaa9c",
+      "push_back_call": "0x1aaae8"
+    },
+    {
+      "property": "entertainment.tuner.coverArt",
+      "native_factory_id": 136,
+      "proc_unit": 0,
+      "name_address": "0x5a1be7",
+      "constructor_call": "0x1aab4c",
+      "push_back_call": "0x1aab98"
+    },
+    {
+      "property": "entertainment.tuner.epgEvent",
+      "native_factory_id": 137,
+      "proc_unit": 0,
+      "name_address": "0x5a1c04",
+      "constructor_call": "0x1aabfc",
+      "push_back_call": "0x1aac48"
+    },
+    {
+      "property": "entertainment.tuner.signalQuality",
+      "native_factory_id": 138,
+      "proc_unit": 0,
+      "name_address": "0x5a1c21",
+      "constructor_call": "0x1aacac",
+      "push_back_call": "0x1aacf8"
+    },
+    {
+      "property": "entertainment.rhmi.statusCurrentSource",
+      "native_factory_id": 139,
+      "proc_unit": 0,
+      "name_address": "0x5a1c43",
+      "constructor_call": "0x1aad5c",
+      "push_back_call": "0x1aada8"
+    },
+    {
+      "property": "entertainment.rhmi.coverArt",
+      "native_factory_id": 140,
+      "proc_unit": 0,
+      "name_address": "0x5a1c6a",
+      "constructor_call": "0x1aaf98",
+      "push_back_call": "0x1aafe4"
+    },
+    {
+      "property": "entertainment.rhmi.providerLogo",
+      "native_factory_id": 141,
+      "proc_unit": 0,
+      "name_address": "0x5a1c86",
+      "constructor_call": "0x1ab048",
+      "push_back_call": "0x1ab094"
+    },
+    {
+      "property": "entertainment.rhmi.statusMetaInfo",
+      "native_factory_id": 142,
+      "proc_unit": 0,
+      "name_address": "0x5a1ca6",
+      "constructor_call": "0x1ab0f8",
+      "push_back_call": "0x1ab144"
+    },
+    {
+      "property": "entertainment.md.coverArt",
+      "native_factory_id": 143,
+      "proc_unit": 0,
+      "name_address": "0x5a1cc8",
+      "constructor_call": "0x1ab1a8",
+      "push_back_call": "0x1ab1f4"
+    },
+    {
+      "property": "entertainment.md.statusCurrentSource",
+      "native_factory_id": 144,
+      "proc_unit": 0,
+      "name_address": "0x5a1ce2",
+      "constructor_call": "0x1ab258",
+      "push_back_call": "0x1ab2a4"
+    },
+    {
+      "property": "entertainment.md.mediabrowsing",
+      "native_factory_id": 145,
+      "proc_unit": 0,
+      "name_address": "0x5a1d07",
+      "constructor_call": "0x1ab308",
+      "push_back_call": "0x1ab354"
+    },
+    {
+      "property": "entertainment.md.statusPlayback",
+      "native_factory_id": 146,
+      "proc_unit": 0,
+      "name_address": "0x5a1d26",
+      "constructor_call": "0x1ab3b8",
+      "push_back_call": "0x1ab404"
+    },
+    {
+      "property": "entertainment.md.controlPlayback",
+      "native_factory_id": 147,
+      "proc_unit": 0,
+      "name_address": "0x5a1d46",
+      "constructor_call": "0x1ab468",
+      "push_back_call": "0x1ab4b4"
+    },
+    {
+      "property": "entertainment.md.statusMetaInfo",
+      "native_factory_id": 148,
+      "proc_unit": 0,
+      "name_address": "0x5a1d67",
+      "constructor_call": "0x1ab518",
+      "push_back_call": "0x1ab564"
+    },
+    {
+      "property": "entertainment.md.playList",
+      "native_factory_id": 149,
+      "proc_unit": 0,
+      "name_address": "0x5a1d87",
+      "constructor_call": "0x1ab5c8",
+      "push_back_call": "0x1ab614"
+    },
+    {
+      "property": "entertainment.md.random",
+      "native_factory_id": 150,
+      "proc_unit": 0,
+      "name_address": "0x5a1da1",
+      "constructor_call": "0x1ab678",
+      "push_back_call": "0x1ab6c4"
+    },
+    {
+      "property": "entertainment.md.browsingCapabilities",
+      "native_factory_id": 151,
+      "proc_unit": 0,
+      "name_address": "0x5a1db9",
+      "constructor_call": "0x1ab728",
+      "push_back_call": "0x1ab774"
+    },
+    {
+      "property": "entertainment.md.playingCapabilities",
+      "native_factory_id": 152,
+      "proc_unit": 0,
+      "name_address": "0x5a1ddf",
+      "constructor_call": "0x1ab7d8",
+      "push_back_call": "0x1ab824"
+    },
+    {
+      "property": "entertainment.drive.coverArt",
+      "native_factory_id": 153,
+      "proc_unit": 0,
+      "name_address": "0x5a1e04",
+      "constructor_call": "0x1ab888",
+      "push_back_call": "0x1ab8d4"
+    },
+    {
+      "property": "entertainment.drive.statusCurrentSource",
+      "native_factory_id": 154,
+      "proc_unit": 0,
+      "name_address": "0x5a1e21",
+      "constructor_call": "0x1ab938",
+      "push_back_call": "0x1ab984"
+    },
+    {
+      "property": "entertainment.drive.playList",
+      "native_factory_id": 155,
+      "proc_unit": 0,
+      "name_address": "0x5a1e49",
+      "constructor_call": "0x1ab9e8",
+      "push_back_call": "0x1aba34"
+    },
+    {
+      "property": "entertainment.drive.statusPlayback",
+      "native_factory_id": 156,
+      "proc_unit": 0,
+      "name_address": "0x5a1e66",
+      "constructor_call": "0x1aba98",
+      "push_back_call": "0x1abae4"
+    },
+    {
+      "property": "entertainment.drive.controlPlayback",
+      "native_factory_id": 157,
+      "proc_unit": 0,
+      "name_address": "0x5a1e89",
+      "constructor_call": "0x1abb48",
+      "push_back_call": "0x1abb94"
+    },
+    {
+      "property": "entertainment.drive.statusMetaInfo",
+      "native_factory_id": 158,
+      "proc_unit": 0,
+      "name_address": "0x5a1ead",
+      "constructor_call": "0x1abbf8",
+      "push_back_call": "0x1abc44"
+    },
+    {
+      "property": "entertainment.drive.chapterList",
+      "native_factory_id": 159,
+      "proc_unit": 0,
+      "name_address": "0x5a1ed0",
+      "constructor_call": "0x1abca8",
+      "push_back_call": "0x1abcf4"
+    },
+    {
+      "property": "entertainment.drive.subtitle",
+      "native_factory_id": 160,
+      "proc_unit": 0,
+      "name_address": "0x5a1ef0",
+      "constructor_call": "0x1abd58",
+      "push_back_call": "0x1abda4"
+    },
+    {
+      "property": "entertainment.drive.language",
+      "native_factory_id": 161,
+      "proc_unit": 0,
+      "name_address": "0x5a1f0d",
+      "constructor_call": "0x1abe08",
+      "push_back_call": "0x1abe54"
+    },
+    {
+      "property": "entertainment.drive.videoAngle",
+      "native_factory_id": 162,
+      "proc_unit": 0,
+      "name_address": "0x5a1f2a",
+      "constructor_call": "0x1abeb8",
+      "push_back_call": "0x1abf04"
+    },
+    {
+      "property": "entertainment.drive.controlCurrentSource",
+      "native_factory_id": 163,
+      "proc_unit": 0,
+      "name_address": "0x5a1f49",
+      "constructor_call": "0x1abf68",
+      "push_back_call": "0x1abfb4"
+    },
+    {
+      "property": "entertainment.drive.random",
+      "native_factory_id": 164,
+      "proc_unit": 0,
+      "name_address": "0x5a1f72",
+      "constructor_call": "0x1ac018",
+      "push_back_call": "0x1ac064"
+    },
+    {
+      "property": "entertainment.drive.colorButtonColorList",
+      "native_factory_id": 165,
+      "proc_unit": 1,
+      "name_address": "0x5a1f8d",
+      "constructor_call": "0x1ac0c8",
+      "push_back_call": "0x1ac114"
+    },
+    {
+      "property": "entertainment.drive.pipSuppress",
+      "native_factory_id": 166,
+      "proc_unit": 0,
+      "name_address": "0x5a1fb6",
+      "constructor_call": "0x1ac178",
+      "push_back_call": "0x1ac1c4"
+    },
+    {
+      "property": "entertainment.drive.blurayMemory",
+      "native_factory_id": 167,
+      "proc_unit": 0,
+      "name_address": "0x5a1fd6",
+      "constructor_call": "0x1ac228",
+      "push_back_call": "0x1ac274"
+    },
+    {
+      "property": "entertainment.drive.mediabrowsing",
+      "native_factory_id": 168,
+      "proc_unit": 0,
+      "name_address": "0x5a1ff7",
+      "constructor_call": "0x1ac2d8",
+      "push_back_call": "0x1ac324"
+    },
+    {
+      "property": "entertainment.video.statusCurrentSource",
+      "native_factory_id": 169,
+      "proc_unit": 0,
+      "name_address": "0x5a2019",
+      "constructor_call": "0x1ac388",
+      "push_back_call": "0x1ac3d4"
+    },
+    {
+      "property": "entertainment.video.statusPlayback",
+      "native_factory_id": 170,
+      "proc_unit": 0,
+      "name_address": "0x5a2041",
+      "constructor_call": "0x1ac438",
+      "push_back_call": "0x1ac484"
+    },
+    {
+      "property": "entertainment.video.playList",
+      "native_factory_id": 171,
+      "proc_unit": 0,
+      "name_address": "0x5a2064",
+      "constructor_call": "0x1ac4e8",
+      "push_back_call": "0x1ac534"
+    },
+    {
+      "property": "entertainment.video.statusMetaInfo",
+      "native_factory_id": 172,
+      "proc_unit": 0,
+      "name_address": "0x5a2081",
+      "constructor_call": "0x1ac598",
+      "push_back_call": "0x1ac5e4"
+    },
+    {
+      "property": "entertainment.video.subtitle",
+      "native_factory_id": 173,
+      "proc_unit": 0,
+      "name_address": "0x5a20a4",
+      "constructor_call": "0x1ac648",
+      "push_back_call": "0x1ac694"
+    },
+    {
+      "property": "entertainment.video.language",
+      "native_factory_id": 174,
+      "proc_unit": 0,
+      "name_address": "0x5a20c1",
+      "constructor_call": "0x1ac6f8",
+      "push_back_call": "0x1ac744"
+    },
+    {
+      "property": "entertainment.video.controlCurrentSource",
+      "native_factory_id": 175,
+      "proc_unit": 0,
+      "name_address": "0x5a20de",
+      "constructor_call": "0x1ac7a8",
+      "push_back_call": "0x1ac7f4"
+    },
+    {
+      "property": "entertainment.video.epgEvent",
+      "native_factory_id": 176,
+      "proc_unit": 0,
+      "name_address": "0x5a2107",
+      "constructor_call": "0x1ac858",
+      "push_back_call": "0x1ac8a4"
+    },
+    {
+      "property": "entertainment.video.signalQuality",
+      "native_factory_id": 177,
+      "proc_unit": 0,
+      "name_address": "0x5a2124",
+      "constructor_call": "0x1ac908",
+      "push_back_call": "0x1ac954"
+    },
+    {
+      "property": "entertainment.video.teletext",
+      "native_factory_id": 178,
+      "proc_unit": 0,
+      "name_address": "0x5a2146",
+      "constructor_call": "0x1ac9b8",
+      "push_back_call": "0x1aca04"
+    },
+    {
+      "property": "entertainment.video.stationScan",
+      "native_factory_id": 179,
+      "proc_unit": 0,
+      "name_address": "0x5a2163",
+      "constructor_call": "0x1aca68",
+      "push_back_call": "0x1acab4"
+    },
+    {
+      "property": "hmi.tts",
+      "native_factory_id": 180,
+      "proc_unit": 1,
+      "name_address": "0x5b788e",
+      "constructor_call": "0x1acb18",
+      "push_back_call": "0x1acb64"
+    },
+    {
+      "property": "hmi.speedlock",
+      "native_factory_id": 181,
+      "proc_unit": 0,
+      "name_address": "0x5a2183",
+      "constructor_call": "0x1acbc8",
+      "push_back_call": "0x1acc14"
+    },
+    {
+      "property": "hmi.videolock",
+      "native_factory_id": 182,
+      "proc_unit": 0,
+      "name_address": "0x5a2191",
+      "constructor_call": "0x1acc78",
+      "push_back_call": "0x1accc4"
+    },
+    {
+      "property": "hmi.spellerInput",
+      "native_factory_id": 183,
+      "proc_unit": 0,
+      "name_address": "0x5a219f",
+      "constructor_call": "0x1acd28",
+      "push_back_call": "0x1acd74"
+    },
+    {
+      "property": "hmi.iDrive",
+      "native_factory_id": 184,
+      "proc_unit": 1,
+      "name_address": "0x5a21b0",
+      "constructor_call": "0x1acdd8",
+      "push_back_call": "0x1ace24"
+    },
+    {
+      "property": "hmi.graphicalContext",
+      "native_factory_id": 185,
+      "proc_unit": 0,
+      "name_address": "0x5a21bb",
+      "constructor_call": "0x1ace88",
+      "push_back_call": "0x1aced4"
+    },
+    {
+      "property": "hmi.displayControl",
+      "native_factory_id": 186,
+      "proc_unit": 0,
+      "name_address": "0x5a21d0",
+      "constructor_call": "0x1ad0b0",
+      "push_back_call": "0x1ad0fc"
+    },
+    {
+      "property": "hmi.httpTransfer",
+      "native_factory_id": 187,
+      "proc_unit": 1,
+      "name_address": "0x5a21e3",
+      "constructor_call": "0x1ad160",
+      "push_back_call": "0x1ad1ac"
+    },
+    {
+      "property": "hmi.statistic",
+      "native_factory_id": 188,
+      "proc_unit": 1,
+      "name_address": "0x5a21f4",
+      "constructor_call": "0x1ad210",
+      "push_back_call": "0x1ad25c"
+    },
+    {
+      "property": "hmi.seeAllInfo",
+      "native_factory_id": 189,
+      "proc_unit": 0,
+      "name_address": "0x5a2202",
+      "constructor_call": "0x1ad2c0",
+      "push_back_call": "0x1ad30c"
+    },
+    {
+      "property": "navigation.GPSPosition",
+      "native_factory_id": 190,
+      "proc_unit": 1,
+      "name_address": "0x5a2211",
+      "constructor_call": "0x1ad370",
+      "push_back_call": "0x1ad3bc"
+    },
+    {
+      "property": "navigation.GPSRawData",
+      "native_factory_id": 191,
+      "proc_unit": 1,
+      "name_address": "0x5a2228",
+      "constructor_call": "0x1ad420",
+      "push_back_call": "0x1ad46c"
+    },
+    {
+      "property": "navigation.GPSExtendedInfo",
+      "native_factory_id": 192,
+      "proc_unit": 1,
+      "name_address": "0x5a223e",
+      "constructor_call": "0x1ad4d0",
+      "push_back_call": "0x1ad51c"
+    },
+    {
+      "property": "navigation.nextDestinationDetailedInfo",
+      "native_factory_id": 193,
+      "proc_unit": 1,
+      "name_address": "0x5a2259",
+      "constructor_call": "0x1ad580",
+      "push_back_call": "0x1ad5cc"
+    },
+    {
+      "property": "navigation.currentPositionDetailedInfo",
+      "native_factory_id": 194,
+      "proc_unit": 1,
+      "name_address": "0x5a2280",
+      "constructor_call": "0x1ad630",
+      "push_back_call": "0x1ad67c"
+    },
+    {
+      "property": "navigation.finalDestinationDetailedInfo",
+      "native_factory_id": 195,
+      "proc_unit": 1,
+      "name_address": "0x5a22a7",
+      "constructor_call": "0x1ad6e0",
+      "push_back_call": "0x1ad72c"
+    },
+    {
+      "property": "navigation.nextDestination",
+      "native_factory_id": 196,
+      "proc_unit": 1,
+      "name_address": "0x5a22cf",
+      "constructor_call": "0x1ad790",
+      "push_back_call": "0x1ad7dc"
+    },
+    {
+      "property": "navigation.finalDestination",
+      "native_factory_id": 197,
+      "proc_unit": 1,
+      "name_address": "0x5a22ea",
+      "constructor_call": "0x1ad840",
+      "push_back_call": "0x1ad88c"
+    },
+    {
+      "property": "navigation.guidanceStatus",
+      "native_factory_id": 198,
+      "proc_unit": 1,
+      "name_address": "0x5a2306",
+      "constructor_call": "0x1ad8f0",
+      "push_back_call": "0x1ad93c"
+    },
+    {
+      "property": "navigation.units",
+      "native_factory_id": 199,
+      "proc_unit": 1,
+      "name_address": "0x5a2320",
+      "constructor_call": "0x1ad9a0",
+      "push_back_call": "0x1ad9ec"
+    },
+    {
+      "property": "navigation.routeElapsedInfo",
+      "native_factory_id": 200,
+      "proc_unit": 1,
+      "name_address": "0x5a2331",
+      "constructor_call": "0x1ada50",
+      "push_back_call": "0x1ada9c"
+    },
+    {
+      "property": "navigation.infoToNextDestination",
+      "native_factory_id": 201,
+      "proc_unit": 1,
+      "name_address": "0x5a234d",
+      "constructor_call": "0x1adb00",
+      "push_back_call": "0x1adb4c"
+    },
+    {
+      "property": "navigation.infoToFinalDestination",
+      "native_factory_id": 202,
+      "proc_unit": 1,
+      "name_address": "0x5a236e",
+      "constructor_call": "0x1adbb0",
+      "push_back_call": "0x1adbfc"
+    },
+    {
+      "property": "navigation.mapFeature",
+      "native_factory_id": 203,
+      "proc_unit": 0,
+      "name_address": "0x5a2390",
+      "constructor_call": "0x1adc60",
+      "push_back_call": "0x1adcac"
+    },
+    {
+      "property": "navigation.triplist",
+      "native_factory_id": 204,
+      "proc_unit": 0,
+      "name_address": "0x5a23a6",
+      "constructor_call": "0x1add10",
+      "push_back_call": "0x1add5c"
+    },
+    {
+      "property": "navigation.showDestination",
+      "native_factory_id": 205,
+      "proc_unit": 0,
+      "name_address": "0x5a23ba",
+      "constructor_call": "0x1addc0",
+      "push_back_call": "0x1ade0c"
+    },
+    {
+      "property": "navigation.currentPositionCountry",
+      "native_factory_id": 206,
+      "proc_unit": 1,
+      "name_address": "0x5a23d5",
+      "constructor_call": "0x1ade70",
+      "push_back_call": "0x1adebc"
+    },
+    {
+      "property": "navigation.getCABUrl",
+      "native_factory_id": 207,
+      "proc_unit": 1,
+      "name_address": "0x5a23f7",
+      "constructor_call": "0x1adf20",
+      "push_back_call": "0x1adf6c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.POIEnrichment",
+      "native_factory_id": 208,
+      "proc_unit": 0,
+      "name_address": "0x5a240c",
+      "constructor_call": "0x1adfd0",
+      "push_back_call": "0x1ae01c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.PictureOnDestination",
+      "native_factory_id": 209,
+      "proc_unit": 0,
+      "name_address": "0x5a2438",
+      "constructor_call": "0x1ae080",
+      "push_back_call": "0x1ae0cc"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.OnlineSearch",
+      "native_factory_id": 210,
+      "proc_unit": 0,
+      "name_address": "0x5a246b",
+      "constructor_call": "0x1ae130",
+      "push_back_call": "0x1ae17c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.IntermodalInformation",
+      "native_factory_id": 211,
+      "proc_unit": 0,
+      "name_address": "0x5a2496",
+      "constructor_call": "0x1ae1e0",
+      "push_back_call": "0x1ae22c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.IntermodalRouteChange",
+      "native_factory_id": 212,
+      "proc_unit": 0,
+      "name_address": "0x5a24ca",
+      "constructor_call": "0x1ae290",
+      "push_back_call": "0x1ae2dc"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.IntermodalRouteInfo",
+      "native_factory_id": 213,
+      "proc_unit": 0,
+      "name_address": "0x5a24fe",
+      "constructor_call": "0x1ae340",
+      "push_back_call": "0x1ae38c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.CountryInformation",
+      "native_factory_id": 214,
+      "proc_unit": 0,
+      "name_address": "0x5a2530",
+      "constructor_call": "0x1ae3f0",
+      "push_back_call": "0x1ae43c"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.RouteInfoUploadBrowser",
+      "native_factory_id": 215,
+      "proc_unit": 0,
+      "name_address": "0x5a2561",
+      "constructor_call": "0x1ae4a0",
+      "push_back_call": "0x1ae4ec"
+    },
+    {
+      "property": "navigation.onlineStartUseCase.TripChoiceHMI",
+      "native_factory_id": 216,
+      "proc_unit": 0,
+      "name_address": "0x5a2596",
+      "constructor_call": "0x1ae550",
+      "push_back_call": "0x1ae59c"
+    },
+    {
+      "property": "navigation.requestJourneys",
+      "native_factory_id": 217,
+      "proc_unit": 0,
+      "name_address": "0x5a25c2",
+      "constructor_call": "0x1ae600",
+      "push_back_call": "0x1ae64c"
+    },
+    {
+      "property": "navigation.onlineAppInformation",
+      "native_factory_id": 218,
+      "proc_unit": 0,
+      "name_address": "0x5a25dd",
+      "constructor_call": "0x1ae6b0",
+      "push_back_call": "0x1ae6fc"
+    },
+    {
+      "property": "navigation.poiCategorySearch",
+      "native_factory_id": 219,
+      "proc_unit": 0,
+      "name_address": "0x5a25fd",
+      "constructor_call": "0x1ae760",
+      "push_back_call": "0x1ae7ac"
+    },
+    {
+      "property": "navigation.naviguidanceinfo",
+      "native_factory_id": 220,
+      "proc_unit": 0,
+      "name_address": "0x5a261a",
+      "constructor_call": "0x1ae810",
+      "push_back_call": "0x1ae85c"
+    },
+    {
+      "property": "specialvehicle.menucontrol",
+      "native_factory_id": 221,
+      "proc_unit": 1,
+      "name_address": "0x5a2636",
+      "constructor_call": "0x1ae8c0",
+      "push_back_call": "0x1ae90c"
+    },
+    {
+      "property": "sensors.fuel",
+      "native_factory_id": 222,
+      "proc_unit": 1,
+      "name_address": "0x5a2651",
+      "constructor_call": "0x1ae970",
+      "push_back_call": "0x1ae9bc"
+    },
+    {
+      "property": "sensors.PDCStatus",
+      "native_factory_id": 223,
+      "proc_unit": 1,
+      "name_address": "0x5a265e",
+      "constructor_call": "0x1aea20",
+      "push_back_call": "0x1aea6c"
+    },
+    {
+      "property": "sensors.tirePressureWarning",
+      "native_factory_id": 224,
+      "proc_unit": 1,
+      "name_address": "0x5a2670",
+      "constructor_call": "0x1aead0",
+      "push_back_call": "0x1aeb1c"
+    },
+    {
+      "property": "sensors.seatOccupiedPassenger",
+      "native_factory_id": 225,
+      "proc_unit": 1,
+      "name_address": "0x5a268c",
+      "constructor_call": "0x1aeb80",
+      "push_back_call": "0x1aebcc"
+    },
+    {
+      "property": "sensors.seatbelt",
+      "native_factory_id": 226,
+      "proc_unit": 1,
+      "name_address": "0x5a26aa",
+      "constructor_call": "0x1aec30",
+      "push_back_call": "0x1aec7c"
+    },
+    {
+      "property": "sensors.temperatureExterior",
+      "native_factory_id": 227,
+      "proc_unit": 1,
+      "name_address": "0x5a26bb",
+      "constructor_call": "0x1aece0",
+      "push_back_call": "0x1aed2c"
+    },
+    {
+      "property": "sensors.temperatureInterior",
+      "native_factory_id": 228,
+      "proc_unit": 1,
+      "name_address": "0x5a26d7",
+      "constructor_call": "0x1aed90",
+      "push_back_call": "0x1aeddc"
+    },
+    {
+      "property": "sensors.doors",
+      "native_factory_id": 229,
+      "proc_unit": 1,
+      "name_address": "0x5a26f3",
+      "constructor_call": "0x1aee40",
+      "push_back_call": "0x1aee8c"
+    },
+    {
+      "property": "sensors.trunk",
+      "native_factory_id": 230,
+      "proc_unit": 1,
+      "name_address": "0x5a2701",
+      "constructor_call": "0x1aeef0",
+      "push_back_call": "0x1aef3c"
+    },
+    {
+      "property": "sensors.battery",
+      "native_factory_id": 231,
+      "proc_unit": 1,
+      "name_address": "0x5a270f",
+      "constructor_call": "0x1aefa0",
+      "push_back_call": "0x1aefec"
+    },
+    {
+      "property": "sensors.PDCRangeFront",
+      "native_factory_id": 232,
+      "proc_unit": 1,
+      "name_address": "0x5a271f",
+      "constructor_call": "0x1af1c8",
+      "push_back_call": "0x1af214"
+    },
+    {
+      "property": "sensors.PDCRangeRear",
+      "native_factory_id": 233,
+      "proc_unit": 1,
+      "name_address": "0x5a2735",
+      "constructor_call": "0x1af278",
+      "push_back_call": "0x1af2c4"
+    },
+    {
+      "property": "sensors.PDCRangeFront2",
+      "native_factory_id": 234,
+      "proc_unit": 1,
+      "name_address": "0x5a274a",
+      "constructor_call": "0x1af328",
+      "push_back_call": "0x1af374"
+    },
+    {
+      "property": "sensors.PDCRangeRear2",
+      "native_factory_id": 235,
+      "proc_unit": 1,
+      "name_address": "0x5a2761",
+      "constructor_call": "0x1af3d8",
+      "push_back_call": "0x1af424"
+    },
+    {
+      "property": "sensors.seatOccupiedDriver",
+      "native_factory_id": 236,
+      "proc_unit": 1,
+      "name_address": "0x5a2777",
+      "constructor_call": "0x1af488",
+      "push_back_call": "0x1af4d4"
+    },
+    {
+      "property": "sensors.seatOccupiedRearLeft",
+      "native_factory_id": 237,
+      "proc_unit": 1,
+      "name_address": "0x5a2792",
+      "constructor_call": "0x1af538",
+      "push_back_call": "0x1af584"
+    },
+    {
+      "property": "sensors.seatOccupiedRearRight",
+      "native_factory_id": 238,
+      "proc_unit": 1,
+      "name_address": "0x5a27af",
+      "constructor_call": "0x1af5e8",
+      "push_back_call": "0x1af634"
+    },
+    {
+      "property": "sensors.lid",
+      "native_factory_id": 239,
+      "proc_unit": 1,
+      "name_address": "0x5a27cd",
+      "constructor_call": "0x1af698",
+      "push_back_call": "0x1af6e4"
+    },
+    {
+      "property": "sensors.SOCBatteryHybrid",
+      "native_factory_id": 240,
+      "proc_unit": 1,
+      "name_address": "0x5a27d9",
+      "constructor_call": "0x1af748",
+      "push_back_call": "0x1af794"
+    },
+    {
+      "property": "sensors.batteryTemp",
+      "native_factory_id": 241,
+      "proc_unit": 1,
+      "name_address": "0x5a27f2",
+      "constructor_call": "0x1af7f8",
+      "push_back_call": "0x1af844"
+    },
+    {
+      "property": "sensors.childSafetyLock",
+      "native_factory_id": 242,
+      "proc_unit": 1,
+      "name_address": "0x5a2806",
+      "constructor_call": "0x1af8a8",
+      "push_back_call": "0x1af8f4"
+    },
+    {
+      "property": "vehicle.VIN",
+      "native_factory_id": 243,
+      "proc_unit": 1,
+      "name_address": "0x5a281e",
+      "constructor_call": "0x1af958",
+      "push_back_call": "0x1af9a4"
+    },
+    {
+      "property": "vehicle.time",
+      "native_factory_id": 244,
+      "proc_unit": 1,
+      "name_address": "0x5a282a",
+      "constructor_call": "0x1afa08",
+      "push_back_call": "0x1afa54"
+    },
+    {
+      "property": "vehicle.type",
+      "native_factory_id": 245,
+      "proc_unit": 1,
+      "name_address": "0x5a2837",
+      "constructor_call": "0x1afab8",
+      "push_back_call": "0x1afb04"
+    },
+    {
+      "property": "vehicle.country",
+      "native_factory_id": 246,
+      "proc_unit": 1,
+      "name_address": "0x5a2844",
+      "constructor_call": "0x1afb68",
+      "push_back_call": "0x1afbb4"
+    },
+    {
+      "property": "vehicle.unitSpeed",
+      "native_factory_id": 247,
+      "proc_unit": 1,
+      "name_address": "0x5a2854",
+      "constructor_call": "0x1afc18",
+      "push_back_call": "0x1afc64"
+    },
+    {
+      "property": "vehicle.systemTime",
+      "native_factory_id": 248,
+      "proc_unit": 1,
+      "name_address": "0x5a2866",
+      "constructor_call": "0x1afcc8",
+      "push_back_call": "0x1afd14"
+    },
+    {
+      "property": "vehicle.language",
+      "native_factory_id": 249,
+      "proc_unit": 1,
+      "name_address": "0x5a2879",
+      "constructor_call": "0x1afd78",
+      "push_back_call": "0x1afdc4"
+    },
+    {
+      "property": "vehicle.dayNightChangeOver",
+      "native_factory_id": 250,
+      "proc_unit": 1,
+      "name_address": "0x5a288a",
+      "constructor_call": "0x1afe28",
+      "push_back_call": "0x1afe74"
+    },
+    {
+      "property": "vehicle.interactionDetection",
+      "native_factory_id": 251,
+      "proc_unit": 0,
+      "name_address": "0x5a28a5",
+      "constructor_call": "0x1afed8",
+      "push_back_call": "0x1aff24"
+    },
+    {
+      "property": "vehicle.powerStateHeadUnit",
+      "native_factory_id": 252,
+      "proc_unit": 1,
+      "name_address": "0x5a28c2",
+      "constructor_call": "0x1aff88",
+      "push_back_call": "0x1affd4"
+    },
+    {
+      "property": "vehicle.partialNetworkRequest",
+      "native_factory_id": 253,
+      "proc_unit": 1,
+      "name_address": "0x5a28dd",
+      "constructor_call": "0x1b0038",
+      "push_back_call": "0x1b0084"
+    },
+    {
+      "property": "vehicle.statePWF",
+      "native_factory_id": 254,
+      "proc_unit": 0,
+      "name_address": "0x5a28fb",
+      "constructor_call": "0x1b00e8",
+      "push_back_call": "0x1b0134"
+    },
+    {
+      "property": "vehicle.userTimeZone",
+      "native_factory_id": 255,
+      "proc_unit": 1,
+      "name_address": "0x5a290c",
+      "constructor_call": "0x1b0198",
+      "push_back_call": "0x1b01e4"
+    },
+    {
+      "property": "vehicle.units",
+      "native_factory_id": 256,
+      "proc_unit": 1,
+      "name_address": "0x5a2921",
+      "constructor_call": "0x1b0248",
+      "push_back_call": "0x1b0294"
+    },
+    {
+      "property": "vehicle.fasStatus",
+      "native_factory_id": 257,
+      "proc_unit": 1,
+      "name_address": "0x5a292f",
+      "constructor_call": "0x1b02f8",
+      "push_back_call": "0x1b0344"
+    },
+    {
+      "property": "vehicle.partType",
+      "native_factory_id": 258,
+      "proc_unit": 1,
+      "name_address": "0x5a2941",
+      "constructor_call": "0x1b03a8",
+      "push_back_call": "0x1b03f4"
+    },
+    {
+      "property": "vehicle.fastCharging",
+      "native_factory_id": 259,
+      "proc_unit": 1,
+      "name_address": "0x5a2952",
+      "constructor_call": "0x1b0458",
+      "push_back_call": "0x1b04a4"
+    },
+    {
+      "property": "mmi.rseAccess",
+      "native_factory_id": 260,
+      "proc_unit": 0,
+      "name_address": "0x5a2967",
+      "constructor_call": "0x1b0508",
+      "push_back_call": "0x1b0554"
+    },
+    {
+      "property": "rhmi.lumValues",
+      "native_factory_id": 261,
+      "proc_unit": 0,
+      "name_address": "0x5a2975",
+      "constructor_call": "0x1b05b8",
+      "push_back_call": "0x1b0604"
+    },
+    {
+      "property": "atm.atmSettings",
+      "native_factory_id": 262,
+      "proc_unit": 0,
+      "name_address": "0x5a2984",
+      "constructor_call": "0x1b0668",
+      "push_back_call": "0x1b06b4"
+    },
+    {
+      "property": "cds.apiRegistry",
+      "native_factory_id": 263,
+      "proc_unit": 1,
+      "name_address": "0x5a2994",
+      "constructor_call": "0x1b0718",
+      "push_back_call": "0x1b0764"
+    }
+  ],
+  "scope": "Static registration in this captured library only. No property was subscribed, fetched or written to produce this inventory.",
+  "method": "Resolve BasicString name arguments in CCdsPropertyFactory constructor, then record the associated native entry ID, proc-unit word and vector insertion call. Addresses are unrelocated ELF virtual addresses.",
+  "live_delivery_verified_by_inventory": false,
+  "validation": {
+    "registrations": 263,
+    "unique_names": 263,
+    "native_factory_ids_contiguous_1_to_263": true,
+    "all_proc_unit_words_zero_or_one": true,
+    "rpm_name_and_registration_match_prior_audit": true,
+    "groups": {
+      "climate": 22,
+      "comfort": 13,
+      "communication": 21,
+      "controls": 18,
+      "driving": 41,
+      "engine": 8,
+      "entertainment": 56,
+      "hmi": 10,
+      "navigation": 31,
+      "specialvehicle": 1,
+      "sensors": 21,
+      "vehicle": 17,
+      "mmi": 1,
+      "rhmi": 1,
+      "atm": 1,
+      "cds": 1
+    }
+  }
+}
