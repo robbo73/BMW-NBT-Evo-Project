@@ -1,0 +1,29 @@
+test_approach_lights_before_shift_target (__main__.Preview) ... ok
+test_backward_callback_preserves_last_good_receipt (__main__.Preview) ... ok
+test_callback_has_no_model_writes_and_polls_only_emit_image_models (__main__.Preview) ... ok
+test_clock_failure_stops_receipts_in_host_fixture (__main__.Preview) ... ok
+test_duplicate_millisecond_does_not_extend_expiry (__main__.Preview) ... ok
+test_error_payload_is_not_zero_or_a_new_receipt (__main__.Preview) ... ok
+test_error_with_rpm_is_also_rejected_by_fixture_boundary (__main__.Preview) ... ok
+test_existing_9000_policy_is_preserved (__main__.Preview) ... ok
+test_future_receipt_is_not_rendered_as_recent (__main__.Preview) ... ok
+test_hide_blanks_and_show_does_not_restamp (__main__.Preview) ... ok
+test_initial_blank_rpm_and_unavailable_speed (__main__.Preview) ... ok
+test_invalid_values_never_reach_renderer (__main__.Preview) ... ok
+test_json_rpm_is_not_divided_again (__main__.Preview) ... ok
+test_malformed_json_and_duplicate_fields_are_discarded (__main__.Preview) ... ok
+test_native_numeric_latch_also_rejects_nan_and_out_of_range (__main__.Preview) ... ok
+test_polling_does_not_refresh_arrival (__main__.Preview) ... ok
+test_round_once_at_display_boundary (__main__.Preview) ... ok
+test_same_rpm_in_later_callback_is_a_new_receipt_not_proven_fresh (__main__.Preview) ... ok
+test_shift_warning_images_and_digit_color (__main__.Preview) ... ok
+test_stop_refuses_late_updates_while_object_is_alive (__main__.Preview) ... ok
+test_threaded_latch_copies_are_consistent (__main__.Preview) ... ok
+test_unmodified_easing_runs_on_ui_polls (__main__.Preview) ... ok
+test_zero_clock_is_refused_not_confused_with_zero_rpm (__main__.Preview) ... ok
+test_zero_is_valid_and_distinct_from_no_sample (__main__.Preview) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.240s
+
+OK

@@ -12,7 +12,7 @@ is not a completed mechanism.
 | Area | Evidence/status | Reference |
 | --- | --- | --- |
 | QNX SSH; external HU identification/VIN | Demonstrated; HU responses do not establish DME access | [Project README](README.md) |
-| CDS-to-ShiftDeck host experiment | 24 synthetic checks pass; unchanged upstream drawing methods consume receipt-latched RPM through a fake sink. No native callback/screen or producer freshness proof | [Assessment](docs/2026-11-27-shiftdeck-integration-assessment.md) |
+| CDS-to-ShiftDeck host experiment | 24 synthetic checks pass in cloud and owner Ubuntu GCC 9.4; exact uploaded demo matches cloud. No native callback/screen or producer freshness proof | [Ubuntu results](docs/2026-11-27-cds-shift-ubuntu-results.md), [assessment](docs/2026-11-27-shiftdeck-integration-assessment.md) |
 | Existing native gauge reference | Linked iDriveDeck releases BoostDeck/ShiftDeck; exact car framework pair listed; packaged ShiftDeck passes 50 function-prefix/vtable audit. MOST OBD RPM and stable execution on this car unverified | [27 November review](docs/2026-11-27-frezzzer-id6-review.md) |
 | Direct DME communication | Unverified | [Project README](README.md) |
 | Existing RPM cache, engine off/idle | Read-only observations completed; invalid cache and no RPM property in the inspected provider snapshots | [Vehicle observations](docs/2026-11-19-property-state-vehicle-results.md) |
@@ -36,8 +36,10 @@ is not a completed mechanism.
 
 1. The [ShiftDeck integration review and isolated host experiment](docs/2026-11-27-shiftdeck-integration-assessment.md)
    now pass 24 synthetic checks, with original draw/easing/digit methods and
-   a mutex receipt latch. Repeat on Ubuntu if desired; no native rebuild is
-   requested. JSON is already RPM, receipt time is not measurement freshness,
+   a mutex receipt latch. The [owner Ubuntu run](docs/2026-11-27-cds-shift-ubuntu-results.md)
+   also passes all 24; source pins match and the saved demo equals cloud bytes.
+   No repeat or native rebuild is requested. JSON is already RPM,
+   receipt time is not measurement freshness,
    and the upstream 750 ms baseline is not yet a CDS policy. Actual framework
    removal and Message paths have additional static evidence, but removal
    quiescence, dispatch thread, native cadence, display size and app permission

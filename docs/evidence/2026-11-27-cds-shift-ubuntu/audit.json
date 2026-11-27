@@ -1,0 +1,33 @@
+{
+  "scope": "Owner Ubuntu Linux host result, inspected as files; uploaded executable was not run.",
+  "archive_bytes": 34504,
+  "archive_sha256": "315817d8ed7000a02e9fe76cd8eb9b3267d355f6b545c0b39f39567436083595",
+  "archive_members": 8,
+  "source_pins_matched": 12,
+  "tests_passed": 24,
+  "tests_seconds": 0.24,
+  "compiler": "g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0",
+  "demo_bytes": 2672,
+  "demo_sha256": "56f87eda4de4e08a8d4ebd0457f6c35c1d338cc0faef27e8dd8155a2abf53d7c",
+  "demo_byte_identical_to_cloud_frozen_layout_run": true,
+  "rpm_glyphs": [
+    " -- ",
+    "700 ",
+    "700 ",
+    " -- ",
+    " 0  ",
+    " -- "
+  ],
+  "speed_glyphs": "-- ",
+  "host_binary": {
+    "bytes": 88544,
+    "sha256": "e684138c48153e28d743d9ca5a388d40ead4d6f70aa781439a612207c61bff6b",
+    "elf_class": 64,
+    "machine": "x86-64"
+  },
+  "native_execution": false,
+  "vehicle_connection": false,
+  "producer_freshness_verified": false,
+  "hmi_integration_verified": false,
+  "live_rpm_verified": false
+}

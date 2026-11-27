@@ -1,0 +1,9 @@
+{
+  "scope": "Linux host-only synthetic CDS/ShiftDeck model replay",
+  "native_execution": false,
+  "vehicle_connection": false,
+  "milestone_7_edited": false,
+  "producer_freshness_verified": false,
+  "host_tests_passed": 24,
+  "demo_sha256": "56f87eda4de4e08a8d4ebd0457f6c35c1d338cc0faef27e8dd8155a2abf53d7c"
+}

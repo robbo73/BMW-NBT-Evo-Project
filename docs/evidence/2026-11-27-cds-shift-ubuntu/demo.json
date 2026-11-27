@@ -1,0 +1,178 @@
+{
+  "synthetic_only": true,
+  "native_execution": false,
+  "producer_freshness_verified": false,
+  "upstream_window_ms_for_test_only": 750,
+  "results": [
+    {
+      "received_ms": 0,
+      "sequence": 0,
+      "recent_arrival": false,
+      "producer_freshness_verified": false,
+      "models": [
+        [
+          54,
+          56400
+        ],
+        [
+          55,
+          55866
+        ],
+        [
+          60,
+          55901
+        ],
+        [
+          61,
+          55900
+        ],
+        [
+          62,
+          55900
+        ],
+        [
+          63,
+          55901
+        ],
+        [
+          70,
+          55900
+        ],
+        [
+          71,
+          55900
+        ],
+        [
+          72,
+          55901
+        ]
+      ]
+    },
+    {
+      "accepted": true
+    },
+    {
+      "received_ms": 1100,
+      "sequence": 1,
+      "recent_arrival": true,
+      "producer_freshness_verified": false,
+      "models": [
+        [
+          54,
+          56411
+        ],
+        [
+          60,
+          55897
+        ],
+        [
+          61,
+          55890
+        ],
+        [
+          62,
+          55890
+        ],
+        [
+          63,
+          55901
+        ]
+      ]
+    },
+    {
+      "accepted": false
+    },
+    {
+      "received_ms": 1100,
+      "sequence": 1,
+      "recent_arrival": true,
+      "producer_freshness_verified": false,
+      "models": []
+    },
+    {
+      "received_ms": 1100,
+      "sequence": 1,
+      "recent_arrival": false,
+      "producer_freshness_verified": false,
+      "models": [
+        [
+          54,
+          56400
+        ],
+        [
+          60,
+          55901
+        ],
+        [
+          61,
+          55900
+        ],
+        [
+          62,
+          55900
+        ],
+        [
+          63,
+          55901
+        ]
+      ]
+    },
+    {
+      "accepted": true
+    },
+    {
+      "received_ms": 2000,
+      "sequence": 2,
+      "recent_arrival": true,
+      "producer_freshness_verified": false,
+      "models": [
+        [
+          60,
+          55901
+        ],
+        [
+          61,
+          55890
+        ],
+        [
+          62,
+          55901
+        ],
+        [
+          63,
+          55901
+        ]
+      ]
+    },
+    {
+      "stopped": true
+    },
+    {
+      "accepted": false
+    },
+    {
+      "received_ms": 2000,
+      "sequence": 2,
+      "recent_arrival": false,
+      "producer_freshness_verified": false,
+      "models": [
+        [
+          60,
+          55901
+        ],
+        [
+          61,
+          55900
+        ],
+        [
+          62,
+          55900
+        ],
+        [
+          63,
+          55901
+        ]
+      ]
+    }
+  ]
+}
