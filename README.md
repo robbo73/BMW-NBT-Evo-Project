@@ -53,6 +53,8 @@ The [return to plugin-loading review](docs/2026-11-26-runtime-context-review.md)
 
 The [27 November FreZZZeR/iDriveDeck review](docs/2026-11-27-frezzzer-id6-review.md) finds that the two requested repos are diagnostic tooling and an unfinished native prototype, while their linked upstream already releases BoostDeck/ShiftDeck. Our exact car framework pair is listed, and the packaged ShiftDeck passes 50 function-prefix plus vtable checks against our captured pair. Its MOST transport is implemented but OBD RPM over that path remains unverified on the car; some same-pair HMI freezes are reported. Evaluate this as a UI/integration base while retaining the current loading pause and adapter-free RPM goal.
 
+The [ShiftDeck integration assessment](docs/2026-11-27-shiftdeck-integration-assessment.md) accepts a narrow host-only reuse step: a new mutex receipt latch feeds three unchanged MIT ShiftDeck drawing methods into a fake model sink; 24 synthetic checks pass. CDS JSON already carries RPM, and receipt time cannot establish producer freshness. Three CDS method prefixes and 16 actual framework instruction sites add static removal/message/finalizer evidence. No milestone-7, native plugin or vehicle change follows; callback lifetime/cadence and runtime stability remain open.
+
 ## Development setup
 
 - **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.

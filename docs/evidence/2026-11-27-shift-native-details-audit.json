@@ -1,0 +1,116 @@
+{
+  "scope": "Static checks only. No ARM/vehicle execution.",
+  "framework_sha256": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+  "instruction_sites_checked": 16,
+  "sites": [
+    {
+      "address": "0xa508",
+      "mnemonic": "cmp",
+      "operands": "r0, #1",
+      "word_sha256": "2a3859fc0c097f31d04912c82ff99b57d04dd21655dd0b7148cfc26c22502301"
+    },
+    {
+      "address": "0xa510",
+      "mnemonic": "movne",
+      "operands": "r0, #0",
+      "word_sha256": "46c0748e86b2d7deae9651fcffae344869fc3b24b26f638e40bff9e4d600f46f"
+    },
+    {
+      "address": "0xa514",
+      "mnemonic": "popne",
+      "operands": "{r4, r5, r6, r7, fp, pc}",
+      "word_sha256": "cbd1c0fefa03a8825c8a42862c1e9f4e8cd78f908e9e4d36f76bc1a318a73baf"
+    },
+    {
+      "address": "0x6288",
+      "mnemonic": "add",
+      "operands": "r0, r0, #0xc0000000",
+      "word_sha256": "052c4e8406b2441f5d5ce315ca58f6c70ba5dcabc934052aace15a58baea0408"
+    },
+    {
+      "address": "0x62a4",
+      "mnemonic": "b",
+      "operands": "#0x6400",
+      "word_sha256": "cfb36c3d9537958e50cac4221244894752b7cfb4f1cbf89e99081746aaa70764"
+    },
+    {
+      "address": "0x6410",
+      "mnemonic": "bl",
+      "operands": "#0x4e40",
+      "word_sha256": "12965eab4d229fed20dfc2e042b99c70d1305e0b381c097f1580139dad3398ca"
+    },
+    {
+      "address": "0x6430",
+      "mnemonic": "ldr",
+      "operands": "r3, [r3, #0x4c]",
+      "word_sha256": "3b3eb89fdf6114b627e0f49b84b118fc6e0cecd760c79a381b9cba5dcb0a0feb"
+    },
+    {
+      "address": "0x6434",
+      "mnemonic": "blx",
+      "operands": "r3",
+      "word_sha256": "8d82c69d3410eab8902008af07ad145a1392ec9e062f624c7973214627cf3725"
+    },
+    {
+      "address": "0x9978",
+      "mnemonic": "strd",
+      "operands": "r2, r3, [r4, #0x10]",
+      "word_sha256": "773131f6697c307ea81f86e420a66e1ba6b6ac6eebd0fcff2420b251206ba5c3"
+    },
+    {
+      "address": "0x997c",
+      "mnemonic": "add",
+      "operands": "r0, r0, #0x18",
+      "word_sha256": "231512efcdb81520cb6f83845bd19e8e8c077928fe608cd7bb0c4e8bd8e672a4"
+    },
+    {
+      "address": "0xa70c",
+      "mnemonic": "mov",
+      "operands": "r0, #0x50",
+      "word_sha256": "1483785e7ac609bb4a20641b72d115573b8589b41fad282ebae62a28f186f044"
+    },
+    {
+      "address": "0xa71c",
+      "mnemonic": "bl",
+      "operands": "#0x9a18",
+      "word_sha256": "85845f9822274b1171a32a990a23e6e13e3065c3db6c80ff8f6cca74bdcf2e0c"
+    },
+    {
+      "address": "0x5108",
+      "mnemonic": "ldr",
+      "operands": "r3, [r3, #0x5c]",
+      "word_sha256": "fa2359235999e2ee7d6a91b96dcd96612df1f3c7f26fb1edd9337247e23e75e9"
+    },
+    {
+      "address": "0x510c",
+      "mnemonic": "blx",
+      "operands": "r3",
+      "word_sha256": "8d82c69d3410eab8902008af07ad145a1392ec9e062f624c7973214627cf3725"
+    },
+    {
+      "address": "0x5110",
+      "mnemonic": "pop",
+      "operands": "{fp, pc}",
+      "word_sha256": "e6aba9080d76748e6ba8225749778c6da1d93d11733f04a5ebc04ca34576ce3d"
+    },
+    {
+      "address": "0x512c",
+      "mnemonic": "pop",
+      "operands": "{fp, pc}",
+      "word_sha256": "e6aba9080d76748e6ba8225749778c6da1d93d11733f04a5ebc04ca34576ce3d"
+    }
+  ],
+  "parcel_reader_symbol": "_ZNK3bmw6Parcel10readUInt32ERj",
+  "supported_findings": [
+    "Base handler consumes ID 1, returns false for 0x40000003.",
+    "PluginApp handler maps 0x40000003 to readUInt32 key then vtable offset 0x4c (slot 19).",
+    "Native queue allocates 0x50 bytes and calls Message copy constructor.",
+    "Message ID/Parcel ctor writes timer at +0x10 and constructs Parcel at +0x18.",
+    "finalize calls slot 23 and returns without testing r0; base onFinalize does not assign r0."
+  ],
+  "limits": [
+    "Does not establish actual HMI dispatcher/callback thread, complete Message alignment/type or live scheduling.",
+    "Return types are not recovered from mangled names; no current-path reason to change our void finalizer based on upstream bool.",
+    "CDS removal export does not prove callback drain or safe unload."
+  ]
+}

@@ -12,6 +12,7 @@ is not a completed mechanism.
 | Area | Evidence/status | Reference |
 | --- | --- | --- |
 | QNX SSH; external HU identification/VIN | Demonstrated; HU responses do not establish DME access | [Project README](README.md) |
+| CDS-to-ShiftDeck host experiment | 24 synthetic checks pass; unchanged upstream drawing methods consume receipt-latched RPM through a fake sink. No native callback/screen or producer freshness proof | [Assessment](docs/2026-11-27-shiftdeck-integration-assessment.md) |
 | Existing native gauge reference | Linked iDriveDeck releases BoostDeck/ShiftDeck; exact car framework pair listed; packaged ShiftDeck passes 50 function-prefix/vtable audit. MOST OBD RPM and stable execution on this car unverified | [27 November review](docs/2026-11-27-frezzzer-id6-review.md) |
 | Direct DME communication | Unverified | [Project README](README.md) |
 | Existing RPM cache, engine off/idle | Read-only observations completed; invalid cache and no RPM property in the inspected provider snapshots | [Vehicle observations](docs/2026-11-19-property-state-vehicle-results.md) |
@@ -33,19 +34,21 @@ is not a completed mechanism.
 
 ## Next focused work
 
-1. Evaluate the [existing iDriveDeck ShiftDeck/BoostDeck implementation](docs/2026-11-27-frezzzer-id6-review.md)
-   as a UI and native integration reference before further custom gauge work.
-   The two originally supplied FreZZZeR repos are not a completed native app.
-   Our car's framework pair matches four upstream profiles, and a packaged
-   ShiftDeck static audit passes 50 function prefixes plus vtables. Same-pair
-   freeze reports mean this does not establish safe native loading. Separate
-   the UI/lifecycle question from transport: OBD 01 RPM over its implemented
-   MOST fallback is still unverified, and its Android Auto guard may force
-   HSFZ. No installation or vehicle operation was performed.
-   Continue the [runtime-context investigation](docs/2026-11-26-runtime-context-review.md)
-   using the unchanged six-file Ubuntu baseline. Eight core-mapped libraries
-   remain missing locally; a later read-only car collection can close that
-   evidence gap. No repeat inert rehearsal or source change is required now.
+1. The [ShiftDeck integration review and isolated host experiment](docs/2026-11-27-shiftdeck-integration-assessment.md)
+   now pass 24 synthetic checks, with original draw/easing/digit methods and
+   a mutex receipt latch. Repeat on Ubuntu if desired; no native rebuild is
+   requested. JSON is already RPM, receipt time is not measurement freshness,
+   and the upstream 750 ms baseline is not yet a CDS policy. Actual framework
+   removal and Message paths have additional static evidence, but removal
+   quiescence, dispatch thread, native cadence, display size and app permission
+   remain unresolved. Do not adopt the upstream header or change finalizer
+   return types from its declarations alone. Keep Android Auto untouched.
+   The [existing upstream gauge audit](docs/2026-11-27-frezzzer-id6-review.md)
+   remains supporting static evidence, not a safe-loading result; the MOST
+   OBD-RPM path is unverified and deferred. Continue the separate
+   [runtime-context investigation](docs/2026-11-26-runtime-context-review.md),
+   with the eight-library collection still pending. No repeat inert rehearsal
+   or milestone-7 edit is required now.
 2. Continue the unresolved runtime/restart investigation before any HMI load.
    Endpoint expiry is a discovery constraint, not a crash fix or an unload.
 3. Consider a separate bounded stock-screen observation after fingerprints,

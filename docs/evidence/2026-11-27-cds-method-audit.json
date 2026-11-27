@@ -1,0 +1,37 @@
+{
+  "scope": "Static symbol/size/prefix comparison only; no native execution or callback-drain proof",
+  "car_framework_sha256": "057618b81375564f5255308a3c59111dd1e9eb57e43e38b7a858bff04ab41ce5",
+  "donor_framework_sha256": "75aff211cfe29e904cdc8545bf8f4e9174c132dc0469e0a7ef84296391ada69f",
+  "methods": [
+    {
+      "symbol": "_ZN3bmw9PluginApp33cdsAddPropertyChangedEventHandlerERNS_11BasicStringIcEEjRKNS_8DelegateIbRKNS1_ItEEvvvEE",
+      "car_address": "0x7f8c",
+      "donor_address": "0x7fa8",
+      "car_bytes": 76,
+      "donor_bytes": 76,
+      "car_prefix_sha256": "c23ba22edc14da0505d12bd18d9db708aa6d6d923b65cc5c2da58774b2bd5e5d",
+      "donor_prefix_sha256": "c23ba22edc14da0505d12bd18d9db708aa6d6d923b65cc5c2da58774b2bd5e5d",
+      "same_size_and_prefix": true
+    },
+    {
+      "symbol": "_ZN3bmw9PluginApp19cdsGetPropertyAsyncERNS_11BasicStringIcEERKNS_8DelegateIbRKNS1_ItEEvvvEE",
+      "car_address": "0x7fd8",
+      "donor_address": "0x7ff4",
+      "car_bytes": 68,
+      "donor_bytes": 68,
+      "car_prefix_sha256": "87ffbf5aef26b8817cdd1ef354fb2511c99feb1b59a3d1d596a595c8fbd4daa3",
+      "donor_prefix_sha256": "87ffbf5aef26b8817cdd1ef354fb2511c99feb1b59a3d1d596a595c8fbd4daa3",
+      "same_size_and_prefix": true
+    },
+    {
+      "symbol": "_ZN3bmw9PluginApp36cdsRemovePropertyChangedEventHandlerERNS_11BasicStringIcEE",
+      "car_address": "0x587c",
+      "donor_address": "0x5898",
+      "car_bytes": 84,
+      "donor_bytes": 84,
+      "car_prefix_sha256": "77b447a9298f482279f32e1ab9a2f002894899588a2c593abd0802f0ec7feca5",
+      "donor_prefix_sha256": "77b447a9298f482279f32e1ab9a2f002894899588a2c593abd0802f0ec7feca5",
+      "same_size_and_prefix": true
+    }
+  ]
+}

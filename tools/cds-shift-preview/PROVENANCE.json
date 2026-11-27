@@ -1,0 +1,18 @@
+{
+  "upstream": "inotbarnacle/ID6_apps_prerelease",
+  "commit": "8567abaadd1305965b3ad39e3222575cd49c507d",
+  "source": "source/native/src/plugins/shift_deck.cpp",
+  "source_sha256": "85f3af3a7acc95badf3e7d1033519391f10a97edf7a640a8a89770f286e1cd42",
+  "method_body_sha256": {
+    "animatedRpm": "f6762d6c5d35090ca0f12439d0d3bf83566c8d6389074d24a03abee3c6b2f99c",
+    "digits": "601444330c50a444c8b88c285ab1b9119cfb4052d9a4892fe8fa37e20b4559ec",
+    "draw": "82c44ee7ee6e61f9effa5fd2490a7a28df5a976cd4117ac79f2ebea037687aaa"
+  },
+  "methods_unmodified": true,
+  "assets_header_sha256": "b5e7e682e46f14a4874267eb127f10501d7eb29ac628867fc103f108c58326c0",
+  "host_only": true,
+  "native_execution": false,
+  "source_policy_rpm_max": 9000,
+  "upstream_renderer_window_ms": 750,
+  "producer_freshness_verified": false
+}

@@ -1,0 +1,13 @@
+[
+  {"op":"poll","now_ms":1000},
+  {"op":"callback","received_ms":1100,"payload":{"RPMSpeed":700}},
+  {"op":"poll","now_ms":1100},
+  {"op":"callback","received_ms":1200,"payload":{"error":402}},
+  {"op":"poll","now_ms":1200},
+  {"op":"poll","now_ms":1850},
+  {"op":"callback","received_ms":2000,"payload":{"RPMSpeed":0}},
+  {"op":"poll","now_ms":2000},
+  {"op":"stop"},
+  {"op":"callback","received_ms":2100,"payload":{"RPMSpeed":800}},
+  {"op":"poll","now_ms":2100}
+]
