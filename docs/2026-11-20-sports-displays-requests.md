@@ -101,3 +101,5 @@ is proposed here. The prior load/unload probe pause remains in effect.
 
 This checkpoint adds documentation only. No BMW binaries, raw firmware
 payloads or live coding data are committed.
+
+Follow-up, 27 November: an owner-reported [closed/open RPM observation](2026-11-27-sports-displays-rpm-observation.md) completed with the RPM cache invalid and property absent in both snapshots. That observer did not inspect the separate power/torque proxies.

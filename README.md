@@ -59,6 +59,8 @@ The [27 November FreZZZeR/iDriveDeck review](docs/2026-11-27-frezzzer-id6-review
 
 The [ShiftDeck integration assessment](docs/2026-11-27-shiftdeck-integration-assessment.md) accepts a narrow host-only reuse step: a new mutex receipt latch feeds three unchanged MIT ShiftDeck drawing methods into a fake model sink; 24 synthetic checks pass. CDS JSON already carries RPM, and receipt time cannot establish producer freshness. Three CDS method prefixes and 16 actual framework instruction sites add static removal/message/finalizer evidence. The owner then passed all 24 checks on Ubuntu GCC 9.4; the [uploaded replay matches the cloud result byte-for-byte](docs/2026-11-27-cds-shift-ubuntu-results.md). No milestone-7, native plugin or vehicle change follows; callback lifetime/cadence and runtime stability remain open.
 
+The owner also completed a [Sports Displays closed/open RPM cache comparison](docs/2026-11-27-sports-displays-rpm-observation.md): both pasted reports completed, with the same provider and an absent RPM property/invalid cache. Idle was reported at about 600 RPM with the open-screen result. This did not inspect the separate power/torque proxies or issue a CDS subscription; the original report files are still pending upload.
+
 ## Development setup
 
 - **Ubuntu VM on the Windows PC** holds the modified source in `~/milestone-7`. The native plugin uses C++11 and the `qnx65-armv7-toolchain:4.9` Docker image. Its host test suite uses `make -C tests HOST_CXX=g++-10 check`. The separate desktop prototype uses C++17 and SDL2/SDL2_ttf.

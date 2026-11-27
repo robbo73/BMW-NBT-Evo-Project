@@ -30,7 +30,7 @@ is not a completed mechanism.
 | Held-descriptor supervisor/capture | Native normal path passed: control-trace gate, parent release, cleanup, launcher/SSH exit 0, assessor PASS and client ACCEPT. Emergency timer/death paths untested | [Vehicle results](docs/2026-11-26-held-expiry-vehicle-results.md), [build](docs/2026-11-26-supervisor-r2-build-review.md) |
 | Native loader length-error handling | Offline: ftell==-1 is not explicitly rejected; allocation call is new[], runtime consequences unverified. Current C reader already rejects it | [Static check and correction](docs/2026-11-25-larger-body-endpoint-assessment.md) |
 | Earlier native framework/probe crashes | Core establishes mixed C++ stream destruction fault. Eight captured libraries now close the focused dependency graph: BMWOTFapi requires QNX libecpp; named imports are covered. Actual bindings, initialization context and unit restarts remain unresolved | [Runtime-library review](docs/2026-11-27-runtime-libraries-review.md), [core checkpoint](docs/2026-11-17-checkpoint.md) |
-| Stock Sports Displays comparison | Native proxies/notification route traced offline; proposed read-only closed/open comparison not yet performed | [Stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
+| Stock Sports Displays comparison | Owner-pasted closed/open RPM observations completed: same provider, RPM entry absent and cache invalid in both. Engine running; about 600 RPM reported with open result. Separate power/torque proxies not observed; raw report upload pending | [RPM comparison](docs/2026-11-27-sports-displays-rpm-observation.md), [stock-screen trace](docs/2026-11-20-sports-displays-requests.md) |
 
 ## Next focused work
 
