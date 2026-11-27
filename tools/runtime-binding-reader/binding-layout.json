@@ -1,0 +1,560 @@
+{
+  "format": "nbt-runtime-binding-profile/1",
+  "scope": "Static offsets from captured vehicle files; read-only observation, not a loader search-order model.",
+  "modules": {
+    "hmi": {
+      "file": "HmiMain3D-car",
+      "sha256": "027cf939eb503cb55048fba575b4155d28acfaec62020d40d6ea1caa3204b8cf",
+      "bytes": 58795504,
+      "elf_type": "ET_EXEC",
+      "fingerprints": [
+        {
+          "offset": 1048576,
+          "bytes": 64,
+          "sha256": "6ff198deaf26ef92bd5c473e2aec08ca3854c53080b5defc685d19d2b4851919"
+        },
+        {
+          "offset": 2157184,
+          "bytes": 12,
+          "sha256": "513aca7aaf74b53e156950faf7412061604e959156367cb8e312a3d555f68b53"
+        }
+      ],
+      "readable_regions": [
+        {
+          "offset": 1048576,
+          "bytes": 57915520,
+          "file_bytes": 57915520
+        },
+        {
+          "offset": 58968192,
+          "bytes": 1840584,
+          "file_bytes": 873136
+        }
+      ],
+      "plt_offset": 2146592,
+      "plt_bytes": 22100,
+      "writable_regions": [
+        {
+          "offset": 58968192,
+          "bytes": 1840584
+        }
+      ]
+    },
+    "cpp": {
+      "file": "libstdc++.so.6",
+      "sha256": "57a95b3afd5df1d78e7f9fa9c96666501c540bfd04dd156a8dd14ae49d443f3c",
+      "bytes": 849036,
+      "elf_type": "ET_DYN",
+      "fingerprints": [
+        {
+          "offset": 348708,
+          "bytes": 64,
+          "sha256": "658143150f52ea9697598ccf54ddfdcb52d23c8ff38870e45cf58d33e3cc84bd"
+        }
+      ],
+      "readable_regions": [
+        {
+          "offset": 0,
+          "bytes": 831312,
+          "file_bytes": 831312
+        },
+        {
+          "offset": 835408,
+          "bytes": 43236,
+          "file_bytes": 16524
+        }
+      ],
+      "plt_offset": 290760,
+      "plt_bytes": 8372,
+      "writable_regions": [
+        {
+          "offset": 835408,
+          "bytes": 43236
+        }
+      ]
+    },
+    "qnx_cpp": {
+      "file": "libecpp-ne.so.4",
+      "sha256": "28e12c07f2539d1e334c5d6981f6886d14ffe9d71c1b057c3fc6006c0cbaeac8",
+      "bytes": 118172,
+      "elf_type": "ET_DYN",
+      "fingerprints": [
+        {
+          "offset": 85572,
+          "bytes": 64,
+          "sha256": "16ce45b24370ce018923258b30afee28dd8e43e9e228c8e8802d9a3b29e81fdb"
+        }
+      ],
+      "readable_regions": [
+        {
+          "offset": 0,
+          "bytes": 110860,
+          "file_bytes": 110860
+        },
+        {
+          "offset": 114980,
+          "bytes": 26460,
+          "file_bytes": 5712
+        }
+      ],
+      "plt_offset": 38028,
+      "plt_bytes": 1868,
+      "writable_regions": [
+        {
+          "offset": 114980,
+          "bytes": 26460
+        }
+      ]
+    },
+    "hmibase": {
+      "file": "libhmibase.so",
+      "sha256": "88594cc2da8376d7b7483e15c6339f6271523b955cc1d4210167fc930ac16087",
+      "bytes": 397192,
+      "elf_type": "ET_DYN",
+      "fingerprints": [
+        {
+          "offset": 276120,
+          "bytes": 64,
+          "sha256": "e6e9d6200874bec98cb1ed7ecad18db1cd4fde390b1fb4043b559cc71a6b9eb0"
+        }
+      ],
+      "readable_regions": [
+        {
+          "offset": 0,
+          "bytes": 387980,
+          "file_bytes": 387980
+        },
+        {
+          "offset": 389120,
+          "bytes": 13616,
+          "file_bytes": 6600
+        }
+      ],
+      "plt_offset": 107164,
+      "plt_bytes": 2792,
+      "writable_regions": [
+        {
+          "offset": 389120,
+          "bytes": 13616
+        }
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "module": "hmi",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 59718188,
+      "relocation_type": 21
+    },
+    {
+      "module": "hmi",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 59705752,
+      "relocation_type": 22
+    },
+    {
+      "module": "hmi",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "offset": 59708128,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_Znaj",
+      "offset": 850180,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZdaPv",
+      "offset": 850268,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4cerr",
+      "offset": 850588,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4clog",
+      "offset": 850632,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt3cin",
+      "offset": 850864,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4cout",
+      "offset": 851216,
+      "relocation_type": 21
+    },
+    {
+      "module": "cpp",
+      "symbol": "_Znaj",
+      "offset": 847492,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZdaPv",
+      "offset": 847568,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZdlPv",
+      "offset": 847984,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 848840,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "offset": 849256,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "offset": 849284,
+      "relocation_type": 22
+    },
+    {
+      "module": "cpp",
+      "symbol": "_Znwj",
+      "offset": 849884,
+      "relocation_type": 22
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_Znaj",
+      "offset": 120116,
+      "relocation_type": 21
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZdaPv",
+      "offset": 120368,
+      "relocation_type": 21
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZSt3cin",
+      "offset": 120388,
+      "relocation_type": 21
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZSt4cout",
+      "offset": 120428,
+      "relocation_type": 21
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_Znaj",
+      "offset": 119516,
+      "relocation_type": 22
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZdlPv",
+      "offset": 119692,
+      "relocation_type": 22
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZdaPv",
+      "offset": 119868,
+      "relocation_type": 22
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "offset": 119956,
+      "relocation_type": 22
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_Znwj",
+      "offset": 120020,
+      "relocation_type": 22
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 392700,
+      "relocation_type": 21
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "offset": 392020,
+      "relocation_type": 22
+    }
+  ],
+  "definitions": [
+    {
+      "module": "hmi",
+      "symbol": "_Znwj",
+      "offset": 2589196,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmi",
+      "symbol": "_ZdlPv",
+      "offset": 2589132,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmi",
+      "symbol": "_ZdaPv",
+      "offset": 2589100,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmi",
+      "symbol": "_ZSt4cerr",
+      "offset": 59844096,
+      "bytes": 140,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "hmi",
+      "symbol": "_Znaj",
+      "offset": 2589164,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_Znaj",
+      "offset": 726448,
+      "bytes": 28,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZdaPv",
+      "offset": 714652,
+      "bytes": 4,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZdlPv",
+      "offset": 714628,
+      "bytes": 12,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZTVSo",
+      "offset": 842520,
+      "bytes": 40,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4cerr",
+      "offset": 852380,
+      "bytes": 140,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4clog",
+      "offset": 854132,
+      "bytes": 140,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt3cin",
+      "offset": 853948,
+      "bytes": 144,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 346648,
+      "bytes": 172,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "offset": 348708,
+      "bytes": 1716,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "offset": 345500,
+      "bytes": 128,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZTVSi",
+      "offset": 840800,
+      "bytes": 40,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZSt4cout",
+      "offset": 853808,
+      "bytes": 140,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_ZTVSt8ios_base",
+      "offset": 837928,
+      "bytes": 16,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "cpp",
+      "symbol": "_Znwj",
+      "offset": 726096,
+      "bytes": 180,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_Znaj",
+      "offset": 90288,
+      "bytes": 4,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZTVSt7istream",
+      "offset": 118896,
+      "bytes": 16,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZTVSt8ios_base",
+      "offset": 118704,
+      "bytes": 16,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZdlPv",
+      "offset": 79424,
+      "bytes": 12,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZTVSt7ostream",
+      "offset": 118952,
+      "bytes": 16,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZNSt8ios_base4InitC1Ev",
+      "offset": 86168,
+      "bytes": 572,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZdaPv",
+      "offset": 79412,
+      "bytes": 4,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZSt3cin",
+      "offset": 141296,
+      "bytes": 56,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZNSt8ios_base4InitD1Ev",
+      "offset": 85864,
+      "bytes": 152,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZNSt8ios_baseD2Ev",
+      "offset": 81748,
+      "bytes": 124,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_ZSt4cout",
+      "offset": 141352,
+      "bytes": 52,
+      "type": "STT_OBJECT"
+    },
+    {
+      "module": "qnx_cpp",
+      "symbol": "_Znwj",
+      "offset": 90296,
+      "bytes": 204,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_Znaj",
+      "offset": 332092,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_ZdaPv",
+      "offset": 332028,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_ZdlPv",
+      "offset": 332060,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    },
+    {
+      "module": "hmibase",
+      "symbol": "_Znwj",
+      "offset": 332124,
+      "bytes": 32,
+      "type": "STT_FUNC"
+    }
+  ],
+  "stream_symbols": [
+    "_ZSt4cout",
+    "_ZSt4cerr",
+    "_ZSt3cin",
+    "_ZSt4clog"
+  ]
+}

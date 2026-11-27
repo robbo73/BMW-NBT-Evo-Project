@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-27",
+  "purpose": "Read-only HMI runtime-binding observer, offline Ubuntu preparation",
+  "binding_profile_sha256": "1e583439ded361caccb409d0a3f68df89e0562fdc8a0be8bb9e3621a7151613c",
+  "pointer_slots": 27,
+  "named_definitions": 35,
+  "modules": 4,
+  "fingerprints": 5,
+  "stream_storage_first_words": 7,
+  "synthetic_read_calls": 78,
+  "synthetic_aligned_bytes": 808,
+  "observer_hard_read_cap": 160,
+  "observer_hard_aligned_bytes_cap": 8192,
+  "new_host_tests": 16,
+  "unchanged_cache_reader_host_tests": 89,
+  "new_vehicle_mode_verified": false,
+  "native_loading_verified": false,
+  "live_rpm_verified": false,
+  "transport_source_sha256": "aec52dc79b17aca0e0081773fa3c9c57476a5e9ad91d06902288f7116e490580",
+  "core_limitation": "Selected GOT pages and the exit-list head are not retained; no actual initialization order is inferred.",
+  "milestone_source_changed": false,
+  "frozen_preparation": {
+    "file": "nbt-runtime-binding-reader-prep.tar.gz",
+    "bytes": 39931,
+    "sha256": "79f167530635ed665bda242511d76ed3667b8d9ff016cb078cf242240f8be437",
+    "regular_files": 23,
+    "ELF_payloads": 0
+  },
+  "cloud_synthetic_result": {
+    "observer_tests": 16,
+    "cache_reader_tests": 89,
+    "observer_read_calls": 78,
+    "observer_aligned_bytes": 808,
+    "BMW_connection_performed": false,
+    "QNX_execution_performed": false
+  }
+}

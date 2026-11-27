@@ -203,3 +203,7 @@ discoverable, was not observed loaded in HMI, and was rolled back to its hidden
 stage. The archive itself is not stored in this repository. See the historical
 [preflight](../docs/2026-11-15-vehicle-preflight.md)
 and [candidate fingerprints](../docs/2026-11-15-checkpoint.md).
+
+## Runtime-binding observer
+
+The [Python runtime-binding observer](runtime-binding-reader/README.md) reads selected existing stock HMI/runtime pointers through the established SSH transport. Its preparation has 16 new passing synthetic tests and retains the 89 unchanged cache-reader tests. The new vehicle mode has not run; no QNX binary, method invocation, plugin activation or CDS request is part of it.
