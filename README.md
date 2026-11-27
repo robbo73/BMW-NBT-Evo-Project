@@ -61,7 +61,7 @@ The [ShiftDeck integration assessment](docs/2026-11-27-shiftdeck-integration-ass
 
 The owner also completed a [Sports Displays closed/open RPM cache comparison](docs/2026-11-27-sports-displays-rpm-observation.md): both pasted reports completed, with the same provider and an absent RPM property/invalid cache. Idle was reported at about 600 RPM with the open-screen result. This did not inspect the separate power/torque proxies or issue a CDS subscription; the three uploaded original reports now pass offline JSON/content checks against the pasted observations, with their hashes recorded.
 
-A separate [read-only runtime-binding observer](docs/2026-11-27-runtime-binding-observer-preparation.md) is prepared for an offline Ubuntu check: 16 new and 89 unchanged cache-reader tests pass, including a frozen-package rerun. It selects 27 existing HMI/runtime pointer slots and seven stream-storage first words, using the existing SSH transport. No QNX build or milestone-7 change is needed. Its new vehicle observation mode has not been run and does not establish safe plugin loading.
+A separate [read-only runtime-binding observer](docs/2026-11-27-runtime-binding-observer-preparation.md) is prepared for an offline Ubuntu check: 16 new and 89 unchanged cache-reader tests pass, including a frozen-package rerun. It selects 27 existing HMI/runtime pointer slots and seven stream-storage first words, using the existing SSH transport. The [owner Ubuntu Python 3.8.10 upload](docs/2026-11-27-runtime-binding-ubuntu-results.md) now verifies all 105 tests, source pins and a byte-identical synthetic observation. No QNX build or milestone-7 change is needed. Its new vehicle observation mode has not been run and does not establish safe plugin loading.
 
 ## Development setup
 

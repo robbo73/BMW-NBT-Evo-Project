@@ -1,0 +1,806 @@
+{
+  "synthetic_only": true,
+  "BMW_connection_performed": false,
+  "QNX_execution_performed": false,
+  "purpose": "Linux host fake-memory fixture; never a vehicle observation",
+  "observation": {
+    "bindings": [
+      {
+        "module": "hmi",
+        "symbol": "_ZNSt8ios_base4InitD1Ev",
+        "relocation_type": 21,
+        "slot_address": "0x38f3a2c",
+        "target": "0x78054a18",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "hmi",
+        "symbol": "_ZNSt8ios_base4InitD1Ev",
+        "relocation_type": 22,
+        "slot_address": "0x38f0998",
+        "target": "0x78054a18",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "hmi",
+        "symbol": "_ZNSt8ios_base4InitC1Ev",
+        "relocation_type": 22,
+        "slot_address": "0x38f12e0",
+        "target": "0x78055224",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_Znaj",
+        "relocation_type": 21,
+        "slot_address": "0x780cf904",
+        "target": "0x780b15b0",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZdaPv",
+        "relocation_type": 21,
+        "slot_address": "0x780cf95c",
+        "target": "0x780ae79c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZSt4cerr",
+        "relocation_type": 21,
+        "slot_address": "0x780cfa9c",
+        "target": "0x780d019c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cerr",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cerr",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZSt4clog",
+        "relocation_type": 21,
+        "slot_address": "0x780cfac8",
+        "target": "0x780d0874",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4clog",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4clog",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZSt3cin",
+        "relocation_type": 21,
+        "slot_address": "0x780cfbb0",
+        "target": "0x780d07bc",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt3cin",
+            "bytes": 144,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt3cin",
+            "bytes": 144,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZSt4cout",
+        "relocation_type": 21,
+        "slot_address": "0x780cfd10",
+        "target": "0x780d0730",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cout",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cout",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_Znaj",
+        "relocation_type": 22,
+        "slot_address": "0x780cee84",
+        "target": "0x780b15b0",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZdaPv",
+        "relocation_type": 22,
+        "slot_address": "0x780ceed0",
+        "target": "0x780ae79c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZdlPv",
+        "relocation_type": 22,
+        "slot_address": "0x780cf070",
+        "target": "0x780ae784",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdlPv",
+            "bytes": 12,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdlPv",
+            "bytes": 12,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZNSt8ios_base4InitD1Ev",
+        "relocation_type": 22,
+        "slot_address": "0x780cf3c8",
+        "target": "0x78054a18",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZNSt8ios_base4InitC1Ev",
+        "relocation_type": 22,
+        "slot_address": "0x780cf568",
+        "target": "0x78055224",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_ZNSt8ios_baseD2Ev",
+        "relocation_type": 22,
+        "slot_address": "0x780cf584",
+        "target": "0x7805459c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_baseD2Ev",
+            "bytes": 128,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_baseD2Ev",
+            "bytes": 128,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "cpp",
+        "symbol": "_Znwj",
+        "relocation_type": 22,
+        "slot_address": "0x780cf7dc",
+        "target": "0x780b1450",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znwj",
+            "bytes": 180,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znwj",
+            "bytes": 180,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_Znaj",
+        "relocation_type": 21,
+        "slot_address": "0x7901d534",
+        "target": "0x780b15b0",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZdaPv",
+        "relocation_type": 21,
+        "slot_address": "0x7901d630",
+        "target": "0x780ae79c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZSt3cin",
+        "relocation_type": 21,
+        "slot_address": "0x7901d644",
+        "target": "0x780d07bc",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt3cin",
+            "bytes": 144,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt3cin",
+            "bytes": 144,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZSt4cout",
+        "relocation_type": 21,
+        "slot_address": "0x7901d66c",
+        "target": "0x780d0730",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cout",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZSt4cout",
+            "bytes": 140,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_Znaj",
+        "relocation_type": 22,
+        "slot_address": "0x7901d2dc",
+        "target": "0x780b15b0",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znaj",
+            "bytes": 28,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZdlPv",
+        "relocation_type": 22,
+        "slot_address": "0x7901d38c",
+        "target": "0x780ae784",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdlPv",
+            "bytes": 12,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdlPv",
+            "bytes": 12,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZdaPv",
+        "relocation_type": 22,
+        "slot_address": "0x7901d43c",
+        "target": "0x780ae79c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZdaPv",
+            "bytes": 4,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_ZNSt8ios_baseD2Ev",
+        "relocation_type": 22,
+        "slot_address": "0x7901d494",
+        "target": "0x7805459c",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_baseD2Ev",
+            "bytes": 128,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_baseD2Ev",
+            "bytes": 128,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "qnx_cpp",
+        "symbol": "_Znwj",
+        "relocation_type": 22,
+        "slot_address": "0x7901d4d4",
+        "target": "0x780b1450",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znwj",
+            "bytes": 180,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_Znwj",
+            "bytes": 180,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "hmibase",
+        "symbol": "_ZNSt8ios_base4InitD1Ev",
+        "relocation_type": 21,
+        "slot_address": "0x7a05fdfc",
+        "target": "0x78054a18",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitD1Ev",
+            "bytes": 172,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      },
+      {
+        "module": "hmibase",
+        "symbol": "_ZNSt8ios_base4InitC1Ev",
+        "relocation_type": 22,
+        "slot_address": "0x7a05fb54",
+        "target": "0x78055224",
+        "exact_named_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "same_symbol_address_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZNSt8ios_base4InitC1Ev",
+            "bytes": 1716,
+            "type": "STT_FUNC"
+          }
+        ],
+        "target_inside_captured_PLT": [],
+        "interpretation": "Observed pointer value; a PLT target may still be a trampoline. No target was invoked."
+      }
+    ],
+    "stream_storage": [
+      {
+        "storage_module": "hmi",
+        "symbol": "_ZSt4cerr",
+        "storage_address": "0x3912600",
+        "declared_bytes": 140,
+        "first_word": "0x780cdb20",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZTVSo",
+            "bytes": 40,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "cpp",
+        "symbol": "_ZSt4cerr",
+        "storage_address": "0x780d019c",
+        "declared_bytes": 140,
+        "first_word": "0x780cdb20",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZTVSo",
+            "bytes": 40,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "cpp",
+        "symbol": "_ZSt4clog",
+        "storage_address": "0x780d0874",
+        "declared_bytes": 140,
+        "first_word": "0x780cdb20",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZTVSo",
+            "bytes": 40,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "cpp",
+        "symbol": "_ZSt3cin",
+        "storage_address": "0x780d07bc",
+        "declared_bytes": 144,
+        "first_word": "0x780cd468",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZTVSi",
+            "bytes": 40,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "cpp",
+        "symbol": "_ZSt4cout",
+        "storage_address": "0x780d0730",
+        "declared_bytes": 140,
+        "first_word": "0x780cdb20",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "cpp",
+            "symbol": "_ZTVSo",
+            "bytes": 40,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "qnx_cpp",
+        "symbol": "_ZSt3cin",
+        "storage_address": "0x790227f0",
+        "declared_bytes": 56,
+        "first_word": "0x7901d078",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "qnx_cpp",
+            "symbol": "_ZTVSt7istream",
+            "bytes": 16,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      },
+      {
+        "storage_module": "qnx_cpp",
+        "symbol": "_ZSt4cout",
+        "storage_address": "0x79022828",
+        "declared_bytes": 52,
+        "first_word": "0x7901d0b0",
+        "exact_vtable_plus_8_matches": [
+          {
+            "module": "qnx_cpp",
+            "symbol": "_ZTVSt7ostream",
+            "bytes": 16,
+            "type": "STT_OBJECT"
+          }
+        ],
+        "interpretation": "First word only; not an ABI-validity or construction-history check."
+      }
+    ],
+    "snapshot_consistency": "best_effort_rechecked_not_atomic",
+    "observer_read_calls": 78,
+    "observer_aligned_bytes": 808,
+    "scope": "Selected existing HMI bindings/storage only; not complete process symbol resolution.",
+    "initialization_order_verified": false,
+    "ABI_compatibility_verified": false,
+    "plugin_execution_verified": false
+  }
+}

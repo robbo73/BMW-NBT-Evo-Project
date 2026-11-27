@@ -111,3 +111,5 @@ There is no need to rerun the old dlopen probe or install this tool on QNX.
 The result can inform the native initialization investigation; it is not
 permission or evidence to resume plugin activation. Live CDS and RPM remain
 unverified, and the recent stock-screen observation remains passive only.
+
+Follow-up: the [uploaded Ubuntu review](2026-11-27-runtime-binding-ubuntu-results.md) now passes source-pin, test-log and exact synthetic-output verification. Actual vehicle bindings remain unobserved.

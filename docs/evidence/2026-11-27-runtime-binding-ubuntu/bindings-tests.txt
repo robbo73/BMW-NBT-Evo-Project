@@ -1,0 +1,21 @@
+test_bad_offsets_counts_and_bounds_stop_before_reads (test_runtime_bindings.Bindings) ... ok
+test_budgets_are_enforced (test_runtime_bindings.Bindings) ... ok
+test_changed_binding_is_refused (test_runtime_bindings.Bindings) ... ok
+test_changed_stream_first_word_is_refused (test_runtime_bindings.Bindings) ... ok
+test_copy_relocation_cannot_be_read_as_pointer_slot (test_runtime_bindings.Bindings) ... ok
+test_fingerprint_mismatch_stops_before_slot_reads (test_runtime_bindings.Bindings) ... ok
+test_lazy_plt_pointer_is_identified_without_resolving_it (test_runtime_bindings.Bindings) ... ok
+test_main_does_not_overwrite_existing_file_or_symlink (test_runtime_bindings.Bindings) ... ok
+test_main_mapping_only_never_reads_memory (test_runtime_bindings.Bindings) ... ok
+test_main_missing_mapping_records_stop_without_reads (test_runtime_bindings.Bindings) ... ok
+test_mapping_formats_and_missing_conflicting_runtime (test_runtime_bindings.Bindings) ... ok
+test_profile_static_roster_and_copy_not_pointer (test_runtime_bindings.Bindings) ... ok
+test_short_read_is_refused (test_runtime_bindings.Bindings) ... ok
+test_success_reports_bindings_and_distinct_stream_sizes (test_runtime_bindings.Bindings) ... ok
+test_unknown_target_is_reported_without_dereferencing_it (test_runtime_bindings.Bindings) ... ok
+test_zero_pointer_is_not_called_or_claimed_resolved (test_runtime_bindings.Bindings) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.007s
+
+OK

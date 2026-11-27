@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-27",
+  "scope": "Offline inspection of uploaded Ubuntu host-review outputs; no BMW connection, ARM/QNX execution or library loading.",
+  "archive": {
+    "file": "nbt-runtime-binding-host.Pyki63.tar.gz",
+    "bytes": 5004,
+    "sha256": "db85358d61d9e5e382f9ff67eb8672dd38762f3338d7edb3091412e9a92e4d57",
+    "matches_owner_reported_hash": true,
+    "regular_files": 6,
+    "directories": 1
+  },
+  "python_version": "3.8.10",
+  "tests": {
+    "observer": {
+      "passed": 16,
+      "seconds": 0.007,
+      "skipped": 0
+    },
+    "cache_reader": {
+      "passed": 89,
+      "seconds": 0.073,
+      "skipped": 0
+    }
+  },
+  "source_manifest": {
+    "sha256": "d8a98458378dce4318a1e5cd77448f439a7401065bacfddcb36a8539c95b9270",
+    "pinned_files": 22,
+    "matches_frozen_preparation_manifest": true,
+    "all_preparation_source_hashes_verified": true
+  },
+  "synthetic_observation": {
+    "bytes": 23832,
+    "sha256": "a4a5277066b89d013b5c43c9ea84fa3a4087ddbb6613d9a8d3b16fb57c5417e9",
+    "byte_identical_to_cloud_frozen_run": true,
+    "read_calls": 78,
+    "aligned_bytes": 808,
+    "binding_slots": 27,
+    "stream_storage_first_words": 7,
+    "synthetic_only": true
+  },
+  "files": {
+    "SHA256SUMS": {
+      "bytes": 437,
+      "sha256": "dc5cb4f10fb5d8e679f3e34d648e9f62d0a80578967638879074ea8776081060"
+    },
+    "SOURCE-SHA256SUMS": {
+      "bytes": 2373,
+      "sha256": "d8a98458378dce4318a1e5cd77448f439a7401065bacfddcb36a8539c95b9270"
+    },
+    "SYNTHETIC-binding-observation.json": {
+      "bytes": 23832,
+      "sha256": "a4a5277066b89d013b5c43c9ea84fa3a4087ddbb6613d9a8d3b16fb57c5417e9"
+    },
+    "bindings-tests.txt": {
+      "bytes": 1493,
+      "sha256": "9ef229dc9231dbbf558475a994e421d9201dad34a785deeeb025c38accd86149"
+    },
+    "cache-tests.txt": {
+      "bytes": 7313,
+      "sha256": "69f4cb80447ec696c8fc17be681b2c3b53d9675e6db76db5c9afa0e73efcc49d"
+    },
+    "python-version.txt": {
+      "bytes": 14,
+      "sha256": "1768b773a9f4cf27074d0947ae9522c8b945e47a260081b46cddd5dcadd14a9b"
+    }
+  },
+  "limits": [
+    "Host logs report test execution; this inspection verifies their contents and pins, not independently observed execution of the VM.",
+    "The synthetic report is not a vehicle memory snapshot.",
+    "No actual HMI binding, ABI compatibility, initialization order, native plugin stability or live CDS/RPM is established."
+  ],
+  "next_step": "A later read-only mappings-first observation of the existing HMI process; no new native build or library-loading probe."
+}
